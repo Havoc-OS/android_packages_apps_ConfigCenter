@@ -793,4 +793,11 @@
     <string name="stock_statusbar_in_hide">Stock status bar height</string>
     <string name="stock_statusbar_in_hide_summary">Use default status bar height in Hide mode</string>
 
+    <!-- Smart pulldown-->
+    <string name="smart_pulldown_title">Smart pulldown</string>
+    <string name="smart_pulldown_off">Off</string>
+    <string name="smart_pulldown_none">No notifications</string>
+    <string name="smart_pulldown_dismissable">No dismissable notifications</string>
+    <string name="smart_pulldown_ongoing">No ongoing notifications</string>
+
 </resources>
