@@ -402,4 +402,8 @@
     <string name="screen_state_off_delay_title">Screen-off actions delay</string>
     <string name="screen_state_on_delay_title">Screen-on actions delay</string>
 
+    <!-- Show QS on lockscreen -->
+    <string name="show_qs_on_secure_keyguard_title">Quick settings</string>
+    <string name="show_qs_on_secure_keyguard_summary">Show quick settings on secure lockscreen</string>
+
 </resources>
