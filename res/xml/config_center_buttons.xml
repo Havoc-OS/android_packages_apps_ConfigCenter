@@ -18,10 +18,32 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/buttons_title" >
 
-    <com.havoc.support.preferences.SystemSettingSwitchPreference
-        android:key="allow_incall_home"
-        android:title="@string/allow_incall_home_title"
-        android:summary="@string/allow_incall_home_summary"
-        android:defaultValue="true" />
+    <PreferenceCategory
+        android:key="hardware_keys"
+        android:title="@string/hardware_keys_category" >
 
+        <com.havoc.support.preferences.SystemSettingSeekBarPreference
+            android:key="button_brightness"
+            android:title="@string/button_brightness_title"
+            android:max="255"
+            settings:min="0"
+            android:defaultValue="255"
+            settings:units=""
+            android:persistent="false" />
+
+        <com.havoc.support.preferences.SystemSettingListPreference
+            android:entries="@array/backlight_timeout_entries"
+            android:entryValues="@array/backlight_timeout_values"
+            android:key="backlight_timeout"
+            android:persistent="false"
+            android:defaultValue="5000"
+            android:title="@string/backlight_timeout_title" />
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="allow_incall_home"
+            android:title="@string/allow_incall_home_title"
+            android:summary="@string/allow_incall_home_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
 </PreferenceScreen>
