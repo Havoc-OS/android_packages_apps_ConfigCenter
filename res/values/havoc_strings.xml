@@ -161,4 +161,13 @@
     <string name="double_tap_sleep_gesture_title">Double tap to sleep</string>
     <string name="double_tap_sleep_gesture_summary">Double tap on the status bar to put the device to sleep</string>
     
+    <!-- Power Menu -->
+    <string name="hardware_keys_power_category">Power Button</string>
+    <string name="powermenu_title">Power Menu</string>
+    <string name="powermenu_summary">Customize elements to be displayed in power menu</string>
+    <string name="powermenu_reboot_title">Reboot</string>
+    <string name="powermenu_advanced_reboot_title">Advanced Reboot</string>
+    <string name="powermenu_lockdown">Lockdown</string>
+    <string name="powermenu_screenshot_title">Screenshot</string>
+
 </resources>
