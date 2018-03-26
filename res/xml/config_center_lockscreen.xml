@@ -88,6 +88,12 @@
         android:title="@string/ls_disable_elements">
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_show_status_bar"
+            android:title="@string/lockscreen_show_status_bar_title"
+            android:summary="@string/lockscreen_show_status_bar_summary"
+            android:defaultValue="true" />
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_battery_info"
             android:title="@string/lockscreen_battery_info_title"
             android:summary="@string/lockscreen_battery_info_summary"
