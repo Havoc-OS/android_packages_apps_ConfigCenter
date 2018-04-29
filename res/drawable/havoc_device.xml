@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2019 Havoc-OS
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="23dp"
+    android:height="24dp"
+    android:viewportWidth="23"
+    android:viewportHeight="24">
+
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M0.53,12.39V5.15c0-0.3,0-0.35 0.35 -0.35h12a4.38,4.38,0,0,1,4.38,3.45,5,5,0,0,1,0.1,1v10.4c0,0.27-0.05 0.33 -0.33 0.33 h-3c-0.28,0-0.34-0.06-0.34-0.36V10.41a2.3,2.3,0,0,0-0.93-1.89,2.16,2.16,0,0,0-1.33-0.47H4.42c-0.2,0-0.23,0-0.23 0.28 V19.73c0,0.18-0.08 0.26 -0.25 0.27 H0.9c-0.34,0-0.37,0-0.37-0.37Z" />
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M23.84,12.4v7.23c0,0.33,0,0.37-0.37 0.37 H20.53c-0.31,0-0.36-0.06-0.36-0.36V5.16c0-0.31 0.06 -0.36 0.37 -0.36h2.93c0.32,0,0.37,0,0.37 0.36 Z" />
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M10.74,15.34v4.33c0,0.28-0.05 0.33 -0.32 0.33 h-3c-0.26,0-0.32-0.07-0.32-0.33V11c0-0.26 0.06 -0.33 0.33 -0.33h3c0.28,0,0.33 0.06 0.33 0.33 Z" />
+</vector>
