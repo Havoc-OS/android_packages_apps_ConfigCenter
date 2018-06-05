@@ -18,7 +18,7 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title="@string/notifications_title">
 
-    <!--<PreferenceCategory
+    <PreferenceCategory
         android:key="notification_flash"
         android:title="@string/notification_flash_title" >
 
@@ -34,7 +34,17 @@
             android:title="@string/flashlight_on_call_wait_title"
             android:summary="@string/flashlight_on_call_wait_summary"
             android:defaultValue="false" />
-    </PreferenceCategory>-->
+
+        <com.havoc.support.preferences.CustomSeekBarPreference
+            android:key="flash_on_call_waiting_delay"
+            android:max="1000"
+            android:persistent="false"
+            android:title="@string/flash_on_call_delay_title"
+            settings:min="50"
+            settings:units="ms"
+            settings:interval="50"
+            android:dependency="flash_on_call_waiting"/>
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="notification_screen"

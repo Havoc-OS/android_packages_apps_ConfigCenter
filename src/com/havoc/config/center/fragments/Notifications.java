@@ -23,8 +23,8 @@ import android.provider.Settings;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
-import com.android.internal.logging.nano.MetricsProto; 
-import com.android.internal.util.custom.Utils; 
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.custom.Utils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -40,11 +40,13 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String HEADS_UP_NOTIFICATIONS_ENABLED = "heads_up_notifications_enabled";
     private static final String AMBIENT_NOTIFICATION_LIGHT = "pulse_ambient_light";
     // private static final String STATUS_BAR_SHOW_TICKER = "status_bar_show_ticker";
+    private static final String FLASH_ON_CALL_WAITING_DELAY = "flash_on_call_waiting_delay";
 
     // private PreferenceCategory mLightsCategory;
     private GlobalSettingMasterSwitchPreference mHeadsUpEnabled;
     private SystemSettingMasterSwitchPreference mEdgeLightEnabled;
     // private SystemSettingMasterSwitchPreference mTickerEnabled;
+    private CustomSeekBarPreference mFlashOnCallWaitingDelay;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,6 +78,10 @@ public class Notifications extends SettingsPreferenceFragment implements
         // if (Utils.hasNotch(getActivity())) {
         //     mTickerEnabled.setVisible(false);
         // }
+
+        mFlashOnCallWaitingDelay = (CustomSeekBarPreference) findPreference(FLASH_ON_CALL_WAITING_DELAY);
+        mFlashOnCallWaitingDelay.setValue(Settings.System.getInt(resolver, Settings.System.FLASH_ON_CALLWAITING_DELAY, 200));
+        mFlashOnCallWaitingDelay.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -101,6 +107,10 @@ public class Notifications extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(),
                     AMBIENT_NOTIFICATION_LIGHT, value ? 1 : 0);
+            return true;
+        } else if (preference == mFlashOnCallWaitingDelay) {
+            int val = (Integer) newValue;
+            Settings.System.putInt(getContentResolver(), Settings.System.FLASH_ON_CALLWAITING_DELAY, val);
             return true;
         // } else if (preference == mTickerEnabled) {
         //     boolean value = (Boolean) newValue;

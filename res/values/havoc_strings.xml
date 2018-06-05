@@ -691,6 +691,7 @@
     <string name="flashlight_on_call_always">Always</string>
     <string name="flashlight_on_call_wait_title">Blink for call waiting</string>
     <string name="flashlight_on_call_wait_summary">Pulse flash when there\'s a call waiting</string>
+    <string name="flash_on_call_delay_title">Flash blink rate</string>
 
     <!-- Screenshot -->
     <string name="screenshot_type_title">Screenshot type</string>
