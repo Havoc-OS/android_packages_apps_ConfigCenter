@@ -871,4 +871,11 @@
     <string name="status_bar_notif_count_title">Notification count</string>
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
 
+    <!-- Dashboard -->
+    <string name="dashboard_category">Settings Dashboard</string>
+    <string name="dashboard_conditions_title">Condition cards</string>
+    <string name="dashboard_conditions_summary">Show condition cards on the dashboard</string>
+    <string name="dashboard_suggestions_title">Suggestion cards</string>
+    <string name="dashboard_suggestions_summary">Show suggestion cards on the dashboard</string>
+
 </resources>
