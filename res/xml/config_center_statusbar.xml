@@ -62,6 +62,14 @@
         android:key="statusbar_tuner"
         android:title="@string/statusbar_items_category">
 
+        <Preference
+            android:title="@string/statusbar_items_title"
+            android:summary="@string/statusbar_items_summary" >
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+        </Preference>
+
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="show_fourg_icon"
             android:title="@string/show_fourg_icon_title"
