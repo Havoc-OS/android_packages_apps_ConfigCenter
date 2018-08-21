@@ -284,4 +284,8 @@
     <string name="network_traffic_arrow_title">Activity arrows</string>
     <string name="network_traffic_arrow_summary">Show the network traffic indicator arrows</string>
 
+    <!-- Statusbar Tuner -->
+    <string name="statusbar_items_title">Statusbar icons</string>
+    <string name="statusbar_items_summary">Toggle the visibility of icons in statusbar</string>
+
 </resources>
