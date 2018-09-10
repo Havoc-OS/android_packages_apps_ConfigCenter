@@ -199,4 +199,10 @@
     <string name="quick_settings_vibrate_title">Vibrate on touch</string>
     <string name="quick_settings_vibrate_summary">Vibrate when QS tiles are pressed</string>
 
+    <!-- Quick settings tiles columns and rows config --> 
+    <string name="qs_layout_category">Layout</string>
+    <string name="qs_columns_portrait_title">Columns (Portrait)</string>
+    <string name="qs_columns_landscape_title">Columns (Landscape)</string>
+    <string name="sysui_qqs_count_title">Columns (Quickbar)</string>
+	
 </resources>
