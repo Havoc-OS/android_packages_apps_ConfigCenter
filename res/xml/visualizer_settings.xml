@@ -18,6 +18,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title="@string/lockscreen_visualizer_enable">
 
+
+    <com.havoc.support.preferences.SecureSettingSwitchPreference
+        android:key="ambient_visualizer"
+        android:title="@string/ambient_visualizer_title"
+        android:summary="@string/ambient_visualizer_summary"
+        android:defaultValue="false" />
+
     <com.havoc.support.preferences.SecureSettingSwitchPreference
        android:key="lockscreen_visualizer_autocolor"
         android:title="@string/lockscreen_autocolor_title"

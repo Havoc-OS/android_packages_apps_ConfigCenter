@@ -692,4 +692,8 @@
     <string name="qs_show_brightness_buttons_title">Brightness control buttons</string>
     <string name="qs_show_brightness_buttons_summary">Show buttons beside the brightness slider to adjust brightness</string>
 
+    <!-- Ambient visualizer -->
+    <string name="ambient_visualizer_title">Show on Ambient Display</string>
+    <string name="ambient_visualizer_summary">Display the visualizer bars on ambient display</string>
+
 </resources>
