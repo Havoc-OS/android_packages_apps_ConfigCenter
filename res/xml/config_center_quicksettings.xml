@@ -55,6 +55,13 @@
             settings:interval="5"
             android:defaultValue="255" />
 
+        <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
+            android:key="status_bar_custom_header"
+            android:fragment="com.havoc.config.center.fragments.QsHeader"
+            android:title="@string/status_bar_custom_header_title"
+            android:summary="@string/status_bar_custom_header_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

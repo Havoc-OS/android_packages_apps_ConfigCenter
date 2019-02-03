@@ -31,6 +31,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.havoc.support.preferences.CustomSeekBarPreference;
+import com.havoc.support.preferences.SystemSettingMasterSwitchPreference;
 
 public class QuickSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -40,10 +41,12 @@ public class QuickSettings extends SettingsPreferenceFragment
     private static final String PREF_COLUMNS_PORTRAIT = "qs_columns_portrait";
     private static final String PREF_COLUMNS_LANDSCAPE = "qs_columns_landscape";
     private static final String PREF_COLUMNS_QUICKBAR = "qs_columns_quickbar";
+    private static final String STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
 
     private CustomSeekBarPreference mQsColumnsPortrait;
     private CustomSeekBarPreference mQsColumnsLandscape;
     private CustomSeekBarPreference mQsColumnsQuickbar;	
+    private SystemSettingMasterSwitchPreference mCustomHeader;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -69,6 +72,12 @@ public class QuickSettings extends SettingsPreferenceFragment
                 Settings.System.QS_QUICKBAR_COLUMNS, 6);
         mQsColumnsQuickbar.setValue(columnsQuickbar);
         mQsColumnsQuickbar.setOnPreferenceChangeListener(this);	
+
+        mCustomHeader = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_CUSTOM_HEADER);
+        int qsHeader = Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_CUSTOM_HEADER, 0);
+        mCustomHeader.setChecked(qsHeader != 0);
+        mCustomHeader.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -88,6 +97,11 @@ public class QuickSettings extends SettingsPreferenceFragment
             int value = (Integer) newValue;
             Settings.System.putIntForUser(resolver,
                     Settings.System.QS_LAYOUT_COLUMNS_LANDSCAPE, value, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mCustomHeader) {
+            boolean header = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.STATUS_BAR_CUSTOM_HEADER, header ? 1 : 0);
             return true;
         }
         return false;
