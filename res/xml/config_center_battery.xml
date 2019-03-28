@@ -38,4 +38,10 @@
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
         android:defaultValue="false" />
+
+    <Preference
+        android:key="aggressive_battery"
+        android:title="@string/aggressive_battery_title"
+        android:summary="@string/aggressive_battery_summary"
+        android:fragment="com.havoc.config.center.fragments.AggressiveBattery" />
 </PreferenceScreen>
