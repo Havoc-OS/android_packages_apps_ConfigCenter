@@ -25,6 +25,13 @@
         android:summary="@string/status_bar_clock_summary"
         android:defaultValue="true" />
 
+    <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
+        android:key="status_bar_logo"
+        android:fragment="com.havoc.config.center.fragments.StatusbarLogo"
+        android:title="@string/status_bar_logo_title"
+        android:summary="@string/status_bar_logo_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:key="statusbar_gestures"
         android:title="@string/gestures_title">
