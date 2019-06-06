@@ -350,4 +350,8 @@
     <string name="brightness_icon_title">Auto brightness icon</string>
     <string name="brightness_icon_summary">Show toggle for adaptive brightness near the slider</string>
 
+    <!-- Charging animation -->
+    <string name="charging_animation_title">Charging animation</string>
+    <string name="charging_animation_summary">Display an animation when the device is plugged in</string>
+
 </resources>
