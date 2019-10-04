@@ -19,6 +19,19 @@
 	android:title="@string/notifications_title">
 
     <PreferenceCategory
+        android:key="notification_stat"
+        android:title="@string/notification_stat">
+
+        <com.havoc.support.preferences.GlobalSettingMasterSwitchPreference
+            android:key="heads_up_notifications_enabled"
+            android:fragment="com.havoc.config.center.fragments.HeadsUp"
+            android:title="@string/heads_up_notifications"
+            android:summary="@string/heads_up_notifications_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category" >
 
