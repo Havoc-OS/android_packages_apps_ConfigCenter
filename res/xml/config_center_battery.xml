@@ -18,4 +18,11 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/battery_title" >
 
+    <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
+        android:key="smart_pixels_enable"
+        android:fragment="com.havoc.config.center.fragments.SmartPixels"
+        android:title="@string/smart_pixels_title"
+        android:summary="@string/smart_pixels_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>

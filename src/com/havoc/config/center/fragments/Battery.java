@@ -24,25 +24,46 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import androidx.preference.*;
 
-import com.android.internal.logging.nano.MetricsProto; 
+import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class Battery extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+import com.havoc.support.preferences.SystemSettingMasterSwitchPreference;
+
+public class Battery extends SettingsPreferenceFragment implements 
+        Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "Battery";
+
+    private static final String SMART_PIXELS_ENABLED = "smart_pixels_enable";
+
+    private SystemSettingMasterSwitchPreference mSmartPixelsEnabled;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.config_center_battery);
+
+        mSmartPixelsEnabled = (SystemSettingMasterSwitchPreference) findPreference(SMART_PIXELS_ENABLED);
+        mSmartPixelsEnabled.setOnPreferenceChangeListener(this);
+        int smartPixelsEnabled = Settings.System.getInt(getContentResolver(),
+                SMART_PIXELS_ENABLED, 0);
+        mSmartPixelsEnabled.setChecked(smartPixelsEnabled != 0);
+
+        if (!getResources().getBoolean(com.android.internal.R.bool.config_enableSmartPixels)) {
+            getPreferenceScreen().removePreference(mSmartPixelsEnabled);
+        }
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        if (preference == mSmartPixelsEnabled) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getContentResolver(),
+		            SMART_PIXELS_ENABLED, value ? 1 : 0);
+        }
+        return true; 
     }
 
     @Override
