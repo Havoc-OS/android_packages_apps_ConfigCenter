@@ -29,4 +29,16 @@
             android:defaultValue="false" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="statusbar_tuner"
+        android:title="@string/statusbar_items_category">
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="show_fourg_icon"
+            android:title="@string/show_fourg_icon_title"
+            android:summary="@string/show_fourg_icon_summary"
+            android:defaultValue="false"/>
+
+    </PreferenceCategory>
 </PreferenceScreen>
