@@ -33,6 +33,7 @@
     <string name="statusbar_title">Status Bar</string>
     <string name="system_title">System</string>
     <string name="battery_title">Battery Saving</string>
+    <string name="ambient_display_custom_title">Ambient Display</string>
 
     <!-- About -->
 	<string name="developers_category_title">Developers</string>
