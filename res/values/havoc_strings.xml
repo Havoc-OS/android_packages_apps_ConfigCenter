@@ -62,4 +62,11 @@
     <string name="website_title">Website</string>
     <string name="website_title_summary">Download Havoc-OS for your device</string>
 
+    <!-- Lockscreen Categories -->
+    <string name="ls_disable_elements">Elements</string>
+
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">Charging info</string>
+    <string name="lockscreen_battery_info_summary">Display charger max current, voltage and battery temperature while charging</string>
+
 </resources>
