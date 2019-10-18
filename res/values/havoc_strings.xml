@@ -168,5 +168,6 @@
     <string name="powermenu_advanced_reboot_title">Advanced Reboot</string>
     <string name="powermenu_lockdown">Lockdown</string>
     <string name="powermenu_screenshot_title">Screenshot</string>
+    <string name="powermenu_torch">Flashlight</string>
 
 </resources>
