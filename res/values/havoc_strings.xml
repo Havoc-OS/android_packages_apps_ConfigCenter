@@ -144,4 +144,8 @@
     <string name="volume_key_cursor_control_on">Volume Up/Down - Cursor Left/Right</string>
     <string name="volume_key_cursor_control_on_reverse">Volume Up/Down - Cursor Right/Left</string>
 
+    <!-- Wake on charge -->
+    <string name="wakeup_when_plugged_unplugged_title">Wake up on charge</string>
+    <string name="wakeup_when_plugged_unplugged_summary">Wake up the device if charger is plugged/unplugged</string>
+
 </resources>
