@@ -53,5 +53,33 @@
             android:title="@string/powermenu_lockscreen_title"
             android:summary="@string/powermenu_lockscreen_summary"
             android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="powermenu_ls_reboot"
+            android:title="@string/powermenu_reboot_title"
+            android:summary="@string/powermenu_ls_reboot_summary"
+            android:dependency="powermenu_reboot"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="powermenu_ls_advanced_reboot"
+            android:title="@string/powermenu_advanced_reboot_title"
+            android:summary="@string/powermenu_ls_advanced_reboot_summary"
+            android:dependency="powermenu_advanced_reboot"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="powermenu_ls_screenshot"
+            android:title="@string/powermenu_screenshot_title"
+            android:summary="@string/powermenu_ls_screenshot_summary"
+            android:dependency="powermenu_screenshot"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="powermenu_ls_torch"
+            android:title="@string/powermenu_torch"
+            android:summary="@string/powermenu_ls_torch_summary"
+            android:dependency="powermenu_torch"
+            android:defaultValue="false" />
     </PreferenceCategory>
 </PreferenceScreen>
