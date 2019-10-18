@@ -154,4 +154,8 @@
     <string name="incall_vibrate_call_wait_title">Vibrate on Call Waiting</string>
     <string name="incall_vibrate_disconnect_title">Vibrate on Disconnect</string>
 
+    <!-- Double Tap gestures -->
+    <string name="double_tap_sleep_lockscreen_title">Double tap to sleep</string>
+    <string name="double_tap_sleep_lockscreen_summary">Double tap anywhere on the lockscreen to put phone to sleep</string>
+    
 </resources>

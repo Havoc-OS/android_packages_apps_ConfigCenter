@@ -19,6 +19,18 @@
     android:title="@string/lockscreen_title" >
 
     <PreferenceCategory
+        android:key="ls_gestures"
+        android:title="@string/gestures_title">
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_lockscreen"
+            android:title="@string/double_tap_sleep_lockscreen_title"
+            android:summary="@string/double_tap_sleep_lockscreen_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="ls_disable_elements"
         android:title="@string/ls_disable_elements">
 
