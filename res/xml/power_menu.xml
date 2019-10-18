@@ -39,4 +39,9 @@
         android:title="@string/powermenu_screenshot_title"
         android:defaultValue="false" />
 
+    <SwitchPreference
+        android:key="powermenu_torch"
+        android:title="@string/powermenu_torch"
+        android:persistent="false" />
+
 </PreferenceScreen>
