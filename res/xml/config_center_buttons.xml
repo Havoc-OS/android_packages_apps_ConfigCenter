@@ -60,7 +60,17 @@
             android:title="@string/anbi_title"
             android:summary="@string/anbi_summary"
             android:defaultValue="false" />
+    </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="volume_rocker"
+        android:title="@string/volume_title">
+
+        <Preference
+            android:key="volume_key"
+            android:fragment="com.havoc.config.center.fragments.Volume"
+            android:title="@string/volume_title"
+            android:summary="@string/volume_summary" />
     </PreferenceCategory>
 
     <PreferenceCategory
