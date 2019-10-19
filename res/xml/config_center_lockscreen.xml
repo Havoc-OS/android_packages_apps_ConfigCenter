@@ -31,6 +31,24 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="ls_unlocking"
+        android:title="@string/ls_unlocking">
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="fingerprint_success_vib"
+            android:title="@string/fprint_sucess_vib_title"
+            android:summary="@string/fprint_sucess_vib_summary"
+            android:defaultValue="true" />
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="fingerprint_error_vib"
+            android:title="@string/fprint_error_vib_title"
+            android:summary="@string/fprint_error_vib_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="ls_disable_elements"
         android:title="@string/ls_disable_elements">
 
