@@ -261,4 +261,9 @@
     <string name="swap_volume_buttons_title">Swap keys</string>
     <string name="swap_volume_buttons_summary">Swap volume keys when the device is rotated</string>
     
+    <!-- Lock screen cover art -->
+    <string name="lockscreen_media_category">Music</string>
+    <string name="media_art_title">Media artwork</string>
+    <string name="media_art_summary">Show media cover art as the lockscreen background</string>
+
 </resources>
