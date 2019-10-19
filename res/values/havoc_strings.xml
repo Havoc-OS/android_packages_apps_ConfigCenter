@@ -231,4 +231,8 @@
     <string name="fprint_error_vib_title">FP error vibration</string>
     <string name="fprint_error_vib_summary">Vibrate when fingerprint authentication fails</string>
 
+    <!-- Fingerprint unlock -->
+    <string name="fp_unlock_keystore_title">Force FP authentication</string>
+    <string name="fp_unlock_keystore_summary">Unlock device with fingerprint after reboot or lockdown</string>
+
 </resources>
