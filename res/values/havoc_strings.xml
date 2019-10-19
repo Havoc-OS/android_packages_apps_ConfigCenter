@@ -246,4 +246,9 @@
     <string name="volume_steps_voice_call_title">Volume steps: Voice Call</string>
     <string name="volume_steps_reset">Reset</string>
 
+    <!-- Disabling FC notifications --> 
+    <string name="notification_messages">System</string>
+    <string name="enable_fc_notifications_title">Force close notifications</string>
+    <string name="enable_fc_notifications_summary">Show a dialog when an application crashes</string>
+
 </resources>
