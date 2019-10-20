@@ -31,6 +31,27 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="statusbar_ntraffic"
+        android:title="@string/statusbar_ntraffic">
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="network_traffic_state"
+            android:title="@string/network_traffic_state_title"
+            android:summary="@string/network_traffic_state_summary"
+            android:defaultValue="false" />
+
+        <com.havoc.support.preferences.SystemSettingSeekBarPreference
+            android:key="network_traffic_autohide_threshold"
+            android:title="@string/network_traffic_autohide_threshold_title"
+            android:max="10"
+            settings:min="0"
+            android:defaultValue="0"
+            settings:units="KB/s"
+            android:dependency="network_traffic_state" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="statusbar_tuner"
         android:title="@string/statusbar_items_category">
 
