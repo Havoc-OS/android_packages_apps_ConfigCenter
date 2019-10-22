@@ -288,4 +288,8 @@
     <string name="statusbar_items_title">Statusbar icons</string>
     <string name="statusbar_items_summary">Toggle the visibility of icons in statusbar</string>
 
+    <!-- Navbar options -->
+    <string name="navbar_invert_layout_title">Invert layout</string>
+    <string name="navbar_invert_layout_summary">Use inverted layout for navbar buttons</string>
+
 </resources>
