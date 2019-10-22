@@ -71,6 +71,12 @@
             android:title="@string/powermenu_title"
             android:summary="@string/powermenu_summary"
             android:fragment="com.havoc.config.center.fragments.PowerMenu" />
+
+        <ListPreference
+            android:key="torch_power_button_gesture"
+            android:title="@string/torch_power_button_gesture_title"
+            android:entries="@array/torch_power_button_gesture_entries"
+            android:entryValues="@array/torch_power_button_gesture_values" />
     </PreferenceCategory>
 
     <PreferenceCategory
