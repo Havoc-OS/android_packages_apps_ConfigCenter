@@ -24,25 +24,45 @@ import android.hardware.fingerprint.FingerprintManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
-import androidx.preference.*;
+import androidx.preference.Preference;
 
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.havoc.support.preferences.SecureSettingMasterSwitchPreference;
+
 public class LockScreen extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
+
+    private static final String LOCKSCREEN_VISUALIZER_ENABLED = "lockscreen_visualizer_enabled";
+
+    private SecureSettingMasterSwitchPreference mVisualizerEnabled;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.config_center_lockscreen);
-        final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        ContentResolver resolver = getActivity().getContentResolver();
         Resources resources = getResources();
+
+        mVisualizerEnabled = (SecureSettingMasterSwitchPreference) findPreference(LOCKSCREEN_VISUALIZER_ENABLED);
+        mVisualizerEnabled.setOnPreferenceChangeListener(this);
+        int visualizerEnabled = Settings.Secure.getInt(resolver,
+                LOCKSCREEN_VISUALIZER_ENABLED, 0);
+        mVisualizerEnabled.setChecked(visualizerEnabled != 0);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mVisualizerEnabled) {
+            boolean value = (Boolean) newValue;
+            Settings.Secure.putInt(getContentResolver(),
+		            LOCKSCREEN_VISUALIZER_ENABLED, value ? 1 : 0);
+            return true;
+        }
         return false;
     }
 
