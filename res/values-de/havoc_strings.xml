@@ -54,7 +54,7 @@
     <string name="havoc_source_summary">Havoc-OS Quellcode</string>
     <string name="havoc_donate">Spenden</string>
     <string name="havoc_donate_summary">Unterstützung für das Havoc-OS-Team zeigen</string>
-	<string name="havoc_links">Links</string>
+    <string name="havoc_links">Links</string>
     <string name="website_title">Internetseite</string>
     <string name="website_title_summary">Havoc-OS für Ihr Gerät herunterladen</string>
 
@@ -158,7 +158,7 @@
     <string name="double_tap_sleep_gesture_summary">Auf die Statusleiste doppeltippen, um das Gerät in den Ruhezustand zu versetzen</string>
     
     <!-- Power Menu -->
-    <string name="hardware_keys_power_category">Ein-/Austaste</string>
+    <string name="hardware_keys_power_category">Ein-/Aus-Taste</string>
     <string name="powermenu_title">Ein-/Ausschaltmenü</string>
     <string name="powermenu_summary">Anpassen der Elemente, die im Ein-/Ausschaltmenü angezeigt werden sollen</string>
     <string name="powermenu_reboot_title">Neustart</string>
@@ -294,6 +294,6 @@
     <string name="torch_power_button_gesture_none">Deaktiviert</string>
     <string name="torch_power_button_gesture_dt">Netzschalter doppeltippen</string>
     <string name="torch_power_button_gesture_dt_toast">Sprung zur Kamerageste ist jetzt deaktiviert</string>
-    <string name="torch_power_button_gesture_lp">Ein-/Austaste lange drücken</string>
+    <string name="torch_power_button_gesture_lp">Ein-/Aus-Taste lange drücken</string>
 
 </resources>
