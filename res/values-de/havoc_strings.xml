@@ -36,14 +36,10 @@
     <string name="ambient_display_custom_title">Ambient Display</string>
 
     <!-- About -->
-	<string name="developers_category_title">Entwickler</string>
-	<string name="support_category_title">Support-Team</string>
+    <string name="developers_category_title">Entwickler</string>
+    <string name="support_category_title">Support-Team</string>
     <string name="maintainers_category_title">Betreuer</string>
-    <string name="havoc_developers_skulshady" translatable="false">• Co-Founder \n• Core Developer \n• UI/UX Designer\n• Maintainer</string>
-    <string name="havoc_developers_zenixxx" translatable="false">• Co-Founder \n• Core Developer\n• Maintainer</string>
-    <string name="havoc_support_tushar" translatable="false">• Support Group Moderator</string>
-    <string name="havoc_support_summary" translatable="false">• Support Group Moderator</string>
-    <string name="device_maintainers_title">Official Devices</string>
+    <string name="device_maintainers_title">Offizielle Geräte</string>
     <string name="device_maintainers_title_summary">Liste der offiziellen Geräte und ihrer Betreuer</string>
     <string name="changelog_title">Änderungsprotokoll</string>
     <string name="changelog_title_summary">Aktuelle Änderungen im ROM anzeigen</string>
