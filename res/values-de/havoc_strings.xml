@@ -150,7 +150,7 @@
     <string name="wakeup_when_plugged_unplugged_summary">Gerät wecken, wenn das Ladegerät angeschlossen oder getrennt wird</string>
 
     <!-- Incall vibrate options -->
-    <string name="incall_vibration_category">Bei Anruf vibrieren/string>
+    <string name="incall_vibration_category">Bei Anruf vibrieren</string>
     <string name="incall_vibrate_connect_title">Bei Anrufverbindung vibrieren</string>
     <string name="incall_vibrate_call_wait_title">Beim Anklopfen von Anrufen vibrieren</string>
     <string name="incall_vibrate_disconnect_title">Bei Anruftrennung vibrieren</string>
