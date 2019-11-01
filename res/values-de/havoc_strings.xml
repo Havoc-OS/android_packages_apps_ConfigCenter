@@ -295,5 +295,12 @@
     <string name="torch_power_button_gesture_dt">Netzschalter doppeltippen</string>
     <string name="torch_power_button_gesture_dt_toast">Sprung zur Kamerageste ist jetzt deaktiviert</string>
     <string name="torch_power_button_gesture_lp">Ein-/Aus-Taste lange drücken</string>
-
+     
+    <!-- Brightness control -->
+    <string name="status_bar_toggle_brightness">Helligkeitsregelung</string>
+    <string name="status_bar_toggle_brightness_summary">Helligkeit durch Wischen über die Statusleiste anpassen</string>
+     
+    <!-- Pocket judge -->
+    <string name="pocket_judge_title">Taschenerkennung</string>
+    <string name="pocket_judge_summary">Bildschirm und Tasteneingaben sperren, wenn sich das Gerät in der Tasche befindet</string>    
 </resources>
