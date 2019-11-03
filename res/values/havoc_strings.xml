@@ -340,4 +340,14 @@
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
 
+    <!-- Quick settings brightness slider -->
+    <string name="qs_brightness_slider_title">Brightness slider position</string>
+    <string name="qs_brightness_slider_hide">Hidden</string>
+    <string name="qs_brightness_slider_top">Top</string>
+    <string name="qs_brightness_slider_bottom">Bottom</string>
+
+    <!-- Quick settings brightness icon -->
+    <string name="brightness_icon_title">Auto brightness icon</string>
+    <string name="brightness_icon_summary">Show toggle for adaptive brightness near the slider</string>
+
 </resources>
