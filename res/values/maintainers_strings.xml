@@ -70,8 +70,11 @@
     <string name="device_guacamole" translatable="false">OnePlus 7 Pro</string>
     <string name="device_guacamole_summary" translatable="false">guacamole\nAnushek Prasal (SKULSHADY)</string>
 
-    <string name="device_taimen" translatable="false">Google Pixel 2 XL</string>
-    <string name="device_taimen_summary" translatable="false">taimen\nSteve Provancal (slothdabski)</string>
+    <string name="device_blueline" translatable="false">Google Pixel 3</string>
+    <string name="device_blueline_summary" translatable="false">blueline\nSteve Provancal (slothdabski)</string>
+
+    <string name="device_crosshatch" translatable="false">Google Pixel 3 XL</string>
+    <string name="device_crosshatch_summary" translatable="false">crosshatch\nSteve Provancal (slothdabski)</string>
 
     <string name="device_j7xelte" translatable="false">Samsung Galaxy J7 2016</string>
     <string name="device_j7xelte_summary" translatable="false">j7xelte\nRuturaj Kadam</string>

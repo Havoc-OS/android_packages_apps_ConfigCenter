@@ -148,20 +148,30 @@
         </Preference>
     </PreferenceCategory>
 
-    <!--<PreferenceCategory
+    <PreferenceCategory
         android:id="@+id/device_category_google"
         android:title="@string/device_category_google_title" >
 
         <Preference
-            android:id="@+id/device_taimen"
+            android:id="@+id/device_blueline"
             android:icon="@drawable/havoc_device"
-            android:summary="@string/device_taimen_summary"
-            android:title="@string/device_taimen" >
+            android:summary="@string/device_blueline_summary"
+            android:title="@string/device_blueline" >
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/steveproski" />
         </Preference>
-    </PreferenceCategory>-->
+
+        <Preference
+            android:id="@+id/device_crosshatch"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_crosshatch_summary"
+            android:title="@string/device_crosshatch" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/steveproski" />
+        </Preference>
+    </PreferenceCategory>
 
     <!--<PreferenceCategory
         android:id="@+id/device_category_samsung"
