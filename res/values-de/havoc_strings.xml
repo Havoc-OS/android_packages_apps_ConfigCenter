@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2018 Havoc-OS
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- App Title -->
+    <string name="config_center_title">Konfigurationszentrum</string>
+
+    <!-- Preferences -->
+    <string name="about_title">Über</string>
+    <string name="animations_title">Animationen</string>
+    <string name="buttons_title">Tasten</string>
+    <string name="gestures_title">Gesten</string>
+    <string name="lockscreen_title">Sperrbildschirm</string>
+    <string name="misc_title">Sonstiges</string>
+    <string name="navigation_title">Navigationsleiste</string>
+    <string name="notifications_title">Benachrichtigungen</string>
+    <string name="panels_title">Panels</string>
+    <string name="quicksettings_title">Schnelleinstellungen</string>
+    <string name="statusbar_title">Statusleiste</string>
+    <string name="system_title">System</string>
+    <string name="battery_title">Akku sparen</string>
+    <string name="ambient_display_custom_title">Ambient Display</string>
+
+    <!-- About -->
+	<string name="developers_category_title">Entwickler</string>
+	<string name="support_category_title">Support-Team</string>
+    <string name="maintainers_category_title">Betreuer</string>
+    <string name="device_maintainers_title">Offizielle Geräte</string>
+    <string name="device_maintainers_title_summary">Liste der offiziellen Geräte und ihrer Betreuer</string>
+    <string name="changelog_title">Änderungsprotokoll</string>
+    <string name="changelog_title_summary">Aktuelle Änderungen im ROM anzeigen</string>
+    <string name="changelog_error">Änderungsprotokoll laden nicht möglich</string>
+    <string name="havoc_announcements_title">Ankündigungen</string>
+    <string name="havoc_announcements_summary">Offizieller Ankündigungskanal</string>
+    <string name="havoc_telegram_title">Telegram</string>
+    <string name="havoc_telegram_summary">Supportgruppe für offizielle Builds</string>
+    <string name="havoc_discord_title">Unstimmigkeit</string>
+    <string name="havoc_discord_summary">Offizieller Server für ROM-Unterstützung</string>
+    <string name="havoc_source_title">Github</string>
+    <string name="havoc_source_summary">Havoc-OS Quellcode</string>
+    <string name="havoc_donate">Spenden</string>
+    <string name="havoc_donate_summary">Unterstützung für das Havoc-OS-Team zeigen</string>
+	<string name="havoc_links">Links</string>
+    <string name="website_title">Internetseite</string>
+    <string name="website_title_summary">Havoc-OS für Ihr Gerät herunterladen</string>
+
+    <!-- Lockscreen Categories -->
+    <string name="ls_disable_elements">Elemente</string>
+
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">Ladeinformation</string>
+    <string name="lockscreen_battery_info_summary">Anzeige des maximalen Stroms, der maximalen Spannung und der maximalen Temperatur des Ladegeräts während des Ladevorgangs</string>
+
+    <!-- Incall Home button behavior-->
+    <string name="allow_incall_home_title">Home-Taste beim Klingeln</string>
+    <string name="allow_incall_home_summary">Ermöglicht die Verwendung der Home-Taste, wenn das Gerät klingelt</string>
+
+    <!-- Buttons backlight timeout -->
+    <string name="backlight_timeout_title">Tastenhintergrundbeleuchtung-Auszeit</string>
+    <string name="backlight_timeout_on">Immer aktiviert</string>
+    <string name="backlight_timeout_1s">1 Sek</string>
+    <string name="backlight_timeout_3s">3 Sek</string>
+    <string name="backlight_timeout_5s">5 Sek</string>
+    <string name="backlight_timeout_10s">10 Sek</string>
+    <string name="backlight_timeout_15s">15 Sek</string>
+    <string name="backlight_timeout_20s">20 Sek</string>
+    <string name="backlight_timeout_30s">30 Sek</string>
+
+    <!-- Enable keys backlight-->
+    <string name="button_brightness_title">Hintergrundbeleuchtung</string>
+    <string name="button_brightness_sw_title">Hintergrundbeleuchtung aktiviert</string>
+    <string name="button_backlight_on_touch_only_title">Tastendruck</string>
+    <string name="button_backlight_on_touch_only_summary">Hintergrundbeleuchtung mit Auszeit nur bei Tastendruck aktivieren</string>
+
+    <!-- HW Keys customization -->
+    <string name="action_value_default_action" translatable="false">default</string>
+    <string name="action_value_select_app" translatable="false">app</string>
+    <string name="action_value_custom_action" translatable="false">custom</string>
+    <string name="action_value_back" translatable="false">task_back</string>
+    <string name="action_value_home" translatable="false">task_home</string>
+    <string name="action_value_search_assist" translatable="false">task_assist</string>
+    <string name="action_value_recent_apps" translatable="false">task_recents</string>
+    <string name="action_value_voice_search" translatable="false">task_voice_search</string>
+    <string name="action_value_menu" translatable="false">task_menu</string>
+    <string name="picker_activities">Aktionen</string>
+    <string name="select_custom_app_title">Benutzerdefinierte App auswählen</string>
+    <string name="select_custom_activity_title">Benutzerdefinierte Aktion auswählen</string>
+    <string name="profile_applist_title">Apps</string>
+    <string name="choose_action_title">Aktion auswählen</string>
+    <string name="action_entry_default_action">Standardeinstellungen</string>
+    <string name="action_entry_select_app">App auswählen</string>
+    <string name="action_entry_custom_action">Benutzerdefinierte Aktion auswählen</string>
+    <string name="hardware_keys_home_key_title">Home-Taste</string>
+    <string name="hardware_keys_menu_key_title">Menü-Taste</string>
+    <string name="hardware_keys_assist_key_title">Suchen-Taste</string>
+    <string name="hardware_keys_appswitch_key_title">Übersichts-Taste</string>
+    <string name="hardware_keys_back_key_title">Zurück-Taste</string>
+    <string name="hardware_keys_double_tap_summary">Doppeltipp-Aktion einstellen</string>
+    <string name="hardware_keys_single_tap_summary">Einzeltipp-Aktion einstellen</string>
+    <string name="hardware_keys_long_press_summary">Lange Druck-Aktion einstellen</string>
+    <string name="hardware_keys_single_tap_title">Einzeltipp-Aktion</string>
+    <string name="hardware_keys_long_press_title">Lange Druckaktion</string>
+    <string name="hardware_keys_double_tap_title">Doppeltipp-Aktion</string>
+    <string name="hardware_keys_category">Hardware-Tasten</string>
+    <string name="hardware_keys_disable_title">Tasten deaktivieren</string>
+    <string name="hardware_keys_disable_summary">Hardware-Tasten des Geräts deaktivieren</string>
+
+    <!-- ANBI -->
+    <string name="anbi_title">Unbeabsichtigte Berührung</string>
+    <string name="anbi_summary">Interaktion mit den Navigationstasten verhindern, während der Bildschirm berührt wird</string>
+
+    <string name="volume_title">Lautstärkeregler</string>
+    <string name="volume_summary">Einstellungen für Lautstärketasten anpassen</string>
+
+    <!-- Volume rocker music control -->
+    <string name="volume_rocker_music_controls_title">Wiedergabesteuerung</string>
+    <string name="volume_rocker_music_controls_summary">Bei ausgeschaltetem Bildschirm, wird durch langes Drücken der Lautstärketasten nach Musiktiteln gesucht.</string>
+
+    <!-- Volume rocker wake -->
+    <string name="volume_rocker_wake_title">Gerät wecken</string>
+    <string name="volume_rocker_wake_summary">Lautstärketasten drückem, um Ihr Gerät zu wecken</string>
+
+    <!-- Volume rocker cursor control -->
+    <string name="cursor_section_header">Cursor</string>
+    <string name="volume_key_cursor_control_title">Tastatur-Cursor-Steuerung</string>
+    <string name="volume_key_cursor_control_off">Deaktiviert</string>
+    <string name="volume_key_cursor_control_on">Lautstärke rauf/runter - Cursor links/rechts</string>
+    <string name="volume_key_cursor_control_on_reverse">Lautstärke rauf/runter - Cursor rechts/links</string>
+
+    <!-- Wake on charge -->
+    <string name="wakeup_when_plugged_unplugged_title">Beim Aufladen wecken</string>
+    <string name="wakeup_when_plugged_unplugged_summary">Gerät wecken, wenn das Ladegerät angeschlossen oder getrennt wird</string>
+
+    <!-- Incall vibrate options -->
+    <string name="incall_vibration_category">Bei Anruf vibrieren</string>
+    <string name="incall_vibrate_connect_title">Bei Anrufverbindung vibrieren</string>
+    <string name="incall_vibrate_call_wait_title">Beim Anklopfen von Anrufen vibrieren</string>
+    <string name="incall_vibrate_disconnect_title">Bei Anruftrennung vibrieren</string>
+
+    <!-- Double Tap gestures -->
+    <string name="double_tap_sleep_lockscreen_title">Doppeltippen, um Bildschirm auszuschalten</string>
+    <string name="double_tap_sleep_lockscreen_summary">An einer beliebigen Stelle 2x auf den Sperrbildschirm tippen, um das Telefon in den Ruhezustand zu versetzen</string>
+    <string name="double_tap_sleep_gesture_title">Doppeltippen, um Bildschirm auszuschalten</string>
+    <string name="double_tap_sleep_gesture_summary">Auf die Statusleiste doppeltippen, um das Gerät in den Ruhezustand zu versetzen</string>
+    
+    <!-- Power Menu -->
+    <string name="hardware_keys_power_category">Ein-/Aus-Taste</string>
+    <string name="powermenu_title">Ein-/Ausschaltmenü</string>
+    <string name="powermenu_summary">Anpassen der Elemente, die im Ein-/Ausschaltmenü angezeigt werden sollen</string>
+    <string name="powermenu_reboot_title">Neustart</string>
+    <string name="powermenu_advanced_reboot_title">Erweiterter Neustart</string>
+    <string name="powermenu_lockdown">Sperren</string>
+    <string name="powermenu_screenshot_title">Screenshot</string>
+    <string name="powermenu_torch">Taschenlampe</string>
+    <string name="powermenu_category_visibility">Sperrbildschirmoptionen</string>
+    <string name="powermenu_lockscreen_title">Auf dem Sperrbildschirm anzeigen</string>
+    <string name="powermenu_lockscreen_summary">Aktivieren Sie die Möglichkeit, den Dialog des Ein-/Ausschaltmenüs anzuzeigen und zu verwenden, während Sie sich auf dem Sperrbildschirm befinden</string>
+    <string name="powermenu_ls_reboot_summary">Neustartoption auf dem Sperrbildschirm anzeigen</string>
+    <string name="powermenu_ls_advanced_reboot_summary">Erweiterte Neustartoptionen auf dem Sperrbildschirm anzeigen</string>
+    <string name="powermenu_ls_screenshot_summary">Screenshot-Funktion auf dem Sperrbildschirm anzeigen</string>
+    <string name="powermenu_ls_torch_summary">Taschenlampe auf dem Sperrbildschirm anzeigen</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Wischen für Screenshot</string>
+    <string name="three_finger_gesture_summary">Mit drei Fingern nach unten wischen, um einen Screenshot aufzunehmen</string>
+
+    <!-- Heads up -->
+    <string name="notification_stat">Statusleiste</string>
+    <string name="heads_up_notifications">Popup</string>
+    <string name="heads_up_notifications_summary">Benachrichtigungen in der Statusleiste anzeigen</string>
+    <string name="add_heads_up_package">App hinzufügen</string>
+    <string name="heads_up_stoplist_title">Stopliste</string>
+    <string name="add_heads_up_stoplist_summary">Popups in diesen Apps deaktivieren</string>
+    <string name="heads_up_blacklist_title">Sperrliste</string>
+    <string name="add_heads_up_blacklist_summary">Popups für diese Apps deaktivieren</string>
+    <string name="profile_choose_app">App auswählen</string>
+    <string name="dialog_delete_title">Löschen</string>
+    <string name="dialog_delete_message">Ausgewähltes Element entfernen?</string>
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Bei Berührung vibrieren</string>
+    <string name="quick_settings_vibrate_summary">Beim Berühren von QS-Kacheln vibrieren</string>
+
+    <!-- Quick settings tiles columns and rows config --> 
+    <string name="qs_layout_category">Layout</string>
+    <string name="qs_columns_portrait_title">Spalten (Hochformat)</string>
+    <string name="qs_columns_landscape_title">Spalten (Querformat)</string>
+    <string name="sysui_qqs_count_title">Spalten (Schnellstartleiste)</string>
+    <string name="qs_tile_title_visibility_title">Kacheltitel</string>
+    <string name="qs_tile_title_visibility_summary">Titels unter jeder Kachel anzeigen</string>
+
+    <!-- Smart Pixels -->
+    <string name="smart_pixels_title">Intelligente Pixel</string>
+    <string name="smart_pixels_summary">Energie sparen, indem zusätzliche Pixel ausgeschalten werden</string>
+    <string name="smart_pixels_on_power_save_title">Auto-Aktivierung beim Akkusparer</string>
+    <string name="smart_pixels_on_power_save_summary">Mit Akkusparer aktivieren, um die Energieeinsparung zu erhöhen</string>
+    <string name="smart_pixels_percent">Prozentsatz der zu deaktivierenden Pixel</string>
+    <string name="smart_pixels_shift">Einbrennschutz-Intervall</string>
+
+    <!-- Aggressive battery -->
+    <string name="aggressive_battery_title">Aggressiver Akku</string>
+    <string name="aggressive_idle_title">Aggressiver Leerlauf</string>
+    <string name="aggressive_idle_summary">Gerät häufiger in den Ruhezustand versetzen und weniger aufwecken</string>
+    <string name="aggressive_standby_title">Aggressiver Standby</string>
+    <string name="aggressive_standby_summary">Ausführen von Apps im Hintergrund einschränken</string>
+    <string name="aggressive_battery_saver_title">Auto-Aktivierung im Akkusparer</string>
+    <string name="aggressive_battery_saver_summary">Aggressiven Akku automatisch bei Verwendung des Akkusparers verwenden</string>
+    
+    <!-- Fingerprint authentication vibration -->
+    <string name="ls_unlocking">Entsperren</string>
+    <string name="fprint_sucess_vib_title">FP-AuthentifizierungsVibration</string>
+    <string name="fprint_sucess_vib_summary">Wenn die FP-Authentifizierung erfolgreich ist vibrieren</string>
+    <string name="fprint_error_vib_title">FP-Fehlervibrationen</string>
+    <string name="fprint_error_vib_summary">Wenn die Fingerabdruck-Authentifizierung fehlschlägt vibrieren</string>
+
+    <!-- Fingerprint unlock -->
+    <string name="fp_unlock_keystore_title">FP-Authentifizierung erzwingen</string>
+    <string name="fp_unlock_keystore_summary">Gerät mit Fingerabdruck nach einem Neustart oder einer Bildschirmsperre entsperren</string>
+
+    <!-- Volume Steps Fragment -->
+    <string name="volume_steps_title">Lautstärkeschritte</string>
+    <string name="volume_steps_summary">Benutzerdefinierter Lautstärkeschritte für Töne festlegen</string>
+    <string name="volume_steps_alarm_title">Schritte: Alarm</string>
+    <string name="volume_steps_dtmf_title">Schritte: DTMF</string>
+    <string name="volume_steps_music_title">Schritte: Medien</string>
+    <string name="volume_steps_notification_title">Schritte: Benachrichtigung</string>
+    <string name="volume_steps_ring_title">Schritte: Klingelton</string>
+    <string name="volume_steps_system_title">Schritte: System</string>
+    <string name="volume_steps_voice_call_title">Schritte: Sprachanruf</string>
+    <string name="volume_steps_reset">Zurücksetzen</string>
+
+    <!-- Disabling FC notifications --> 
+    <string name="notification_messages">System</string>
+    <string name="enable_fc_notifications_title">Benachrichtigungen schließen erzwingen</string>
+    <string name="enable_fc_notifications_summary">Einen Dialog anzeigen, wenn eine App abstürzt</string>
+
+    <!-- 4G icon -->
+    <string name="statusbar_items_category">Symbole</string>
+    <string name="show_fourg_icon_title">4G-Symbol</string>
+    <string name="show_fourg_icon_summary">4G- anstatt LTE-Symbol anzeigen</string>
+
+    <!-- Volume swap buttons -->
+    <string name="swap_volume_buttons_title">Tasten tauschen</string>
+    <string name="swap_volume_buttons_summary">Lautstärketasten bei der Drehung des Geräts austauschen</string>
+    
+    <!-- Lock screen cover art -->
+    <string name="lockscreen_media_category">Musik</string>
+    <string name="media_art_title">Mediengestaltung</string>
+    <string name="media_art_summary">Medienalbum als Sperrbildschirmhintergrund anzeigen</string>
+
+    <!-- Lock screen media blur -->
+    <string name="lockscreen_media_blur_title">Mediengestaltung-Unschärfegrad</string>
+
+    <!-- Data disabled icon -->
+    <string name="data_disabled_icon_title">Datensymbol deaktivieren</string>
+    <string name="data_disabled_icon_summary">Kreuzzeichen neben dem Signal anzeigen, wenn Daten deaktiviert sind</string>
+
+    <!-- Roaming indicator icon -->
+    <string name="roaming_indicator_icon_title">Roaming indicator</string>
+    <string name="roaming_indicator_icon_summary">Display the roaming indicator in signal icon when in roaming mode</string>
+
+    <!-- Statusbar net monitor -->
+    <string name="statusbar_ntraffic">Netzwerk</string>
+    <string name="network_traffic_state_title">Netzwerkaktivität</string>
+    <string name="network_traffic_state_summary">Netzwerkaktivität in der Statusleiste anzeigen</string>
+    <string name="network_traffic_autohide_threshold_title">Schwellenwert Auto-Ausblendung</string>
+    <string name="network_traffic_arrow_title">Aktivitätspfeile</string>
+    <string name="network_traffic_arrow_summary">Netzwerkaktivitätspfeile anzeigen</string>
+
+    <!-- Statusbar Tuner -->
+    <string name="statusbar_items_title">Statusleistensymbole</string>
+    <string name="statusbar_items_summary">Sichtbarkeit von Statusleistensymbolen umschalten</string>
+
+    <!-- Navbar options -->
+    <string name="navbar_invert_layout_title">Layout umkehren</string>
+    <string name="navbar_invert_layout_summary">Invertiertes Layout für Navigationsleistentasten verwenden</string>
+
+    <!-- Torch Power button gestures -->
+    <string name="torch_power_button_gesture_title">Taschenlampe bei Bildschirm aus </string>
+    <string name="torch_power_button_gesture_none">Deaktiviert</string>
+    <string name="torch_power_button_gesture_dt">Netzschalter doppeltippen</string>
+    <string name="torch_power_button_gesture_dt_toast">Sprung zur Kamerageste ist jetzt deaktiviert</string>
+    <string name="torch_power_button_gesture_lp">Ein-/Aus-Taste lange drücken</string>
+
+
+    <!-- Brightness control -->
+    <string name="status_bar_toggle_brightness">Helligkeitsregelung</string>
+    <string name="status_bar_toggle_brightness_summary">Helligkeit durch Wischen über die Statusleiste anpassen</string>
+
+    <!-- Pocket judge -->
+    <string name="pocket_judge_title">Taschenerkennung</string>
+    <string name="pocket_judge_summary">Bildschirm und Tasteneingaben sperren, wenn sich das Gerät in der Tasche befindet</string>
+
+    <!-- Quick settings brightness slider -->
+    <string name="qs_brightness_slider_title">Helligkeitsregler</string>
+    <string name="qs_brightness_slider_hide">Ausblenden</string>
+    <string name="qs_brightness_slider_top">Oben</string>
+    <string name="qs_brightness_slider_bottom">Unten</string>
+
+    <!-- Quick settings brightness icon -->
+    <string name="brightness_icon_title">Symbol für autom. Helligkeit</string>
+    <string name="brightness_icon_summary">Schalter für adaptive Helligkeit in der Nähe des Reglers anzeigen</string>
+</resources>
