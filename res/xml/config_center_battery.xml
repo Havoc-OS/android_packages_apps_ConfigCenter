@@ -25,6 +25,13 @@
         android:summary="@string/smart_pixels_summary"
         android:defaultValue="false" />
 
+    <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
+        android:key="screen_state_toggles_enable_key"
+        android:fragment="com.havoc.config.center.fragments.ScreenStateToggles"
+        android:title="@string/screen_state_toggles_title"
+        android:summary="@string/screen_state_toggles_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:key="aggressive_battery"
         android:title="@string/aggressive_battery_title">
