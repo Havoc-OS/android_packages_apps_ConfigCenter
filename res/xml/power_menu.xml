@@ -39,6 +39,11 @@
         android:title="@string/powermenu_screenshot_title"
         android:defaultValue="false" />
 
+    <com.havoc.support.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_screenrecord"
+        android:title="@string/powermenu_screenrecord_title"
+        android:defaultValue="false" />
+
     <SwitchPreference
         android:key="powermenu_torch"
         android:title="@string/powermenu_torch"
@@ -73,6 +78,13 @@
             android:title="@string/powermenu_screenshot_title"
             android:summary="@string/powermenu_ls_screenshot_summary"
             android:dependency="powermenu_screenshot"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="powermenu_ls_screenrecord"
+            android:title="@string/powermenu_screenrecord_title"
+            android:summary="@string/powermenu_ls_screenrecord_summary"
+            android:dependency="powermenu_screenrecord"
             android:defaultValue="false" />
 
         <SwitchPreference
