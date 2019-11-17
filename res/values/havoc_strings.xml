@@ -464,4 +464,11 @@
     <string name="battery_percentage_on">Enabled</string>
     <string name="battery_percentage_charging">Enabled (While charging)</string>
 
+    <!-- Quick pull down-->
+    <string name="quick_pulldown_title">Quick pulldown</string>
+    <string name="quick_pulldown_summary">%1$s</string>
+    <string name="quick_pulldown_off">Disabled</string>
+    <string name="quick_pulldown_left">Left</string>
+    <string name="quick_pulldown_right">Right</string>
+
 </resources>
