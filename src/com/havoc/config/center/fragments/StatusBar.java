@@ -30,18 +30,36 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.havoc.support.preferences.SystemSettingMasterSwitchPreference;
+
 public class StatusBar extends SettingsPreferenceFragment implements
     Preference.OnPreferenceChangeListener {
+
+    private static final String STATUS_BAR_CLOCK = "status_bar_clock";
+
+    private SystemSettingMasterSwitchPreference mStatusBarClockShow;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.config_center_statusbar);
         PreferenceScreen prefSet = getPreferenceScreen();
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        mStatusBarClockShow = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_CLOCK);
+        mStatusBarClockShow.setChecked((Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_CLOCK, 1) == 1));
+        mStatusBarClockShow.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mStatusBarClockShow) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_CLOCK, value ? 1 : 0);
+            return true;
+		}
         return false;
     }
 
