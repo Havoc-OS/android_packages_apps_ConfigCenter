@@ -69,6 +69,12 @@
             settings:units="KB/s"
             android:dependency="network_traffic_state" />
 
+        <Preference
+            android:key="carrier_label"
+            android:title="@string/carrier_label_settings_title"
+            android:summary="@string/carrier_label_settings_summary"
+            android:fragment="com.havoc.config.center.fragments.CustomCarrierLabel" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
