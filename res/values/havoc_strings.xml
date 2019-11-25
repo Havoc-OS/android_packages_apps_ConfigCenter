@@ -614,4 +614,8 @@
     <string name="status_bar_logo_style_xbox_controller">XBOX Controller</string>
     <string name="status_bar_logo_style_yin_yang">Yin-Yang</string>
 
+    <!-- QS background opacity -->
+    <string name="qs_theme_category">Style</string>
+    <string name="qs_panel_alpha_title">Background opacity</string>
+
 </resources>
