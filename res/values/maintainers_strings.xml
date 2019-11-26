@@ -105,7 +105,7 @@
 
     <string name="device_montana" translatable="false">Moto G5S</string>
     <string name="device_montana_summary" translatable="false">montana\nJoão Lucas (JohnLaff)</string>
-	
+
     <string name="device_sanders" translatable="false">Moto G5S Plus</string>
     <string name="device_sanders_summary" translatable="false">sanders\nRonax (ronaxdevil)</string>
 
@@ -163,8 +163,8 @@
     <string name="device_land" translatable="false">Xiaomi Redmi 3S</string>
     <string name="device_land_summary" translatable="false">land\nSaksham Singh</string>
 
-    <string name="device_markw" translatable="false">Xiaomi Redmi 4 Prime</string>
-    <string name="device_markw_summary" translatable="false">markw\nPéter Róth (Deus)</string>
+    <string name="device_markw" translatable="false">Xiaomi Redmi 4</string>
+    <string name="device_markw_summary" translatable="false">markw\nShihabZzz</string>
 
     <string name="device_rolex" translatable="false">Xiaomi Redmi 4A</string>
     <string name="device_rolex_summary" translatable="false">rolex\nAnkan Ghosh (Ankan005)</string>
@@ -173,7 +173,7 @@
     <string name="device_santoni_summary" translatable="false">santoni\nViraj Patil (Stargazer19)</string>
 
     <string name="device_rosy" translatable="false">Xiaomi Redmi 5</string>
-    <string name="device_rosy_summary" translatable="false">rosy\nSukrut Bhagwat (Sukrut4778)</string>	
+    <string name="device_rosy_summary" translatable="false">rosy\nSukrut Bhagwat (Sukrut4778)</string>
 
     <string name="device_vince" translatable="false">Xiaomi Redmi 5 Plus</string>
     <string name="device_vince_summary" translatable="false">vince\nAbubakar Yagoub (Blacksuan19)</string>
@@ -189,7 +189,7 @@
 
     <string name="device_mido" translatable="false">Xiaomi Redmi Note 4</string>
     <string name="device_mido_summary" translatable="false">mido\nHung Phan (hungphan2001)</string>
-	
+
     <string name="device_whyred" translatable="false">Xiaomi Redmi Note 5 Pro</string>
     <string name="device_whyred_summary" translatable="false">whyred\nRuturaj Kadam</string>
 
