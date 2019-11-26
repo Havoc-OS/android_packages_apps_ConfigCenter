@@ -32,6 +32,13 @@
             android:fragment="com.havoc.config.center.fragments.QuickSettings"
             android:icon="@drawable/ic_settings_quicksettings"/>
 
+        <!-- Screen -->
+        <Preference
+            android:key="screen_category"
+            android:title="@string/screen_title"
+            android:fragment="com.havoc.config.center.fragments.Screen"
+            android:icon="@drawable/ic_settings_screen"/>
+
         <!-- Ambient Display -->
         <Preference
             android:key="ambient_display_custom"
