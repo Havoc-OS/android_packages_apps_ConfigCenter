@@ -14,12 +14,10 @@
      limitations under the License.
 -->
 <resources>
-	
-    <!-- Shortcut picker -->
-    <dimen name="shortcut_picker_left_padding">70dip</dimen>
 
-    <dimen name="alert_dialog_padding_material">20dp</dimen>
-    <dimen name="floating_widget_view_padding">10dp</dimen>
-    <dimen name="floating_widget_window_padding">10dp</dimen>
+    <style name="preference_icon_frame">
+        <item name="android:layout_marginStart">-4dp</item>
+        <item name="android:minWidth">60dp</item>
+    </style>
 
 </resources>

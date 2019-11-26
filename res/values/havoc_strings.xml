@@ -639,4 +639,12 @@
     <string name="show_hd_icon_title">HD icon</string>
     <string name="show_hd_icon_summary">Display HD icon in statusbar instead of VoLTE</string>
 
+    <!-- Per App aspect Ratio -->
+    <string name="action_save">Save</string>
+    <string name="aspect_ratio_category_title">Legacy app scaling</string>
+    <string name="aspect_ratio_apps_enabled_title">Force higher aspect ratio</string>
+    <string name="aspect_ratio_apps_enabled_summary">Allow the selected legacy apps to use full screen</string>
+    <string name="aspect_ratio_apps_list_title">Select apps</string>
+    <string name="aspect_ratio_apps_list_summary">Force full screen for these apps</string>
+
 </resources>
