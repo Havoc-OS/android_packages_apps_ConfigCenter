@@ -252,7 +252,7 @@
     <!-- 4G icon -->
     <string name="statusbar_items_category">Icons</string>
     <string name="show_fourg_icon_title">4G icon</string>
-    <string name="show_fourg_icon_summary">Display 4G icon in signal icon instead LTE</string>
+    <string name="show_fourg_icon_summary">Display 4G icon in statusbar instead of LTE</string>
 
     <!-- Volume swap buttons -->
     <string name="swap_volume_buttons_title">Swap keys</string>
@@ -633,5 +633,9 @@
     <string name="file_header_select_title">Pick image from storage</string>
     <string name="file_header_select_summary">Select an image from internal storage</string>
     <string name="status_bar_custom_header_shadow_title">Darken image</string>
+
+    <!-- Volte icon -->
+    <string name="show_hd_icon_title">HD icon</string>
+    <string name="show_hd_icon_summary">Display HD icon in statusbar instead of VoLTE</string>
 
 </resources>

@@ -37,9 +37,12 @@ public class StatusBar extends SettingsPreferenceFragment implements
 
     private static final String STATUS_BAR_CLOCK = "status_bar_clock";
     private static final String STATUS_BAR_LOGO = "status_bar_logo";
+    private static final String SHOW_HD_ICON = "show_hd_icon";
 
     private SystemSettingMasterSwitchPreference mStatusBarClockShow;
     private SystemSettingMasterSwitchPreference mStatusBarLogo;
+    private SwitchPreference mShowHDVolte;
+    private boolean mConfigShowHDVolteIcon;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -57,6 +60,13 @@ public class StatusBar extends SettingsPreferenceFragment implements
         mStatusBarLogo.setChecked((Settings.System.getInt(resolver,
                 Settings.System.STATUS_BAR_LOGO, 0) == 1));
         mStatusBarLogo.setOnPreferenceChangeListener(this);
+
+        mConfigShowHDVolteIcon = getResources().getBoolean(com.android.internal.R.bool.config_display_hd_volte);
+        int useHDIcon = (mConfigShowHDVolteIcon ? 1 : 0);
+        mShowHDVolte = (SwitchPreference) findPreference(SHOW_HD_ICON);
+        mShowHDVolte.setChecked((Settings.System.getInt(resolver,
+                Settings.System.SHOW_HD_ICON, useHDIcon) == 1));
+        mShowHDVolte.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -70,6 +80,11 @@ public class StatusBar extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUS_BAR_LOGO, value ? 1 : 0);
+            return true;
+        } else if (preference == mShowHDVolte) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.SHOW_HD_ICON, value ? 1 : 0);
             return true;
 		}
         return false;
