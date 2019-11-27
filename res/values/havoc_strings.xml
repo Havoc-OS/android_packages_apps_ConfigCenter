@@ -648,4 +648,11 @@
     <string name="aspect_ratio_apps_list_summary">Force full screen for these apps</string>
     <string name="aspect_ratio_footer_text">Restart the apps in order for the changes to take effect</string>
 
+    <!-- Rounded corners -->
+    <string name="corners_category_title">Corners</string>
+    <string name="corner_radius">Rounded corner radius</string>
+    <string name="content_padding">Corner content padding</string>
+    <string name="corner_fwvals_title">Use framework values</string>
+    <string name="corner_fwvals_summary">Use the default values for your device</string>
+
 </resources>
