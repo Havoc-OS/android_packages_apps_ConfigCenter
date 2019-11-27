@@ -78,6 +78,7 @@ public class Screen extends SettingsPreferenceFragment implements
                 valuesList.addAll(Arrays.asList(valuesString.split(":")));
                 mAspectRatioApps.setVisible(true);
                 mAspectRatioApps.setValues(valuesList);
+                mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.aspect_ratio_footer_text);
             } else {
                 mAspectRatioApps.setVisible(false);
             }
@@ -96,6 +97,7 @@ public class Screen extends SettingsPreferenceFragment implements
                     Settings.System.ASPECT_RATIO_APPS_LIST, TextUtils.join(":", valueList));
                 mAspectRatioApps.setVisible(true);
                 mAspectRatioApps.setValues(valueList);
+                mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.aspect_ratio_footer_text);
             } else {
                 Settings.System.putString(getContentResolver(),
                     Settings.System.ASPECT_RATIO_APPS_LIST, "");
