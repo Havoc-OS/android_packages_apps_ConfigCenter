@@ -39,10 +39,10 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.havoc.Utils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.Utils;
 
 import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
@@ -92,6 +92,15 @@ public class Clock extends SettingsPreferenceFragment
 
         int clockStyle = Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_CLOCK_STYLE, 0);
+        CharSequence[] NonNotchEntries = { getResources().getString(R.string.status_bar_clock_style_left),
+                getResources().getString(R.string.status_bar_clock_style_center),
+                getResources().getString(R.string.status_bar_clock_style_right) };
+        CharSequence[] NotchEntries = { getResources().getString(R.string.status_bar_clock_style_left),
+                getResources().getString(R.string.status_bar_clock_style_right) };
+        CharSequence[] NonNotchValues = {"0", "1" , "2"};
+        CharSequence[] NotchValues = {"0", "2"};
+        mStatusBarClock.setEntries(Utils.hasNotch(getActivity()) ? NotchEntries : NonNotchEntries);
+        mStatusBarClock.setEntryValues(Utils.hasNotch(getActivity()) ? NotchValues : NonNotchValues);
         mStatusBarClock.setValue(String.valueOf(clockStyle));
         mStatusBarClock.setSummary(mStatusBarClock.getEntry());
         mStatusBarClock.setOnPreferenceChangeListener(this);
