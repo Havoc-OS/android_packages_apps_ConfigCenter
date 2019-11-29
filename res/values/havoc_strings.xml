@@ -657,4 +657,8 @@
     <string name="corner_fwvals_title">Use framework values</string>
     <string name="corner_fwvals_summary">Use the default values for your device</string>
 
+    <!-- QS battery estimates -->
+    <string name="qs_show_battery_estimate_title">Battery estimates</string>
+    <string name="qs_show_battery_estimate_summary">Show estimated remaining battery life next to the icon</string>
+
 </resources>
