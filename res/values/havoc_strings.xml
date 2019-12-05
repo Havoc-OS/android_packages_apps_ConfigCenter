@@ -202,7 +202,7 @@
     <string name="quick_settings_vibrate_summary">Vibrate when QS tiles are pressed</string>
 
     <!-- Quick settings tiles columns and rows config --> 
-    <string name="qs_layout_category">Layout</string>
+    <string name="qs_tiles_category">Tiles</string>
     <string name="qs_columns_portrait_title">Columns (Portrait)</string>
     <string name="qs_columns_landscape_title">Columns (Landscape)</string>
     <string name="sysui_qqs_count_title">Columns (Quickbar)</string>
@@ -674,5 +674,16 @@
     <string name="pulse_ambient_light_title">Edge lighting</string>
     <string name="pulse_ambient_light_summary">Light up the side edges of the screen on notification pulse</string>
     <string name="pulse_ambient_light_color_title">Edge light color</string>
+
+    <!-- QS footer icons -->
+    <string name="qs_footer_title">Footer</string>
+    <string name="qs_footer_settings_title">Settings icon</string>
+    <string name="qs_footer_settings_summary">Display Settings icon in quick settings footer</string>
+    <string name="qs_footer_services_title">Running Services icon</string>
+    <string name="qs_footer_services_summary">Display Running Services icon in quick settings footer</string>
+    <string name="qs_footer_user_title">User switcher icon</string>
+    <string name="qs_footer_user_summary">Display Multi-user switcher icon in quick settings footer</string>
+    <string name="qs_footer_edit_title">Edit icon</string>
+    <string name="qs_footer_edit_summary">Display the tile edit icon in quick settings footer</string>
 
 </resources>
