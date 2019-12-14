@@ -41,11 +41,15 @@ public class QuickSettings extends SettingsPreferenceFragment
     private static final String PREF_COLUMNS_PORTRAIT = "qs_columns_portrait";
     private static final String PREF_COLUMNS_LANDSCAPE = "qs_columns_landscape";
     private static final String PREF_COLUMNS_QUICKBAR = "qs_columns_quickbar";
+    private static final String PREF_ROWS_PORTRAIT = "qs_rows_portrait";
+    private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
     private static final String STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
 
     private CustomSeekBarPreference mQsColumnsPortrait;
     private CustomSeekBarPreference mQsColumnsLandscape;
     private CustomSeekBarPreference mQsColumnsQuickbar;	
+    private CustomSeekBarPreference mQsRowsPortrait;
+    private CustomSeekBarPreference mQsRowsLandscape;
     private SystemSettingMasterSwitchPreference mCustomHeader;
 
     @Override
@@ -66,6 +70,18 @@ public class QuickSettings extends SettingsPreferenceFragment
                 Settings.System.QS_LAYOUT_COLUMNS_LANDSCAPE, 4, UserHandle.USER_CURRENT);
         mQsColumnsLandscape.setValue(columnsLandscape);
         mQsColumnsLandscape.setOnPreferenceChangeListener(this);
+
+        mQsRowsPortrait = (CustomSeekBarPreference) findPreference(PREF_ROWS_PORTRAIT);
+        int rowsPortrait = Settings.System.getIntForUser(resolver,
+                Settings.System.QS_LAYOUT_ROWS, 3, UserHandle.USER_CURRENT);
+        mQsRowsPortrait.setValue(rowsPortrait);
+        mQsRowsPortrait.setOnPreferenceChangeListener(this);
+
+        mQsRowsLandscape = (CustomSeekBarPreference) findPreference(PREF_ROWS_LANDSCAPE);
+        int rowsLandscape = Settings.System.getIntForUser(resolver,
+                Settings.System.QS_LAYOUT_ROWS_LANDSCAPE, 2, UserHandle.USER_CURRENT);
+        mQsRowsLandscape.setValue(rowsLandscape);
+        mQsRowsLandscape.setOnPreferenceChangeListener(this);
 
         mQsColumnsQuickbar = (CustomSeekBarPreference) findPreference(PREF_COLUMNS_QUICKBAR);
         int columnsQuickbar = Settings.System.getInt(resolver,
@@ -97,6 +113,16 @@ public class QuickSettings extends SettingsPreferenceFragment
             int value = (Integer) newValue;
             Settings.System.putIntForUser(resolver,
                     Settings.System.QS_LAYOUT_COLUMNS_LANDSCAPE, value, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mQsRowsPortrait) {
+            int value = (Integer) newValue;
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.QS_LAYOUT_ROWS, value, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mQsRowsLandscape) {
+            int value = (Integer) newValue;
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.QS_LAYOUT_ROWS_LANDSCAPE, value, UserHandle.USER_CURRENT);
             return true;
         } else if (preference == mCustomHeader) {
             boolean header = (Boolean) newValue;
