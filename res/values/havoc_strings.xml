@@ -675,7 +675,9 @@
     <string name="notification_screen_title">Screen</string>
     <string name="pulse_ambient_light_title">Edge lighting</string>
     <string name="pulse_ambient_light_summary">Light up the side edges of the screen on notification pulse</string>
-    <string name="pulse_ambient_light_color_title">Edge light color</string>
+    <string name="pulse_ambient_light_color_title">Custom color</string>
+    <string name="pulse_ambient_light_auto_color_title">Automatic color</string>
+    <string name="pulse_ambient_light_auto_color_summary">Set edge light color to the primary color of your wallpaper</string>
 
     <!-- QS footer icons -->
     <string name="qs_footer_title">Footer</string>
