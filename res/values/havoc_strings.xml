@@ -678,6 +678,7 @@
     <string name="pulse_ambient_light_color_title">Custom color</string>
     <string name="pulse_ambient_light_auto_color_title">Automatic color</string>
     <string name="pulse_ambient_light_auto_color_summary">Set edge light color to the primary color of your wallpaper</string>
+    <string name="pulse_ambient_light_duration_title">Lights duration</string>
 
     <!-- QS footer icons -->
     <string name="qs_footer_title">Footer</string>
