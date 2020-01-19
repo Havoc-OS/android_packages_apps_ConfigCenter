@@ -99,6 +99,12 @@
             android:summary="@string/show_qs_on_secure_keyguard_summary"
             android:defaultValue="true"/>
 
+        <com.havoc.support.preferences.SecureSettingSwitchPreference
+            android:key="sysui_keyguard_show_lock_icon"
+            android:title="@string/lockscreen_lock_icon_title"
+            android:summary="@string/lockscreen_lock_icon_summary"
+            android:defaultValue="true" />
+
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_battery_info"
             android:title="@string/lockscreen_battery_info_title"
