@@ -225,9 +225,9 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/notallowedontelegram" />
-        </Preference> 
+        </Preference>
 
-        <Preference 
+        <Preference
             android:id="@+id/device_on7xelte"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_on7xelte_summary"
@@ -247,7 +247,7 @@
                 android:data="https://t.me/jprimero15" />
         </Preference>
 
-        <!--<Preference 
+        <!--<Preference
             android:id="@+id/device_trlte"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_trlte_summary"
@@ -257,7 +257,7 @@
                 android:data="https://t.me/Mba65music" />
         </Preference>
 
-        <Preference 
+        <Preference
             android:id="@+id/device_tblte"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_tblte_summary"
@@ -266,8 +266,8 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/Mba65music" />
         </Preference>
- 
-        <Preference 
+
+        <Preference
             android:id="@+id/device_ks01ltex"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_ks01ltex_summary"
@@ -276,8 +276,8 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/Mba65music" />
         </Preference>
- 
-        <Preference 
+
+        <Preference
             android:id="@+id/device_klte"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_klte_summary"
@@ -544,7 +544,7 @@
             android:title="@string/device_markw" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/rpeter" />
+                android:data="https://t.me/ShihabZzz" />
         </Preference>-->
 
         <!--<Preference
@@ -761,7 +761,7 @@
     <!--<PreferenceCategory
         android:id="@+id/device_category_nubia"
         android:title="@string/device_category_nubia_title" >
-              
+
         <Preference
             android:id="@+id/device_nx531j"
             android:icon="@drawable/havoc_device"
@@ -795,7 +795,7 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/jmjxperia" />
-        </Preference>		
+        </Preference>
     </PreferenceCategory>-->
 
     <PreferenceCategory
