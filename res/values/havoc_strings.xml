@@ -712,4 +712,10 @@
     <string name="lockscreen_lock_icon_title">Lock icon</string>
     <string name="lockscreen_lock_icon_summary">Show current lock status icon on the lockscreen</string>
 
+    <!-- QS blur -->
+    <string name="qs_blur_title">Background blur</string>
+    <string name="qs_blur_summary">Blur the background behind quick settings</string>
+    <string name="qs_blur_alpha_title">Blur alpha</string>
+    <string name="qs_blur_intensity_title">Blur intensity</string>
+
 </resources>

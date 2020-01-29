@@ -62,6 +62,13 @@
             android:summary="@string/status_bar_custom_header_summary"
             android:defaultValue="false" />
 
+        <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
+            android:key="qs_background_blur"
+            android:fragment="com.havoc.config.center.fragments.QsBlur"
+            android:title="@string/qs_blur_title"
+            android:summary="@string/qs_blur_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
