@@ -74,7 +74,7 @@
             android:title="@string/device_bacon">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/ClintT" />
+                android:data="https://t.me/ClintT1" />
         </Preference>
 
         <!--<Preference
