@@ -17,14 +17,14 @@
 
     <!--- Buttons backlight timeout -->
     <string-array name="backlight_timeout_entries">
-        <item>@string/按鍵背光開啟</item>
-        <item>@string/1 秒鐘</item>
-        <item>@string/3 秒鐘</item>
-        <item>@string/5 秒鐘</item>
-        <item>@string/10 秒鐘</item>
-        <item>@string/15 秒鐘</item>
-        <item>@string/20 秒鐘</item>
-        <item>@string/30 秒鐘</item>
+        <item>@string/backlight_timeout_on</item>
+        <item>@string/backlight_timeout_1s</item>
+        <item>@string/backlight_timeout_3s</item>
+        <item>@string/backlight_timeout_5s</item>
+        <item>@string/backlight_timeout_10s</item>
+        <item>@string/backlight_timeout_15s</item>
+        <item>@string/backlight_timeout_20s</item>
+        <item>@string/backlight_timeout_30s</item>
     </string-array>
 
     <string-array name="backlight_timeout_values">
