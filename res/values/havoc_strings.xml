@@ -661,28 +661,28 @@
     <string name="use_old_mobiletype_summary">Show mobile type icon on top of the signal indicator</string>
 
     <!-- Ambient edge lighting -->
-    <string name="notification_screen_title">Screen</string>
-    <string name="pulse_ambient_light_title">Edge lighting</string>
+    <string name="notification_screen_title">螢幕</string>
+    <string name="pulse_ambient_light_title">編輯亮度</string>
     <string name="pulse_ambient_light_summary">Light up the side edges of the screen on notification pulse</string>
-    <string name="pulse_ambient_light_color_title">Custom color</string>
-    <string name="pulse_ambient_light_auto_color_title">Automatic color</string>
-    <string name="pulse_ambient_light_auto_color_summary">Set edge light color to the primary color of your wallpaper</string>
-    <string name="pulse_ambient_light_duration_title">Lights duration</string>
+    <string name="pulse_ambient_light_color_title">自訂顏色</string>
+    <string name="pulse_ambient_light_auto_color_title">自動挑選顏色</string>
+    <string name="pulse_ambient_light_auto_color_summary">將邊緣的顏色設定為桌布的顏色</string>
+    <string name="pulse_ambient_light_duration_title">持續顯示時間</string>
 
     <!-- QS footer icons -->
-    <string name="qs_footer_title">Footer</string>
-    <string name="qs_footer_settings_title">Settings icon</string>
-    <string name="qs_footer_settings_summary">Display Settings icon in quick settings footer</string>
-    <string name="qs_footer_services_title">Running Services icon</string>
-    <string name="qs_footer_services_summary">Display Running Services icon in quick settings footer</string>
-    <string name="qs_footer_user_title">User switcher icon</string>
-    <string name="qs_footer_user_summary">Display Multi-user switcher icon in quick settings footer</string>
-    <string name="qs_footer_edit_title">Edit icon</string>
-    <string name="qs_footer_edit_summary">Display the tile edit icon in quick settings footer</string>
+    <string name="qs_footer_title">補充</string>
+    <string name="qs_footer_settings_title">設定</string>
+    <string name="qs_footer_settings_summary">顯示設定圖示在快速設定欄上</string>
+    <string name="qs_footer_services_title">服務執行中圖示</string>
+    <string name="qs_footer_services_summary">顯示服務執行中圖示在快速設定欄上</string>
+    <string name="qs_footer_user_title">切換使用者</string>
+    <string name="qs_footer_user_summary">在快速設定欄上，顯示多使用者切換按鍵</string>
+    <string name="qs_footer_edit_title">編輯按鍵</string>
+    <string name="qs_footer_edit_summary">在快速設定欄附近，顯示編輯快速設定欄按鍵</string>
 
     <!-- Brightness buttons -->
-    <string name="qs_show_brightness_buttons_title">Brightness control buttons</string>
-    <string name="qs_show_brightness_buttons_summary">Show buttons beside the brightness slider to adjust brightness</string>
+    <string name="qs_show_brightness_buttons_title">亮度控制按鍵</string>
+    <string name="qs_show_brightness_buttons_summary">在亮度控制條附近顯示按鍵以控制亮度</string>
 
     <!-- Ambient visualizer -->
     <string name="ambient_visualizer_title">環境顯示</string>
@@ -695,8 +695,8 @@
     <string name="flashlight_on_call_not_dnd">僅在鈴聲開啟時</string>
     <string name="flashlight_on_call_dnd">僅在 DND 模式開啟時</string>
     <string name="flashlight_on_call_always">永遠</string>
-    <string name="flashlight_on_call_wait_title">Blink for call waiting</string>
-    <string name="flashlight_on_call_wait_summary">Pulse flash when there\'s a call waiting</string>
+    <string name="flashlight_on_call_wait_title">在等待通話時閃爍</string>
+    <string name="flashlight_on_call_wait_summary">在等待通話時閃爍</string>
 
     <!-- Screenshot -->
     <string name="screenshot_type_title">截圖樣式</string>
