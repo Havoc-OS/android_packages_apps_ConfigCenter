@@ -663,7 +663,7 @@
     <!-- Ambient edge lighting -->
     <string name="notification_screen_title">螢幕</string>
     <string name="pulse_ambient_light_title">編輯亮度</string>
-    <string name="pulse_ambient_light_summary">Light up the side edges of the screen on notification pulse</string>
+    <string name="pulse_ambient_light_summary">當通知顯示於螢幕通知欄時 側邊感測邊緣亮起</string>
     <string name="pulse_ambient_light_color_title">自訂顏色</string>
     <string name="pulse_ambient_light_auto_color_title">自動挑選顏色</string>
     <string name="pulse_ambient_light_auto_color_summary">將邊緣的顏色設定為桌布的顏色</string>
