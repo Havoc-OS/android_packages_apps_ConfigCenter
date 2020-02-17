@@ -93,6 +93,15 @@
             settings:units="sec"
             android:dependency="pulse_ambient_light" />
 
+        <com.havoc.support.preferences.SystemSettingSeekBarPreference
+            android:key="pulse_ambient_light_repeat_count"
+            android:title="@string/pulse_ambient_light_repeat_count_title"
+            android:persistent="false"
+            android:defaultValue="0"
+            android:max="10"
+            settings:min="0"
+            android:dependency="pulse_ambient_light" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -709,4 +709,6 @@
     <string name="lockscreen_lock_icon_title">Lock icon</string>
     <string name="lockscreen_lock_icon_summary">Show current lock status icon on the lockscreen</string>
 
+    <string name="pulse_ambient_light_repeat_count_title">Lights repeat count</string>
+
 </resources>
