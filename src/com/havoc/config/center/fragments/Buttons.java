@@ -26,6 +26,7 @@ import android.widget.Toast;
 import androidx.preference.*;
 
 import com.android.internal.logging.nano.MetricsProto; 
+import com.android.internal.util.havoc.Utils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -50,6 +51,7 @@ public class Buttons extends SettingsPreferenceFragment
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.config_center_buttons);
         resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefSet = getPreferenceScreen();
 
         mTorchPowerButton = (ListPreference) findPreference(TORCH_POWER_BUTTON_GESTURE);
         int mTorchPowerButtonValue = Settings.Secure.getInt(resolver,
@@ -65,6 +67,10 @@ public class Buttons extends SettingsPreferenceFragment
             mNavBarLayout.setValue(navBarLayoutValue);
         } else {
             mNavBarLayout.setValueIndex(0);
+        }
+
+        if (!Utils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
+            prefSet.removePreference(mNavBarLayout);
         }
 
         final boolean defaultToNavigationBar = getResources().getBoolean(
