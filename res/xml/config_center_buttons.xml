@@ -43,6 +43,13 @@
             android:dependency="force_show_navbar" />
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="navigation_bar_menu_arrow_keys"
+            android:title="@string/navigation_bar_arrow_keys_title"
+            android:summary="@string/navigation_bar_arrow_keys_summary"
+            android:dependency="force_show_navbar"
+            android:defaultValue="false" />
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="swap_navigation_keys"
             android:title="@string/swap_navigation_keys_title"
             android:summary="@string/swap_navigation_keys_title_summary"
