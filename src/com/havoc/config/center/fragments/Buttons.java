@@ -38,10 +38,12 @@ public class Buttons extends SettingsPreferenceFragment
     private static final String TORCH_POWER_BUTTON_GESTURE = "torch_power_button_gesture";
     private static final String NAV_BAR_LAYOUT = "nav_bar_layout";
     private static final String SYSUI_NAV_BAR = "sysui_nav_bar";
+    private static final String KEY_NAVIGATION_BAR_ENABLED = "force_show_navbar";
 
     private ContentResolver resolver;
     private ListPreference mTorchPowerButton;
     private ListPreference mNavBarLayout;
+    private SwitchPreference mNavigationBar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,6 +67,17 @@ public class Buttons extends SettingsPreferenceFragment
             mNavBarLayout.setValueIndex(0);
         }
 
+        final boolean defaultToNavigationBar = getResources().getBoolean(
+                com.android.internal.R.bool.config_showNavigationBar);
+        final boolean navigationBarEnabled = Settings.System.getIntForUser(
+                resolver, Settings.System.FORCE_SHOW_NAVBAR,
+                defaultToNavigationBar ? 1 : 0, UserHandle.USER_CURRENT) != 0;
+
+        mNavigationBar = (SwitchPreference) findPreference(KEY_NAVIGATION_BAR_ENABLED);
+        mNavigationBar.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.FORCE_SHOW_NAVBAR,
+                defaultToNavigationBar ? 1 : 0) == 1));
+        mNavigationBar.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -90,6 +103,11 @@ public class Buttons extends SettingsPreferenceFragment
             return true;
         } else if (preference == mNavBarLayout) {
             Settings.Secure.putString(resolver, SYSUI_NAV_BAR, (String) objValue);
+            return true;
+        } else if (preference == mNavigationBar) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FORCE_SHOW_NAVBAR, value ? 1 : 0);
             return true;
         }
         return false;

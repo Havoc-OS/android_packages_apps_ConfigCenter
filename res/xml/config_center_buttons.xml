@@ -27,6 +27,11 @@
             android:title="@string/hardware_keys_disable_title"
             android:summary="@string/hardware_keys_disable_summary" />
 
+        <SwitchPreference
+            android:key="force_show_navbar"
+            android:title="@string/navigation_bar_title"
+            android:summary="@string/navigation_bar_summary" />
+
         <ListPreference
             android:key="nav_bar_layout"
             android:title="@string/nav_bar_layout"
@@ -34,7 +39,8 @@
             android:defaultValue="default"
             android:persistent="false"
             android:entries="@array/nav_bar_layouts"
-            android:entryValues="@array/nav_bar_layouts_values" />
+            android:entryValues="@array/nav_bar_layouts_values"
+            android:dependency="force_show_navbar" />
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="swap_navigation_keys"
@@ -46,7 +52,8 @@
             android:key="sysui_nav_bar_inverse"
             android:title="@string/navbar_invert_layout_title"
             android:summary="@string/navbar_invert_layout_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            android:dependency="force_show_navbar" />
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="anbi_enabled_option"

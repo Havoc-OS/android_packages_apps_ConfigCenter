@@ -671,4 +671,8 @@
     <string name="hardware_keys_disable_title">Disable keys</string>
     <string name="hardware_keys_disable_summary">Disable the device hardware keys</string>
 
+    <!-- Navigation bar -->
+    <string name="navigation_bar_title">Navigation bar</string>
+    <string name="navigation_bar_summary">Show on-screen navigation keys</string>
+
 </resources>
