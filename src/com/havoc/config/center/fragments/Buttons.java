@@ -46,6 +46,7 @@ public class Buttons extends SettingsPreferenceFragment
     private static final String KEY_NAVIGATION_BAR_ENABLED = "force_show_navbar";
     private static final String KEY_NAVIGATION_BAR_ARROWS = "navigation_bar_menu_arrow_keys";
     private static final String KEY_SWAP_NAVIGATION_KEYS = "swap_navigation_keys";
+    private static final String KEY_GESTURE_SYSTEM = "gesture_system_navigation";
 
     private static final String KEY_BACK_LONG_PRESS_ACTION = "back_key_long_press";
     private static final String KEY_BACK_DOUBLE_TAP_ACTION = "back_key_double_tap";
@@ -90,6 +91,7 @@ public class Buttons extends SettingsPreferenceFragment
     private ListPreference mAssistDoubleTap;
     private ListPreference mTorchPowerButton;
     private ListPreference mNavBarLayout;
+    private Preference mGestureSystemNavigation;
     private PreferenceCategory mHomeCategory;
     private PreferenceCategory mBackCategory;
     private PreferenceCategory mMenuCategory;
@@ -189,6 +191,8 @@ public class Buttons extends SettingsPreferenceFragment
                 || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_wide_back_nopill")) {
             prefSet.removePreference(mNavBarLayout);
         }
+
+        mGestureSystemNavigation = (Preference) findPreference(KEY_GESTURE_SYSTEM);
 
         mNavigationArrows = (SystemSettingSwitchPreference) findPreference(KEY_NAVIGATION_BAR_ARROWS);
         if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_nopill")) {
@@ -521,6 +525,38 @@ public class Buttons extends SettingsPreferenceFragment
                 mNavigationArrows.setEnabled(false);
                 mSwapHardwareKeys.setEnabled(true);
             }
+        }
+
+        if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_nopill")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_wide_back")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_extra_wide_back")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_extra_wide_back_nopill")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_narrow_back")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_narrow_back_nopill")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_wide_back_nopill")) {
+            mHomeCategory.setEnabled(false);
+            mBackCategory.setEnabled(false);
+            mMenuCategory.setEnabled(false);
+            mAssistCategory.setEnabled(false);
+            mAppSwitchCategory.setEnabled(false);
+            mCameraCategory.setEnabled(false);
+        }
+
+        if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
+            mGestureSystemNavigation.setSummary(getString(R.string.legacy_navigation_title));
+        } else if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton")) {
+            mGestureSystemNavigation.setSummary(getString(R.string.swipe_up_to_switch_apps_title));
+        } else if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_nopill")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_wide_back")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_extra_wide_back")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_extra_wide_back_nopill")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_narrow_back")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_narrow_back_nopill")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_wide_back_nopill")) {
+            mGestureSystemNavigation.setSummary(getString(R.string.edge_to_edge_navigation_title));
         }
     }
 }
