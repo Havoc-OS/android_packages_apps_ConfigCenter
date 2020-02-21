@@ -42,14 +42,12 @@ public class Notifications extends SettingsPreferenceFragment
     private static final String LIGHTS_CATEGORY = "notification_lights";
     private static final String BATTERY_LIGHT_ENABLED = "battery_light_enabled";
     private static final String HEADS_UP_NOTIFICATIONS_ENABLED = "heads_up_notifications_enabled";
-    private static final String PULSE_AMBIENT_LIGHT_COLOR = "pulse_ambient_light_color";
-    private static final String PULSE_AMBIENT_LIGHT_DURATION = "pulse_ambient_light_duration";
+    private static final String PULSE_AMBIENT_LIGHT = "pulse_ambient_light";
 
     private PreferenceCategory mLightsCategory;
     private SystemSettingMasterSwitchPreference mBatteryLightEnabled;
     private GlobalSettingMasterSwitchPreference mHeadsUpEnabled;
-    private ColorPickerPreference mEdgeLightColorPreference;
-    private CustomSeekBarPreference mEdgeLightDurationPreference;
+    private SystemSettingMasterSwitchPreference mEdgeLightEnabled;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,23 +71,11 @@ public class Notifications extends SettingsPreferenceFragment
             getPreferenceScreen().removePreference(mLightsCategory);
         }
 
-        mEdgeLightColorPreference = (ColorPickerPreference) findPreference(PULSE_AMBIENT_LIGHT_COLOR);
-        int edgeLightColor = Settings.System.getInt(getContentResolver(),
-                Settings.System.PULSE_AMBIENT_LIGHT_COLOR, 0xFF3980FF);
-        mEdgeLightColorPreference.setNewPreviewColor(edgeLightColor);
-        String edgeLightColorHex = String.format("#%08x", (0xFF3980FF & edgeLightColor));
-        if (edgeLightColorHex.equals("#ff3980ff")) {
-            mEdgeLightColorPreference.setSummary(R.string.default_string);
-        } else {
-            mEdgeLightColorPreference.setSummary(edgeLightColorHex);
-        }
-        mEdgeLightColorPreference.setOnPreferenceChangeListener(this);
-
-        mEdgeLightDurationPreference = (CustomSeekBarPreference) findPreference(PULSE_AMBIENT_LIGHT_DURATION);
-        int lightDuration = Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.PULSE_AMBIENT_LIGHT_DURATION, 2, UserHandle.USER_CURRENT);
-        mEdgeLightDurationPreference.setValue(lightDuration);
-        mEdgeLightDurationPreference.setOnPreferenceChangeListener(this);
+        mEdgeLightEnabled = (SystemSettingMasterSwitchPreference) findPreference(PULSE_AMBIENT_LIGHT);
+        mEdgeLightEnabled.setOnPreferenceChangeListener(this);
+        int edgeLightEnabled = Settings.System.getInt(getContentResolver(),
+                PULSE_AMBIENT_LIGHT, 0);
+        mEdgeLightEnabled.setChecked(edgeLightEnabled != 0);
     }
 
     @Override
@@ -109,22 +95,10 @@ public class Notifications extends SettingsPreferenceFragment
             Settings.System.putInt(getContentResolver(),
 		            BATTERY_LIGHT_ENABLED, value ? 1 : 0);
             return true;
-        } else if (preference == mEdgeLightColorPreference) {
-            String hex = ColorPickerPreference.convertToARGB(
-                    Integer.valueOf(String.valueOf(newValue)));
-            if (hex.equals("#ff3980ff")) {
-                preference.setSummary(R.string.default_string);
-            } else {
-                preference.setSummary(hex);
-            }
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
+        } else if (preference == mEdgeLightEnabled) {
+            boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(),
-                    Settings.System.PULSE_AMBIENT_LIGHT_COLOR, intHex);
-            return true;
-        } else if (preference == mEdgeLightDurationPreference) {
-            int value = (Integer) newValue;
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.PULSE_AMBIENT_LIGHT_DURATION, value, UserHandle.USER_CURRENT);
+                    PULSE_AMBIENT_LIGHT, value ? 1 : 0);
             return true;
         }
         return false;

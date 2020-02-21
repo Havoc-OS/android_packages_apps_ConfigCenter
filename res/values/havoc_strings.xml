@@ -661,9 +661,12 @@
     <string name="pulse_ambient_light_title">Edge lighting</string>
     <string name="pulse_ambient_light_summary">Light up the side edges of the screen on notification pulse</string>
     <string name="pulse_ambient_light_color_title">Custom color</string>
-    <string name="pulse_ambient_light_auto_color_title">Automatic color</string>
-    <string name="pulse_ambient_light_auto_color_summary">Set edge light color to the primary color of your wallpaper</string>
-    <string name="pulse_ambient_light_duration_title">Lights duration</string>
+    <string name="pulse_ambient_light_color_mode_title">Light color</string>
+    <string name="pulse_ambient_light_color_mode_wall">Automatic (Wallpaper Based)</string>
+    <string name="pulse_ambient_light_color_mode_accent">Accent</string>
+    <string name="pulse_ambient_light_color_mode_custom">Custom</string>
+    <string name="pulse_ambient_light_duration_title">Light duration</string>
+    <string name="pulse_ambient_light_repeat_count_title">Light repeat count</string>
 
     <!-- QS footer icons -->
     <string name="qs_footer_title">Footer</string>
@@ -708,7 +711,5 @@
     <!-- Lock icon -->
     <string name="lockscreen_lock_icon_title">Lock icon</string>
     <string name="lockscreen_lock_icon_summary">Show current lock status icon on the lockscreen</string>
-
-    <string name="pulse_ambient_light_repeat_count_title">Lights repeat count</string>
 
 </resources>
