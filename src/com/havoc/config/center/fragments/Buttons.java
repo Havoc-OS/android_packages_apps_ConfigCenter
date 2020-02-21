@@ -43,12 +43,16 @@ public class Buttons extends SettingsPreferenceFragment
     private static final String SYSUI_NAV_BAR = "sysui_nav_bar";
     private static final String KEY_NAVIGATION_BAR_ENABLED = "force_show_navbar";
     private static final String KEY_NAVIGATION_BAR_ARROWS = "navigation_bar_menu_arrow_keys";
+    private static final String KEY_SWAP_NAVIGATION_KEYS = "swap_navigation_keys";
 
     private ContentResolver resolver;
     private ListPreference mTorchPowerButton;
     private ListPreference mNavBarLayout;
     private SwitchPreference mNavigationBar;
     private SystemSettingSwitchPreference mNavigationArrows;
+    private SystemSettingSwitchPreference mSwapHardwareKeys;
+
+    private int deviceKeys;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -83,6 +87,9 @@ public class Buttons extends SettingsPreferenceFragment
                 resolver, Settings.System.FORCE_SHOW_NAVBAR,
                 defaultToNavigationBar ? 1 : 0, UserHandle.USER_CURRENT) != 0;
 
+        deviceKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+
         mNavigationBar = (SwitchPreference) findPreference(KEY_NAVIGATION_BAR_ENABLED);
         mNavigationBar.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.FORCE_SHOW_NAVBAR,
@@ -93,6 +100,13 @@ public class Buttons extends SettingsPreferenceFragment
         if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_nopill")) {
             prefSet.removePreference(mNavigationArrows);
         }
+
+        mSwapHardwareKeys = (SystemSettingSwitchPreference) findPreference(KEY_SWAP_NAVIGATION_KEYS);
+
+        if (deviceKeys == 0) {
+            prefSet.removePreference(mSwapHardwareKeys);
+        }
+        updateOptions();
     }
 
     @Override
@@ -123,6 +137,7 @@ public class Buttons extends SettingsPreferenceFragment
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.FORCE_SHOW_NAVBAR, value ? 1 : 0);
+            updateOptions();
             return true;
         }
         return false;
@@ -131,5 +146,33 @@ public class Buttons extends SettingsPreferenceFragment
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.HAVOC_SETTINGS;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateOptions();
+
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        updateOptions();
+    }
+
+    private void updateOptions() {
+        resolver = getActivity().getContentResolver();
+        boolean defaultToNavigationBar = getResources().getBoolean(
+                com.android.internal.R.bool.config_showNavigationBar);
+        boolean navigationBarEnabled = Settings.System.getIntForUser(
+                resolver, Settings.System.FORCE_SHOW_NAVBAR,
+                defaultToNavigationBar ? 1 : 0, UserHandle.USER_CURRENT) != 0;
+
+        if (navigationBarEnabled) {
+            mSwapHardwareKeys.setEnabled(false);
+        } else {
+            mSwapHardwareKeys.setEnabled(true);
+        }
     }
 }
