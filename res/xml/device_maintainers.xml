@@ -74,7 +74,7 @@
             android:title="@string/device_bacon">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/ClintT" />
+                android:data="https://t.me/ClintT1" />
         </Preference>
 
         <!--<Preference
@@ -124,7 +124,7 @@
             android:title="@string/device_enchilada">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/SKULSHADY" />
+                android:data="https://t.me/rdjr5" />
         </Preference>
 
         <Preference
@@ -144,7 +144,7 @@
             android:title="@string/device_guacamoleb">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/SKULSHADY" />
+                android:data="https://t.me/Travisholt92" />
         </Preference>
 
         <Preference
