@@ -69,6 +69,13 @@
             android:defaultValue="false"
             android:dependency="force_show_navbar" />
 
+        <Preference
+            android:key="button_brightness"
+            android:title="@string/button_backlight_title"
+            android:summary="@string/button_backlight_summary"
+            android:persistent="false"
+            android:fragment="com.havoc.config.center.fragments.ButtonBrightness" />
+
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="anbi_enabled_option"
             android:title="@string/anbi_title"
