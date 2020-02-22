@@ -81,6 +81,9 @@
     <string name="action_qs_panel">QS panel</string>
     <string name="action_app_action">Application</string>
     <string name="action_ringer_modes">Ringer modes</string>
+    <string name="app_picker_dialog_title">Select an app</string>
+    <string name="long_press_custom_app_title">Long press custom app</string>
+    <string name="double_tap_custom_app_title">Double tap custom app</string>
 
     <!-- Lockscreen Categories -->
     <string name="ls_disable_elements">Elements</string>
