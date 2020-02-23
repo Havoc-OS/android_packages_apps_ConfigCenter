@@ -330,7 +330,7 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/JohnLaff" />
-        </Preference>
+        </Preference>-->
 
         <Preference
             android:id="@+id/device_sanders"
@@ -342,7 +342,7 @@
                 android:data="https://t.me/Ronax" />
         </Preference>
 
-        <Preference
+        <!--<Preference
             android:id="@+id/device_evert"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_evert_summary"
