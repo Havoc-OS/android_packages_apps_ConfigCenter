@@ -468,7 +468,7 @@
     <!-- Gaming mode -->
     <string name="gaming_mode_title">遊戲模式</string>
     <string name="gaming_mode_summary">自定義遊戲模式下的效能</string>
-    <string name="gaming_mode_app_picker_title">自動為這些應用程式打開/string>
+    <string name="gaming_mode_app_picker_title">自動為這些應用程式打開</string>
     <string name="add_gaming_mode_package_title">添加程式到遊戲模式</string>
     <string name="add_gaming_mode_package_summary">遊戲模式將會在這些應用程式打開時啟動，也會在這些應用程式關閉時一併關閉</string>
     <string name="gaming_mode_headsup_title">阻擋通知</string>
