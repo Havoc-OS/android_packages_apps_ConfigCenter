@@ -20,30 +20,28 @@
 	android:title="@string/pulse_ambient_light_title">
 
         <ListPreference
-            android:key="pulse_ambient_light_color_mode"
+            android:key="ambient_light_color"
             android:title="@string/pulse_ambient_light_color_mode_title"
             android:entries="@array/pulse_ambient_light_color_mode_entries"
             android:entryValues="@array/pulse_ambient_light_color_mode_values"
-            android:defaultValue="1" />
+            android:defaultValue="0" />
 
         <com.havoc.support.colorpicker.ColorPickerPreference
-            android:key="pulse_ambient_light_color"
+            android:key="ambient_light_custom_color"
             android:title="@string/pulse_ambient_light_color_title"
             settings:defaultColorValue="0xFF3980FF" />
 
         <com.havoc.support.preferences.CustomSeekBarPreference
-            android:key="pulse_ambient_light_duration"
+            android:key="ambient_light_duration"
             android:title="@string/pulse_ambient_light_duration_title"
-            android:persistent="false"
             android:defaultValue="2"
             android:max="10"
             settings:min="1"
             settings:units="sec" />
 
         <com.havoc.support.preferences.CustomSeekBarPreference
-            android:key="pulse_ambient_light_repeat_count"
+            android:key="ambient_light_repeat_count"
             android:title="@string/pulse_ambient_light_repeat_count_title"
-            android:persistent="false"
             android:defaultValue="0"
             android:max="10"
             settings:min="0" />
