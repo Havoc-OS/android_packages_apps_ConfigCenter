@@ -19,6 +19,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title="@string/pulse_ambient_light_title">
 
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="ambient_light_pulse_for_all"
+            android:title="@string/pulse_ambient_light_show_always_title"
+            android:summary="@string/pulse_ambient_light_show_always_summary"
+            android:defaultValue="false" />
+
         <ListPreference
             android:key="ambient_light_color"
             android:title="@string/pulse_ambient_light_color_mode_title"
