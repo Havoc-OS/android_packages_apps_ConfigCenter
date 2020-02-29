@@ -196,8 +196,7 @@ public class Buttons extends SettingsPreferenceFragment
         mButtonBrightness = (Preference) findPreference(KEY_BUTTON_BRIGHTNESS);
         mGestureSystemNavigation = (Preference) findPreference(KEY_GESTURE_SYSTEM);
 
-        if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton")
-                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural")
+        if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural")
                 || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_nopill")
                 || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_wide_back")
                 || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_extra_wide_back")
@@ -614,7 +613,7 @@ public class Buttons extends SettingsPreferenceFragment
         }
 
         if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton") && navigationBar) {
-            homeCategory.setEnabled(false);
+            homeCategory.setEnabled(true);
             backCategory.setEnabled(true);
             menuCategory.setEnabled(false);
             assistCategory.setEnabled(false);
