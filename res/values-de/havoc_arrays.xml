@@ -17,15 +17,15 @@
 
     <!-- Smart Pixels -->
     <string-array name="smart_pixels_shift_times">
-        <item>15 seconds</item>
-        <item>30 seconds</item>
+        <item>15 Sekunden</item>
+        <item>30 Sekunden</item>
         <item>1 Minute</item>
         <item>2 Minuten</item>
         <item>5 Minuten</item>
-        <item>10 Minutens</item>
+        <item>10 Minuten</item>
         <item>20 Minuten</item>
         <item>30 Minuten</item>
-        <item>1 Stunden</item>
+        <item>1 Stunde</item>
     </string-array>
 
 </resources>
