@@ -94,14 +94,13 @@
 
     <!-- ANBI -->
     <string name="anbi_title">Accidental touch</string>
-    <string name="anbi_summary">Prevent interaction with navigation buttons while the screen is being touched</string>
+    <string name="anbi_summary">Prevent interaction with the hardware buttons while the screen is being used</string>
 
-    <string name="volume_title">Volume Rockers</string>
-    <string name="volume_summary">Customize settings for volume buttons</string>
+    <string name="volume_title">Volume Buttons</string>
 
     <!-- Volume rocker music control -->
     <string name="volume_rocker_music_controls_title">Playback control</string>
-    <string name="volume_rocker_music_controls_summary">When the screen is off, long-pressing the volume keys will seek music tracks</string>
+    <string name="volume_rocker_music_controls_summary">Long-press the volume keys to seek music tracks when the screen is off</string>
 
     <!-- Volume rocker wake -->
     <string name="volume_rocker_wake_title">Wake device</string>
@@ -213,7 +212,7 @@
 
     <!-- Volume swap buttons -->
     <string name="swap_volume_buttons_title">Swap keys</string>
-    <string name="swap_volume_buttons_summary">Swap volume keys when the device is rotated</string>
+    <string name="swap_volume_buttons_summary">Invert volume keys when the device is rotated</string>
     
     <!-- Lock screen cover art -->
     <string name="lockscreen_media_category">Music</string>
@@ -619,7 +618,7 @@
 
     <!-- Swap navigation keys -->
     <string name="swap_navigation_keys_title">Swap keys</string>
-    <string name="swap_navigation_keys_title_summary">Swap back and recents hardware keys</string>
+    <string name="swap_navigation_keys_title_summary">Invert back and recents hardware keys</string>
 
     <!-- Old mobile type icons -->
     <string name="use_old_mobiletype_title">Small mobile type icon</string>
@@ -691,14 +690,15 @@
     <string name="qs_blur_intensity_title">Blur intensity</string>
 
     <!-- HW keys -->
-    <string name="hardware_keys_disable_title">Disable keys</string>
-    <string name="hardware_keys_disable_summary">Disable the device hardware keys</string>
+    <string name="hardware_keys_title">Hardware</string>
+    <string name="hardware_keys_disable_title">Hardware keys</string>
+    <string name="hardware_keys_disable_summary">Use the device hardware keys for navigation</string>
 
     <!-- Navigation bar -->
     <string name="navigation_bar_title">Navigation bar</string>
     <string name="navigation_bar_summary">Show on-screen navigation keys</string>
-    <string name="navigation_bar_arrow_keys_title">Show arrow keys while typing</string>
-    <string name="navigation_bar_arrow_keys_summary">Display left and right cursor buttons in navigation bar while typing</string>
+    <string name="navigation_bar_arrow_keys_title">Arrow keys</string>
+    <string name="navigation_bar_arrow_keys_summary">Show left &amp; right arrows to control the cursor while typing</string>
     <string name="home_key_title">Home button</string>
     <string name="back_key_title">Back button</string>
     <string name="menu_key_title">Menu button</string>
@@ -710,7 +710,7 @@
     <string name="double_tap_title">Double tap action</string>
 
     <!-- Button backlight -->
-    <string name="button_backlight_title">Backlight</string>
+    <string name="button_backlight_title">Button backlight</string>
     <string name="button_backlight_summary">Configure backlight for capacitive keys</string>
     <string name="button_backlight_on_touch_only_title">Button touch</string>
     <string name="button_backlight_on_touch_only_summary">Enable backlight with timeout only on button touch</string>
