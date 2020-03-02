@@ -39,6 +39,7 @@ import com.android.internal.util.havoc.Utils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.havoc.support.preferences.SystemSettingListPreference;
 import com.havoc.support.preferences.SecureSettingSwitchPreference;
 import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
@@ -80,6 +81,8 @@ public class Buttons extends SettingsPreferenceFragment
     private static final String KEY_CATEGORY_ASSIST        = "assist_key";
     private static final String KEY_CATEGORY_APP_SWITCH    = "app_switch_key";
     private static final String KEY_CATEGORY_CAMERA        = "camera_key";
+    private static final String KEY_CATEGORY_LEFT_SWIPE    = "left_swipe";
+    private static final String KEY_CATEGORY_RIGHT_SWIPE   = "right_swipe";
     private static final String KEY_CATEGORY_HW_KEYS       = "hw_keys";
 
     private ContentResolver resolver;
@@ -103,6 +106,8 @@ public class Buttons extends SettingsPreferenceFragment
     private ListPreference mCameraDoubleTap;
     private ListPreference mAssistLongPress;
     private ListPreference mAssistDoubleTap;
+    private ListPreference mLeftSwipeActions;
+    private ListPreference mRightSwipeActions;
 
     private Preference mAppSwitchLongPressCustomApp;
     private Preference mAppSwitchDoubleTapCustomApp;
@@ -113,6 +118,8 @@ public class Buttons extends SettingsPreferenceFragment
     private Preference mHomeDoubleTapCustomApp;
     private ListPreference mTorchPowerButton;
     private ListPreference mNavBarLayout;
+    private Preference mLeftSwipeAppSelection;
+    private Preference mRightSwipeAppSelection;
 
     private PreferenceCategory homeCategory;
     private PreferenceCategory backCategory;
@@ -120,11 +127,15 @@ public class Buttons extends SettingsPreferenceFragment
     private PreferenceCategory assistCategory;
     private PreferenceCategory appSwitchCategory;
     private PreferenceCategory cameraCategory;
+    private PreferenceCategory leftSwipeCategory;
+    private PreferenceCategory rightSwipeCategory;
     private PreferenceCategory hwKeysCategory;
 
     private SwitchPreference mNavigationBar;
     private SecureSettingSwitchPreference mSwapNavbar;
     private SystemSettingSwitchPreference mNavigationArrowKeys;
+    private SystemSettingListPreference mTimeout;
+    private SystemSettingSwitchPreference mExtendedSwipe;
 
     private int deviceKeys;
 
@@ -198,6 +209,8 @@ public class Buttons extends SettingsPreferenceFragment
         assistCategory = (PreferenceCategory) findPreference(KEY_CATEGORY_ASSIST);
         appSwitchCategory = (PreferenceCategory) findPreference(KEY_CATEGORY_APP_SWITCH);
         cameraCategory = (PreferenceCategory) findPreference(KEY_CATEGORY_CAMERA);
+        leftSwipeCategory = (PreferenceCategory) findPreference(KEY_CATEGORY_LEFT_SWIPE);
+        rightSwipeCategory = (PreferenceCategory) findPreference(KEY_CATEGORY_RIGHT_SWIPE);
         hwKeysCategory = (PreferenceCategory) findPreference(KEY_CATEGORY_HW_KEYS);
 
         mGestureSystemNavigation = (Preference) findPreference(KEY_GESTURE_SYSTEM);
@@ -324,6 +337,43 @@ public class Buttons extends SettingsPreferenceFragment
         mAssistDoubleTap.setSummary(mAssistDoubleTap.getEntry());
         mAssistDoubleTap.setOnPreferenceChangeListener(this);
 
+        int leftSwipeActions = Settings.System.getIntForUser(resolver,
+                Settings.System.LEFT_LONG_BACK_SWIPE_ACTION, 0,
+                UserHandle.USER_CURRENT);
+        mLeftSwipeActions = (ListPreference) findPreference("left_swipe_actions");
+        mLeftSwipeActions.setValue(Integer.toString(leftSwipeActions));
+        mLeftSwipeActions.setSummary(mLeftSwipeActions.getEntry());
+        mLeftSwipeActions.setOnPreferenceChangeListener(this);
+
+        int rightSwipeActions = Settings.System.getIntForUser(resolver,
+                Settings.System.RIGHT_LONG_BACK_SWIPE_ACTION, 0,
+                UserHandle.USER_CURRENT);
+        mRightSwipeActions = (ListPreference) findPreference("right_swipe_actions");
+        mRightSwipeActions.setValue(Integer.toString(rightSwipeActions));
+        mRightSwipeActions.setSummary(mRightSwipeActions.getEntry());
+        mRightSwipeActions.setOnPreferenceChangeListener(this);
+
+        mLeftSwipeAppSelection = (Preference) findPreference("left_swipe_app_action");
+        boolean isAppSelection = Settings.System.getIntForUser(resolver,
+                Settings.System.LEFT_LONG_BACK_SWIPE_ACTION, 0, UserHandle.USER_CURRENT) == 5/*action_app_action*/;
+        mLeftSwipeAppSelection.setEnabled(isAppSelection);
+
+        mRightSwipeAppSelection = (Preference) findPreference("right_swipe_app_action");
+        isAppSelection = Settings.System.getIntForUser(resolver,
+                Settings.System.RIGHT_LONG_BACK_SWIPE_ACTION, 0, UserHandle.USER_CURRENT) == 5/*action_app_action*/;
+        mRightSwipeAppSelection.setEnabled(isAppSelection);
+        customAppCheck();
+
+        mTimeout = (SystemSettingListPreference) findPreference("long_back_swipe_timeout");
+
+        mExtendedSwipe = (SystemSettingSwitchPreference) findPreference("back_swipe_extended");
+        boolean extendedSwipe = Settings.System.getIntForUser(resolver,
+                Settings.System.BACK_SWIPE_EXTENDED, 0,
+                UserHandle.USER_CURRENT) != 0;
+        mExtendedSwipe.setChecked(extendedSwipe);
+        mExtendedSwipe.setOnPreferenceChangeListener(this);
+        mTimeout.setEnabled(!mExtendedSwipe.isChecked());
+
         if (!hasMenu && menuCategory != null) {
             prefSet.removePreference(menuCategory);
         }
@@ -361,6 +411,10 @@ public class Buttons extends SettingsPreferenceFragment
                 [appswitchlongpress].equals("16"));
         mAppSwitchDoubleTapCustomApp.setVisible(mAppSwitchDoubleTap.getEntryValues()
                 [appswitchdoubletap].equals("16"));
+        mLeftSwipeAppSelection.setVisible(mLeftSwipeActions.getEntryValues()
+                [leftSwipeActions].equals("5"));
+        mLeftSwipeAppSelection.setVisible(mRightSwipeActions.getEntryValues()
+                [rightSwipeActions].equals("5"));
     }
 
     @Override
@@ -525,6 +579,34 @@ public class Buttons extends SettingsPreferenceFragment
             mAssistDoubleTap.setSummary(
                     mAssistDoubleTap.getEntries()[index]);
             return true;
+        } else if (preference == mLeftSwipeActions) {
+            int leftSwipeActions = Integer.valueOf((String) objValue);
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.LEFT_LONG_BACK_SWIPE_ACTION, leftSwipeActions,
+                    UserHandle.USER_CURRENT);
+            int index = mLeftSwipeActions.findIndexOfValue((String) objValue);
+            mLeftSwipeActions.setSummary(
+                    mLeftSwipeActions.getEntries()[index]);
+            mLeftSwipeAppSelection.setEnabled(leftSwipeActions == 5);
+            actionPreferenceReload();
+            customAppCheck();
+            return true;
+        } else if (preference == mRightSwipeActions) {
+            int rightSwipeActions = Integer.valueOf((String) objValue);
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.RIGHT_LONG_BACK_SWIPE_ACTION, rightSwipeActions,
+                    UserHandle.USER_CURRENT);
+            int index = mRightSwipeActions.findIndexOfValue((String) objValue);
+            mRightSwipeActions.setSummary(
+                    mRightSwipeActions.getEntries()[index]);
+            mRightSwipeAppSelection.setEnabled(rightSwipeActions == 5);
+            actionPreferenceReload();
+            customAppCheck();
+            return true;
+        } else if (preference == mExtendedSwipe) {
+            boolean enabled = ((Boolean) objValue).booleanValue();
+            mExtendedSwipe.setChecked(enabled);
+            mTimeout.setEnabled(!enabled);
         }
         return false;
     }
@@ -534,19 +616,41 @@ public class Buttons extends SettingsPreferenceFragment
         return MetricsProto.MetricsEvent.HAVOC_SETTINGS;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        navbarCheck();
+        customAppCheck();
+        updateHwKeys();
+        actionPreferenceReload();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        navbarCheck();
+        customAppCheck();
+        updateHwKeys();
+        actionPreferenceReload();
+    }
+
     private void customAppCheck() {
-        mBackLongPressCustomApp.setSummary(Settings.System.getString(getActivity().getContentResolver(),
-                String.valueOf(Settings.System.KEY_BACK_LONG_PRESS_CUSTOM_APP_FR_NAME)));
-        mBackDoubleTapCustomApp.setSummary(Settings.System.getString(getActivity().getContentResolver(),
-                String.valueOf(Settings.System.KEY_BACK_DOUBLE_TAP_CUSTOM_APP_FR_NAME)));
-        mHomeLongPressCustomApp.setSummary(Settings.System.getString(getActivity().getContentResolver(),
-                String.valueOf(Settings.System.KEY_HOME_LONG_PRESS_CUSTOM_APP_FR_NAME)));
-        mHomeDoubleTapCustomApp.setSummary(Settings.System.getString(getActivity().getContentResolver(),
-                String.valueOf(Settings.System.KEY_HOME_DOUBLE_TAP_CUSTOM_APP_FR_NAME)));
-        mAppSwitchLongPressCustomApp.setSummary(Settings.System.getString(getActivity().getContentResolver(),
-                String.valueOf(Settings.System.KEY_APP_SWITCH_LONG_PRESS_CUSTOM_APP_FR_NAME)));
-        mAppSwitchDoubleTapCustomApp.setSummary(Settings.System.getString(getActivity().getContentResolver(),
-                String.valueOf(Settings.System.KEY_APP_SWITCH_DOUBLE_TAP_CUSTOM_APP_FR_NAME)));
+        mBackLongPressCustomApp.setSummary(Settings.System.getStringForUser(getActivity().getContentResolver(),
+                String.valueOf(Settings.System.KEY_BACK_LONG_PRESS_CUSTOM_APP_FR_NAME), UserHandle.USER_CURRENT));
+        mBackDoubleTapCustomApp.setSummary(Settings.System.getStringForUser(getActivity().getContentResolver(),
+                String.valueOf(Settings.System.KEY_BACK_DOUBLE_TAP_CUSTOM_APP_FR_NAME), UserHandle.USER_CURRENT));
+        mHomeLongPressCustomApp.setSummary(Settings.System.getStringForUser(getActivity().getContentResolver(),
+                String.valueOf(Settings.System.KEY_HOME_LONG_PRESS_CUSTOM_APP_FR_NAME), UserHandle.USER_CURRENT));
+        mHomeDoubleTapCustomApp.setSummary(Settings.System.getStringForUser(getActivity().getContentResolver(),
+                String.valueOf(Settings.System.KEY_HOME_DOUBLE_TAP_CUSTOM_APP_FR_NAME), UserHandle.USER_CURRENT));
+        mAppSwitchLongPressCustomApp.setSummary(Settings.System.getStringForUser(getActivity().getContentResolver(),
+                String.valueOf(Settings.System.KEY_APP_SWITCH_LONG_PRESS_CUSTOM_APP_FR_NAME), UserHandle.USER_CURRENT));
+        mAppSwitchDoubleTapCustomApp.setSummary(Settings.System.getStringForUser(getActivity().getContentResolver(),
+                String.valueOf(Settings.System.KEY_APP_SWITCH_DOUBLE_TAP_CUSTOM_APP_FR_NAME), UserHandle.USER_CURRENT));
+        mLeftSwipeAppSelection.setSummary(Settings.System.getStringForUser(getActivity().getContentResolver(),
+                String.valueOf(Settings.System.LEFT_LONG_BACK_SWIPE_APP_FR_ACTION), UserHandle.USER_CURRENT));
+        mRightSwipeAppSelection.setSummary(Settings.System.getStringForUser(getActivity().getContentResolver(),
+                String.valueOf(Settings.System.RIGHT_LONG_BACK_SWIPE_APP_FR_ACTION), UserHandle.USER_CURRENT));
     }
 
     private void updateHwKeys() {
@@ -619,6 +723,10 @@ public class Buttons extends SettingsPreferenceFragment
             assistCategory.setVisible(false);
             appSwitchCategory.setVisible(false);
             cameraCategory.setVisible(false);
+            mTimeout.setVisible(true);
+            mExtendedSwipe.setVisible(true);
+            leftSwipeCategory.setVisible(true);
+            rightSwipeCategory.setVisible(true);
         } else {
             homeCategory.setVisible(true);
             backCategory.setVisible(true);
@@ -626,6 +734,10 @@ public class Buttons extends SettingsPreferenceFragment
             assistCategory.setVisible(true);
             appSwitchCategory.setVisible(true);
             cameraCategory.setVisible(true);
+            mTimeout.setVisible(false);
+            mExtendedSwipe.setVisible(false);
+            leftSwipeCategory.setVisible(false);
+            rightSwipeCategory.setVisible(false);
         }
 
         if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton") && navigationBar) {
@@ -635,12 +747,24 @@ public class Buttons extends SettingsPreferenceFragment
             assistCategory.setVisible(false);
             appSwitchCategory.setVisible(false);
             cameraCategory.setVisible(false);
+            mTimeout.setVisible(false);
+            mExtendedSwipe.setVisible(false);
+            leftSwipeCategory.setVisible(false);
+            rightSwipeCategory.setVisible(false);
         }
 
         if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
             mGestureSystemNavigation.setSummary(getString(R.string.legacy_navigation_title));
+            mTimeout.setVisible(false);
+            mExtendedSwipe.setVisible(false);
+            leftSwipeCategory.setVisible(false);
+            rightSwipeCategory.setVisible(false);
         } else if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton")) {
             mGestureSystemNavigation.setSummary(getString(R.string.swipe_up_to_switch_apps_title));
+            mTimeout.setVisible(false);
+            mExtendedSwipe.setVisible(false);
+            leftSwipeCategory.setVisible(false);
+            rightSwipeCategory.setVisible(false);
         } else if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural")
                 || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_nopill")
                 || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_wide_back")
@@ -650,22 +774,32 @@ public class Buttons extends SettingsPreferenceFragment
                 || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_narrow_back_nopill")
                 || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_wide_back_nopill")) {
             mGestureSystemNavigation.setSummary(getString(R.string.edge_to_edge_navigation_title));
+            mTimeout.setVisible(true);
+            mExtendedSwipe.setVisible(true);
+            leftSwipeCategory.setVisible(true);
+            rightSwipeCategory.setVisible(true);
         }
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        navbarCheck();
-        customAppCheck();
-        updateHwKeys();
-    }
+    private void actionPreferenceReload() {
+        int leftSwipeActions = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.LEFT_LONG_BACK_SWIPE_ACTION, 0,
+                UserHandle.USER_CURRENT);
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        navbarCheck();
-        customAppCheck();
-        updateHwKeys();
+        int rightSwipeActions = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.RIGHT_LONG_BACK_SWIPE_ACTION, 0,
+                UserHandle.USER_CURRENT);
+
+        // Reload the action preferences
+        mLeftSwipeActions.setValue(Integer.toString(leftSwipeActions));
+        mLeftSwipeActions.setSummary(mLeftSwipeActions.getEntry());
+
+        mRightSwipeActions.setValue(Integer.toString(rightSwipeActions));
+        mRightSwipeActions.setSummary(mRightSwipeActions.getEntry());
+
+        mLeftSwipeAppSelection.setVisible(mLeftSwipeActions.getEntryValues()
+                [leftSwipeActions].equals("5"));
+        mRightSwipeAppSelection.setVisible(mRightSwipeActions.getEntryValues()
+                [rightSwipeActions].equals("5"));
     }
 }
