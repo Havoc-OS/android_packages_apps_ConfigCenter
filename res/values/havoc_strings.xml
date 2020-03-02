@@ -750,4 +750,8 @@
     <string name="back_swipe_extended_summary">Trigger action if the swipe is horizontally wider than 3\/4 of display size</string>
     <string name="active_edge_app_select_summary">Select an app to launch with the squeeze action</string>
 
+    <!-- Full screen gestures -->
+    <string name="navbar_gesture_pill_toggle_title">Fullscreen gestures</string>
+    <string name="navbar_gesture_pill_toggle_summary">Hide the navigation bar pill for a seamless fullscreen gestures</string>
+
 </resources>

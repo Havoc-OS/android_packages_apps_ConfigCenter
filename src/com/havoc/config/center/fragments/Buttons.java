@@ -19,8 +19,10 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.om.IOverlayManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.ServiceManager;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
@@ -38,6 +40,7 @@ import com.android.internal.util.havoc.Utils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.gestures.SystemNavigationGestureSettings;
 
 import com.havoc.support.preferences.SystemSettingListPreference;
 import com.havoc.support.preferences.SecureSettingSwitchPreference;
@@ -52,6 +55,7 @@ public class Buttons extends SettingsPreferenceFragment
     private static final String NAV_BAR_LAYOUT = "nav_bar_layout";
     private static final String SYSUI_NAV_BAR = "sysui_nav_bar";
     private static final String KEY_NAVIGATION_BAR_ENABLED = "force_show_navbar";
+    private static final String KEY_GESTURE_PILL_SWITCH = "gesture_pill_switch";
     private static final String KEY_NAVIGATION_BAR_ARROWS = "navigation_bar_menu_arrow_keys";
     private static final String KEY_SWAP_NAVBAR = "sysui_nav_bar_inverse";
     private static final String KEY_GESTURE_SYSTEM = "gesture_system_navigation";
@@ -131,6 +135,7 @@ public class Buttons extends SettingsPreferenceFragment
     private PreferenceCategory rightSwipeCategory;
     private PreferenceCategory hwKeysCategory;
 
+    private SwitchPreference mGesturePill;
     private SwitchPreference mNavigationBar;
     private SecureSettingSwitchPreference mSwapNavbar;
     private SystemSettingSwitchPreference mNavigationArrowKeys;
@@ -362,7 +367,6 @@ public class Buttons extends SettingsPreferenceFragment
         isAppSelection = Settings.System.getIntForUser(resolver,
                 Settings.System.RIGHT_LONG_BACK_SWIPE_ACTION, 0, UserHandle.USER_CURRENT) == 5/*action_app_action*/;
         mRightSwipeAppSelection.setEnabled(isAppSelection);
-        customAppCheck();
 
         mTimeout = (SystemSettingListPreference) findPreference("long_back_swipe_timeout");
 
@@ -373,6 +377,11 @@ public class Buttons extends SettingsPreferenceFragment
         mExtendedSwipe.setChecked(extendedSwipe);
         mExtendedSwipe.setOnPreferenceChangeListener(this);
         mTimeout.setEnabled(!mExtendedSwipe.isChecked());
+
+        mGesturePill = (SwitchPreference) findPreference(KEY_GESTURE_PILL_SWITCH);
+        mGesturePill.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.GESTURE_PILL_TOGGLE, 0) == 1));
+        mGesturePill.setOnPreferenceChangeListener(this);
 
         if (!hasMenu && menuCategory != null) {
             prefSet.removePreference(menuCategory);
@@ -607,6 +616,13 @@ public class Buttons extends SettingsPreferenceFragment
             boolean enabled = ((Boolean) objValue).booleanValue();
             mExtendedSwipe.setChecked(enabled);
             mTimeout.setEnabled(!enabled);
+        } else if (preference == mGesturePill) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.GESTURE_PILL_TOGGLE, value ? 1 : 0);
+            SystemNavigationGestureSettings.setBackGestureOverlaysToUse(getActivity());
+            SystemNavigationGestureSettings.setCurrentSystemNavigationMode(getActivity(),
+                    getOverlayManager(), SystemNavigationGestureSettings.getCurrentSystemNavigationMode(getActivity()));
         }
         return false;
     }
@@ -727,6 +743,7 @@ public class Buttons extends SettingsPreferenceFragment
             mExtendedSwipe.setVisible(true);
             leftSwipeCategory.setVisible(true);
             rightSwipeCategory.setVisible(true);
+            mGesturePill.setVisible(true);
         } else {
             homeCategory.setVisible(true);
             backCategory.setVisible(true);
@@ -738,6 +755,7 @@ public class Buttons extends SettingsPreferenceFragment
             mExtendedSwipe.setVisible(false);
             leftSwipeCategory.setVisible(false);
             rightSwipeCategory.setVisible(false);
+            mGesturePill.setVisible(false);
         }
 
         if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton") && navigationBar) {
@@ -751,6 +769,7 @@ public class Buttons extends SettingsPreferenceFragment
             mExtendedSwipe.setVisible(false);
             leftSwipeCategory.setVisible(false);
             rightSwipeCategory.setVisible(false);
+            mGesturePill.setVisible(false);
         }
 
         if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
@@ -759,12 +778,14 @@ public class Buttons extends SettingsPreferenceFragment
             mExtendedSwipe.setVisible(false);
             leftSwipeCategory.setVisible(false);
             rightSwipeCategory.setVisible(false);
+            mGesturePill.setVisible(false);
         } else if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton")) {
             mGestureSystemNavigation.setSummary(getString(R.string.swipe_up_to_switch_apps_title));
             mTimeout.setVisible(false);
             mExtendedSwipe.setVisible(false);
             leftSwipeCategory.setVisible(false);
             rightSwipeCategory.setVisible(false);
+            mGesturePill.setVisible(false);
         } else if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural")
                 || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_nopill")
                 || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_wide_back")
@@ -778,6 +799,7 @@ public class Buttons extends SettingsPreferenceFragment
             mExtendedSwipe.setVisible(true);
             leftSwipeCategory.setVisible(true);
             rightSwipeCategory.setVisible(true);
+            mGesturePill.setVisible(true);
         }
     }
 
@@ -801,5 +823,9 @@ public class Buttons extends SettingsPreferenceFragment
                 [leftSwipeActions].equals("5"));
         mRightSwipeAppSelection.setVisible(mRightSwipeActions.getEntryValues()
                 [rightSwipeActions].equals("5"));
+    }
+
+    private IOverlayManager getOverlayManager() {
+        return IOverlayManager.Stub.asInterface(ServiceManager.getService(Context.OVERLAY_SERVICE));
     }
 }
