@@ -25,18 +25,6 @@
         android:summary="@string/gaming_mode_summary"
         android:defaultValue="false" />
 
-    <com.havoc.support.preferences.GlobalSettingSwitchPreference
-        android:key="wake_when_plugged_or_unplugged"
-        android:title="@string/wakeup_when_plugged_unplugged_title"
-        android:summary="@string/wakeup_when_plugged_unplugged_summary"
-        android:defaultValue="true" />
-
-    <com.havoc.support.preferences.SystemSettingSwitchPreference
-        android:key="charging_animation"
-        android:title="@string/charging_animation_title"
-        android:summary="@string/charging_animation_summary"
-        android:defaultValue="true" />
-
     <com.havoc.support.preferences.SystemSettingListPreference
         android:key="screenshot_type"
         android:title="@string/screenshot_type_title"
@@ -44,4 +32,20 @@
         android:entryValues="@array/screenshot_type_values"
         android:defaultValue="0" />
 
+    <PreferenceCategory
+        android:key="charge"
+        android:title="@string/charge_title">
+
+        <com.havoc.support.preferences.GlobalSettingSwitchPreference
+            android:key="wake_when_plugged_or_unplugged"
+            android:title="@string/wakeup_when_plugged_unplugged_title"
+            android:summary="@string/wakeup_when_plugged_unplugged_summary"
+            android:defaultValue="true" />
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="charging_animation"
+            android:title="@string/charging_animation_title"
+            android:summary="@string/charging_animation_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
 </PreferenceScreen>

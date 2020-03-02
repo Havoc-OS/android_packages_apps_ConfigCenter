@@ -69,6 +69,12 @@
             android:summary="@string/pocket_judge_summary"
             android:defaultValue="false" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="ls_fingerprint"
+        android:title="@string/ls_fingerprint">
+
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="fingerprint_success_vib"
             android:title="@string/fprint_sucess_vib_title"

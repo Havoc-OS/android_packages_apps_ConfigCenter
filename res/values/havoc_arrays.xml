@@ -30,13 +30,13 @@
 
     <!-- Smart Pixels -->
     <string-array name="smart_pixels_percent_strings" translatable="false">
-        <item>12</item>
-        <item>25</item>
-        <item>38</item>
-        <item>50</item>
-        <item>62</item>
-        <item>75</item>
-        <item>88</item>
+        <item>12 percent</item>
+        <item>25 percent</item>
+        <item>38 percent</item>
+        <item>50 percent</item>
+        <item>62 percent</item>
+        <item>75 percent</item>
+        <item>88 percent</item>
     </string-array>
 
     <string-array name="smart_pixels_percent_values" translatable="false">
