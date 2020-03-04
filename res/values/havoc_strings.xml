@@ -752,6 +752,13 @@
 
     <!-- Full screen gestures -->
     <string name="navbar_gesture_pill_toggle_title">Fullscreen gestures</string>
-    <string name="navbar_gesture_pill_toggle_summary">Hide the navigation bar pill for a seamless fullscreen gestures</string>
+    <string name="navbar_gesture_pill_toggle_summary">Hide the navigation bar pill for seamless gestures</string>
+
+    <!-- Back gesture -->
+    <string name="back_gesture_title">Back gesture</string>
+    <string name="back_arrow_gesture_title">Arrow animation</string>
+    <string name="back_arrow_gesture_summary">Show an animation when the back gesture is triggered</string>
+    <string name="back_gesture_haptic_title">Haptic feedback</string>
+    <string name="back_gesture_haptic_summary">Vibrate when the back gesture is triggered</string>
 
 </resources>

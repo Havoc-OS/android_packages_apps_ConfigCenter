@@ -69,23 +69,7 @@
             android:key="gesture_pill_switch"
             android:title="@string/navbar_gesture_pill_toggle_title"
             android:summary="@string/navbar_gesture_pill_toggle_summary"
-            android:dependency="force_show_navbar"
             android:defaultValue="false" />
-
-        <com.havoc.support.preferences.SystemSettingSwitchPreference
-            android:key="back_swipe_extended"
-            android:title="@string/back_swipe_extended_title"
-            android:summary="@string/back_swipe_extended_summary"
-            android:dependency="force_show_navbar"
-            android:defaultValue="false" />
-
-        <com.havoc.support.preferences.SystemSettingListPreference
-            android:key="long_back_swipe_timeout"
-            android:title="@string/long_back_swipe_timeout_title"
-            android:dependency="force_show_navbar"
-            android:entries="@array/long_back_swipe_timeout_entries"
-            android:entryValues="@array/long_back_swipe_timeout_values"
-            android:defaultValue="2000" />
 
         <ListPreference
             android:key="nav_bar_layout"
@@ -164,13 +148,31 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="left_swipe"
-        android:title="@string/left_swipe_key_title">
+        android:key="back_gesture"
+        android:title="@string/back_gesture_title">
+
+        <com.havoc.support.preferences.SecureSettingSwitchPreference
+            android:key="show_back_arrow_gesture"
+            android:title="@string/back_arrow_gesture_title"
+            android:summary="@string/back_arrow_gesture_summary"
+            android:defaultValue="true" />
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="back_swipe_extended"
+            android:title="@string/back_swipe_extended_title"
+            android:summary="@string/back_swipe_extended_summary"
+            android:defaultValue="false" />
+
+        <com.havoc.support.preferences.SystemSettingListPreference
+            android:key="long_back_swipe_timeout"
+            android:title="@string/long_back_swipe_timeout_title"
+            android:entries="@array/long_back_swipe_timeout_entries"
+            android:entryValues="@array/long_back_swipe_timeout_values"
+            android:defaultValue="2000" />
 
         <ListPreference
             android:key="left_swipe_actions"
             android:title="@string/left_swipe_actions_title"
-            android:dependency="force_show_navbar"
             android:entries="@array/active_edge_actions_entries"
             android:entryValues="@array/active_edge_actions_values"
             android:defaultValue="0" />
@@ -178,23 +180,15 @@
         <Preference
             android:key="left_swipe_app_action"
             android:title="@string/left_swipe_app_action_title"
-            android:summary="@string/active_edge_app_select_summary"
-            android:dependency="force_show_navbar">
+            android:summary="@string/active_edge_app_select_summary">
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.statusbar.phone.LeftBackSwipeCustomApp" />
         </Preference>
 
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="right_swipe"
-        android:title="@string/right_swipe_key_title">
-
         <ListPreference
             android:key="right_swipe_actions"
             android:title="@string/right_swipe_actions_title"
-            android:dependency="force_show_navbar"
             android:entries="@array/active_edge_actions_entries"
             android:entryValues="@array/active_edge_actions_values"
             android:defaultValue="0" />
@@ -202,12 +196,17 @@
         <Preference
             android:key="right_swipe_app_action"
             android:title="@string/right_swipe_app_action_title"
-            android:summary="@string/active_edge_app_select_summary"
-            android:dependency="force_show_navbar">
+            android:summary="@string/active_edge_app_select_summary">
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.statusbar.phone.RightBackSwipeCustomApp" />
         </Preference>
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="back_gesture_haptic"
+            android:title="@string/back_gesture_haptic_title"
+            android:summary="@string/back_gesture_haptic_summary"
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 
