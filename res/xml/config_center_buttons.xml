@@ -157,11 +157,12 @@
             android:summary="@string/back_arrow_gesture_summary"
             android:defaultValue="true" />
 
-        <com.havoc.support.preferences.SystemSettingSwitchPreference
-            android:key="back_swipe_extended"
-            android:title="@string/back_swipe_extended_title"
-            android:summary="@string/back_swipe_extended_summary"
-            android:defaultValue="false" />
+        <com.havoc.support.preferences.SystemSettingListPreference
+            android:key="back_swipe_type"
+            android:title="@string/back_swipe_type_title"
+            android:entries="@array/back_swipe_type_entries"
+            android:entryValues="@array/back_swipe_type_values"
+            android:defaultValue="0" />
 
         <com.havoc.support.preferences.SystemSettingListPreference
             android:key="long_back_swipe_timeout"
@@ -180,7 +181,7 @@
         <Preference
             android:key="left_swipe_app_action"
             android:title="@string/left_swipe_app_action_title"
-            android:summary="@string/active_edge_app_select_summary">
+            android:summary="@string/back_swipe_app_select_summary">
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.statusbar.phone.LeftBackSwipeCustomApp" />
@@ -196,7 +197,7 @@
         <Preference
             android:key="right_swipe_app_action"
             android:title="@string/right_swipe_app_action_title"
-            android:summary="@string/active_edge_app_select_summary">
+            android:summary="@string/back_swipe_app_select_summary">
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.statusbar.phone.RightBackSwipeCustomApp" />
