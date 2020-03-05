@@ -43,7 +43,7 @@
             android:dependency="hardware_keys_enable" />
 
         <Preference
-            android:key="button_backlight_enable"
+            android:key="button_backlight"
             android:title="@string/button_backlight_title"
             android:summary="@string/button_backlight_summary"
             android:fragment="com.havoc.config.center.fragments.ButtonBrightness"

@@ -59,6 +59,7 @@ public class Buttons extends SettingsPreferenceFragment
     private static final String KEY_NAVIGATION_BAR_ARROWS = "navigation_bar_menu_arrow_keys";
     private static final String KEY_SWAP_NAVBAR = "sysui_nav_bar_inverse";
     private static final String KEY_GESTURE_SYSTEM = "gesture_system_navigation";
+    private static final String KEY_BUTTON_BACKLIGHT = "button_backlight";
 
     private static final String KEY_BACK_LONG_PRESS_ACTION = "back_key_long_press";
     private static final String KEY_BACK_LONG_PRESS_CUSTOM_APP = "back_key_long_press_custom_app";
@@ -123,6 +124,7 @@ public class Buttons extends SettingsPreferenceFragment
     private ListPreference mNavBarLayout;
     private Preference mLeftSwipeAppSelection;
     private Preference mRightSwipeAppSelection;
+    private Preference mButtonBacklight;
 
     private PreferenceCategory homeCategory;
     private PreferenceCategory backCategory;
@@ -173,6 +175,9 @@ public class Buttons extends SettingsPreferenceFragment
 
         boolean defaultToNavigationBar = getResources().getBoolean(
                 com.android.internal.R.bool.config_showNavigationBar);
+
+        boolean buttonBacklightSupported = getResources().getBoolean(
+                com.android.internal.R.bool.config_button_brightness_support);
 
         deviceKeys = getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
@@ -380,6 +385,8 @@ public class Buttons extends SettingsPreferenceFragment
                 Settings.System.GESTURE_PILL_TOGGLE, 0) == 1));
         mGesturePill.setOnPreferenceChangeListener(this);
 
+        mButtonBacklight = (Preference) findPreference(KEY_BUTTON_BACKLIGHT);
+
         if (!hasMenu && menuCategory != null) {
             prefSet.removePreference(menuCategory);
         }
@@ -397,6 +404,10 @@ public class Buttons extends SettingsPreferenceFragment
             prefSet.removePreference(menuCategory);
             prefSet.removePreference(assistCategory);
             prefSet.removePreference(cameraCategory);
+        }
+
+        if (!buttonBacklightSupported) {
+            mButtonBacklight.setVisible(false);
         }
 
         mHandler = new Handler();
