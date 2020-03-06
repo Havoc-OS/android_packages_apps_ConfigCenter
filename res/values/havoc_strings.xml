@@ -687,12 +687,6 @@
     <string name="screenshot_type_fullscreen">Full</string>
     <string name="screenshot_type_partial">Partial</string>
 
-    <!-- Screen Off animation -->
-    <string name="screen_off_animation_title">Screen off animation</string>
-    <string name="screen_off_animation_fade">Fade</string>
-    <string name="screen_off_animation_crt">CRT</string>
-    <string name="screen_off_animation_scale">Scale</string>
-
     <!-- Lock icon -->
     <string name="lockscreen_lock_icon_title">Lock icon</string>
     <string name="lockscreen_lock_icon_summary">Show current lock status icon on the lockscreen</string>
