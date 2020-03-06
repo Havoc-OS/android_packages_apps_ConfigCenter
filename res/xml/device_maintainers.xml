@@ -387,6 +387,36 @@
                 android:data="https://t.me/kyoto44" />
         </Preference>
 
+        <Preference
+            android:id="@+id/device_grus"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_grus_summary"
+            android:title="@string/device_grus">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/kyoto44" />
+        </Preference>
+
+        <Preference
+            android:id="@+id/device_ugglite"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_ugglite_summary"
+            android:title="@string/device_ugglite">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/kyoto44" />
+        </Preference>
+
+        <Preference
+            android:id="@+id/device_aries"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_aries_summary"
+            android:title="@string/device_aries">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/kyoto44" />
+        </Preference>
+
         <!--<Preference
             android:id="@+id/device_natrium"
             android:icon="@drawable/havoc_device"
