@@ -527,15 +527,15 @@
                 android:data="https://t.me/Reignz3" />
         </Preference>
 
-        <!--<Preference
+        <Preference
             android:id="@+id/device_land"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_land_summary"
             android:title="@string/device_land" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/Saks_Ham" />
-        </Preference>-->
+                android:data="https://t.me/Sairam60" />
+        </Preference>
 
         <Preference
             android:id="@+id/device_markw"
