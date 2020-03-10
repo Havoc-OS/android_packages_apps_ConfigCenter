@@ -654,7 +654,7 @@
             android:title="@string/device_lavender">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/Sukrut4778" />
+                android:data="https://t.me/xyzuan" />
         </Preference>
 
         <Preference
