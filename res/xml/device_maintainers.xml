@@ -427,7 +427,7 @@
                 android:data="https://t.me/ZeNiXxXx" />
         </Preference>
 
-        <!--<Preference
+        <Preference
             android:id="@+id/device_platina"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_platina_summary"
@@ -437,7 +437,7 @@
                 android:data="https://t.me/riquebarros17" />
         </Preference>
 
-        <Preference
+        <!--<Preference
             android:id="@+id/device_sirius"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_sirius_summary"
