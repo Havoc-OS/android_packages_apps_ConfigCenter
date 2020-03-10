@@ -319,7 +319,7 @@
             android:title="@string/device_potter">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/shivvvvvv" />
+                android:data="https://t.me/abhijit1998" />
         </Preference>
 
         <!--<Preference
