@@ -26,7 +26,7 @@
         android:defaultValue="false" />
 
     <com.havoc.support.preferences.SecureSettingSwitchPreference
-       android:key="lockscreen_visualizer_autocolor"
+        android:key="lockscreen_visualizer_autocolor"
         android:title="@string/lockscreen_autocolor_title"
         android:summary="@string/lockscreen_autocolor_summary"
         android:defaultValue="true" />
@@ -48,7 +48,7 @@
         android:dependency="lockscreen_lavalamp_enabled"/>
 
     <PreferenceCategory
-        android:id="@+id/lockscreen_solid_lines_category"
+        android:key="lockscreen_solid_lines_category"
         android:title="@string/lockscreen_solid_lines_category" >
 
         <com.havoc.support.preferences.SecureSettingSeekBarPreference

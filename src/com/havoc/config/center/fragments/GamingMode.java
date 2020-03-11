@@ -37,7 +37,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.CompoundButton;
 import android.widget.ListView;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -52,19 +55,25 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.havoc.support.preferences.PackageListAdapter;
 import com.havoc.support.preferences.PackageListAdapter.PackageItem;
+import com.havoc.support.preferences.SystemSettingListPreference;
+import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class GamingMode extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceClickListener {
+public class GamingMode extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceClickListener, CompoundButton.OnCheckedChangeListener {
 
     private static final int DIALOG_GAMING_APPS = 1;
-    private static final String GAMING_MODE_HW_KEYS = "gaming_mode_hw_keys_toggle";
 
-    private SwitchPreference mHardwareKeysDisable;
+    private SystemSettingListPreference mRingerMode;
+    private SystemSettingListPreference mGamingNotification;
+    private SystemSettingSwitchPreference mHeadsUpDisable;
+    private SystemSettingSwitchPreference mHardwareKeysDisable;
+    private SystemSettingSwitchPreference mManualBrightness;
+    private SystemSettingSwitchPreference mDynamicMode;
 
     private PackageListAdapter mPackageAdapter;
     private PackageManager mPackageManager;
@@ -74,6 +83,9 @@ public class GamingMode extends SettingsPreferenceFragment
     private String mGamingPackageList;
     private Map<String, Package> mGamingPackages;
     private Context mContext;
+
+    private TextView mTextView;
+    private View mSwitchBar;
 
     private static final int KEY_MASK_HOME = 0x01;
     private static final int KEY_MASK_BACK = 0x02;
@@ -90,8 +102,13 @@ public class GamingMode extends SettingsPreferenceFragment
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
-        mHardwareKeysDisable = (SwitchPreference) findPreference(GAMING_MODE_HW_KEYS);
-        
+        mRingerMode = (SystemSettingListPreference) findPreference("gaming_mode_ringer_mode");
+        mGamingNotification = (SystemSettingListPreference) findPreference("gaming_mode_notifications");
+        mHeadsUpDisable = (SystemSettingSwitchPreference) findPreference("gaming_mode_headsup_toggle");
+        mHardwareKeysDisable = (SystemSettingSwitchPreference) findPreference("gaming_mode_hw_keys_toggle");
+        mManualBrightness = (SystemSettingSwitchPreference) findPreference("gaming_mode_manual_brightness_toggle");
+        mDynamicMode = (SystemSettingSwitchPreference) findPreference("gaming_mode_dynamic_state");
+
         if (!hasHWkeys()) {
             prefScreen.removePreference(mHardwareKeysDisable);
         }
@@ -112,6 +129,60 @@ public class GamingMode extends SettingsPreferenceFragment
 
         SettingsObserver observer = new SettingsObserver(new Handler(Looper.getMainLooper()));
         observer.observe();
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        final View view = LayoutInflater.from(getContext()).inflate(R.layout.master_setting_switch, container, false);
+        ((ViewGroup) view).addView(super.onCreateView(inflater, container, savedInstanceState));
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        boolean enabled = Settings.System.getInt(getContentResolver(),
+                Settings.System.GAMING_MODE_ENABLED, 0) == 1;
+
+        mTextView = view.findViewById(R.id.switch_text);
+        mTextView.setText(getString(enabled ?
+                R.string.switch_on_text : R.string.switch_off_text));
+
+        mSwitchBar = view.findViewById(R.id.switch_bar);
+        Switch switchWidget = mSwitchBar.findViewById(android.R.id.switch_widget);
+        switchWidget.setChecked(enabled);
+        switchWidget.setOnCheckedChangeListener(this);
+        mSwitchBar.setActivated(enabled);
+        mSwitchBar.setOnClickListener(v -> {
+            switchWidget.setChecked(!switchWidget.isChecked());
+            mSwitchBar.setActivated(switchWidget.isChecked());
+        });
+
+        mRingerMode.setEnabled(enabled);
+        mGamingNotification.setEnabled(enabled);
+        mHeadsUpDisable.setEnabled(enabled);
+        mHardwareKeysDisable.setEnabled(enabled);
+        mManualBrightness.setEnabled(enabled);
+        mDynamicMode.setEnabled(enabled);
+        mAddGamingPref.setEnabled(enabled);
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.GAMING_MODE_ENABLED, isChecked ? 1 : 0);
+        mTextView.setText(getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text));
+        mSwitchBar.setActivated(isChecked);
+
+        mRingerMode.setEnabled(isChecked);
+        mGamingNotification.setEnabled(isChecked);
+        mHeadsUpDisable.setEnabled(isChecked);
+        mHardwareKeysDisable.setEnabled(isChecked);
+        mManualBrightness.setEnabled(isChecked);
+        mDynamicMode.setEnabled(isChecked);
+        mAddGamingPref.setEnabled(isChecked);
     }
 
     @Override

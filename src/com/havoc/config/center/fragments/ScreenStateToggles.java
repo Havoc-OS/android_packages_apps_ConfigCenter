@@ -20,21 +20,26 @@ package com.havoc.config.center.fragments;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
+import android.net.ConnectivityManager;
+import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserManager;
+import android.provider.Settings;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
+
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
-import android.os.Bundle;
-import android.os.UserHandle;
-import android.os.UserManager;
-import android.provider.Settings;
-import android.view.View;
-
-import android.content.Intent;
-import android.util.Log;
-import android.net.ConnectivityManager;
 
 import com.havoc.config.center.R;
 import com.havoc.support.preferences.CustomSeekBarPreference;
@@ -42,8 +47,8 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.internal.logging.nano.MetricsProto;
 
-public class ScreenStateToggles extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+public class ScreenStateToggles extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
 
     private static final String TAG = "ScreenStateToggles";
     private static final String SCREEN_STATE_TOGGLES_TWOG = "screen_state_toggles_twog";
@@ -55,6 +60,9 @@ public class ScreenStateToggles extends SettingsPreferenceFragment
     private static final String SCREEN_STATE_CATGEGORY_MOBILE_DATA = "screen_state_toggles_mobile_key";
 
     private Context mContext;
+
+    private TextView mTextView;
+    private View mSwitchBar;
 
     private SwitchPreference mEnableScreenStateTogglesTwoG;
     private SwitchPreference mEnableScreenStateTogglesGps;
@@ -134,6 +142,54 @@ public class ScreenStateToggles extends SettingsPreferenceFragment
                 Settings.System.SCREEN_STATE_GPS, 0, UserHandle.USER_CURRENT) == 1));
             mEnableScreenStateTogglesGps.setOnPreferenceChangeListener(this);
         }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        final View view = LayoutInflater.from(getContext()).inflate(R.layout.master_setting_switch, container, false);
+        ((ViewGroup) view).addView(super.onCreateView(inflater, container, savedInstanceState));
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        boolean enabled = Settings.System.getInt(getContentResolver(),
+                Settings.System.START_SCREEN_STATE_SERVICE, 0) == 1;
+
+        mTextView = view.findViewById(R.id.switch_text);
+        mTextView.setText(getString(enabled ?
+                R.string.switch_on_text : R.string.switch_off_text));
+
+        mSwitchBar = view.findViewById(R.id.switch_bar);
+        Switch switchWidget = mSwitchBar.findViewById(android.R.id.switch_widget);
+        switchWidget.setChecked(enabled);
+        switchWidget.setOnCheckedChangeListener(this);
+        mSwitchBar.setActivated(enabled);
+        mSwitchBar.setOnClickListener(v -> {
+            switchWidget.setChecked(!switchWidget.isChecked());
+            mSwitchBar.setActivated(switchWidget.isChecked());
+        });
+
+        mSecondsOffDelay.setEnabled(enabled);
+        mSecondsOnDelay.setEnabled(enabled);
+        mMobileDateCategory.setEnabled(enabled);
+        mLocationCategory.setEnabled(enabled);
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.START_SCREEN_STATE_SERVICE, isChecked ? 1 : 0);
+        mTextView.setText(getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text));
+        mSwitchBar.setActivated(isChecked);
+
+        mSecondsOffDelay.setEnabled(isChecked);
+        mSecondsOnDelay.setEnabled(isChecked);
+        mMobileDateCategory.setEnabled(isChecked);
+        mLocationCategory.setEnabled(isChecked);
     }
 
     @Override

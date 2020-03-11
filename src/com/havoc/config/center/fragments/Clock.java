@@ -35,8 +35,13 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.havoc.Utils;
@@ -50,9 +55,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
 
-public class Clock extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+public class Clock extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
 
+    private static final String CLOCK_CATEGORY = "clock_category";
+    private static final String DATE_CATEGORY = "date_category";
     private static final String STATUS_BAR_CLOCK_SECONDS = "status_bar_clock_seconds";
     private static final String STATUS_BAR_CLOCK_STYLE = "statusbar_clock_style";
     private static final String STATUS_BAR_AM_PM = "status_bar_am_pm";
@@ -64,6 +71,8 @@ public class Clock extends SettingsPreferenceFragment
     public static final int CLOCK_DATE_STYLE_UPPERCASE = 2;
     private static final int CUSTOM_CLOCK_DATE_FORMAT_INDEX = 18;
 
+    private PreferenceCategory mClockCategory;
+    private PreferenceCategory mDateCategory;
     private SystemSettingSwitchPreference mStatusBarSecondsShow;
     private ListPreference mStatusBarClock;
     private ListPreference mStatusBarAmPm;
@@ -72,6 +81,9 @@ public class Clock extends SettingsPreferenceFragment
     private ListPreference mClockDateFormat;
     private ListPreference mClockDatePosition;
 
+    private TextView mTextView;
+    private View mSwitchBar;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,6 +91,8 @@ public class Clock extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
 
+        mClockCategory = (PreferenceCategory) findPreference(CLOCK_CATEGORY);
+        mDateCategory = (PreferenceCategory) findPreference(DATE_CATEGORY);
         mStatusBarSecondsShow = (SystemSettingSwitchPreference) findPreference(STATUS_BAR_CLOCK_SECONDS);
         mStatusBarClock = (ListPreference) findPreference(STATUS_BAR_CLOCK_STYLE);
         mStatusBarAmPm = (ListPreference) findPreference(STATUS_BAR_AM_PM);
@@ -150,6 +164,50 @@ public class Clock extends SettingsPreferenceFragment
         mClockDatePosition.setOnPreferenceChangeListener(this);
 
         setDateOptions();
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        final View view = LayoutInflater.from(getContext()).inflate(R.layout.master_setting_switch, container, false);
+        ((ViewGroup) view).addView(super.onCreateView(inflater, container, savedInstanceState));
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        boolean enabled = Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_CLOCK, 1) == 1;
+
+        mTextView = view.findViewById(R.id.switch_text);
+        mTextView.setText(getString(enabled ?
+                R.string.switch_on_text : R.string.switch_off_text));
+
+        mSwitchBar = view.findViewById(R.id.switch_bar);
+        Switch switchWidget = mSwitchBar.findViewById(android.R.id.switch_widget);
+        switchWidget.setChecked(enabled);
+        switchWidget.setOnCheckedChangeListener(this);
+        mSwitchBar.setActivated(enabled);
+        mSwitchBar.setOnClickListener(v -> {
+            switchWidget.setChecked(!switchWidget.isChecked());
+            mSwitchBar.setActivated(switchWidget.isChecked());
+        });
+
+        mClockCategory.setEnabled(enabled);
+        mDateCategory.setEnabled(enabled);
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.STATUS_BAR_CLOCK, isChecked ? 1 : 0);
+        mTextView.setText(getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text));
+        mSwitchBar.setActivated(isChecked);
+
+        mClockCategory.setEnabled(isChecked);
+        mDateCategory.setEnabled(isChecked);
     }
 
     @Override

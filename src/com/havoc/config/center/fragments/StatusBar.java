@@ -63,16 +63,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
 
-        mStatusBarClockShow = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_CLOCK);
-        mStatusBarClockShow.setChecked((Settings.System.getInt(resolver,
-                Settings.System.STATUS_BAR_CLOCK, 1) == 1));
-        mStatusBarClockShow.setOnPreferenceChangeListener(this);
-
-        mStatusBarLogo = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_LOGO);
-        mStatusBarLogo.setChecked((Settings.System.getInt(resolver,
-                Settings.System.STATUS_BAR_LOGO, 0) == 1));
-        mStatusBarLogo.setOnPreferenceChangeListener(this);
-
         mConfigShowHDVolteIcon = getResources().getBoolean(com.android.internal.R.bool.config_display_hd_volte);
         int useHDIcon = (mConfigShowHDVolteIcon ? 1 : 0);
         mShowHDVolte = (SwitchPreference) findPreference(SHOW_HD_ICON);
@@ -101,11 +91,25 @@ public class StatusBar extends SettingsPreferenceFragment implements
         updateNetworkTrafficPrefs(networkTraffic);
 
         mConfigUseOldMobileType = getResources().getBoolean(com.android.internal.R.bool.config_useOldMobileIcons);
-        int useOldMobileIcons = (!mConfigUseOldMobileType ? 1 : 0);
+        int useOldMobileIcons = (mConfigUseOldMobileType ? 1 : 0);
         mUseOldMobileType = (SwitchPreference) findPreference(KEY_USE_OLD_MOBILETYPE);
         mUseOldMobileType.setChecked((Settings.System.getInt(resolver,
                 Settings.System.USE_OLD_MOBILETYPE, useOldMobileIcons) == 1));
         mUseOldMobileType.setOnPreferenceChangeListener(this);
+
+        updateMasterPrefs();
+    }
+
+    private void updateMasterPrefs() {
+        mStatusBarClockShow = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_CLOCK);
+        mStatusBarClockShow.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_CLOCK, 1) == 1));
+        mStatusBarClockShow.setOnPreferenceChangeListener(this);
+    
+        mStatusBarLogo = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_LOGO);
+        mStatusBarLogo.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_LOGO, 0) == 1));
+        mStatusBarLogo.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -140,6 +144,18 @@ public class StatusBar extends SettingsPreferenceFragment implements
             return true;
 		}
         return false;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateMasterPrefs();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        updateMasterPrefs();
     }
 
     private void updateNetworkTrafficPrefs(int networkTraffic) {

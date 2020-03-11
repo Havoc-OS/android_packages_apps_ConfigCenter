@@ -24,26 +24,35 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import com.android.internal.logging.nano.MetricsProto;
-
-import com.havoc.support.preferences.SystemSettingSwitchPreference;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.havoc.support.colorpicker.ColorPickerPreference;
+import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
 public class BatteryLightSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
 
     private ColorPickerPreference mLowColor;
     private ColorPickerPreference mMediumColor;
     private ColorPickerPreference mFullColor;
     private ColorPickerPreference mReallyFullColor;
     private ColorPickerPreference mFastColor;
+    private SystemSettingSwitchPreference mBatteryLightOnDnd;
     private SystemSettingSwitchPreference mLowBatteryBlinking;
 
     private PreferenceCategory mColorCategory;
+
+    private TextView mTextView;
+    private View mSwitchBar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,6 +61,8 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
 
         PreferenceScreen prefSet = getPreferenceScreen();
         mColorCategory = (PreferenceCategory) findPreference("battery_light_cat");
+
+        mBatteryLightOnDnd = (SystemSettingSwitchPreference) findPreference("battery_light_allow_on_dnd");
 
         mLowBatteryBlinking = (SystemSettingSwitchPreference)prefSet.findPreference("battery_light_low_blinking");
         if (getResources().getBoolean(
@@ -124,6 +135,52 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
                 prefSet.removePreference(mColorCategory);
             }
         }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        final View view = LayoutInflater.from(getContext()).inflate(R.layout.master_setting_switch, container, false);
+        ((ViewGroup) view).addView(super.onCreateView(inflater, container, savedInstanceState));
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        boolean enabled = Settings.System.getInt(getContentResolver(),
+                Settings.System.BATTERY_LIGHT_ENABLED, 1) == 1;
+
+        mTextView = view.findViewById(R.id.switch_text);
+        mTextView.setText(getString(enabled ?
+                R.string.switch_on_text : R.string.switch_off_text));
+
+        mSwitchBar = view.findViewById(R.id.switch_bar);
+        Switch switchWidget = mSwitchBar.findViewById(android.R.id.switch_widget);
+        switchWidget.setChecked(enabled);
+        switchWidget.setOnCheckedChangeListener(this);
+        mSwitchBar.setActivated(enabled);
+        mSwitchBar.setOnClickListener(v -> {
+            switchWidget.setChecked(!switchWidget.isChecked());
+            mSwitchBar.setActivated(switchWidget.isChecked());
+        });
+
+        mBatteryLightOnDnd.setEnabled(enabled);
+        mLowBatteryBlinking.setEnabled(enabled);
+        mColorCategory.setEnabled(enabled);
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.BATTERY_LIGHT_ENABLED, isChecked ? 1 : 0);
+        mTextView.setText(getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text));
+        mSwitchBar.setActivated(isChecked);
+
+        mBatteryLightOnDnd.setEnabled(isChecked);
+        mLowBatteryBlinking.setEnabled(isChecked);
+        mColorCategory.setEnabled(isChecked);
     }
 
     @Override

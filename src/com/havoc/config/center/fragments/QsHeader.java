@@ -23,6 +23,12 @@ import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 
@@ -32,7 +38,6 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.havoc.support.preferences.CustomSeekBarPreference;
-import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -40,8 +45,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class QsHeader extends SettingsPreferenceFragment 
-             implements Preference.OnPreferenceChangeListener{
+public class QsHeader extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
 
     private static final String CUSTOM_HEADER_BROWSE = "custom_header_browse";
     private static final String DAYLIGHT_HEADER_PACK = "daylight_header_pack";
@@ -58,6 +63,9 @@ public class QsHeader extends SettingsPreferenceFragment
     private String mDaylightHeaderProvider;
     private Preference mFileHeader;
     private String mFileHeaderProvider;
+
+    private TextView mTextView;
+    private View mSwitchBar;
 
     @Override
     public void onResume() {
@@ -100,6 +108,54 @@ public class QsHeader extends SettingsPreferenceFragment
 
         mFileHeader = findPreference(FILE_HEADER_SELECT);
 
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        final View view = LayoutInflater.from(getContext()).inflate(R.layout.master_setting_switch, container, false);
+        ((ViewGroup) view).addView(super.onCreateView(inflater, container, savedInstanceState));
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        boolean enabled = Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_CUSTOM_HEADER, 0) == 1;
+
+        mTextView = view.findViewById(R.id.switch_text);
+        mTextView.setText(getString(enabled ?
+                R.string.switch_on_text : R.string.switch_off_text));
+
+        mSwitchBar = view.findViewById(R.id.switch_bar);
+        Switch switchWidget = mSwitchBar.findViewById(android.R.id.switch_widget);
+        switchWidget.setChecked(enabled);
+        switchWidget.setOnCheckedChangeListener(this);
+        mSwitchBar.setActivated(enabled);
+        mSwitchBar.setOnClickListener(v -> {
+            switchWidget.setChecked(!switchWidget.isChecked());
+            mSwitchBar.setActivated(switchWidget.isChecked());
+        });
+
+        mHeaderProvider.setEnabled(enabled);
+        mFileHeader.setEnabled(enabled);
+        mHeaderShadow.setEnabled(enabled);
+        mDaylightHeaderPack.setEnabled(enabled);
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.STATUS_BAR_CUSTOM_HEADER, isChecked ? 1 : 0);
+        mTextView.setText(getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text));
+        mSwitchBar.setActivated(isChecked);
+
+        mHeaderProvider.setEnabled(isChecked);
+        mFileHeader.setEnabled(isChecked);
+        mHeaderShadow.setEnabled(isChecked);
+        mDaylightHeaderPack.setEnabled(isChecked);
     }
 
     private void updateHeaderProviderSummary(boolean headerEnabled) {

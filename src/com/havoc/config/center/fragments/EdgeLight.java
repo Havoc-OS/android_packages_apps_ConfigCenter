@@ -23,6 +23,12 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
 import androidx.preference.*;
 
 import com.android.internal.logging.nano.MetricsProto; 
@@ -32,25 +38,33 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.havoc.support.colorpicker.ColorPickerPreference;
 import com.havoc.support.preferences.CustomSeekBarPreference;
+import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
-public class EdgeLight extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+public class EdgeLight extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
 
     public static final String TAG = "EdgeLight";
     private static final String AMBIENT_LIGHT_COLOR = "ambient_light_color";
     private static final String AMBIENT_LIGHT_CUSTOM_COLOR = "ambient_light_custom_color";
     private static final String AMBIENT_LIGHT_DURATION = "ambient_light_duration";
     private static final String AMBIENT_LIGHT_REPEAT_COUNT = "ambient_light_repeat_count";
+    private static final String AMBIENT_LIGHT_ALWAYS = "ambient_light_pulse_for_all";
 
+    private SystemSettingSwitchPreference mEdgeLightAlways;
     private ListPreference mEdgeLightColorMode;
     private ColorPickerPreference mEdgeLightColor;
     private CustomSeekBarPreference mEdgeLightDuration;
     private CustomSeekBarPreference mEdgeLightRepeatCount;
 
+    private TextView mTextView;
+    private View mSwitchBar;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.edge_light);
+
+        mEdgeLightAlways = (SystemSettingSwitchPreference) findPreference(AMBIENT_LIGHT_ALWAYS);
 
         mEdgeLightColorMode = (ListPreference) findPreference(AMBIENT_LIGHT_COLOR);
         int edgeLightColorMode = Settings.System.getIntForUser(getContentResolver(),
@@ -84,6 +98,56 @@ public class EdgeLight extends SettingsPreferenceFragment
         mEdgeLightRepeatCount.setOnPreferenceChangeListener(this);
 
         updateColorPrefs(edgeLightColorMode);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        final View view = LayoutInflater.from(getContext()).inflate(R.layout.master_setting_switch, container, false);
+        ((ViewGroup) view).addView(super.onCreateView(inflater, container, savedInstanceState));
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        boolean enabled = Settings.System.getInt(getContentResolver(),
+                Settings.System.AMBIENT_NOTIFICATION_LIGHT, 0) == 1;
+
+        mTextView = view.findViewById(R.id.switch_text);
+        mTextView.setText(getString(enabled ?
+                R.string.switch_on_text : R.string.switch_off_text));
+
+        mSwitchBar = view.findViewById(R.id.switch_bar);
+        Switch switchWidget = mSwitchBar.findViewById(android.R.id.switch_widget);
+        switchWidget.setChecked(enabled);
+        switchWidget.setOnCheckedChangeListener(this);
+        mSwitchBar.setActivated(enabled);
+        mSwitchBar.setOnClickListener(v -> {
+            switchWidget.setChecked(!switchWidget.isChecked());
+            mSwitchBar.setActivated(switchWidget.isChecked());
+        });
+
+        mEdgeLightAlways.setEnabled(enabled);
+        mEdgeLightColorMode.setEnabled(enabled);
+        mEdgeLightColor.setEnabled(enabled);
+        mEdgeLightDuration.setEnabled(enabled);
+        mEdgeLightRepeatCount.setEnabled(enabled);
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.AMBIENT_NOTIFICATION_LIGHT, isChecked ? 1 : 0);
+        mTextView.setText(getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text));
+        mSwitchBar.setActivated(isChecked);
+
+        mEdgeLightAlways.setEnabled(isChecked);
+        mEdgeLightColorMode.setEnabled(isChecked);
+        mEdgeLightColor.setEnabled(isChecked);
+        mEdgeLightDuration.setEnabled(isChecked);
+        mEdgeLightRepeatCount.setEnabled(isChecked);
     }
 
     @Override

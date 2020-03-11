@@ -24,6 +24,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.provider.Settings;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
@@ -35,14 +36,17 @@ import android.view.View;
 import android.view.ViewGroup; 
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.CompoundButton;
 import android.widget.ListView;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.havoc.support.preferences.PackageListAdapter;
 import com.havoc.support.preferences.PackageListAdapter.PackageItem;
-import android.provider.Settings;
+import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,7 +54,8 @@ import java.util.List;
 import java.util.Map;
 
 public class HeadsUp extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
+        implements Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener,
+        CompoundButton.OnCheckedChangeListener {
 
     private static final int DIALOG_STOPLIST_APPS = 0;
     private static final int DIALOG_BLACKLIST_APPS = 1;
@@ -65,11 +70,15 @@ public class HeadsUp extends SettingsPreferenceFragment
     private Preference mAddBlacklistPref;
     private ListPreference mHeadsUpTimeOut;
     private ListPreference mHeadsUpSnoozeTime;
+    private SystemSettingSwitchPreference mLessBoring;
 
     private String mStoplistPackageList;
     private String mBlacklistPackageList;
     private Map<String, Package> mStoplistPackages;
     private Map<String, Package> mBlacklistPackages;
+
+    private TextView mTextView;
+    private View mSwitchBar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -101,6 +110,8 @@ public class HeadsUp extends SettingsPreferenceFragment
             return;
         }
 
+        mLessBoring = (SystemSettingSwitchPreference) findPreference("less_boring_heads_up");
+
         int defaultTimeOut = systemUiResources.getInteger(systemUiResources.getIdentifier(
                     "com.android.systemui:integer/heads_up_notification_decay", null, null));
         mHeadsUpTimeOut = (ListPreference) findPreference(PREF_HEADS_UP_TIME_OUT);
@@ -118,6 +129,56 @@ public class HeadsUp extends SettingsPreferenceFragment
                 Settings.System.HEADS_UP_NOTIFICATION_SNOOZE, defaultSnooze);
         mHeadsUpSnoozeTime.setValue(String.valueOf(headsUpSnooze));
         updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        final View view = LayoutInflater.from(getContext()).inflate(R.layout.master_setting_switch, container, false);
+        ((ViewGroup) view).addView(super.onCreateView(inflater, container, savedInstanceState));
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        boolean enabled = Settings.Global.getInt(getContentResolver(),
+                Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED, 1) == 1;
+
+        mTextView = view.findViewById(R.id.switch_text);
+        mTextView.setText(getString(enabled ?
+                R.string.switch_on_text : R.string.switch_off_text));
+
+        mSwitchBar = view.findViewById(R.id.switch_bar);
+        Switch switchWidget = mSwitchBar.findViewById(android.R.id.switch_widget);
+        switchWidget.setChecked(enabled);
+        switchWidget.setOnCheckedChangeListener(this);
+        mSwitchBar.setActivated(enabled);
+        mSwitchBar.setOnClickListener(v -> {
+            switchWidget.setChecked(!switchWidget.isChecked());
+            mSwitchBar.setActivated(switchWidget.isChecked());
+        });
+
+        mHeadsUpTimeOut.setEnabled(enabled);
+        mHeadsUpSnoozeTime.setEnabled(enabled);
+        mLessBoring.setEnabled(enabled);
+        mAddStoplistPref.setEnabled(enabled);
+        mAddBlacklistPref.setEnabled(enabled);
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+        Settings.Global.putInt(getContentResolver(),
+                Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED, isChecked ? 1 : 0);
+        mTextView.setText(getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text));
+        mSwitchBar.setActivated(isChecked);
+
+        mHeadsUpTimeOut.setEnabled(isChecked);
+        mHeadsUpSnoozeTime.setEnabled(isChecked);
+        mLessBoring.setEnabled(isChecked);
+        mAddStoplistPref.setEnabled(isChecked);
+        mAddBlacklistPref.setEnabled(isChecked);
     }
 
     @Override

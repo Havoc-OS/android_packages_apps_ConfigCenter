@@ -44,6 +44,10 @@ public class Misc extends SettingsPreferenceFragment
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.config_center_misc);
 
+        updateMasterPrefs();
+    }
+
+    private void updateMasterPrefs() {
         mGamingMode = (SystemSettingMasterSwitchPreference) findPreference(GAMING_MODE_ENABLED);
         mGamingMode.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.GAMING_MODE_ENABLED, 0) == 1));
@@ -59,6 +63,18 @@ public class Misc extends SettingsPreferenceFragment
             return true;
         }
         return false;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateMasterPrefs();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        updateMasterPrefs();
     }
 
     @Override

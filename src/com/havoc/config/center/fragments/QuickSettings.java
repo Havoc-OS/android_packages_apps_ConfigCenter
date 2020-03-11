@@ -91,14 +91,18 @@ public class QuickSettings extends SettingsPreferenceFragment
         mQsColumnsQuickbar.setValue(columnsQuickbar);
         mQsColumnsQuickbar.setOnPreferenceChangeListener(this);	
 
+        updateMasterPrefs();
+    }
+
+    private void updateMasterPrefs() {
         mCustomHeader = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_CUSTOM_HEADER);
-        int qsHeader = Settings.System.getInt(resolver,
+        int qsHeader = Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.STATUS_BAR_CUSTOM_HEADER, 0);
         mCustomHeader.setChecked(qsHeader != 0);
         mCustomHeader.setOnPreferenceChangeListener(this);
 
         mQsBlur = (SystemSettingMasterSwitchPreference) findPreference(QS_BACKGROUND_BLUR);
-        int blur = Settings.System.getInt(resolver,
+        int blur = Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.QS_BACKGROUND_BLUR, 0);
         mQsBlur.setChecked(blur != 0);
         mQsBlur.setOnPreferenceChangeListener(this);
@@ -144,6 +148,18 @@ public class QuickSettings extends SettingsPreferenceFragment
             return true;
         }
         return false;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateMasterPrefs();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        updateMasterPrefs();
     }
 
     @Override

@@ -45,12 +45,13 @@ public class LockScreen extends SettingsPreferenceFragment implements
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.config_center_lockscreen);
 
-        ContentResolver resolver = getActivity().getContentResolver();
-        Resources resources = getResources();
+        updateMasterPrefs();
+    }
 
+    private void updateMasterPrefs() {
         mVisualizerEnabled = (SecureSettingMasterSwitchPreference) findPreference(LOCKSCREEN_VISUALIZER_ENABLED);
         mVisualizerEnabled.setOnPreferenceChangeListener(this);
-        int visualizerEnabled = Settings.Secure.getInt(resolver,
+        int visualizerEnabled = Settings.Secure.getInt(getActivity().getContentResolver(),
                 LOCKSCREEN_VISUALIZER_ENABLED, 0);
         mVisualizerEnabled.setChecked(visualizerEnabled != 0);
     }
@@ -64,6 +65,18 @@ public class LockScreen extends SettingsPreferenceFragment implements
             return true;
         }
         return false;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateMasterPrefs();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        updateMasterPrefs();
     }
 
     @Override

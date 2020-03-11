@@ -54,12 +54,10 @@ public class Notifications extends SettingsPreferenceFragment
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.config_center_notifications);
 
-        mHeadsUpEnabled = (GlobalSettingMasterSwitchPreference) findPreference(HEADS_UP_NOTIFICATIONS_ENABLED);
-        mHeadsUpEnabled.setOnPreferenceChangeListener(this);
-        int headsUpEnabled = Settings.Global.getInt(getContentResolver(),
-                HEADS_UP_NOTIFICATIONS_ENABLED, 1);
-        mHeadsUpEnabled.setChecked(headsUpEnabled != 0);
+        updateMasterPrefs();
+    }
 
+    private void updateMasterPrefs() {
         mBatteryLightEnabled = (SystemSettingMasterSwitchPreference) findPreference(BATTERY_LIGHT_ENABLED);
         mBatteryLightEnabled.setOnPreferenceChangeListener(this);
         int batteryLightEnabled = Settings.System.getInt(getContentResolver(),
@@ -68,8 +66,14 @@ public class Notifications extends SettingsPreferenceFragment
 
         mLightsCategory = (PreferenceCategory) findPreference(LIGHTS_CATEGORY);
         if (!getResources().getBoolean(com.android.internal.R.bool.config_hasNotificationLed)) {
-            getPreferenceScreen().removePreference(mLightsCategory);
+            mLightsCategory.setVisible(false);
         }
+
+        mHeadsUpEnabled = (GlobalSettingMasterSwitchPreference) findPreference(HEADS_UP_NOTIFICATIONS_ENABLED);
+        mHeadsUpEnabled.setOnPreferenceChangeListener(this);
+        int headsUpEnabled = Settings.Global.getInt(getContentResolver(),
+                HEADS_UP_NOTIFICATIONS_ENABLED, 1);
+        mHeadsUpEnabled.setChecked(headsUpEnabled != 0);
 
         mEdgeLightEnabled = (SystemSettingMasterSwitchPreference) findPreference(AMBIENT_NOTIFICATION_LIGHT);
         mEdgeLightEnabled.setOnPreferenceChangeListener(this);
@@ -81,6 +85,13 @@ public class Notifications extends SettingsPreferenceFragment
     @Override
     public void onResume() {
         super.onResume();
+        updateMasterPrefs();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        updateMasterPrefs();
     }
 
     @Override

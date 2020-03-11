@@ -47,6 +47,10 @@ public class Battery extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.config_center_battery);
 
+        updateMasterPrefs();
+    }
+
+    private void updateMasterPrefs() {
         mSmartPixelsEnabled = (SystemSettingMasterSwitchPreference) findPreference(SMART_PIXELS_ENABLED);
         mSmartPixelsEnabled.setOnPreferenceChangeListener(this);
         int smartPixelsEnabled = Settings.System.getInt(getContentResolver(),
@@ -54,7 +58,7 @@ public class Battery extends SettingsPreferenceFragment implements
         mSmartPixelsEnabled.setChecked(smartPixelsEnabled != 0);
 
         if (!getResources().getBoolean(com.android.internal.R.bool.config_enableSmartPixels)) {
-            getPreferenceScreen().removePreference(mSmartPixelsEnabled);
+            mSmartPixelsEnabled.setVisible(false);
         }
 
         mEnableScreenStateToggles = (SystemSettingMasterSwitchPreference) findPreference(SCREEN_STATE_TOGGLES_ENABLE);
@@ -85,6 +89,18 @@ public class Battery extends SettingsPreferenceFragment implements
             return true;
         }
         return true; 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateMasterPrefs();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        updateMasterPrefs();
     }
 
     @Override
