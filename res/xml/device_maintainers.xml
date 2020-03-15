@@ -144,7 +144,7 @@
             android:title="@string/device_guacamoleb">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/Travisholt92" />
+                android:data="https://t.me/TheHunter08" />
         </Preference>
 
         <Preference
