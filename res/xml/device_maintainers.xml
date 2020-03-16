@@ -350,7 +350,7 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/fjsantim" />
-        </Preference>
+        </Preference>-->
 
         <Preference
             android:id="@+id/device_payton"
@@ -360,7 +360,7 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/SyberHexen" />
-        </Preference>-->
+        </Preference>
     </PreferenceCategory>
 
     <PreferenceCategory
