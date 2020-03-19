@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Havoc-OS
+ * Copyright (C) 2020 Havoc-OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,6 @@
 package com.havoc.config.center.fragments;
 
 import android.content.ContentResolver;
-import android.content.Context;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
@@ -27,11 +26,9 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
-import androidx.preference.ListPreference;
+
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
-import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -42,13 +39,13 @@ import com.havoc.support.preferences.SecureSettingSeekBarPreference;
 import com.havoc.support.preferences.SecureSettingSwitchPreference;
 
 public class Visualizer extends SettingsPreferenceFragment implements
-        OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
+        Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
 
     private static final String KEY_AUTOCOLOR = "lockscreen_visualizer_autocolor";
     private static final String KEY_LAVALAMP = "lockscreen_lavalamp_enabled";
 
-    private SwitchPreference mAutoColor;
-    private SwitchPreference mLavaLamp;
+    private SecureSettingSwitchPreference mAutoColor;
+    private SecureSettingSwitchPreference mLavaLamp;
     private SecureSettingSwitchPreference mAmbientVisualizer;
     private SecureSettingSeekBarPreference mColorBlend;
     private PreferenceCategory mSolidLines;
@@ -68,7 +65,7 @@ public class Visualizer extends SettingsPreferenceFragment implements
                 Settings.Secure.LOCKSCREEN_LAVALAMP_ENABLED, 1,
                 UserHandle.USER_CURRENT) != 0;
 
-        mAutoColor = (SwitchPreference) findPreference(KEY_AUTOCOLOR);
+        mAutoColor = (SecureSettingSwitchPreference) findPreference(KEY_AUTOCOLOR);
         mAutoColor.setEnabled(!mLavaLampEnabled);
 
         if (mLavaLampEnabled) {
@@ -79,7 +76,7 @@ public class Visualizer extends SettingsPreferenceFragment implements
                     R.string.lockscreen_autocolor_summary));
         }
 
-        mLavaLamp = (SwitchPreference) findPreference(KEY_LAVALAMP);
+        mLavaLamp = (SecureSettingSwitchPreference) findPreference(KEY_LAVALAMP);
         mLavaLamp.setOnPreferenceChangeListener(this);
 
         mAmbientVisualizer = (SecureSettingSwitchPreference) findPreference("ambient_visualizer");

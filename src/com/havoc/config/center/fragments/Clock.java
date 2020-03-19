@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2020 Havoc-OS
  * Copyright (C) 2017-2018 The Dirty Unicorns Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,23 +19,10 @@ package com.havoc.config.center.fragments;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import android.content.res.Resources;
-import android.database.ContentObserver;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.UserHandle;
-import androidx.preference.ListPreference;
-import androidx.preference.SwitchPreference;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceScreen;
-import androidx.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.text.format.DateFormat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +30,11 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.havoc.Utils;
@@ -51,8 +44,6 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Date;
 
 public class Clock extends SettingsPreferenceFragment implements

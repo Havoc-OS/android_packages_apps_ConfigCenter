@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2018 Havoc-OS
+ * Copyright (C) 2020 Havoc-OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,26 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.havoc.config.center.fragments;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.provider.Settings;
 import android.text.InputFilter;
 import android.text.Spannable;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import androidx.preference.*;
+
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.havoc.Utils;
@@ -42,8 +42,8 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.havoc.support.preferences.SystemSettingListPreference;
 
-public class CustomCarrierLabel extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+public class CustomCarrierLabel extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "CarrierLabel";
     private static final String CUSTOM_CARRIER_LABEL = "custom_carrier_label";

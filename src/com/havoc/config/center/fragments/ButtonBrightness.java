@@ -1,5 +1,6 @@
 /*
- *  Copyright (C) 2014 The OmniROM Project
+ * Copyright (C) 2020 Havoc-OS
+ * Copyright (C) 2014 The OmniROM Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,22 +25,18 @@ import android.os.PowerManager;
 import android.os.UserHandle;
 import android.provider.Settings;
 
-import androidx.preference.PreferenceCategory;
-import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.SwitchPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.Utils;
 
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.havoc.support.preferences.CustomSeekBarPreference;
 
-public class ButtonBrightness extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
+public class ButtonBrightness extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
     private static final String KEY_BUTTON_MANUAL_BRIGHTNESS_NEW = "button_manual_brightness_new";
     private static final String KEY_BUTTON_TIMEOUT = "button_timeout";

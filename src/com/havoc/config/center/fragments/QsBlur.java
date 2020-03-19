@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2018 Havoc-OS
+ * Copyright (C) 2020 Havoc-OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,20 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.havoc.config.center.fragments;
 
-import android.app.Activity;
-import android.content.ContentResolver;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.RemoteException;
-import android.os.ServiceManager;
-import android.os.UserHandle;
 import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,17 +25,15 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
-import androidx.preference.*;
+
+import androidx.preference.Preference;
 
 import com.android.internal.logging.nano.MetricsProto;
+
+import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+
 import com.havoc.support.preferences.CustomSeekBarPreference;
-
-import com.havoc.config.center.R;
-
-import java.util.List;
-import java.util.ArrayList;
 
 public class QsBlur extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {

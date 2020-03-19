@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2020 Havoc-OS
  * Copyright (C) 2017 The ABC rom
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,16 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.havoc.config.center.fragments;
 
-import android.content.ContentResolver;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
-import androidx.preference.ListPreference;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +27,12 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
+
 import com.android.internal.logging.nano.MetricsProto;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 

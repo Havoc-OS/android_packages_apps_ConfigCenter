@@ -15,20 +15,22 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
  */
+
 package com.havoc.config.center.preferences;
 
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import androidx.preference.Preference;
+import androidx.preference.PreferenceViewHolder;
 
 import com.android.settings.R;
 

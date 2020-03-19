@@ -16,17 +16,15 @@
 
 package com.havoc.config.center.fragments;
 
-import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.provider.Settings;
 import android.util.Log;
-import android.text.TextUtils;
+
+import com.android.internal.util.gaming.GamingModeController;
 
 import com.android.settings.R;
-import com.android.internal.util.gaming.GamingModeController;
 
 public class GamingModeReceiver extends BroadcastReceiver {
 

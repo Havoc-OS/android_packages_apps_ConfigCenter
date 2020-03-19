@@ -15,6 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
+
 package com.havoc.config.center.preferences;
 
 import android.content.ComponentName;
@@ -44,6 +45,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class AppMultiSelectListPreference extends CustomDialogPreferenceCompat {
+
     private static final String TAG = "AppMultiSelectList";
     private static final boolean DEBUG = false;
 

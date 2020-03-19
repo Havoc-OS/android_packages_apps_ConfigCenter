@@ -1,11 +1,12 @@
 /*
+ * Copyright (C) 2020 Havoc-OS
  * Copyright (C) 2014 The Nitrogen Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +26,6 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.Settings;
-import androidx.preference.ListPreference;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceGroup;
-import androidx.preference.PreferenceScreen;
-import androidx.preference.PreferenceViewHolder;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,9 +37,15 @@ import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
+
 import com.android.internal.logging.nano.MetricsProto;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+
 import com.havoc.support.preferences.PackageListAdapter;
 import com.havoc.support.preferences.PackageListAdapter.PackageItem;
 import com.havoc.support.preferences.SystemSettingSwitchPreference;
@@ -53,8 +55,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class HeadsUp extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener,
+public class HeadsUp extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener,
         CompoundButton.OnCheckedChangeListener {
 
     private static final int DIALOG_STOPLIST_APPS = 0;

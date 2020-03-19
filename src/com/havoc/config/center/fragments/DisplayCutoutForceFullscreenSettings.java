@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (C) 2018 The LineageOS Project
  * Copyright (C) 2019 PixelExperience
  *
@@ -30,26 +30,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SectionIndexer;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import com.android.settingslib.applications.ApplicationsState;
-
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import com.android.internal.util.custom.cutout.CutoutFullscreenController;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+
+import com.android.settingslib.applications.ApplicationsState;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.android.internal.util.custom.cutout.CutoutFullscreenController;
 
 public class DisplayCutoutForceFullscreenSettings extends SettingsPreferenceFragment
         implements ApplicationsState.Callbacks {

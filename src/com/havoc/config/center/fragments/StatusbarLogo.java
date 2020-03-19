@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Havoc-OS
+ * Copyright (C) 2020 Havoc-OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,6 @@
 
 package com.havoc.config.center.fragments;
 
-import android.content.Context;
-import android.content.ContentResolver;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.LayoutInflater;
@@ -28,7 +26,6 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.preference.Preference;
-import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -38,7 +35,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.havoc.support.preferences.SystemSettingListPreference;
 
 public class StatusbarLogo extends SettingsPreferenceFragment implements
-        OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
+        Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
 
     private SystemSettingListPreference mLogoStyle;
     private SystemSettingListPreference mLogoPosition;

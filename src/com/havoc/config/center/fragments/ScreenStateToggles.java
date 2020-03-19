@@ -1,7 +1,7 @@
 /*
+ * Copyright (C) 2020 Havoc-OS
  * Copyright (C) 2013 Android Open Kang Project
- *           (C) 2017 faust93 at monumentum@gmail.com
- *           (C) 2018 Havoc OS
+ * Copyright (C) 2017 faust93 at monumentum@gmail.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,13 +21,11 @@ package com.havoc.config.center.fragments;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,14 +36,14 @@ import android.widget.TextView;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.SwitchPreference;
-
-import com.havoc.config.center.R;
-import com.havoc.support.preferences.CustomSeekBarPreference;
-import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.internal.logging.nano.MetricsProto;
+
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+
+import com.havoc.support.preferences.CustomSeekBarPreference;
+import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
 public class ScreenStateToggles extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
@@ -64,9 +62,9 @@ public class ScreenStateToggles extends SettingsPreferenceFragment implements
     private TextView mTextView;
     private View mSwitchBar;
 
-    private SwitchPreference mEnableScreenStateTogglesTwoG;
-    private SwitchPreference mEnableScreenStateTogglesGps;
-    private SwitchPreference mEnableScreenStateTogglesMobileData;
+    private SystemSettingSwitchPreference mEnableScreenStateTogglesTwoG;
+    private SystemSettingSwitchPreference mEnableScreenStateTogglesGps;
+    private SystemSettingSwitchPreference mEnableScreenStateTogglesMobileData;
     private CustomSeekBarPreference mSecondsOffDelay;
     private CustomSeekBarPreference mSecondsOnDelay;
     private PreferenceCategory mMobileDateCategory;
@@ -98,7 +96,7 @@ public class ScreenStateToggles extends SettingsPreferenceFragment implements
         mLocationCategory = (PreferenceCategory) findPreference(
                 SCREEN_STATE_CATGEGORY_LOCATION);
 
-        mEnableScreenStateTogglesTwoG = (SwitchPreference) findPreference(
+        mEnableScreenStateTogglesTwoG = (SystemSettingSwitchPreference) findPreference(
                 SCREEN_STATE_TOGGLES_TWOG);
 
         ConnectivityManager cm = (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -112,7 +110,7 @@ public class ScreenStateToggles extends SettingsPreferenceFragment implements
             mEnableScreenStateTogglesTwoG.setOnPreferenceChangeListener(this);
         }
 
-        mEnableScreenStateTogglesMobileData = (SwitchPreference) findPreference(
+        mEnableScreenStateTogglesMobileData = (SystemSettingSwitchPreference) findPreference(
                 SCREEN_STATE_TOGGLES_MOBILE_DATA);
 
         if (!cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE)){
@@ -130,7 +128,7 @@ public class ScreenStateToggles extends SettingsPreferenceFragment implements
         boolean isLocationChangeAllowed = !um.hasUserRestriction(UserManager.DISALLOW_SHARE_LOCATION);
 
         // TODO: check if gps is available on this device?
-        mEnableScreenStateTogglesGps = (SwitchPreference) findPreference(
+        mEnableScreenStateTogglesGps = (SystemSettingSwitchPreference) findPreference(
                 SCREEN_STATE_TOGGLES_GPS);
 
         if (!isLocationChangeAllowed){
