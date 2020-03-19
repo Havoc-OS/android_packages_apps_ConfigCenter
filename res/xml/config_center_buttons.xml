@@ -54,7 +54,7 @@
         android:key="navigation_keys"
         android:title="@string/navigation_title" >
 
-        <SwitchPreference
+        <com.havoc.support.preferences.SwitchPreference
             android:key="force_show_navbar"
             android:title="@string/navigation_bar_title"
             android:summary="@string/navigation_bar_summary" />
@@ -65,7 +65,7 @@
             android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings"
             settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController" />
 
-        <SwitchPreference
+        <com.havoc.support.preferences.SwitchPreference
             android:key="gesture_pill_switch"
             android:title="@string/navbar_gesture_pill_toggle_title"
             android:summary="@string/navbar_gesture_pill_toggle_summary"

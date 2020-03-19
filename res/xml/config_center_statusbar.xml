@@ -114,7 +114,7 @@
                 android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
         </Preference>
 
-        <SwitchPreference
+        <com.havoc.support.preferences.SwitchPreference
             android:key="show_hd_icon"
             android:title="@string/show_hd_icon_title"
             android:summary="@string/show_hd_icon_summary"/>
@@ -137,7 +137,7 @@
             android:summary="@string/roaming_indicator_icon_summary"
             android:defaultValue="true"/>
 
-        <SwitchPreference
+        <com.havoc.support.preferences.SwitchPreference
             android:key="use_old_mobiletype"
             android:title="@string/use_old_mobiletype_title"
             android:summary="@string/use_old_mobiletype_summary" />

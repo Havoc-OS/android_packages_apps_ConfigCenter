@@ -22,7 +22,6 @@ import android.provider.Settings;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -30,6 +29,8 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.havoc.config.center.preferences.Utils;
+
+import com.havoc.support.preferences.SwitchPreference;
 
 public class PowerMenu extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
