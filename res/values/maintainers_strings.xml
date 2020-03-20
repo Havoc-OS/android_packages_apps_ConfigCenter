@@ -235,6 +235,9 @@
 
     <string name="device_x01bd" translatable="false">Asus Zenfone Max Pro M2</string>
     <string name="device_x01bd_summary" translatable="false">X01BD\nSonal Singh (SonalSingh18)</string>
+     
+    <string name="device_RMX1921" translatable="false">Realme XT</string>
+    <string name="device_RMX1921_summary" translatable="false">RMX1921\nProbir Ghosh (officialpro)</string>   
 
     <string name="device_s2" translatable="false">LeEco Le 2</string>
     <string name="device_s2_summary" translatable="false">s2\nHimanshu Kumar (Hk26)</string>
