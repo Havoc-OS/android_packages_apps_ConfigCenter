@@ -65,12 +65,6 @@
             android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings"
             settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController" />
 
-        <com.havoc.support.preferences.SwitchPreference
-            android:key="gesture_pill_switch"
-            android:title="@string/navbar_gesture_pill_toggle_title"
-            android:summary="@string/navbar_gesture_pill_toggle_summary"
-            android:defaultValue="false" />
-
         <ListPreference
             android:key="nav_bar_layout"
             android:title="@string/nav_bar_layout"
