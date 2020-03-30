@@ -507,16 +507,27 @@
                 android:data="https://t.me/Lightvortex242" />
         </Preference>
 
-        <!--<Preference
-            android:id="@+id/device_clover"
+       <!--<Preference
+            android:id="@+id/device_onclite"
             android:icon="@drawable/havoc_device"
-            android:summary="@string/device_clover_summary"
-            android:title="@string/device_clover" >
+            android:summary="@string/device_onclite_summary"
+            android:title="@string/device_onclite" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/rcstar6696" />
+                android:data="https://t.me/XtremeQ" />
         </Preference>-->
 
+	   <Preference
+            android:id="@+id/device_jasmine_sprout"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_jasmine_sprout_summary"
+            android:title="@string/device_jasmine_sprout">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/SiddharthBharadwaj" />
+        </Preference> 
+	    
+	        
         <Preference
             android:id="@+id/device_beryllium"
             android:icon="@drawable/havoc_device"
