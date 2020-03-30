@@ -28,6 +28,7 @@
     <string name="device_category_xiaomi_title" translatable="false">Xiaomi</string>
     <string name="device_category_lenovo_title" translatable="false">Lenovo</string>
     <string name="device_category_asus_title" translatable="false">Asus</string>
+    <string name="device_category_asus_title" translatable="false">Realme</string>
     <string name="device_category_leeco_title" translatable="false">LeEco</string>
     <string name="device_category_nextbit_title" translatable="false">Nextbit</string>
     <string name="device_category_nubia_title" translatable="false">Nubia</string>
