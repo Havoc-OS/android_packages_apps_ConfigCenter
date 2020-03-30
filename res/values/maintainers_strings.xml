@@ -201,6 +201,9 @@
     <string name="device_sakura" translatable="false">Xiaomi Redmi 6 Pro</string>
     <string name="device_sakura_summary" translatable="false">sakura\nTushar Mahajan (mahajant99)</string>
 
+    <string name="device_onclite" translatable="false">Xiaomi Redmi 7</string>
+    <string name="device_onclite_summary" translatable="false">onclite\nMohamed Arshad (MArshadRiyaz)</string>
+
     <string name="device_raphael" translatable="false">Xiaomi Redmi K20 Pro</string>
     <string name="device_raphael_summary" translatable="false">raphael\nWajid Khan (wajidkh08)</string>
 

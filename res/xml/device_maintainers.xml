@@ -598,6 +598,16 @@
         </Preference>
 
         <Preference
+            android:id="@+id/device_onclite"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_onclite_summary"
+            android:title="@string/device_onclite" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/XtremeQ" />
+        </Preference>
+
+        <Preference
             android:id="@+id/device_raphael"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_raphael_summary"
