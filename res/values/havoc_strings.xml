@@ -754,4 +754,8 @@
     <string name="back_gesture_haptic_title">Haptic feedback</string>
     <string name="back_gesture_haptic_summary">Vibrate when the back gesture is triggered</string>
 
+    <!-- Media heads up -->
+    <string name="show_media_heads_up_title">Media heads up</string>
+    <string name="show_media_heads_up_summary">Show heads up notification when a new track is played</string>
+
 </resources>
