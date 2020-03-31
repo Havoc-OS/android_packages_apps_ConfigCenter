@@ -727,6 +727,21 @@
                 android:data="https://t.me/SonalSingh18" />
         </Preference>
     </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:id="@+id/device_category_realme"
+        android:title="@string/device_category_realme_title" >
+
+        <Preference
+            android:id="@+id/device_RMX1921"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_RMX1921_summary"
+            android:title="@string/device_RMX1921" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/officialpro" />
+        </Preference>
+    </PreferenceCategory>
 
     <!--<PreferenceCategory
         android:id="@+id/device_category_leeco"
