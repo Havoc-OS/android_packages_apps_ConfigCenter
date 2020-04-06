@@ -758,4 +758,8 @@
     <string name="show_media_heads_up_title">Media heads up</string>
     <string name="show_media_heads_up_summary">Show heads up notification when a new track is played</string>
 
+    <!-- FOD animation -->
+    <string name="fod_recognizing_animation_title">Recognizing animation</string>
+    <string name="fod_recognizing_animation_summary">Show an animation while reading your fingerprint</string>
+
 </resources>
