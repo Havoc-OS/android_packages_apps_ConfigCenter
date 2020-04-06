@@ -18,28 +18,40 @@ package com.havoc.config.center.fragments;
 
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import androidx.preference.Preference;
 
+import com.android.internal.custom.app.LineageContextConstants;
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.havoc.support.preferences.SecureSettingMasterSwitchPreference;
+import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
 public class LockScreen extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String LOCKSCREEN_VISUALIZER_ENABLED = "lockscreen_visualizer_enabled";
+    private static final String FOD_ANIMATION_PREF = "fod_recognizing_animation";
 
     private SecureSettingMasterSwitchPreference mVisualizerEnabled;
+    private SystemSettingSwitchPreference mFODAnimationEnabled;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.config_center_lockscreen);
+
+        PackageManager packageManager = getPackageManager();
+
+        mFODAnimationEnabled = (SystemSettingSwitchPreference) findPreference(FOD_ANIMATION_PREF);
+        if (!packageManager.hasSystemFeature(LineageContextConstants.Features.FOD)) {
+            mFODAnimationEnabled.setVisible(false);
+        }
 
         updateMasterPrefs();
     }
