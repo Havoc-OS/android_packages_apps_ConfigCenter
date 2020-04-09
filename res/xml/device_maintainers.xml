@@ -614,7 +614,7 @@
             android:title="@string/device_raphael">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/itzwajid" />
+                android:data="https://t.me/nuub1k" />
         </Preference>
 
 	    <Preference
