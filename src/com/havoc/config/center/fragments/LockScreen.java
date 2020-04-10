@@ -52,9 +52,6 @@ public class LockScreen extends SettingsPreferenceFragment implements
         PackageManager packageManager = getPackageManager();
 
         mFODAnimationEnabled = (SystemSettingSwitchPreference) findPreference(FOD_ANIMATION_PREF);
-        if (!packageManager.hasSystemFeature(LineageContextConstants.Features.FOD)) {
-            mFODAnimationEnabled.setVisible(false);
-        }
 
         boolean mScreenOffFODValue = Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.SCREEN_OFF_FOD, 0) != 0;
@@ -62,6 +59,11 @@ public class LockScreen extends SettingsPreferenceFragment implements
         mScreenOffFOD = (SwitchPreference) findPreference(KEY_SCREEN_OFF_FOD);
         mScreenOffFOD.setChecked(mScreenOffFODValue);
         mScreenOffFOD.setOnPreferenceChangeListener(this);
+
+        if (!packageManager.hasSystemFeature(LineageContextConstants.Features.FOD)) {
+            mFODAnimationEnabled.setVisible(false);
+            mScreenOffFOD.setVisible(false);
+        }
 
         updateMasterPrefs();
     }
