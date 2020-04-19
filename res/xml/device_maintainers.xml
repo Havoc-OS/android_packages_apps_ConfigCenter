@@ -717,6 +717,16 @@
         android:id="@+id/device_category_asus"
         android:title="@string/device_category_asus_title">
 
+        <Preference
+            android:id="@+id/device_I001D"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_I001D_summary"
+            android:title="@string/device_I001D">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/ComicoX" />
+        </Preference>
+
         <Preference 
             android:id="@+id/device_I01WD" 
             android:icon="@drawable/havoc_device" 
@@ -725,7 +735,7 @@
             <intent 
                 android:action="android.intent.action.VIEW" 
                 android:data="https://t.me/ComicoX" /> 
-        </Preference>       
+        </Preference>
 
         <Preference
             android:id="@+id/device_x00t"

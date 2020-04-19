@@ -234,6 +234,9 @@
     <string name="device_kuntao" translatable="false">Lenovo P2</string>
     <string name="device_kuntao_summary" translatable="false">kuntao\nAdvaith Bhat (advaithbhat)</string>
 
+    <string name="device_I001D" translatable="false">Asus ROG Phone II</string>
+    <string name="device_I001D_summary" translatable="false">I001D\nRăileanu Cosmin (Comico)</string>
+
     <string name="device_I01WD" translatable="false">Asus Zenfone 6 (2019)</string>
     <string name="device_I01WD_summary" translatable="false">I01WD\nRăileanu Cosmin (Comico)</string>
 
