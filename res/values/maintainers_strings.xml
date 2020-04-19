@@ -237,6 +237,9 @@
     <string name="device_I01WD" translatable="false">Asus Zenfone 6 (2019)</string>
     <string name="device_I01WD_summary" translatable="false">I01WD\nRăileanu Cosmin (Comico)</string>
 
+    <string name="device_I001D" translatable="false">Asus RogPhone II</string>
+    <string name="device_I001D_summary" translatable="false">I001D\nRăileanu Cosmin (Comico)</string>
+
     <string name="device_x00t" translatable="false">Asus Zenfone Max Pro M1</string>
     <string name="device_x00t_summary" translatable="false">X00T\nRizky Benggolo (travarilo)</string>
 
