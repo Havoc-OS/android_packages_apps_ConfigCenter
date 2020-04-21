@@ -437,17 +437,17 @@
                 android:data="https://t.me/riquebarros17" />
         </Preference>
 
-        <!--<Preference
+        <Preference
             android:id="@+id/device_sirius"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_sirius_summary"
             android:title="@string/device_sirius" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/Zachx" />
+                android:data="https://t.me/dimasyudha" />
         </Preference>
 
-        <Preference
+        <!--<Preference
             android:id="@+id/device_cepheus"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_cepheus_summary"
