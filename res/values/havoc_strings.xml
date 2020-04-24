@@ -149,7 +149,7 @@
     <string name="powermenu_screenrecord_title">Screenrecord</string>
     <string name="powermenu_torch">Flashlight</string>
     <string name="powermenu_category_visibility">Lockscreen</string>
-    <string name="powermenu_lockscreen_title">Visibile on the lockscreen</string>
+    <string name="powermenu_lockscreen_title">Visible on the lockscreen</string>
     <string name="powermenu_lockscreen_summary">Show and use the power menu dialog on the lockscreen</string>
     <string name="powermenu_ls_reboot_summary">Show the reboot option on the lockscreen</string>
     <string name="powermenu_ls_advanced_reboot_summary">Show the advanced reboot option on the lockscreen</string>
