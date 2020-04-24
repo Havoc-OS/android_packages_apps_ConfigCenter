@@ -367,7 +367,7 @@
         android:id="@+id/device_category_xiaomi"
         android:title="@string/device_category_xiaomi_title">
 
-        <Preference
+        <!--<Preference
             android:id="@+id/device_cancro"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_cancro_summary"
@@ -387,7 +387,7 @@
                 android:data="https://t.me/kyoto44" />
         </Preference>
 
-        <!--<Preference
+        <Preference
             android:id="@+id/device_natrium"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_natrium_summary"
@@ -407,7 +407,7 @@
                 android:data="https://t.me/EnderXH" />
         </Preference>
 
-        <Preference
+        <!--<Preference
             android:id="@+id/device_wayne"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_wayne_summary"
@@ -425,7 +425,7 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/ZeNiXxXx" />
-        </Preference>
+        </Preference>-->
 
         <Preference
             android:id="@+id/device_platina"
@@ -437,17 +437,17 @@
                 android:data="https://t.me/riquebarros17" />
         </Preference>
 
-        <!--<Preference
+        <Preference
             android:id="@+id/device_sirius"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_sirius_summary"
             android:title="@string/device_sirius" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/Zachx" />
+                android:data="https://t.me/dimasyudha" />
         </Preference>
 
-        <Preference
+        <!--<Preference
             android:id="@+id/device_cepheus"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_cepheus_summary"
