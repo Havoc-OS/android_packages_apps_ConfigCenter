@@ -129,6 +129,9 @@
     <string name="device_evert" translatable="false">Moto G6 Plus</string>
     <string name="device_evert_summary" translatable="false">evert\nJose Santiago (Lieutenant Lettuce)</string>
 
+    <string name="device_river" translatable="false">Moto G7</string>
+    <string name="device_river_summary" translatable="false">river\nAndrew Hexen (SyberHexen)</string>
+
     <string name="device_payton" translatable="false">Moto X4</string>
     <string name="device_payton_summary" translatable="false">payton\nAndrew Hexen (SyberHexen)</string>
 
