@@ -353,6 +353,16 @@
         </Preference>-->
 
         <Preference
+            android:id="@+id/device_river"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_river_summary"
+            android:title="@string/device_river" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/SyberHexen" />
+        </Preference>
+
+        <Preference
             android:id="@+id/device_payton"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_payton_summary"
