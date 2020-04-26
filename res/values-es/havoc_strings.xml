@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2018 Havoc-OS
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- App Title -->
+    <!-- Preferences -->
+    <!-- About -->
+    <!-- Custom actions -->
+    <!-- Lockscreen Categories -->
+    <!-- Lockscreen battery info indicator  -->
+    <!-- ANBI -->
+    <!-- Volume rocker music control -->
+    <!-- Volume rocker wake -->
+    <!-- Volume rocker cursor control -->
+    <!-- Wake on charge -->
+    <!-- Double Tap gestures -->
+    <!-- Power Menu -->
+    <string name="powermenu_lockscreen_summary">Mostrar y utilizar el diálogo del menú de apagado en la pantalla de bloqueo</string>
+    <!-- Three-fingers-swipe to screenshot -->
+    <!-- Heads up -->
+    <!-- QuickSettings haptic feedback -->
+    <!-- Quick settings tiles columns and rows config -->
+    <!-- Smart Pixels -->
+    <!-- Fingerprint authentication vibration -->
+    <!-- Volume Steps Fragment -->
+    <!-- Disabling FC notifications -->
+    <!-- 4G icon -->
+    <!-- Volume swap buttons -->
+    <!-- Lock screen cover art -->
+    <!-- Lock screen media blur -->
+    <!-- Data disabled icon -->
+    <!-- Roaming indicator icon -->
+    <!-- Statusbar net monitor -->
+    <!-- Statusbar Tuner -->
+    <!-- Navbar options -->
+    <!-- Torch Power button gestures -->
+    <!-- Bluetooth battery status -->
+    <!-- Lock screen visualizer -->
+    <!-- Notification light -->
+    <!-- Battery light -->
+    <!-- Pocket judge -->
+    <!-- Brightness control -->
+    <!-- Quick settings brightness slider -->
+    <!-- Quick settings brightness icon -->
+    <!-- Charging animation -->
+    <!-- Heads up timeout -->
+    <!-- Heads up snooze -->
+    <!-- Heads up options -->
+    <!-- Notification guts kill app button -->
+    <!-- Show statusbar on lockscreen -->
+    <!-- Screen state service -->
+    <!-- Show QS on lockscreen -->
+    <!-- AOKP custom system animations -->
+    <!-- Tiles animation style  -->
+    <!-- Battery -->
+    <!-- Quick pull down-->
+    <!-- Gaming mode -->
+    <!-- Volume key answer -->
+    <!-- Notifications while screen on -->
+    <!-- Statusbar Clock -->
+    <!-- Custom carrier label and position -->
+    <!-- Statusbar logo -->
+    <!-- QS background opacity -->
+    <!-- QS header image -->
+    <!-- Volte icon -->
+    <!-- Per App aspect Ratio -->
+    <!-- Rounded corners -->
+    <!-- QS battery estimates -->
+    <!-- Swap navigation keys -->
+    <!-- Old mobile type icons -->
+    <!-- Ambient edge lighting -->
+    <!-- QS footer icons -->
+    <!-- Brightness buttons -->
+    <!-- Ambient visualizer -->
+    <!-- Blink flashlight for incoming calls -->
+    <!-- Screenshot -->
+    <!-- Lock icon -->
+    <!-- QS blur -->
+    <!-- HW keys -->
+    <!-- Navigation bar -->
+    <!-- Button backlight -->
+    <!-- Long swipe gestures -->
+    <!-- Full screen gestures -->
+    <!-- Back gesture -->
+    <!-- Media heads up -->
+    <!-- FOD animation -->
+    <!-- Adaptive Playback -->
+    <!-- Screen off FOD -->
+    <!-- IME button space -->
+</resources>
