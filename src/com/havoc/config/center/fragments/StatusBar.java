@@ -18,6 +18,7 @@ package com.havoc.config.center.fragments;
 
 import android.content.ContentResolver;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.provider.Settings;
 
 import androidx.preference.ListPreference;
@@ -55,6 +56,9 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private SystemSettingSeekBarPreference mNetworkTrafficAutohide;
     private SwitchPreference mUseOldMobileType;
     private boolean mConfigUseOldMobileType;
+    private ListPreference mBatteryStyle;
+    private ListPreference mBatteryPercent;
+    private int mBatteryPercentValue;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -96,6 +100,21 @@ public class StatusBar extends SettingsPreferenceFragment implements
         mUseOldMobileType.setChecked((Settings.System.getInt(resolver,
                 Settings.System.USE_OLD_MOBILETYPE, useOldMobileIcons) == 1));
         mUseOldMobileType.setOnPreferenceChangeListener(this);
+
+        mBatteryStyle = (ListPreference) findPreference("status_bar_battery_style");
+        int batterystyle = Settings.System.getIntForUser(resolver,
+                Settings.System.STATUS_BAR_BATTERY_STYLE, 0, UserHandle.USER_CURRENT);
+        mBatteryStyle.setValue(String.valueOf(batterystyle));
+        mBatteryStyle.setSummary(mBatteryStyle.getEntry());
+        mBatteryStyle.setOnPreferenceChangeListener(this);
+
+        mBatteryPercent = (ListPreference) findPreference("status_bar_show_battery_percent");
+        int batteryPercent = Settings.System.getIntForUser(resolver,
+                Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, 0, UserHandle.USER_CURRENT);
+        mBatteryPercent.setValue(String.valueOf(batteryPercent));
+        mBatteryPercent.setSummary(mBatteryPercent.getEntry());
+        mBatteryPercent.setOnPreferenceChangeListener(this);
+        mBatteryPercent.setEnabled(batterystyle != 4 && batterystyle != 5);
 
         updateMasterPrefs();
     }
@@ -141,6 +160,23 @@ public class StatusBar extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.USE_OLD_MOBILETYPE, value ? 1 : 0);
+            return true;
+		} else if (preference == mBatteryStyle) {
+            int batterystyle = Integer.parseInt((String) newValue);
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_BATTERY_STYLE, batterystyle,
+                UserHandle.USER_CURRENT);
+            int index = mBatteryStyle.findIndexOfValue((String) newValue);
+            mBatteryStyle.setSummary(mBatteryStyle.getEntries()[index]);
+            mBatteryPercent.setEnabled(batterystyle != 4 && batterystyle != 5);
+            return true;
+        } else if (preference == mBatteryPercent) {
+            int batteryPercent = Integer.parseInt((String) newValue);
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, batteryPercent,
+                    UserHandle.USER_CURRENT);
+            int index = mBatteryPercent.findIndexOfValue((String) newValue);
+            mBatteryPercent.setSummary(mBatteryPercent.getEntries()[index]);
             return true;
 		}
         return false;
