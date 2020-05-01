@@ -275,7 +275,7 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/Mba65music" />
-        </Preference>
+        </Preference>-->
 
         <Preference
             android:id="@+id/device_klte"
@@ -284,10 +284,10 @@
             android:title="@string/device_klte" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/brunowp8" />
+                android:data="https://t.me/cnkzlyr" />
         </Preference>
 
-	    <Preference
+	    <!--<Preference
             android:id="@+id/device_herolte"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_herolte_summary"
