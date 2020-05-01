@@ -247,6 +247,16 @@
                 android:data="https://t.me/jprimero15" />
         </Preference>
 
+        <Preference
+            android:id="@+id/device_klte"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_klte_summary"
+            android:title="@string/device_klte">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/cnkzlyr" />
+        </Preference>
+	    
         <!--<Preference
             android:id="@+id/device_trlte"
             android:icon="@drawable/havoc_device"
