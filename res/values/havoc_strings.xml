@@ -777,6 +777,8 @@
     <!-- Screen off FOD -->
     <string name="screen_off_fod_title">Screen off FOD</string>
     <string name="screen_off_fod_summary">Use fingerprint reader also when the screen is off</string>
+    <string name="screen_off_fod_icon_title">Show icon</string>
+    <string name="screen_off_fod_icon_summary">Show fingerprint icon when the screen is off</string>
 
     <!-- IME button space -->
     <string name="navigation_bar_ime_space_title">IME button space</string>

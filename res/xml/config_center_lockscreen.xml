@@ -82,6 +82,13 @@
             android:defaultValue="false" />
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="screen_off_fod_icon"
+            android:title="@string/screen_off_fod_icon_title"
+            android:summary="@string/screen_off_fod_icon_summary"
+            android:defaultValue="true"
+            android:dependency="screen_off_fod" />
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="fod_recognizing_animation"
             android:title="@string/fod_recognizing_animation_title"
             android:summary="@string/fod_recognizing_animation_summary"
