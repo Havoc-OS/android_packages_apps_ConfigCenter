@@ -27,6 +27,7 @@
     <string name="device_category_motorola_title" translatable="false">Motorola</string>
     <string name="device_category_xiaomi_title" translatable="false">Xiaomi</string>
     <string name="device_category_lenovo_title" translatable="false">Lenovo</string>
+    <string name="device_category_lg_title" translatable="false">LG</string>
     <string name="device_category_asus_title" translatable="false">Asus</string>
     <string name="device_category_realme_title" translatable="false">Realme</string>
     <string name="device_category_leeco_title" translatable="false">LeEco</string>
@@ -242,6 +243,9 @@
 
     <string name="device_kuntao" translatable="false">Lenovo P2</string>
     <string name="device_kuntao_summary" translatable="false">kuntao\nAdvaith Bhat (advaithbhat)</string>
+
+    <string name="device_lucye" translatable="false">LG G6</string>
+    <string name="device_lucye_summary" translatable="false">lucye\nMichael Bardoň (wolfsvk)</string>
 
     <string name="device_I001D" translatable="false">Asus ROG Phone II</string>
     <string name="device_I001D_summary" translatable="false">I001D\nRăileanu Cosmin (Comico)</string>
