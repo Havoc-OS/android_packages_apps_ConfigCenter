@@ -309,6 +309,21 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:id="@+id/device_category_lge"
+        android:title="@string/device_category_lge_title">
+
+        <Preference
+            android:id="@+id/device_lucye"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_lucye_summary"
+            android:title="@string/device_lucye">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/wolfsvk" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:id="@+id/device_category_motorola"
         android:title="@string/device_category_motorola_title">
 

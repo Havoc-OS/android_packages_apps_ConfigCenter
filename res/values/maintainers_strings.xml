@@ -34,6 +34,8 @@
     <string name="device_category_nubia_title" translatable="false">Nubia</string>
     <string name="device_category_yu_title" translatable="false">YU</string>
     <string name="device_category_zuk_title" translatable="false">ZUK</string>
+    <string name="device_category_lge_title" translatable="false">LGE</string>
+
 
     <!-- Devices & Maintainers -->
     <string name="device_generica64aonly" translatable="false">Generic System Image</string>
@@ -116,6 +118,9 @@
 
     <string name="device_hero2lte" translatable="false">Samsung Galaxy S7 Edge</string>
     <string name="device_hero2lte_summary" translatable="false">hero2lte\nGibran Mather (gibranm)</string>
+
+    <string name="device_lucye" translatable="false">LG G6</string>
+    <string name="device_lucye_summary" translatable="false">lucye\Michael Bardoň (wolfsvk)</string>
 
     <string name="device_potter" translatable="false">Moto G5 Plus</string>
     <string name="device_potter_summary" translatable="false">potter\nAbhijit Tudu (abhijit1998)</string>
