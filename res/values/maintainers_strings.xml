@@ -37,17 +37,8 @@
     <string name="device_category_zuk_title" translatable="false">ZUK</string>
 
     <!-- Devices & Maintainers -->
-    <string name="device_generica64aonly" translatable="false">Generic System Image</string>
-    <string name="device_generica64aonly_summary" translatable="false">a64-aonly\nVincent Vidal</string>
-
-    <string name="device_genericarmaonly" translatable="false">Generic System Image</string>
-    <string name="device_genericarmaonly_summary" translatable="false">arm-aonly\nVincent Vidal</string>
-
-    <string name="device_genericarm64aonly" translatable="false">Generic System Image</string>
-    <string name="device_genericarm64aonly_summary" translatable="false">arm64-aonly\nVincent Vidal</string>
-
-    <string name="device_genericarm64ab" translatable="false">Generic System Image</string>
-    <string name="device_genericarm64ab_summary" translatable="false">arm64-ab\nVincent Vidal</string>
+    <string name="device_generic" translatable="false">Generic System Image</string>
+    <string name="device_generic_summary" translatable="false">arm, arm64, a64\nEvgeny Brin (EugW)</string>
 
     <string name="device_bacon" translatable="false">OnePlus One</string>
     <string name="device_bacon_summary" translatable="false">bacon\nClint Thebus (ClintT)</string>
