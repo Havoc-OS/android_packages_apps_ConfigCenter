@@ -248,13 +248,12 @@
 
     <!-- Statusbar net monitor -->
     <string name="statusbar_ntraffic">Network</string>
-    <string name="network_traffic_state_title">Network traffic</string>
-    <string name="network_traffic_disabled">Disabled</string>
+    <string name="network_traffic_state_title">Network speed</string>
+    <string name="network_traffic_state_summary">Show network speed in the status bar</string>
+    <string name="network_traffic_location_title">Location</string>
     <string name="network_traffic_statusbar">Status bar</string>
     <string name="network_traffic_qs_header">QS header</string>
     <string name="network_traffic_autohide_threshold_title">Auto-hide threshold</string>
-    <string name="network_traffic_arrow_title">Activity arrows</string>
-    <string name="network_traffic_arrow_summary">Show the network traffic indicator arrows</string>
 
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">Status icons</string>

@@ -54,24 +54,12 @@
         android:key="statusbar_ntraffic"
         android:title="@string/statusbar_ntraffic">
 
-        <ListPreference
-            android:key="network_traffic_location"
+        <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
+            android:key="network_traffic_state"
+            android:fragment="com.havoc.config.center.fragments.NetworkTraffic"
             android:title="@string/network_traffic_state_title"
-            android:defaultValue="0" />
-
-        <com.havoc.support.preferences.SystemSettingSwitchPreference
-            android:key="network_traffic_arrow"
-            android:title="@string/network_traffic_arrow_title"
-            android:summary="@string/network_traffic_arrow_summary"
-            android:defaultValue="true" />
-
-        <com.havoc.support.preferences.SystemSettingSeekBarPreference
-            android:key="network_traffic_autohide_threshold"
-            android:title="@string/network_traffic_autohide_threshold_title"
-            android:max="10"
-            settings:min="0"
-            android:defaultValue="0"
-            settings:units="KB/s" />
+            android:summary="@string/network_traffic_state_summary"
+            android:defaultValue="false" />
 
         <Preference
             android:key="carrier_label"
