@@ -784,4 +784,13 @@
     <string name="navigation_bar_ime_space_title">IME button space</string>
     <string name="navigation_bar_ime_space_summary">Show IME button space below keyboard</string>
 
+    <!-- Display cutout -->
+    <string name="cutout_category_title">Display Cutout</string>
+    <string name="display_cutout_mode_title">Cutout mode</string>
+    <string name="display_cutout_mode_normal">Normal</string>
+    <string name="display_cutout_mode_immerse">Immerse</string>
+    <string name="display_cutout_mode_hide">Hide</string>
+    <string name="stock_statusbar_in_hide">Stock status bar height</string>
+    <string name="stock_statusbar_in_hide_summary">Use default status bar height in Hide mode</string>
+
 </resources>

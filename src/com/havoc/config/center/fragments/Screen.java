@@ -49,7 +49,6 @@ import java.util.List;
 public class Screen extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    private static final String KEY_FORCE_FULLSCREEN = "display_cutout_force_fullscreen_settings";
     private static final String KEY_ASPECT_RATIO_APPS_ENABLED = "aspect_ratio_apps_enabled";
     private static final String KEY_ASPECT_RATIO_APPS_LIST = "aspect_ratio_apps_list";
     private static final String KEY_ASPECT_RATIO_CATEGORY = "aspect_ratio_category";
@@ -57,12 +56,14 @@ public class Screen extends SettingsPreferenceFragment implements
     private static final String SYSUI_ROUNDED_SIZE = "sysui_rounded_size";
     private static final String SYSUI_ROUNDED_CONTENT_PADDING = "sysui_rounded_content_padding";
     private static final String SYSUI_ROUNDED_FWVALS = "sysui_rounded_fwvals";
+    private static final String KEY_CUTOUT_CATEGORY = "cutout_category";
 
     private AppMultiSelectListPreference mAspectRatioAppsSelect;
     private ScrollAppsViewPreference mAspectRatioApps;
     private CustomSeekBarPreference mCornerRadius;
     private CustomSeekBarPreference mContentPadding;
     private SecureSettingSwitchPreference mRoundedFwvals;
+    private SecureSettingSwitchPreference mCutoutCategory;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -79,9 +80,10 @@ public class Screen extends SettingsPreferenceFragment implements
             e.printStackTrace();
         }
 
-        final Preference forceFullscreen = (Preference) getPreferenceScreen().findPreference(KEY_FORCE_FULLSCREEN);
+        final PreferenceCategory cutoutCategory =
+            (PreferenceCategory) getPreferenceScreen().findPreference(KEY_CUTOUT_CATEGORY);
         if (!Utils.hasNotch(getContext())) {
-            getPreferenceScreen().removePreference(forceFullscreen);
+            getPreferenceScreen().removePreference(cutoutCategory);
         }
 
         final PreferenceCategory aspectRatioCategory =
