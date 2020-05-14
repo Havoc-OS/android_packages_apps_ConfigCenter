@@ -96,7 +96,17 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/SKULSHADY" />
         </Preference>
-
+         
+	<Preference
+            android:id="@+id/device_angler"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_angler_summary"
+            android:title="@string/device_angler">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/roxxannee" />
+        </Preference>
+    
         <Preference
             android:id="@+id/device_cheeseburger"
             android:icon="@drawable/havoc_device"
