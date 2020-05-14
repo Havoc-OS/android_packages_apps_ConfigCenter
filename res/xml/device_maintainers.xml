@@ -605,7 +605,7 @@
             android:title="@string/device_vince">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/blacksuan19" />
+                android:data="https://t.me/KenHV" />
         </Preference>
 
         <Preference
