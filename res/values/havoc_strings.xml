@@ -47,15 +47,15 @@
     <string name="screen_summary">Rounded corners, legacy app scaling</string>
 
     <!-- About -->
-	<string name="developers_category_title">Developers</string>
-	<string name="support_category_title">Support Team</string>
-    <string name="maintainers_category_title">Maintainers</string>
-    <string name="havoc_developers_skulshady" translatable="false">• Co-Founder \n• Core Developer \n• UI/UX Designer\n• Maintainer</string>
-    <string name="havoc_developers_zenixxx" translatable="false">• Co-Founder \n• Developer\n• Maintainer</string>
-    <string name="havoc_support_tushar" translatable="false">• Support Group Moderator</string>
+	<string name="team_category_title">Team</string>
+    <string name="havoc_developers_skulshady" translatable="false">• Founder \n• Core Developer \n• UI/UX Designer\n• Maintainer</string>
+    <string name="havoc_support_tushar" translatable="false">• Head of Support Team\n• Graphics Designer</string>
     <string name="havoc_support_summary" translatable="false">• Support Group Moderator</string>
-    <string name="device_maintainers_title">Official Devices</string>
-    <string name="device_maintainers_title_summary">List of official devices and their maintainers</string>
+    <string name="havoc_support_maintainer_summary" translatable="false">• Maintainer\n• Support Group Moderator</string>
+    <string name="group_mods_title">Support Group Mods</string>
+    <string name="group_mods_summary">List of all our support group moderators</string>
+    <string name="device_maintainers_title">Device Maintainers</string>
+    <string name="device_maintainers_title_summary">List of officially supported devices and their maintainers</string>
     <string name="changelog_title">Changelog</string>
     <string name="changelog_title_summary">View recent changes in ROM</string>
     <string name="changelog_error">Unable to load changelog</string>

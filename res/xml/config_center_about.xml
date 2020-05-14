@@ -19,8 +19,8 @@
     android:title="@string/about_title" >
 
     <PreferenceCategory
-        android:key="developer_category"
-        android:title="@string/developers_category_title">
+        android:key="team_category"
+        android:title="@string/team_category_title">
 
         <Preference
             android:title="Anushek Prasal (SKULSHADY)"
@@ -32,35 +32,16 @@
         </Preference>
 
         <Preference
-            android:title="Viktor Hermann (ZeNiXxX)"
-            android:summary="@string/havoc_developers_zenixxx"
-            android:icon="@drawable/havoc_developer">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://www.paypal.me/vhermann"/>
-        </Preference>
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="support_category" 
-        android:title="@string/support_category_title"> 
-
-        <Preference
             android:title="Tushar Jain (theoj22)"
             android:summary="@string/havoc_support_tushar"
             android:icon="@drawable/havoc_support"/>
 
         <Preference
-            android:title="Apoorva Srivastava (Dank_Boi)"
-            android:summary="@string/havoc_support_summary"
-            android:icon="@drawable/havoc_support"/>
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="maintainer_category" 
-        android:title="@string/maintainers_category_title"> 
+            android:key="mods"
+            android:fragment="com.havoc.config.center.fragments.GroupModerators"
+            android:summary="@string/group_mods_summary"
+            android:title="@string/group_mods_title"
+            android:icon="@drawable/havoc_moderator"/>
 
         <Preference
             android:key="maintainers"
@@ -111,7 +92,7 @@
             android:icon="@drawable/havoc_donate">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://www.paypal.me/vhermann"/>
+                android:data="https://www.paypal.me/ANUSHEK"/>
         </Preference>
 
         <!--<Preference
