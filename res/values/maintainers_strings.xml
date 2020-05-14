@@ -35,6 +35,7 @@
     <string name="device_category_nubia_title" translatable="false">Nubia</string>
     <string name="device_category_yu_title" translatable="false">YU</string>
     <string name="device_category_zuk_title" translatable="false">ZUK</string>
+    <string name="device_category_huawei_title" translatable="false">Huawei</string>
 
     <!-- Devices & Maintainers -->
     <string name="device_generic" translatable="false">Generic System Image</string>
@@ -270,5 +271,8 @@
 
     <string name="device_z2_plus">Zuk Z2 Plus</string>
     <string name="device_z2_plus_summary">z2_plus\nNikhil Gohil (nikhil.gohil3)</string>
+
+    <string name="device_angler" translatable="false">Nexus 6P</string>
+    <string name="device_angler_summary" translatable="false">angler\nHardik Kumar (hk1271)</string>
 
 </resources>

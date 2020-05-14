@@ -873,4 +873,19 @@
                 android:data="https://t.me/nikhilgohil3" />
         </Preference>
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:id="@+id/device_category_huawei"
+        android:title="@string/device_category_huawei_title">
+
+	    <Preference
+            android:id="@+id/device_angler"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_angler_summary"
+            android:title="@string/device_angler">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/roxxannee" />
+        </Preference>
+    </PreferenceCategory>
 </PreferenceScreen>
