@@ -34,7 +34,8 @@
     <string name="device_category_nubia_title" translatable="false">Nubia</string>
     <string name="device_category_yu_title" translatable="false">YU</string>
     <string name="device_category_zuk_title" translatable="false">ZUK</string>
-
+    <string name="device_category_huawei_title" translatable="false">Huawei</string>
+    
     <!-- Devices & Maintainers -->
     <string name="device_generica64aonly" translatable="false">Generic System Image</string>
     <string name="device_generica64aonly_summary" translatable="false">a64-aonly\nVincent Vidal</string>
@@ -48,6 +49,9 @@
     <string name="device_genericarm64ab" translatable="false">Generic System Image</string>
     <string name="device_genericarm64ab_summary" translatable="false">arm64-ab\nVincent Vidal</string>
 
+    <string name="device_angler" translatable="false">Nexus 6P</string>
+    <string name="device_angler_summary" translatable="false">angler\Hardik Kumar (hk1271)</string>
+    
     <string name="device_bacon" translatable="false">OnePlus One</string>
     <string name="device_bacon_summary" translatable="false">bacon\nClint Thebus (ClintT)</string>
 
