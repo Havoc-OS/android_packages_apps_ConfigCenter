@@ -675,7 +675,6 @@ public class Buttons extends SettingsPreferenceFragment implements
                 com.android.internal.R.integer.config_deviceHardwareKeys);
 
         if (deviceKeys == 0) {
-            mNavigationBar.setEnabled(false);
             homeCategory.setEnabled(true);
             backCategory.setEnabled(true);
             menuCategory.setEnabled(true);
