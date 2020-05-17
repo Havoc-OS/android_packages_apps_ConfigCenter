@@ -57,6 +57,7 @@ public class Buttons extends SettingsPreferenceFragment implements
     private static final String KEY_SWAP_NAVBAR = "sysui_nav_bar_inverse";
     private static final String KEY_GESTURE_SYSTEM = "gesture_system_navigation";
     private static final String KEY_BUTTON_BACKLIGHT = "button_backlight";
+    private static final String KEY_SWAP_KEYS = "swap_navigation_keys";
 
     private static final String KEY_BACK_LONG_PRESS_ACTION = "back_key_long_press";
     private static final String KEY_BACK_LONG_PRESS_CUSTOM_APP = "back_key_long_press_custom_app";
@@ -134,6 +135,7 @@ public class Buttons extends SettingsPreferenceFragment implements
 
     private SwitchPreference mNavigationBar;
     private SecureSettingSwitchPreference mSwapNavbar;
+    private SystemSettingSwitchPreference mSwapKeys;
     private SystemSettingSwitchPreference mNavigationArrowKeys;
     private SystemSettingSwitchPreference mNavigationIMESpace;
     private SystemSettingListPreference mTimeout;
@@ -201,8 +203,11 @@ public class Buttons extends SettingsPreferenceFragment implements
         int AssistKeyDoubleTap = getResources().getInteger(
                 com.android.internal.R.integer.config_doubleTapOnAssistKeyBehavior);
 
+        boolean hasHome = (deviceKeys & KEY_MASK_HOME) != 0;
+        boolean hasBack = (deviceKeys & KEY_MASK_BACK) != 0;
         boolean hasMenu = (deviceKeys & KEY_MASK_MENU) != 0;
         boolean hasAssist = (deviceKeys & KEY_MASK_ASSIST) != 0;
+        boolean hasAppSwitch = (deviceKeys & KEY_MASK_APP_SWITCH) != 0;
         boolean hasCamera = (deviceKeys & KEY_MASK_CAMERA) != 0;
 
         homeCategory = (PreferenceCategory) findPreference(KEY_CATEGORY_HOME);
@@ -365,6 +370,8 @@ public class Buttons extends SettingsPreferenceFragment implements
 
         mButtonBacklight = (Preference) findPreference(KEY_BUTTON_BACKLIGHT);
 
+        mSwapKeys = (SystemSettingSwitchPreference) findPreference(KEY_SWAP_KEYS);
+
         if (!hasMenu && menuCategory != null) {
             prefSet.removePreference(menuCategory);
         }
@@ -382,6 +389,12 @@ public class Buttons extends SettingsPreferenceFragment implements
             prefSet.removePreference(menuCategory);
             prefSet.removePreference(assistCategory);
             prefSet.removePreference(cameraCategory);
+        }
+
+        boolean keySwapSupported = hasBack && (hasMenu || hasAppSwitch);
+
+        if (!keySwapSupported) {
+            mSwapKeys.setVisible(false);
         }
 
         if (!buttonBacklightSupported) {
