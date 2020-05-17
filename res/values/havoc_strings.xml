@@ -254,6 +254,7 @@
     <string name="network_traffic_statusbar">Status bar</string>
     <string name="network_traffic_qs_header">QS header</string>
     <string name="network_traffic_autohide_threshold_title">Auto-hide threshold</string>
+    <string name="network_traffic_refresh_interval_title">Refresh interval</string>
 
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">Status icons</string>
