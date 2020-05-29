@@ -467,6 +467,16 @@
                 android:data="https://t.me/SiddharthBharadwaj" />
         </Preference>
 
+        <Preference
+            android:id="@+id/device_daisy"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_daisy_summary"
+            android:title="@string/device_daisy">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/LuPeSolTec" />
+        </Preference>
+
 
         <Preference
             android:id="@+id/device_laurel_sprout"

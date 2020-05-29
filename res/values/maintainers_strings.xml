@@ -164,6 +164,9 @@
     <string name="device_jasmine_sprout" translatable="false">Xiaomi Mi A2</string>
     <string name="device_jasmine_sprout_summary" translatable="false">jasmine_sprout\nSiddharth Bharadwaj (SiddharthBharadwaj)</string>
 
+    <string name="device_daisy" translatable="false">Xiaomi Mi A2 Lite</string>
+    <string name="device_daisy_summary" translatable="false">daisy\nLuPe (LuPeSolTec)</string>
+
     <string name="device_laurel_sprout" translatable="false">Xiaomi Mi A3</string>
     <string name="device_laurel_sprout_summary" translatable="false">laurel_sprout\nPrakash Singh (Prakaship78)</string>
 
