@@ -87,6 +87,12 @@
             android:entryValues="@array/status_bar_battery_percentage_values"
             android:defaultValue="0" />
 
+        <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
+            android:key="statusbar_battery_bar"
+            android:fragment="com.havoc.config.center.fragments.BatteryBar"
+            android:title="@string/battery_bar_title"
+            android:summary="@string/battery_bar_summary"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <PreferenceCategory

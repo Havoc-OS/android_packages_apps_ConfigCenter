@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright (C) 2020 Havoc-OS
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    android:title="@string/battery_bar_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <com.havoc.support.preferences.SystemSettingListPreference
+        android:key="statusbar_battery_bar_location"
+        android:title="@string/battery_bar_location_title"
+        android:entries="@array/battery_bar_location_entries"
+        android:entryValues="@array/battery_bar_location_values"
+        android:defaultValue="1" />
+
+    <com.havoc.support.preferences.SystemSettingListPreference
+        android:key="statusbar_battery_bar_style"
+        android:title="@string/battery_bar_style_title"
+        android:entries="@array/battery_bar_style_entries"
+        android:entryValues="@array/battery_bar_style_values"
+        android:defaultValue="0" />
+
+    <com.havoc.support.preferences.SystemSettingSeekBarPreference
+        android:key="statusbar_battery_bar_thickness"
+        android:title="@string/battery_bar_thickness_title"
+        android:defaultValue="2"
+        android:max="4"
+        settings:min="1"
+        settings:units="dp" />
+
+    <com.havoc.support.preferences.SystemSettingSwitchPreference
+        android:key="statusbar_battery_bar_animate"
+        android:title="@string/battery_bar_animate_title"
+        android:summary="@string/battery_bar_animate_summary"
+        android:defaultValue="false" />
+
+    <com.havoc.support.preferences.SystemSettingSwitchPreference
+        android:key="statusbar_battery_bar_enable_charging_color"
+        android:title="@string/battery_bar_use_charging_color_title"
+        android:summary="@string/battery_bar_use_charging_color_summary"
+        android:defaultValue="true" />
+
+    <PreferenceCategory
+        android:key="light_statusbar"
+        android:title="@string/light_statusbar_title">
+
+        <com.havoc.support.preferences.SystemSettingColorBlendPreference
+            android:title="@string/battery_bar_color_title"
+            android:summary="@string/battery_bar_color_summary"
+            settings:keyColorStart="statusbar_battery_bar_battery_low_color"
+            settings:keyColorEnd="statusbar_battery_bar_color"
+            settings:keyBlendReverse="statusbar_battery_bar_blend_color_reverse"
+            settings:defaultValueColorStart="#ffffffff"
+            settings:defaultValueColorEnd="#ffffffff"
+            settings:previewStartText="@string/battery_blend_start"
+            settings:previewBetweenText="@string/battery_blend_between"
+            settings:previewEndText="@string/battery_blend_end" />
+
+        <com.havoc.support.colorpicker.ColorPickerPreference
+            android:key="statusbar_battery_bar_charging_color"
+            android:title="@string/battery_bar_charging_color_title"
+            settings:defaultColorValue="0xffffff00"
+            android:dependency="statusbar_battery_bar_enable_charging_color" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="dark_statusbar"
+        android:title="@string/dark_statusbar_title">
+
+        <com.havoc.support.preferences.SystemSettingColorBlendPreference
+            android:title="@string/battery_bar_color_title"
+            android:summary="@string/battery_bar_color_summary"
+            settings:keyColorStart="statusbar_battery_bar_battery_low_dark_color"
+            settings:keyColorEnd="statusbar_battery_bar_dark_color"
+            settings:keyBlendReverse="statusbar_battery_bar_blend_color_dark_reverse"
+            settings:defaultValueColorStart="#99000000"
+            settings:defaultValueColorEnd="#99000000"
+            settings:previewStartText="@string/battery_blend_start"
+            settings:previewBetweenText="@string/battery_blend_between"
+            settings:previewEndText="@string/battery_blend_end" />
+
+        <com.havoc.support.colorpicker.ColorPickerPreference
+            android:key="statusbar_battery_bar_charging_dark_color"
+            android:title="@string/battery_bar_charging_color_title"
+            settings:defaultColorValue="0xff0d47a1"
+            android:dependency="statusbar_battery_bar_enable_charging_color" />
+    </PreferenceCategory>
+</PreferenceScreen>

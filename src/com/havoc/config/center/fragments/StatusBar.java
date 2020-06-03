@@ -18,6 +18,7 @@ package com.havoc.config.center.fragments;
 
 import android.content.ContentResolver;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.UserHandle;
 import android.provider.Settings;
 
@@ -41,10 +42,12 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private static final String SHOW_HD_ICON = "show_hd_icon";
     private static final String KEY_USE_OLD_MOBILETYPE = "use_old_mobiletype";
     private static final String NETWORK_TRAFFIC = "network_traffic_state";
+    private static final String BATTERY_BAR = "statusbar_battery_bar";
 
     private SystemSettingMasterSwitchPreference mStatusBarClockShow;
     private SystemSettingMasterSwitchPreference mStatusBarLogo;
     private SystemSettingMasterSwitchPreference mNetworkTraffic;
+    private SystemSettingMasterSwitchPreference mBatteryBar;
     private SwitchPreference mShowHDVolte;
     private boolean mConfigShowHDVolteIcon;
     private SwitchPreference mUseOldMobileType;
@@ -52,6 +55,8 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private ListPreference mBatteryStyle;
     private ListPreference mBatteryPercent;
     private int mBatteryPercentValue;
+    private boolean mIsBarSwitchingMode = false;
+    private Handler mHandler;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -59,6 +64,8 @@ public class StatusBar extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.config_center_statusbar);
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
+
+        mHandler = new Handler();
 
         mConfigShowHDVolteIcon = getResources().getBoolean(com.android.internal.R.bool.config_display_hd_volte);
         int useHDIcon = (mConfigShowHDVolteIcon ? 1 : 0);
@@ -107,6 +114,11 @@ public class StatusBar extends SettingsPreferenceFragment implements
         mNetworkTraffic.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.NETWORK_TRAFFIC_STATE, 0) == 1));
         mNetworkTraffic.setOnPreferenceChangeListener(this);
+
+        mBatteryBar = (SystemSettingMasterSwitchPreference) findPreference(BATTERY_BAR);
+        mBatteryBar.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUSBAR_BATTERY_BAR, 0) == 1));
+        mBatteryBar.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -148,12 +160,28 @@ public class StatusBar extends SettingsPreferenceFragment implements
             int index = mBatteryPercent.findIndexOfValue((String) newValue);
             mBatteryPercent.setSummary(mBatteryPercent.getEntries()[index]);
             return true;
-		} else if (preference == mNetworkTraffic) {
+        } else if (preference == mNetworkTraffic) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0);
             return true;
-		}
+	} else if (preference == mBatteryBar) {
+            if (mIsBarSwitchingMode) {
+                return false;
+            }
+            mIsBarSwitchingMode = true;
+            boolean showing = (Boolean) newValue;
+            Settings.System.putIntForUser(getActivity().getContentResolver(), Settings.System.STATUSBAR_BATTERY_BAR,
+                    showing ? 1 : 0, UserHandle.USER_CURRENT);
+            mBatteryBar.setChecked(showing);
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mIsBarSwitchingMode = false;
+                }
+            }, 1500);
+            return true;
+        }
         return false;
     }
 
