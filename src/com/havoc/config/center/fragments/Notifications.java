@@ -24,6 +24,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
 import com.android.internal.logging.nano.MetricsProto; 
+import com.android.internal.util.havoc.Utils; 
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -39,11 +40,13 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String BATTERY_LIGHT_ENABLED = "battery_light_enabled";
     private static final String HEADS_UP_NOTIFICATIONS_ENABLED = "heads_up_notifications_enabled";
     private static final String AMBIENT_NOTIFICATION_LIGHT = "ambient_notification_light";
+    private static final String STATUS_BAR_SHOW_TICKER = "status_bar_show_ticker";
 
     private PreferenceCategory mLightsCategory;
     private SystemSettingMasterSwitchPreference mBatteryLightEnabled;
     private GlobalSettingMasterSwitchPreference mHeadsUpEnabled;
     private SystemSettingMasterSwitchPreference mEdgeLightEnabled;
+    private SystemSettingMasterSwitchPreference mTickerEnabled;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,6 +79,16 @@ public class Notifications extends SettingsPreferenceFragment implements
         int edgeLightEnabled = Settings.System.getInt(getContentResolver(),
                 AMBIENT_NOTIFICATION_LIGHT, 0);
         mEdgeLightEnabled.setChecked(edgeLightEnabled != 0);
+
+        mTickerEnabled = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_SHOW_TICKER);
+        mTickerEnabled.setOnPreferenceChangeListener(this);
+        int tickerEnabled = Settings.System.getInt(getContentResolver(),
+                STATUS_BAR_SHOW_TICKER, 0);
+        mTickerEnabled.setChecked(tickerEnabled != 0);
+
+        if (Utils.hasNotch(getActivity())) {
+            mTickerEnabled.setVisible(false);
+        }
     }
 
     @Override
@@ -106,6 +119,11 @@ public class Notifications extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(),
                     AMBIENT_NOTIFICATION_LIGHT, value ? 1 : 0);
+            return true;
+        } else if (preference == mTickerEnabled) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getContentResolver(),
+                    STATUS_BAR_SHOW_TICKER, value ? 1 : 0);
             return true;
         }
         return false;
