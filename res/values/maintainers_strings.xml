@@ -134,8 +134,11 @@
     <string name="device_libra" translatable="false">Xiaomi Mi 4C</string>
     <string name="device_libra_summary" translatable="false">libra\nDmitry Gomzyakov (kyoto44)</string>
 
-    <string name="device_natrium" translatable="false">Xiaomi Mi 5s Plus</string>
+    <string name="device_natrium" translatable="false">Xiaomi Mi 5S Plus</string>
     <string name="device_natrium_summary" translatable="false">natrium\nJosh Leivenzon (theOriginalSuperl2)</string>
+
+    <string name="device_tiffany" translatable="false">Xiaomi Mi 5X</string>
+    <string name="device_tiffany_summary" translatable="false">tiffany\nMagical Unicorn (BLIBWU)</string>
 
     <string name="device_sagit" translatable="false">Xiaomi Mi 6</string>
     <string name="device_sagit_summary" translatable="false">sagit\nAfanasev Denis (EnderXH)</string>

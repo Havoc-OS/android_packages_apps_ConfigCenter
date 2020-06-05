@@ -378,6 +378,16 @@
         </Preference>-->
 
         <Preference
+            android:id="@+id/device_tiffany"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_tiffany_summary"
+            android:title="@string/device_tiffany">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/blibwu" />
+        </Preference>
+
+        <Preference
             android:id="@+id/device_sagit"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_sagit_summary"
