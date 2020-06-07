@@ -235,9 +235,19 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/Mba65music" />
-        </Preference>
+        </Preference>-->
 
         <Preference
+            android:id="@+id/device_crownlte"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_crownlte_summary"
+            android:title="@string/device_crownlte">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/varunsoma" />
+        </Preference>
+
+        <!--<Preference
             android:id="@+id/device_ks01ltex"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_ks01ltex_summary"
@@ -276,6 +286,26 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/Giblyat" />
         </Preference>-->
+
+        <Preference
+            android:id="@+id/device_starlte"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_starlte_summary"
+            android:title="@string/device_starlte">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/varunsoma" />
+        </Preference>
+
+        <Preference
+            android:id="@+id/device_star2lte"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_star2lte_summary"
+            android:title="@string/device_star2lte">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/varunsoma" />
+        </Preference>
     </PreferenceCategory>
 
     <PreferenceCategory
