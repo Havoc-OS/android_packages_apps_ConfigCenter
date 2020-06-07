@@ -280,5 +280,14 @@
 
     <string name="device_angler" translatable="false">Nexus 6P</string>
     <string name="device_angler_summary" translatable="false">angler\nHardik Kumar (hk1271)</string>
+    
+    <string name="device_angler" translatable="false">Samsung S9 (exynos)</string>
+    <string name="device_starlte_summary" translatable="false">starlte\nVarun Soma</string>
+    
+    <string name="device_angler" translatable="false">Samsung S9+ (exynos)</string>
+    <string name="device_star2lte_summary" translatable="false">star2lte\nVarun Soma</string>
+    
+    <string name="device_angler" translatable="false">Samsung Note 9 (exynos)</string>
+    <string name="device_crownlte_summary" translatable="false">crownlte\nVarun Soma</string>
 
 </resources>
