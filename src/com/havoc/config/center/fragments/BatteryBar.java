@@ -25,10 +25,12 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.havoc.Utils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -41,7 +43,7 @@ import com.havoc.support.preferences.SystemSettingSwitchPreference;
 public class BatteryBar extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
 
-    private SystemSettingListPreference mLocation;
+    private ListPreference mLocation;
     private SystemSettingSeekBarPreference mThickness;
     private SystemSettingListPreference mStyle;
     private SystemSettingSwitchPreference mAnimate;
@@ -59,7 +61,6 @@ public class BatteryBar extends SettingsPreferenceFragment implements
         super.onCreate(savedInstance);
         addPreferencesFromResource(R.xml.battery_bar);
 
-        mLocation = (SystemSettingListPreference) findPreference("statusbar_battery_bar_location");
         mThickness = (SystemSettingSeekBarPreference) findPreference("statusbar_battery_bar_thickness");
         mStyle = (SystemSettingListPreference) findPreference("statusbar_battery_bar_style");
         mAnimate = (SystemSettingSwitchPreference) findPreference("statusbar_battery_bar_animate");
@@ -67,6 +68,27 @@ public class BatteryBar extends SettingsPreferenceFragment implements
         mChargingColorDark = (ColorPickerPreference) findPreference("statusbar_battery_bar_charging_dark_color");
         mLight = (PreferenceCategory) findPreference("light_statusbar");
         mDark = (PreferenceCategory) findPreference("dark_statusbar");
+
+        boolean isButtonNavigation = (Utils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")
+                || Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton"));
+
+        mLocation = (ListPreference) findPreference("statusbar_battery_bar_location");
+        int batteryBarLocation = Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUSBAR_BATTERY_BAR_LOCATION, 0);
+        CharSequence[] ButtonNavEntries = { getResources().getString(R.string.battery_bar_location_statusbar_top),
+                getResources().getString(R.string.battery_bar_location_statusbar_bottom),
+                getResources().getString(R.string.battery_bar_location_navbar_top),
+                getResources().getString(R.string.battery_bar_location_navbar_bottom) };
+        CharSequence[] GestureNavEntries = { getResources().getString(R.string.battery_bar_location_statusbar_top),
+                getResources().getString(R.string.battery_bar_location_statusbar_bottom),
+                getResources().getString(R.string.battery_bar_location_navbar_bottom) };
+        CharSequence[] ButtonNavValues = {"1", "2", "3", "4"};
+        CharSequence[] GestureNavValues = {"1", "2", "4"};
+        mLocation.setEntries(isButtonNavigation ? ButtonNavEntries : GestureNavEntries);
+        mLocation.setEntryValues(isButtonNavigation ? ButtonNavValues : GestureNavValues);
+        mLocation.setValue(String.valueOf(batteryBarLocation));
+        mLocation.setSummary(mLocation.getEntry());
+        mLocation.setOnPreferenceChangeListener(this);
 
         mChargingColor = (ColorPickerPreference) findPreference("statusbar_battery_bar_charging_color");
         int chargingColor = Settings.System.getInt(getContentResolver(),
@@ -154,7 +176,14 @@ public class BatteryBar extends SettingsPreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mChargingColor) {
+        if (preference == mLocation) {
+            int batteryBarLocation = Integer.valueOf((String) newValue);
+            int index = mLocation.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_BATTERY_BAR_LOCATION, batteryBarLocation);
+            mLocation.setSummary(mLocation.getEntries()[index]);
+            return true;
+        } else if (preference == mChargingColor) {
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
             if (hex.equals("#ffffff00")) {
