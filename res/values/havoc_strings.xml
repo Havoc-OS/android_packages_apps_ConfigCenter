@@ -661,6 +661,12 @@
     <string name="pulse_ambient_light_repeat_count_title">Light repeat count</string>
     <string name="pulse_ambient_light_show_always_title">Show always</string>
     <string name="pulse_ambient_light_show_always_summary">Show lights for all doze events and not just notifications</string>
+    <string name="pulse_ambient_light_repeat_direction_title">Light repeat mode</string>
+    <string name="pulse_ambient_light_repeat_direction_restart">Restart</string>
+    <string name="pulse_ambient_light_repeat_direction_reverse">Reverse</string>
+    <string name="pulse_ambient_light_layout_title">Light view</string>
+    <string name="pulse_ambient_light_layout_solid">Solid</string>
+    <string name="pulse_ambient_light_layout_faded">Faded</string>
 
     <!-- QS footer icons -->
     <string name="qs_footer_title">Footer</string>
