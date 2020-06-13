@@ -31,6 +31,8 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.havoc.support.preferences.GlobalSettingMasterSwitchPreference;
 import com.havoc.support.preferences.SystemSettingMasterSwitchPreference;
+import com.havoc.support.preferences.CustomSeekBarPreference;
+import com.havoc.support.preferences.SystemSettingListPreference;
 
 public class Notifications extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -41,12 +43,18 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String AMBIENT_NOTIFICATION_LIGHT = "pulse_ambient_light";
     // private static final String STATUS_BAR_SHOW_TICKER = "status_bar_show_ticker";
     private static final String FLASH_ON_CALL_WAITING_DELAY = "flash_on_call_waiting_delay";
+    private static final String PREF_FLASH_ON_CALL = "flashlight_on_call";
+    private static final String PREF_FLASH_ON_CALL_DND = "flashlight_on_call_ignore_dnd";
+    private static final String PREF_FLASH_ON_CALL_RATE = "flashlight_on_call_rate";
 
     // private PreferenceCategory mLightsCategory;
     private GlobalSettingMasterSwitchPreference mHeadsUpEnabled;
     private SystemSettingMasterSwitchPreference mEdgeLightEnabled;
     // private SystemSettingMasterSwitchPreference mTickerEnabled;
     private CustomSeekBarPreference mFlashOnCallWaitingDelay;
+    private SystemSettingListPreference mFlashOnCall;
+    private SystemSettingSwitchPreference mFlashOnCallIgnoreDND;
+    private CustomSeekBarPreference mFlashOnCallRate;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -82,6 +90,24 @@ public class Notifications extends SettingsPreferenceFragment implements
         mFlashOnCallWaitingDelay = (CustomSeekBarPreference) findPreference(FLASH_ON_CALL_WAITING_DELAY);
         mFlashOnCallWaitingDelay.setValue(Settings.System.getInt(resolver, Settings.System.FLASH_ON_CALLWAITING_DELAY, 200));
         mFlashOnCallWaitingDelay.setOnPreferenceChangeListener(this);
+
+        mFlashOnCallRate = (CustomSeekBarPreference)
+                findPreference(PREF_FLASH_ON_CALL_RATE);
+        value = Settings.System.getInt(resolver,
+                Settings.System.FLASHLIGHT_ON_CALL_RATE, 1);
+        mFlashOnCallRate.setValue(value);
+        mFlashOnCallRate.setOnPreferenceChangeListener(this);
+
+        mFlashOnCallIgnoreDND = (SystemSettingSwitchPreference)
+                findPreference(PREF_FLASH_ON_CALL_DND);
+        value = Settings.System.getInt(resolver,
+                Settings.System.FLASHLIGHT_ON_CALL, 0);
+        mFlashOnCallIgnoreDND.setVisible(value > 1);
+        mFlashOnCallRate.setVisible(value != 0);
+
+        mFlashOnCall = (SystemSettingListPreference)
+                findPreference(PREF_FLASH_ON_CALL);
+        mFlashOnCall.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -111,6 +137,18 @@ public class Notifications extends SettingsPreferenceFragment implements
         } else if (preference == mFlashOnCallWaitingDelay) {
             int val = (Integer) newValue;
             Settings.System.putInt(getContentResolver(), Settings.System.FLASH_ON_CALLWAITING_DELAY, val);
+            return true;
+        } else if (preference == mFlashOnCall) {
+            int value = Integer.parseInt((String) newValue);
+            Settings.System.putInt(resolver,
+                    Settings.System.FLASHLIGHT_ON_CALL, value);
+            mFlashOnCallIgnoreDND.setVisible(value > 1);
+            mFlashOnCallRate.setVisible(value != 0);
+            return true;
+        } else if (preference == mFlashOnCallRate) {
+            int value = (Integer) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.FLASHLIGHT_ON_CALL_RATE, value);
             return true;
         // } else if (preference == mTickerEnabled) {
         //     boolean value = (Boolean) newValue;

@@ -690,6 +690,10 @@
     <string name="flashlight_on_call_no_ringer">When ringer is silent</string>
     <string name="flashlight_on_call_dnd">Only in DND mode</string>
     <string name="flashlight_on_call_always">Always</string>
+    <string name="flashlight_on_call_ignore_dnd_title">Ignore DND</string>
+    <string name="flashlight_on_call_ignore_dnd_summary">Whether to blink flash when in Do Not Disturb mode</string>
+    <string name="flashlight_on_call_rate_title">Rate</string>
+    <string name="flashlight_on_call_rate_summary">Flashlight on call blink rate</string>
     <string name="flashlight_on_call_wait_title">Blink for call waiting</string>
     <string name="flashlight_on_call_wait_summary">Pulse flash when there\'s a call waiting</string>
     <string name="flash_on_call_delay_title">Flash blink rate</string>
