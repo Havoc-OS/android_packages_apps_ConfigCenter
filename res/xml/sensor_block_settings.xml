@@ -19,15 +19,8 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/sensor_block_title">
 
-    <com.havoc.support.preferences.SystemSettingSwitchPreference
-        android:key="sensor_block"
-        android:title="@string/sensor_block_title"
-        android:summary="@string/sensor_block_summary"
-        android:defaultValue="false" />
-
     <PreferenceCategory
         android:title="@string/sensor_block_app_picker_title"
-        android:dependency="sensor_block"
         android:key="sensor_block_applications">
         <Preference
             android:key="add_sensor_block_packages"

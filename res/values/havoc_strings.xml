@@ -40,7 +40,7 @@
     <string name="statusbar_title">Status Bar</string>
     <string name="statusbar_summary">Clock, logo, status icons</string>
     <string name="battery_title">Battery Saving</string>
-    <string name="battery_saving_summary">Smart pixels, suspend actions</string>
+    <string name="battery_saving_summary">Suspend actions, block sensors</string>
     <string name="ambient_display_custom_title">Ambient Display</string>
     <string name="ambient_display_custom_summary">Always on, music ticker, gestures</string>
     <string name="screen_title">Screen</string>
@@ -814,7 +814,7 @@
 
     <!-- Sensor block per-package -->
     <string name="sensor_block_title">Block sensors</string>
-    <string name="sensor_block_summary">Block access to certain sensors for some apps to save battery</string>
+    <string name="sensor_block_summary">Block access to certain sensors for selected apps</string>
     <string name="sensor_block_app_picker_title">Block sensors for these apps</string>
     <string name="add_sensor_block_package_title">Add apps for Sensor block</string>
     <string name="add_sensor_block_package_summary">Significant motion, accelerometer, linear acceleration sensors will be blocked for these apps</string>

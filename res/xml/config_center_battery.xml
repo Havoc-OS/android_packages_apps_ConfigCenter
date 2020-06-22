@@ -32,9 +32,10 @@
         android:summary="@string/screen_state_toggles_summary"
         android:defaultValue="false" />
 
-    <Preference
-        android:key="sensor_block_settings"
+    <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
+        android:key="sensor_block"
+        android:fragment="com.havoc.config.center.fragments.SensorBlock"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
-        android:fragment="com.havoc.config.center.fragments.SensorBlock"/>
+        android:defaultValue="false" />
 </PreferenceScreen>
