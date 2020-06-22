@@ -19,10 +19,12 @@ package com.havoc.config.center.fragments;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.provider.Settings;
 
+import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 
 import com.android.internal.logging.nano.MetricsProto; 
@@ -38,13 +40,23 @@ public class Misc extends SettingsPreferenceFragment implements
     public static final String TAG = "Misc";
 
     private static final String GAMING_MODE_ENABLED = "gaming_mode_enabled";
+    private static final String KEY_RINGTONE_FOCUS_MODE = "ringtone_focus_mode";
 
     private SystemSettingMasterSwitchPreference mGamingMode;
+    private ListPreference mRingtoneFocusMode;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.config_center_misc);
+
+        final Resources res = getResources();
+
+        mRingtoneFocusMode = (ListPreference) findPreference(KEY_RINGTONE_FOCUS_MODE);
+
+        if (!res.getBoolean(com.android.internal.R.bool.config_deviceRingtoneFocusMode)) {
+            mRingtoneFocusMode.setVisible(false);
+        }
 
         updateMasterPrefs();
     }

@@ -66,5 +66,12 @@
             android:entryValues="@array/adaptive_playback_timeout_values"
             android:defaultValue="30000"
             android:dependency="adaptive_playback_enabled" />
+
+        <com.havoc.support.preferences.GlobalSettingListPreference
+            android:key="ringtone_focus_mode"
+            android:title="@string/ringtone_focus_mode_title"
+            android:entries="@array/ringtone_focus_mode_entries"
+            android:entryValues="@array/ringtone_focus_mode_values"
+            android:defaultValue="1" />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -857,4 +857,9 @@
     <string name="ticker_animation_mode_scroll">Scroll</string>
     <string name="ticker_tick_duration_title">Duration</string>
 
+    <!-- Headset ringtone audio focus -->
+    <string name="ringtone_focus_mode_title">Ringtone focus mode</string>
+    <string name="ringtone_focus_mode_dynamic">Headset (If media is playing)</string>
+    <string name="ringtone_focus_mode_stock">Speaker and headset</string>
+
 </resources>
