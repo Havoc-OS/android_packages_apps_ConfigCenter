@@ -615,10 +615,6 @@
     <string name="file_header_select_summary">Select an image from internal storage</string>
     <string name="status_bar_custom_header_shadow_title">Darken image</string>
 
-    <!-- Volte icon -->
-    <string name="show_hd_icon_title">HD icon</string>
-    <string name="show_hd_icon_summary">Display HD icon in status bar instead of VoLTE</string>
-
     <!-- Per App aspect Ratio -->
     <string name="action_save">Save</string>
     <string name="aspect_ratio_category_title">Legacy app scaling</string>

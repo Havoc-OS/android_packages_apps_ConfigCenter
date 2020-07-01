@@ -39,7 +39,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
 
     private static final String STATUS_BAR_CLOCK = "status_bar_clock";
     private static final String STATUS_BAR_LOGO = "status_bar_logo";
-    private static final String SHOW_HD_ICON = "show_hd_icon";
     private static final String KEY_USE_OLD_MOBILETYPE = "use_old_mobiletype";
     private static final String NETWORK_TRAFFIC = "network_traffic_state";
     private static final String BATTERY_BAR = "statusbar_battery_bar";
@@ -48,8 +47,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private SystemSettingMasterSwitchPreference mStatusBarLogo;
     private SystemSettingMasterSwitchPreference mNetworkTraffic;
     private SystemSettingMasterSwitchPreference mBatteryBar;
-    private SwitchPreference mShowHDVolte;
-    private boolean mConfigShowHDVolteIcon;
     private SwitchPreference mUseOldMobileType;
     private boolean mConfigUseOldMobileType;
     private ListPreference mBatteryStyle;
@@ -66,13 +63,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
 
         mHandler = new Handler();
-
-        mConfigShowHDVolteIcon = getResources().getBoolean(com.android.internal.R.bool.config_display_hd_volte);
-        int useHDIcon = (mConfigShowHDVolteIcon ? 1 : 0);
-        mShowHDVolte = (SwitchPreference) findPreference(SHOW_HD_ICON);
-        mShowHDVolte.setChecked((Settings.System.getInt(resolver,
-                Settings.System.SHOW_HD_ICON, useHDIcon) == 1));
-        mShowHDVolte.setOnPreferenceChangeListener(this);
 
         mConfigUseOldMobileType = getResources().getBoolean(com.android.internal.R.bool.config_useOldMobileIcons);
         int useOldMobileIcons = (mConfigUseOldMobileType ? 1 : 0);
@@ -132,11 +122,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUS_BAR_LOGO, value ? 1 : 0);
-            return true;
-        } else if (preference == mShowHDVolte) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.SHOW_HD_ICON, value ? 1 : 0);
             return true;
         } else if (preference == mUseOldMobileType) {
             boolean value = (Boolean) newValue;
