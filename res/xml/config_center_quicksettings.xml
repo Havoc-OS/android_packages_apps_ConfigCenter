@@ -75,6 +75,12 @@
             android:summary="@string/status_bar_custom_header_summary"
             android:defaultValue="false" />
 
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="qs_tile_accent_tint"
+            android:title="@string/qs_tile_accent_tint_title"
+            android:summary="@string/qs_tile_accent_tint_summary"
+            android:defaultValue="false"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -858,4 +858,8 @@
     <string name="ringtone_focus_mode_dynamic">Headset (If media is playing)</string>
     <string name="ringtone_focus_mode_stock">Speaker and headset</string>
 
+    <!-- QS tile tint -->
+    <string name="qs_tile_accent_tint_title">Tint tiles</string>
+    <string name="qs_tile_accent_tint_summary">Apply accent color tint to QS tiles</string>
+
 </resources>
