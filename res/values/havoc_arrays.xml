@@ -734,4 +734,14 @@
         <item>0</item>
     </string-array>
 
+    <!-- QS statusbar background -->
+    <string-array name="qs_header_background_entries">
+        <item>@string/qs_header_background_black</item>
+        <item>@string/qs_header_background_transparent</item>
+    </string-array>
+    <string-array name="qs_header_background_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
 </resources>

@@ -862,4 +862,9 @@
     <string name="qs_tile_accent_tint_title">Tint tiles</string>
     <string name="qs_tile_accent_tint_summary">Apply accent color tint to QS tiles</string>
 
+    <!-- QS statusbar background -->
+    <string name="qs_header_background_title">Statusbar background</string>
+    <string name="qs_header_background_black">Black</string>
+    <string name="qs_header_background_transparent">Transparent</string>
+
 </resources>
