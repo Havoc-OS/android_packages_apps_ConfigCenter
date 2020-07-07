@@ -247,6 +247,16 @@
                 android:data="https://t.me/varunsoma" />
         </Preference>
 
+        <Preference
+            android:id="@+id/device_greatlte"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_greatlte_summary"
+            android:title="@string/device_greatlte">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/xEugW" />
+        </Preference>
+
         <!--<Preference
             android:id="@+id/device_ks01ltex"
             android:icon="@drawable/havoc_device"
@@ -286,6 +296,26 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/Giblyat" />
         </Preference>-->
+
+        <Preference
+            android:id="@+id/device_dreamlte"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_dreamlte_summary"
+            android:title="@string/device_dreamlte">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/xEugW" />
+        </Preference>
+
+        <Preference
+            android:id="@+id/device_dream2lte"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_dream2lte_summary"
+            android:title="@string/device_dream2lte">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/xEugW" />
+        </Preference>
 
         <Preference
             android:id="@+id/device_starlte"
