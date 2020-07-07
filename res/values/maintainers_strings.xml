@@ -98,6 +98,9 @@
     <string name="device_tblte" translatable="false">Samsung Galaxy Note Edge</string>
     <string name="device_tblte_summary" translatable="false">tblte\nKhalvat-M (khalvat)</string>
 
+    <string name="device_greatlte" translatable="false">Samsung Galaxy Note 8 (exynos)</string>
+    <string name="device_greatlte_summary" translatable="false">greatlte\nEvgeny Brin (EugW)</string>
+
     <string name="device_crownlte" translatable="false">Samsung Galaxy Note 9 (exynos)</string>
     <string name="device_crownlte_summary" translatable="false">crownlte\nVarun Soma (vsoma)</string>
 
@@ -112,6 +115,12 @@
 
     <string name="device_hero2lte" translatable="false">Samsung Galaxy S7 Edge</string>
     <string name="device_hero2lte_summary" translatable="false">hero2lte\nGibran Mather (gibranm)</string>
+
+    <string name="device_dreamlte" translatable="false">Samsung Galaxy S8 (exynos)</string>
+    <string name="device_dreamlte_summary" translatable="false">dreamlte\nEvgeny Brin (EugW)</string>
+
+    <string name="device_dream2lte" translatable="false">Samsung Galaxy S8+ (exynos)</string>
+    <string name="device_dream2lte_summary" translatable="false">dream2lte\nEvgeny Brin (EugW)</string>
 
     <string name="device_starlte" translatable="false">Samsung Galaxy S9 (exynos)</string>
     <string name="device_starlte_summary" translatable="false">starlte\nVarun Soma (vsoma)</string>
