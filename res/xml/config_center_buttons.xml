@@ -91,6 +91,13 @@
             android:title="@string/navigation_bar_arrow_keys_title"
             android:summary="@string/navigation_bar_arrow_keys_summary"
             android:defaultValue="false" />
+
+        <Preference
+            android:key="pulse"
+            android:title="@string/pulse_settings"
+            android:summary="@string/pulse_settings_summary"
+            android:dependency="force_show_navbar"
+            android:fragment="com.havoc.config.center.fragments.PulseSettings" />
     </PreferenceCategory>
 
     <PreferenceCategory

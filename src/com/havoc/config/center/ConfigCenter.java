@@ -19,9 +19,11 @@ package com.havoc.config.center;
 import com.android.internal.logging.nano.MetricsProto;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.Surface;
 
 import androidx.preference.Preference;
@@ -78,5 +80,11 @@ public class ConfigCenter extends SettingsPreferenceFragment {
                 break;
         }
         activity.setRequestedOrientation(frozenRotation);
+    }
+
+    public static int getThemeAccentColor (final Context context) {
+        final TypedValue value = new TypedValue();
+        context.getTheme().resolveAttribute(android.R.attr.colorAccent, value, true);
+        return value.data;
     }
 }
