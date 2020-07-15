@@ -42,7 +42,7 @@
         <com.havoc.support.colorpicker.ColorPickerPreference
             android:key="ambient_light_custom_color"
             android:title="@string/pulse_ambient_light_color_title"
-            settings:defaultColorValue="0xFF3980FF" />
+            android:defaultValue="0xFF3980FF" />
 
         <com.havoc.support.preferences.CustomSeekBarPreference
             android:key="ambient_light_duration"

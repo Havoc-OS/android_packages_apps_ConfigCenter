@@ -70,7 +70,7 @@
         <com.havoc.support.colorpicker.ColorPickerPreference
             android:key="statusbar_battery_bar_charging_color"
             android:title="@string/battery_bar_charging_color_title"
-            settings:defaultColorValue="0xffffff00"
+            android:defaultValue="0xffffff00"
             android:dependency="statusbar_battery_bar_enable_charging_color" />
     </PreferenceCategory>
 
@@ -93,7 +93,7 @@
         <com.havoc.support.colorpicker.ColorPickerPreference
             android:key="statusbar_battery_bar_charging_dark_color"
             android:title="@string/battery_bar_charging_color_title"
-            settings:defaultColorValue="0xff0d47a1"
+            android:defaultValue="0xff0d47a1"
             android:dependency="statusbar_battery_bar_enable_charging_color" />
     </PreferenceCategory>
 </PreferenceScreen>
