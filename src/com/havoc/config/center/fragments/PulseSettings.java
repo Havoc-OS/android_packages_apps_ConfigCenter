@@ -21,6 +21,12 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import androidx.preference.PreferenceCategory;
 import androidx.preference.ListPreference;
@@ -34,9 +40,11 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.havoc.config.center.ConfigCenter;
 import com.havoc.support.colorpicker.ColorPickerPreference;
+import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
 public class PulseSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
+
     private static final String TAG = PulseSettings.class.getSimpleName();
     private static final String PULSE_COLOR_MODE_KEY = "navbar_pulse_color_type";
     private static final String PULSE_COLOR_MODE_CHOOSER_KEY = "navbar_pulse_color_user";
@@ -44,6 +52,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private static final String PULSE_RENDER_CATEGORY_SOLID = "pulse_2";
     private static final String PULSE_RENDER_CATEGORY_FADING = "pulse_fading_bars_category";
     private static final String PULSE_RENDER_MODE_KEY = "navbar_pulse_render_style";
+    private static final String PULSE_SMOOTHING_KEY = "pulse_smoothing_enabled";
     private static final int RENDER_STYLE_FADING_BARS = 0;
     private static final int RENDER_STYLE_SOLID_LINES = 1;
     private static final int COLOR_TYPE_ACCENT = 0;
@@ -51,10 +60,16 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private static final int COLOR_TYPE_LAVALAMP = 2;
     private static final int COLOR_TYPE_AUTO = 3;
 
+    private PreferenceCategory mFadingBarsCat;
+    private PreferenceCategory mSolidBarsCat;
     private Preference mRenderMode;
     private ListPreference mColorModePref;
     private ColorPickerPreference mColorPickerPref;
     private Preference mLavaSpeedPref;
+    private SystemSettingSwitchPreference mSmoothingPref;
+
+    private TextView mTextView;
+    private View mSwitchBar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -64,20 +79,89 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         mFooterPreferenceMixin.createFooterPreference()
                 .setTitle(R.string.pulse_help_policy_notice_summary);
 
-        mColorModePref = (ListPreference) findPreference(PULSE_COLOR_MODE_KEY);
-        mColorPickerPref = (ColorPickerPreference) findPreference(PULSE_COLOR_MODE_CHOOSER_KEY);
+        mFadingBarsCat = (PreferenceCategory) findPreference(PULSE_RENDER_CATEGORY_FADING);
+        mSolidBarsCat = (PreferenceCategory) findPreference(PULSE_RENDER_CATEGORY_SOLID);
         mLavaSpeedPref = findPreference(PULSE_COLOR_MODE_LAVA_SPEED_KEY);
+        mSmoothingPref = (SystemSettingSwitchPreference) findPreference(PULSE_SMOOTHING_KEY);
+
+        mColorModePref = (ListPreference) findPreference(PULSE_COLOR_MODE_KEY);
         mColorModePref.setOnPreferenceChangeListener(this);
         int colorMode = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.PULSE_COLOR_TYPE, COLOR_TYPE_ACCENT, UserHandle.USER_CURRENT);
-        mColorPickerPref.setDefaultValue(ConfigCenter.getThemeAccentColor(getContext()));
-        updateColorPrefs(colorMode);
+
+        mColorPickerPref = (ColorPickerPreference) findPreference(PULSE_COLOR_MODE_CHOOSER_KEY);
+        int pulseColor = Settings.System.getInt(getContentResolver(),
+                Settings.System.PULSE_COLOR_USER, 0xFFFFFFFF);
+        mColorPickerPref.setNewPreviewColor(pulseColor);
+        String pulseColorHex = String.format("#%08x", (0xFFFFFFFF & pulseColor));
+        if (pulseColorHex.equals("#ffffffff")) {
+            mColorPickerPref.setSummary(R.string.default_string);
+        } else {
+            mColorPickerPref.setSummary(pulseColorHex);
+        }
+        mColorPickerPref.setOnPreferenceChangeListener(this);
 
         mRenderMode = findPreference(PULSE_RENDER_MODE_KEY);
         mRenderMode.setOnPreferenceChangeListener(this);
         int renderMode = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.PULSE_RENDER_STYLE_URI, 0, UserHandle.USER_CURRENT);
+
+        updateColorPrefs(colorMode);
         updateRenderCategories(renderMode);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        final View view = LayoutInflater.from(getContext()).inflate(R.layout.master_setting_switch, container, false);
+        ((ViewGroup) view).addView(super.onCreateView(inflater, container, savedInstanceState));
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        boolean enabled = Settings.System.getInt(getContentResolver(),
+                Settings.System.PULSE_ENABLED, 0) == 1;
+
+        mTextView = view.findViewById(R.id.switch_text);
+        mTextView.setText(getString(enabled ?
+                R.string.switch_on_text : R.string.switch_off_text));
+
+        mSwitchBar = view.findViewById(R.id.switch_bar);
+        Switch switchWidget = mSwitchBar.findViewById(android.R.id.switch_widget);
+        switchWidget.setChecked(enabled);
+        switchWidget.setOnCheckedChangeListener(this);
+        mSwitchBar.setActivated(enabled);
+        mSwitchBar.setOnClickListener(v -> {
+            switchWidget.setChecked(!switchWidget.isChecked());
+            mSwitchBar.setActivated(switchWidget.isChecked());
+        });
+
+        mLavaSpeedPref.setEnabled(enabled);
+        mColorModePref.setEnabled(enabled);
+        mColorPickerPref.setEnabled(enabled);
+        mRenderMode.setEnabled(enabled);
+        mSmoothingPref.setEnabled(enabled);
+        mFadingBarsCat.setEnabled(enabled);
+        mSolidBarsCat.setEnabled(enabled);
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.PULSE_ENABLED, isChecked ? 1 : 0);
+        mTextView.setText(getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text));
+        mSwitchBar.setActivated(isChecked);
+
+        mLavaSpeedPref.setEnabled(isChecked);
+        mColorModePref.setEnabled(isChecked);
+        mColorPickerPref.setEnabled(isChecked);
+        mRenderMode.setEnabled(isChecked);
+        mSmoothingPref.setEnabled(isChecked);
+        mFadingBarsCat.setEnabled(isChecked);
+        mSolidBarsCat.setEnabled(isChecked);
     }
 
     @Override
@@ -88,6 +172,18 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         } else if (preference.equals(mRenderMode)) {
             updateRenderCategories(Integer.valueOf(String.valueOf(newValue)));
             return true;
+        } else if (preference == mColorPickerPref) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            if (hex.equals("#ffffffff")) {
+                preference.setSummary(R.string.default_string);
+            } else {
+                preference.setSummary(hex);
+            }
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.PULSE_COLOR_USER, intHex);
+            return true;
         }
         return false;
     }
@@ -95,31 +191,27 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private void updateColorPrefs(int val) {
         switch (val) {
             case COLOR_TYPE_ACCENT:
-                mColorPickerPref.setEnabled(false);
-                mLavaSpeedPref.setEnabled(false);
+                mColorPickerPref.setVisible(false);
+                mLavaSpeedPref.setVisible(false);
                 break;
             case COLOR_TYPE_USER:
-                mColorPickerPref.setEnabled(true);
-                mLavaSpeedPref.setEnabled(false);
+                mColorPickerPref.setVisible(true);
+                mLavaSpeedPref.setVisible(false);
                 break;
             case COLOR_TYPE_LAVALAMP:
-                mColorPickerPref.setEnabled(false);
-                mLavaSpeedPref.setEnabled(true);
+                mColorPickerPref.setVisible(false);
+                mLavaSpeedPref.setVisible(true);
                 break;
             case COLOR_TYPE_AUTO:
-                mColorPickerPref.setEnabled(false);
-                mLavaSpeedPref.setEnabled(false);
+                mColorPickerPref.setVisible(false);
+                mLavaSpeedPref.setVisible(false);
                 break;
         }
     }
 
     private void updateRenderCategories(int mode) {
-        PreferenceCategory fadingBarsCat = (PreferenceCategory) findPreference(
-                PULSE_RENDER_CATEGORY_FADING);
-        fadingBarsCat.setEnabled(mode == RENDER_STYLE_FADING_BARS);
-        PreferenceCategory solidBarsCat = (PreferenceCategory) findPreference(
-                PULSE_RENDER_CATEGORY_SOLID);
-        solidBarsCat.setEnabled(mode == RENDER_STYLE_SOLID_LINES);
+        mFadingBarsCat.setVisible(mode == RENDER_STYLE_FADING_BARS);
+        mSolidBarsCat.setVisible(mode == RENDER_STYLE_SOLID_LINES);
     }
 
     @Override

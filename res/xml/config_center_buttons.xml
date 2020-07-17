@@ -63,7 +63,8 @@
             android:key="gesture_system_navigation"
             android:title="@string/system_navigation_title"
             android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings"
-            settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController" />
+            settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController"
+            android:dependency="force_show_navbar" />
 
         <ListPreference
             android:key="nav_bar_layout"
@@ -72,32 +73,36 @@
             android:defaultValue="default"
             android:persistent="false"
             android:entries="@array/nav_bar_layouts"
-            android:entryValues="@array/nav_bar_layouts_values" />
+            android:entryValues="@array/nav_bar_layouts_values"
+            android:dependency="force_show_navbar" />
 
         <com.havoc.support.preferences.SecureSettingSwitchPreference
             android:key="sysui_nav_bar_inverse"
             android:title="@string/navbar_invert_layout_title"
             android:summary="@string/navbar_invert_layout_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            android:dependency="force_show_navbar" />
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="navigation_bar_ime_space"
             android:title="@string/navigation_bar_ime_space_title"
             android:summary="@string/navigation_bar_ime_space_summary"
-            android:defaultValue="true" />
+            android:defaultValue="true"
+            android:dependency="force_show_navbar" />
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="navigation_bar_menu_arrow_keys"
             android:title="@string/navigation_bar_arrow_keys_title"
             android:summary="@string/navigation_bar_arrow_keys_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            android:dependency="force_show_navbar" />
 
-        <Preference
-            android:key="pulse"
+        <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
+            android:key="navbar_pulse_enabled"
+            android:fragment="com.havoc.config.center.fragments.PulseSettings"
             android:title="@string/pulse_settings"
             android:summary="@string/pulse_settings_summary"
-            android:dependency="force_show_navbar"
-            android:fragment="com.havoc.config.center.fragments.PulseSettings" />
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <PreferenceCategory

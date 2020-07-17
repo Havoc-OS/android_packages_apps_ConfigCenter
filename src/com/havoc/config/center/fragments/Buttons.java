@@ -41,6 +41,7 @@ import com.android.settings.gestures.SystemNavigationGestureSettings;
 import com.havoc.support.preferences.SecureSettingSwitchPreference;
 import com.havoc.support.preferences.SwitchPreference;
 import com.havoc.support.preferences.SystemSettingListPreference;
+import com.havoc.support.preferences.SystemSettingMasterSwitchPreference;
 import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
 public class Buttons extends SettingsPreferenceFragment implements
@@ -58,6 +59,7 @@ public class Buttons extends SettingsPreferenceFragment implements
     private static final String KEY_GESTURE_SYSTEM = "gesture_system_navigation";
     private static final String KEY_BUTTON_BACKLIGHT = "button_backlight";
     private static final String KEY_SWAP_KEYS = "swap_navigation_keys";
+    private static final String KEY_NAVBAR_PULSE_ENABLED = "navbar_pulse_enabled";
 
     private static final String KEY_BACK_LONG_PRESS_ACTION = "back_key_long_press";
     private static final String KEY_BACK_LONG_PRESS_CUSTOM_APP = "back_key_long_press_custom_app";
@@ -140,6 +142,7 @@ public class Buttons extends SettingsPreferenceFragment implements
     private SystemSettingSwitchPreference mNavigationIMESpace;
     private SystemSettingListPreference mTimeout;
     private SystemSettingListPreference mBackSwipeType;
+    private SystemSettingMasterSwitchPreference mNavbarPulse;
 
     private int deviceKeys;
 
@@ -372,6 +375,8 @@ public class Buttons extends SettingsPreferenceFragment implements
 
         mSwapKeys = (SystemSettingSwitchPreference) findPreference(KEY_SWAP_KEYS);
 
+        updateMasterPrefs();
+
         if (!hasMenu && menuCategory != null) {
             prefSet.removePreference(menuCategory);
         }
@@ -423,6 +428,14 @@ public class Buttons extends SettingsPreferenceFragment implements
                 [leftSwipeActions].equals("5"));
         mLeftSwipeAppSelection.setVisible(mRightSwipeActions.getEntryValues()
                 [rightSwipeActions].equals("5"));
+    }
+
+    private void updateMasterPrefs() {
+        mNavbarPulse = (SystemSettingMasterSwitchPreference) findPreference(KEY_NAVBAR_PULSE_ENABLED);
+        boolean navbarPulse = Settings.System.getIntForUser(getActivity().getContentResolver(),
+                Settings.System.PULSE_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
+        mNavbarPulse.setChecked(navbarPulse);
+        mNavbarPulse.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -623,6 +636,12 @@ public class Buttons extends SettingsPreferenceFragment implements
             mBackSwipeType.setSummary(mBackSwipeType.getEntries()[index]);
             mTimeout.setEnabled(swipeType == 0);
             return true;
+        } else if (preference == mNavbarPulse) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.PULSE_ENABLED, value ? 1 : 0,
+                    UserHandle.USER_CURRENT);
+            return true;
         }
         return false;
     }
@@ -635,6 +654,7 @@ public class Buttons extends SettingsPreferenceFragment implements
     @Override
     public void onResume() {
         super.onResume();
+        updateMasterPrefs();
         navbarCheck();
         customAppCheck();
         updateHwKeys();
@@ -644,6 +664,7 @@ public class Buttons extends SettingsPreferenceFragment implements
     @Override
     public void onPause() {
         super.onPause();
+        updateMasterPrefs();
         navbarCheck();
         customAppCheck();
         updateHwKeys();

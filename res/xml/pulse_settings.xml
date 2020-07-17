@@ -19,59 +19,43 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/pulse_settings" >
 
-    <com.havoc.support.preferences.SystemSettingSwitchPreference
-        android:key="navbar_pulse_enabled"
-        android:title="@string/show_pulse_title"
-        android:summary="@string/show_pulse_summary"
-        android:defaultValue="false" />
-
     <com.havoc.support.preferences.SystemSettingListPreference
         android:key="navbar_pulse_render_style"
         android:title="@string/pulse_render_mode_title"
         android:entries="@array/pulse_render_mode_entries"
         android:entryValues="@array/pulse_render_mode_values"
-        android:defaultValue="0"
-        android:dependency="navbar_pulse_enabled" />
+        android:defaultValue="0" />
+
+    <com.havoc.support.preferences.SystemSettingListPreference
+        android:key="navbar_pulse_color_type"
+        android:title="@string/pulse_color_mode"
+        android:entries="@array/pulse_color_mode_entries"
+        android:entryValues="@array/pulse_color_mode_values"
+        android:defaultValue="1"/>
+
+    <com.havoc.support.colorpicker.ColorPickerSystemPreference
+        android:key="navbar_pulse_color_user"
+        android:title="@string/pulse_color_chooser"
+        android:defaultValue="0xFFFFFFFF" />
+
+    <com.havoc.support.preferences.SystemSettingSeekBarPreference
+        android:key="navbar_pulse_lavalamp_speed"
+        android:title="@string/lavamp_speed_title"
+        android:max="30000"
+        android:defaultValue="10000"
+        settings:min="200"
+        settings:interval="200"
+        settings:units="ms"/>
 
     <com.havoc.support.preferences.SystemSettingSwitchPreference
         android:key="pulse_smoothing_enabled"
         android:title="@string/smoothing_enabled_title"
         android:summary="@string/smoothing_enabled_summary"
-        android:defaultValue="false"
-        android:dependency="navbar_pulse_enabled" />
-
-    <PreferenceCategory
-        android:key="pulse_color_category"
-        android:title="@string/pulse_color"
-        android:dependency="navbar_pulse_enabled">
-
-        <com.havoc.support.preferences.SystemSettingListPreference
-            android:key="navbar_pulse_color_type"
-            android:title="@string/pulse_color_mode"
-            android:entries="@array/pulse_color_mode_entries"
-            android:entryValues="@array/pulse_color_mode_values"
-            android:defaultValue="1"/>
-
-        <com.havoc.support.colorpicker.ColorPickerSystemPreference
-            android:key="navbar_pulse_color_user"
-            android:title="@string/pulse_color_chooser"
-            settings:showReset="false"
-            settings:showPreview="true"/>
-
-        <com.havoc.support.preferences.SystemSettingSeekBarPreference
-            android:key="navbar_pulse_lavalamp_speed"
-            android:title="@string/lavamp_speed_title"
-            android:max="30000"
-            android:defaultValue="10000"
-            settings:min="200"
-            settings:interval="200"
-            settings:units="ms"/>
-    </PreferenceCategory>
+        android:defaultValue="false" />
 
     <PreferenceCategory
         android:key="pulse_fading_bars_category"
-        android:title="@string/pulse_legacy_mode_advanced_category"
-        android:dependency="navbar_pulse_enabled">
+        android:title="@string/pulse_legacy_mode_advanced_category">
 
         <com.havoc.support.preferences.SystemSettingSeekBarPreference
             android:key="pulse_custom_dimen"
@@ -116,8 +100,7 @@
 
     <PreferenceCategory
         android:key="pulse_2"
-        android:title="@string/pulse_solid_dimen_category"
-        android:dependency="navbar_pulse_enabled">
+        android:title="@string/pulse_solid_dimen_category">
 
         <com.havoc.support.preferences.SystemSettingSeekBarPreference
             android:key="pulse_solid_units_opacity"
