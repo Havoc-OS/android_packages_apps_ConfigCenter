@@ -38,17 +38,17 @@
     <string name="statusbar_title">Bilah Status</string>
     <string name="statusbar_summary">Jam, logo, ikon status</string>
     <string name="battery_title">Hemat Baterai</string>
-    <string name="battery_saving_summary">Pixel cerdas, tunda aksi</string>
+    <string name="battery_saving_summary">Tangguhkan tindakan, blokir sensor</string>
     <string name="ambient_display_custom_title">Tampilan Ambien</string>
     <string name="ambient_display_custom_summary">Selalu menyala, penanda musik, gestur</string>
     <string name="screen_title">Layar</string>
     <string name="screen_summary">Pojok melengkung, pengaturan skala aplikasi lawas</string>
     <!-- About -->
-    <string name="developers_category_title">Para Pengembang</string>
-    <string name="support_category_title">Tim Pendukung</string>
-    <string name="maintainers_category_title">Pemelihara</string>
-    <string name="device_maintainers_title">Perangkat Resmi</string>
-    <string name="device_maintainers_title_summary">Daftar perangkat resmi dan pemeliharanya</string>
+    <string name="team_category_title">Tim</string>
+    <string name="group_mods_title">Dukung Grup Mod</string>
+    <string name="group_mods_summary">Daftar semua moderator grup dukungan kami</string>
+    <string name="device_maintainers_title">Pengelola Perangkat</string>
+    <string name="device_maintainers_title_summary">Daftar perangkat yang didukung secara resmi dan pengelolanya</string>
     <string name="changelog_title">Log Perubahan</string>
     <string name="changelog_title_summary">Lihat perubahan baru dalam ROM</string>
     <string name="changelog_error">Tidak dapat memuat log perubahan</string>
@@ -131,6 +131,7 @@
     <string name="powermenu_screenrecord_title">Perekaman layar</string>
     <string name="powermenu_torch">Senter</string>
     <string name="powermenu_category_visibility">Layar kunci</string>
+    <string name="powermenu_lockscreen_title">Terlihat pada layar kunci</string>
     <string name="powermenu_lockscreen_summary">Tampilkan dan gunakan menu daya pada layar kunci</string>
     <string name="powermenu_ls_reboot_summary">Tampilkan opsi mulai ulang pada layar kunci</string>
     <string name="powermenu_ls_advanced_reboot_summary">Tampilkan opsi mulai ulang lanjutan pada layar kunci</string>
@@ -214,13 +215,17 @@
     <string name="roaming_indicator_icon_summary">Menampilkan indikator roaming di ikon sinyal saat mode roaming</string>
     <!-- Statusbar net monitor -->
     <string name="statusbar_ntraffic">Jaringan</string>
-    <string name="network_traffic_state_title">Lalu lintas jaringan</string>
-    <string name="network_traffic_disabled">Nonaktif</string>
+    <string name="network_traffic_state_title">Kecepatan jaringan</string>
+    <string name="network_traffic_state_summary">Tampilkan kecepatan jaringan di status bar</string>
+    <string name="network_traffic_location_title">Lokasi</string>
     <string name="network_traffic_statusbar">Bilah status</string>
     <string name="network_traffic_qs_header">Bagian atas Setelan Cepat</string>
+    <string name="network_traffic_mode_title">Mode tampilan</string>
+    <string name="network_traffic_dynamic">Dinamis</string>
+    <string name="network_traffic_download">Unduh</string>
+    <string name="network_traffic_upload">Unggah</string>
     <string name="network_traffic_autohide_threshold_title">Otomatis sembunyi pada ambang batas</string>
-    <string name="network_traffic_arrow_title">Panah aktivitas</string>
-    <string name="network_traffic_arrow_summary">Tampilkan panah indikator lalu lintas jaringan</string>
+    <string name="network_traffic_refresh_interval_title">Selang waktu penyegaran</string>
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">Ikon status</string>
     <string name="statusbar_items_summary">Atur visibilitas ikon-ikon di bilah status</string>
@@ -321,6 +326,8 @@
     <string name="screen_state_toggles_location_title">Lokasi</string>
     <string name="screen_state_toggles_twog">Beralih ke 2G</string>
     <string name="screen_state_toggles_twog_summary">Mode jaringan akan dialihkan ke 2G saat layar mati</string>
+    <string name="screen_state_toggles_threeg">Beralih ke 3G</string>
+    <string name="screen_state_toggles_threeg_summary">Mode jaringan akan beralih ke 3G pada saat layar mati</string>
     <string name="screen_state_toggles_gps">Nonaktifkan GPS</string>
     <string name="screen_state_toggles_gps_summary">Layanan GPS berbasis lokasi akan dinonaktifkan saat layar mati</string>
     <string name="screen_state_toggles_mobile_data">Nonaktifkan data seluler</string>
@@ -376,11 +383,12 @@
     <string name="status_bar_battery_style_circle">Lingkaran</string>
     <string name="status_bar_battery_style_dotted_circle">Lingkaran (Titik)</string>
     <string name="status_bar_battery_style_filled_circle">Lingkaran (Terisi)</string>
+    <string name="status_bar_battery_style_text">Teks</string>
     <string name="status_bar_battery_style_hidden">Tersembunyi</string>
     <string name="battery_percentage_title">Persentase baterai</string>
-    <string name="battery_percentage_off">Nonaktif</string>
-    <string name="battery_percentage_on">Aktif</string>
-    <string name="battery_percentage_charging">Aktif (Saat mengisi daya)</string>
+    <string name="status_bar_battery_percentage_default">Tersembunyi</string>
+    <string name="status_bar_battery_percentage_text_inside">Di dalam ikon</string>
+    <string name="status_bar_battery_percentage_text_next">Di samping ikon</string>
     <!-- Quick pull down-->
     <string name="quick_pulldown_title">Tarik ke bawah cepat</string>
     <string name="quick_pulldown_summary">%1$s</string>
@@ -540,9 +548,6 @@
     <string name="file_header_select_title">Pilih gambar dari penyimpanan</string>
     <string name="file_header_select_summary">Pilih gambar dari penyimpanan internal</string>
     <string name="status_bar_custom_header_shadow_title">Gambar menggelap</string>
-    <!-- Volte icon -->
-    <string name="show_hd_icon_title">Ikon HD</string>
-    <string name="show_hd_icon_summary">Tampilkan ikon HD di bilah status sebagai ganti VoLTE</string>
     <!-- Per App aspect Ratio -->
     <string name="action_save">Simpan</string>
     <string name="aspect_ratio_category_title">Penskalaan aplikasi lawas</string>
@@ -580,6 +585,12 @@
     <string name="pulse_ambient_light_repeat_count_title">Jumlah pengulangan cahaya</string>
     <string name="pulse_ambient_light_show_always_title">Selalu tampilkan</string>
     <string name="pulse_ambient_light_show_always_summary">Tampilkan cahaya untuk semua event doze dan bukan sekedar notifikasi</string>
+    <string name="pulse_ambient_light_repeat_direction_title">Mode pengulangan cahaya</string>
+    <string name="pulse_ambient_light_repeat_direction_restart">Mulai Ulang</string>
+    <string name="pulse_ambient_light_repeat_direction_reverse">Terbalik</string>
+    <string name="pulse_ambient_light_layout_title">Tampilan cahaya</string>
+    <string name="pulse_ambient_light_layout_solid">Padat</string>
+    <string name="pulse_ambient_light_layout_faded">Memudar</string>
     <!-- QS footer icons -->
     <string name="qs_footer_title">Bagian Kaki</string>
     <string name="qs_footer_settings_title">Ikon pengaturan</string>
@@ -667,8 +678,43 @@
     <string name="back_gesture_haptic_title">Respon ketukan</string>
     <string name="back_gesture_haptic_summary">Bergetar saat gestur kembali dipicu</string>
     <!-- Media heads up -->
+    <string name="show_media_heads_up_title">Notifikasi mengambang untuk media</string>
+    <string name="show_media_heads_up_summary">Tampilkan pemberitahuan mengambang saat trek baru diputar</string>
     <!-- FOD animation -->
+    <string name="fod_recognizing_animation_title">Mengenali animasi</string>
+    <string name="fod_recognizing_animation_summary">Perlihatkan animasi ketika sedang membaca sidik jari Anda</string>
     <!-- Adaptive Playback -->
+    <string name="media_title">Media</string>
+    <string name="adaptive_playback_title">Pemutaran adaptif</string>
+    <string name="adaptive_playback_summary">Jedakan media ketika volume dibisukan dan lanjutkan media dengan meningkatkan volume dalam batas waktu</string>
+    <string name="adaptive_playback_timeout_title">Batas waktu pemutaran ulang</string>
+    <string name="adaptive_playback_timeout_30_secs">30 detik</string>
+    <string name="adaptive_playback_timeout_1_min">1 menit</string>
+    <string name="adaptive_playback_timeout_2_min">2 menit</string>
+    <string name="adaptive_playback_timeout_5_min">5 menit</string>
+    <string name="adaptive_playback_timeout_10_min">10 menit</string>
     <!-- Screen off FOD -->
+    <string name="screen_off_fod_title">FOD layar mati</string>
+    <string name="screen_off_fod_summary">Gunakan juga pembaca sidik jari ketika layar mati</string>
+    <string name="screen_off_fod_icon_title">Tampilkan ikon</string>
+    <string name="screen_off_fod_icon_summary">Tampilkan ikon sidik jari saat layar mati</string>
     <!-- IME button space -->
+    <string name="navigation_bar_ime_space_title">Jarak tombol IME</string>
+    <string name="navigation_bar_ime_space_summary">Tampilkan jarak tombol IME di bawah papan ketik</string>
+    <!-- Display cutout -->
+    <string name="cutout_category_title">Potongan Tampilan</string>
+    <string name="display_cutout_mode_title">Mode potongan</string>
+    <string name="display_cutout_mode_normal">Normal</string>
+    <string name="display_cutout_mode_immerse">Membenamkan</string>
+    <string name="display_cutout_mode_hide">Menyembunyikan</string>
+    <!-- Smart pulldown-->
+    <!-- Sensor block per-package -->
+    <!-- Battery Bar -->
+    <!-- Status Bar Ticker -->
+    <!-- Headset ringtone audio focus -->
+    <!-- QS tile tint -->
+    <!-- QS statusbar background -->
+    <!-- Notification count -->
+    <!-- Dashboard -->
+    <!-- Pulse -->
 </resources>

@@ -38,17 +38,11 @@
     <string name="statusbar_title">Állapotsor</string>
     <string name="statusbar_summary">Óra, logó, állapot ikonok</string>
     <string name="battery_title">Akkumulátorkímélő</string>
-    <string name="battery_saving_summary">Intelligens pixelek, műveletek felfüggesztése</string>
     <string name="ambient_display_custom_title">Környezeti kijelző</string>
     <string name="ambient_display_custom_summary">Mindig be van kapcsolva, zene jelölő, gesztusok</string>
     <string name="screen_title">Képernyő</string>
     <string name="screen_summary">Lekerekített sarkok, a régi alkalmazás méretezése</string>
     <!-- About -->
-    <string name="developers_category_title">Fejlesztők</string>
-    <string name="support_category_title">Támogatói csoport</string>
-    <string name="maintainers_category_title">Karbantartók</string>
-    <string name="device_maintainers_title">Hivatalosan támogatott eszközök</string>
-    <string name="device_maintainers_title_summary">Hivatalosan támogatott eszközök és karbantartóik listája</string>
     <string name="changelog_title">Változtatások</string>
     <string name="changelog_title_summary">A legfrissebb ROM-változások megtekintése</string>
     <string name="changelog_error">Nem lehet betölteni a változásokat</string>
@@ -131,6 +125,7 @@
     <string name="powermenu_screenrecord_title">Képernyőfelvétel</string>
     <string name="powermenu_torch">Zseblámpa</string>
     <string name="powermenu_category_visibility">Zárképernyő</string>
+    <string name="powermenu_lockscreen_title">Látható a zárképernyőn</string>
     <string name="powermenu_lockscreen_summary">Jelenítse meg és használja az energiagazdálkodási párbeszédpanelt a zárképernyőn</string>
     <string name="powermenu_ls_reboot_summary">Újraindítási lehetőségek megjelenítése a zárképernyőn</string>
     <string name="powermenu_ls_advanced_reboot_summary">Speciális újraindítási lehetőségek megjelenítése a zárképernyőn</string>
@@ -214,13 +209,9 @@
     <string name="roaming_indicator_icon_summary">Roaming indikátor megjelenítése a térerő ikonban, ha roaming módban van</string>
     <!-- Statusbar net monitor -->
     <string name="statusbar_ntraffic">Hálózat</string>
-    <string name="network_traffic_state_title">Hálózati forgalom</string>
-    <string name="network_traffic_disabled">Letiltva</string>
     <string name="network_traffic_statusbar">Értesítési sáv</string>
     <string name="network_traffic_qs_header">Gyorsbeállítások-fejléc</string>
     <string name="network_traffic_autohide_threshold_title">Automatikus elrejtési határ</string>
-    <string name="network_traffic_arrow_title">Aktivitási nyilak</string>
-    <string name="network_traffic_arrow_summary">Hálózati forgalmat jelző nyilak megjelenítése</string>
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">Állapot ikonok</string>
     <string name="statusbar_items_summary">Konfigurálja az ikonok láthatóságát az állapotsoron</string>
@@ -378,9 +369,6 @@
     <string name="status_bar_battery_style_filled_circle">Kör (Töltött)</string>
     <string name="status_bar_battery_style_hidden">Rejtett</string>
     <string name="battery_percentage_title">Akkumulátor százalék</string>
-    <string name="battery_percentage_off">Letiltva</string>
-    <string name="battery_percentage_on">Engedélyezve</string>
-    <string name="battery_percentage_charging">Engedélyezve (töltés közben)</string>
     <!-- Quick pull down-->
     <string name="quick_pulldown_title">Gyors lehúzás</string>
     <string name="quick_pulldown_summary">%1$s</string>
@@ -540,9 +528,6 @@
     <string name="file_header_select_title">Kiválaszthat egy képet a készülék tárhelyéről</string>
     <string name="file_header_select_summary">Kép kiválasztása a belső tárhelyről</string>
     <string name="status_bar_custom_header_shadow_title">Sötétebb kép</string>
-    <!-- Volte icon -->
-    <string name="show_hd_icon_title">HD ikon</string>
-    <string name="show_hd_icon_summary">Jelenítse meg a HD ikont az állapotsorban, az VoLTE helyett</string>
     <!-- Per App aspect Ratio -->
     <string name="action_save">Mentés</string>
     <string name="aspect_ratio_category_title">Régi alkalmazás méretezése</string>
@@ -667,8 +652,36 @@
     <string name="back_gesture_haptic_title">Rezgés visszajelzés</string>
     <string name="back_gesture_haptic_summary">Rezgés, amikor a hátsó gesztus beindul</string>
     <!-- Media heads up -->
+    <string name="show_media_heads_up_title">Média felugró értesítés</string>
+    <string name="show_media_heads_up_summary">Új szám lejátszásakor a felugró értesítés megjelenítése</string>
     <!-- FOD animation -->
+    <string name="fod_recognizing_animation_title">Az animáció felismerése</string>
+    <string name="fod_recognizing_animation_summary">Mutasson animációt az ujjlenyomat olvasása közben</string>
     <!-- Adaptive Playback -->
+    <string name="media_title">Média</string>
+    <string name="adaptive_playback_title">Adaptív lejátszás</string>
+    <string name="adaptive_playback_summary">Megállítja a lejátszást, ha a média elnémul, de folytatja ha gyosan időkorláton belül felhangosításra kerül</string>
+    <string name="adaptive_playback_timeout_title">Lejátszási időkorlát</string>
+    <string name="adaptive_playback_timeout_30_secs">30 másodperc</string>
+    <string name="adaptive_playback_timeout_1_min">1 perc</string>
+    <string name="adaptive_playback_timeout_2_min">2 perc</string>
+    <string name="adaptive_playback_timeout_5_min">5 perc</string>
+    <string name="adaptive_playback_timeout_10_min">10 perc</string>
     <!-- Screen off FOD -->
+    <string name="screen_off_fod_title">FOD képernyő kikapcsolva</string>
+    <string name="screen_off_fod_summary">Használjon ujjlenyomat-olvasót akkor is, ha a képernyő ki van kapcsolva</string>
     <!-- IME button space -->
+    <string name="navigation_bar_ime_space_title">IME gomb hely</string>
+    <string name="navigation_bar_ime_space_summary">Az IME gomb helyének megjelenítése a billentyűzet alatt</string>
+    <!-- Display cutout -->
+    <!-- Smart pulldown-->
+    <!-- Sensor block per-package -->
+    <!-- Battery Bar -->
+    <!-- Status Bar Ticker -->
+    <!-- Headset ringtone audio focus -->
+    <!-- QS tile tint -->
+    <!-- QS statusbar background -->
+    <!-- Notification count -->
+    <!-- Dashboard -->
+    <!-- Pulse -->
 </resources>

@@ -38,17 +38,11 @@
     <string name="statusbar_title">स्टेटस बार</string>
     <string name="statusbar_summary">घड़ी, प्रतीक चिन्ह, स्टेटस बार आइकंस</string>
     <string name="battery_title">बैटरी बचत</string>
-    <string name="battery_saving_summary">स्मार्ट पिक्सल्स, क्रिया निरस्त करें</string>
     <string name="ambient_display_custom_title">एम्बिएंट डिस्प्ले</string>
     <string name="ambient_display_custom_summary">हमेशा चालू, संगीत टिकर, इशारे</string>
     <string name="screen_title">स्क्रीन</string>
     <string name="screen_summary">गोल कोने, लेगेसी ऐप परिमाण</string>
     <!-- About -->
-    <string name="developers_category_title">डेवलपर</string>
-    <string name="support_category_title">समर्थन दल</string>
-    <string name="maintainers_category_title">मेंटेनर</string>
-    <string name="device_maintainers_title">आधिकारिक फोन</string>
-    <string name="device_maintainers_title_summary">समर्थित फोन और उनके मैंटेनर की सूची</string>
     <string name="changelog_title">परिवर्तन</string>
     <string name="changelog_title_summary">रोम में हुए हाल ही के परिवर्तन देखें</string>
     <string name="changelog_error">बदलाव विवरण लोड करने में असमर्थ</string>
@@ -131,6 +125,7 @@
     <string name="powermenu_screenrecord_title">स्क्रीन रिकॉर्ड</string>
     <string name="powermenu_torch">फ्लैश लाइट</string>
     <string name="powermenu_category_visibility">लॉकस्क्रीन</string>
+    <string name="powermenu_lockscreen_title">लॉक स्क्रीन पर दिखाएं</string>
     <string name="powermenu_lockscreen_summary">स्क्रीन लॉक होने पर पॉवर मेन्यू दिखाएं और प्रयोग करें</string>
     <string name="powermenu_ls_reboot_summary">लॉकस्क्रीन पर रिबूट विकल्प दिखाएं</string>
     <string name="powermenu_ls_advanced_reboot_summary">लॉकस्क्रीन पर‌ खास रीबूट के विकल्प दिखाएँ</string>
@@ -214,13 +209,9 @@
     <string name="roaming_indicator_icon_summary">जब रोमिंग मोड में हो तब संकेत चिह्न में रोमिंग सूचक प्रदर्शित करें</string>
     <!-- Statusbar net monitor -->
     <string name="statusbar_ntraffic">नेटवर्क</string>
-    <string name="network_traffic_state_title">नेट गतिविधि</string>
-    <string name="network_traffic_disabled">बंद</string>
     <string name="network_traffic_statusbar">स्टेटस बार</string>
     <string name="network_traffic_qs_header">क्विक सेटिंग्स हैडर</string>
     <string name="network_traffic_autohide_threshold_title">स्वत-छिपाने की सीमा</string>
-    <string name="network_traffic_arrow_title">गतिविधि तीर</string>
-    <string name="network_traffic_arrow_summary">नेट गति संकेतक तीर छुपाएं</string>
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">स्टेटसबार आइकंस</string>
     <string name="statusbar_items_summary">स्टेटस बार में आइकन दृश्यता को संयोजित करें</string>
@@ -378,9 +369,6 @@
     <string name="status_bar_battery_style_filled_circle">वृत्त (भरा हुआ)</string>
     <string name="status_bar_battery_style_hidden">छुपा हुआ</string>
     <string name="battery_percentage_title">बैटरी प्रतिशत</string>
-    <string name="battery_percentage_off">बंद</string>
-    <string name="battery_percentage_on">चालू</string>
-    <string name="battery_percentage_charging">चालू (चार्जिंग के समय)</string>
     <!-- Quick pull down-->
     <string name="quick_pulldown_title">तुरंत नीचे खींचना</string>
     <string name="quick_pulldown_summary">%1$s</string>
@@ -540,9 +528,6 @@
     <string name="file_header_select_title">मेमोरी से फोटो चुनें</string>
     <string name="file_header_select_summary">फोन मेमोरी से फोटो का चयन करें</string>
     <string name="status_bar_custom_header_shadow_title">फोटो को डार्क करें</string>
-    <!-- Volte icon -->
-    <string name="show_hd_icon_title">HD आइकन</string>
-    <string name="show_hd_icon_summary">एलटीई के बजाय सिग्नल आइकन में HD आइकन दिखाएं</string>
     <!-- Per App aspect Ratio -->
     <string name="action_save">सेव करें</string>
     <string name="aspect_ratio_category_title">लेगैसी ऐप्स परिमाप</string>
@@ -667,8 +652,36 @@
     <string name="back_gesture_haptic_title">स्पर्श प्रतिक्रिया</string>
     <string name="back_gesture_haptic_summary">बैक इशारा दबाने पर कम्पन करें</string>
     <!-- Media heads up -->
+    <string name="show_media_heads_up_title">मीडिया हेड्स अप</string>
+    <string name="show_media_heads_up_summary">नया गाना चलने पर हेड्स अप नोटिफिकेशन दिखाएं</string>
     <!-- FOD animation -->
+    <string name="fod_recognizing_animation_title">एनीमेशन पहचान रहा है</string>
+    <string name="fod_recognizing_animation_summary">आपकी उंगली पहचानते समय एक एनीमेशन दिखाएं</string>
     <!-- Adaptive Playback -->
+    <string name="media_title">मीडिया</string>
+    <string name="adaptive_playback_title">अनुकुलित प्लेबैक</string>
+    <string name="adaptive_playback_summary">ध्वनि स्तर शून्य होने पर गाना चलाना रोकें और समय अंतराल के अंदर ध्वनि स्तर बढ़ने पर गाना चलाना अपने आप शुरू करें</string>
+    <string name="adaptive_playback_timeout_title">समय अंतराल</string>
+    <string name="adaptive_playback_timeout_30_secs">30 सेकंड</string>
+    <string name="adaptive_playback_timeout_1_min">1 मिनट</string>
+    <string name="adaptive_playback_timeout_2_min">2 मिनट</string>
+    <string name="adaptive_playback_timeout_5_min">5 मिनट</string>
+    <string name="adaptive_playback_timeout_10_min">10 मिनट</string>
     <!-- Screen off FOD -->
+    <string name="screen_off_fod_title">स्क्रीन बंद एफओडी</string>
+    <string name="screen_off_fod_summary">स्क्रीन बंद होने पर भी फिंगरप्रिंट स्कैनर का इस्तेमाल करें</string>
     <!-- IME button space -->
+    <string name="navigation_bar_ime_space_title">आईएमई बटन का स्थान</string>
+    <string name="navigation_bar_ime_space_summary">कीबोर्ड के नीचे आईएमई बटन का स्थान दिखाएं</string>
+    <!-- Display cutout -->
+    <!-- Smart pulldown-->
+    <!-- Sensor block per-package -->
+    <!-- Battery Bar -->
+    <!-- Status Bar Ticker -->
+    <!-- Headset ringtone audio focus -->
+    <!-- QS tile tint -->
+    <!-- QS statusbar background -->
+    <!-- Notification count -->
+    <!-- Dashboard -->
+    <!-- Pulse -->
 </resources>

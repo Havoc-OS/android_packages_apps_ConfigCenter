@@ -38,17 +38,11 @@
     <string name="statusbar_title">Barra de Status</string>
     <string name="statusbar_summary">Relógio, logo, ícones de status</string>
     <string name="battery_title">Economia de Bateria</string>
-    <string name="battery_saving_summary">Pixels inteligentes, suspender ações</string>
     <string name="ambient_display_custom_title">Tela Ambiente</string>
     <string name="ambient_display_custom_summary">Sempre ligado, faixa da música, gestos</string>
     <string name="screen_title">Tela</string>
     <string name="screen_summary">Cantos arredondados, dimensionamento de aplicativos legados</string>
     <!-- About -->
-    <string name="developers_category_title">Desenvolvedores</string>
-    <string name="support_category_title">Equipe de Suporte</string>
-    <string name="maintainers_category_title">Mantenedores</string>
-    <string name="device_maintainers_title">Dispositivos Oficiais</string>
-    <string name="device_maintainers_title_summary">Lista de dispositivos oficiais e seus mantenedores</string>
     <string name="changelog_title">Lista de mudanças</string>
     <string name="changelog_title_summary">Ver as mudanças recentes na ROM</string>
     <string name="changelog_error">Não foi possível carregar a lista de mudanças</string>
@@ -131,6 +125,7 @@
     <string name="powermenu_screenrecord_title">Gravação de tela</string>
     <string name="powermenu_torch">Lanterna</string>
     <string name="powermenu_category_visibility">Tela de bloqueio</string>
+    <string name="powermenu_lockscreen_title">Visível na tela de bloqueio</string>
     <string name="powermenu_lockscreen_summary">Mostrar e usar a caixa de diálogo do menu de energia na tela de bloqueio</string>
     <string name="powermenu_ls_reboot_summary">Exibir a opção de reinicio na tela de bloqueio</string>
     <string name="powermenu_ls_advanced_reboot_summary">Exibir a opção de reinício avançado na tela de bloqueio</string>
@@ -214,13 +209,9 @@
     <string name="roaming_indicator_icon_summary">Mostrar o indicador de roaming no ícone de sinal quando no modo de roaming</string>
     <!-- Statusbar net monitor -->
     <string name="statusbar_ntraffic">Rede</string>
-    <string name="network_traffic_state_title">Tráfico da rede</string>
-    <string name="network_traffic_disabled">Desativado</string>
     <string name="network_traffic_statusbar">Barra de status</string>
     <string name="network_traffic_qs_header">Cabeçalho das configurações rápidas</string>
     <string name="network_traffic_autohide_threshold_title">Limite para ocultar automaticamente</string>
-    <string name="network_traffic_arrow_title">Setas de atividade</string>
-    <string name="network_traffic_arrow_summary">Mostrar as setas dos indicadores de tráfego</string>
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">Ícones de status</string>
     <string name="statusbar_items_summary">Configure a visibilidade dos ícones na barra de status</string>
@@ -378,9 +369,6 @@
     <string name="status_bar_battery_style_filled_circle">Círculo (preenchido)</string>
     <string name="status_bar_battery_style_hidden">Oculto</string>
     <string name="battery_percentage_title">Porcentagem da bateria</string>
-    <string name="battery_percentage_off">Desativado</string>
-    <string name="battery_percentage_on">Ativado</string>
-    <string name="battery_percentage_charging">Ativado (quando estiver carregando)</string>
     <!-- Quick pull down-->
     <string name="quick_pulldown_title">Deslizar para baixo rapidamente</string>
     <string name="quick_pulldown_summary">%1$s</string>
@@ -540,9 +528,6 @@
     <string name="file_header_select_title">Selecionar imagem a partir do armazenamento</string>
     <string name="file_header_select_summary">Selecione uma imagem do armazenamento interno</string>
     <string name="status_bar_custom_header_shadow_title">Escurecer imagem</string>
-    <!-- Volte icon -->
-    <string name="show_hd_icon_title">Ícone HD</string>
-    <string name="show_hd_icon_summary">Exibir ícone HD na barra de status em vez de VoLTE</string>
     <!-- Per App aspect Ratio -->
     <string name="action_save">Salvar</string>
     <string name="aspect_ratio_category_title">Dimensionamento de aplicativos legados</string>
@@ -667,8 +652,36 @@
     <string name="back_gesture_haptic_title">Retorno tátil</string>
     <string name="back_gesture_haptic_summary">Vibrar quando o gesto para voltar for acionado</string>
     <!-- Media heads up -->
+    <string name="show_media_heads_up_title">Notificações pop-up de mídia</string>
+    <string name="show_media_heads_up_summary">Mostar pop-up de notificação quando uma nova música é reproduzida</string>
     <!-- FOD animation -->
+    <string name="fod_recognizing_animation_title">Animação de reconhecimento da impressão digital na tela</string>
+    <string name="fod_recognizing_animation_summary">Mostrar uma animação enquanto lê a impressão digital</string>
     <!-- Adaptive Playback -->
+    <string name="media_title">Mídia</string>
+    <string name="adaptive_playback_title">Reprodução adaptável</string>
+    <string name="adaptive_playback_summary">Pausar mídia quando o volume é silenciado e retomá-la aumentando o volume dentro do tempo limite</string>
+    <string name="adaptive_playback_timeout_title">Tempo limite de reprodução</string>
+    <string name="adaptive_playback_timeout_30_secs">30 segundos</string>
+    <string name="adaptive_playback_timeout_1_min">1 minuto</string>
+    <string name="adaptive_playback_timeout_2_min">2 minutos</string>
+    <string name="adaptive_playback_timeout_5_min">5 minutos</string>
+    <string name="adaptive_playback_timeout_10_min">10 minutos</string>
     <!-- Screen off FOD -->
+    <string name="screen_off_fod_title">Leitura de digital na tela com o display desligado</string>
+    <string name="screen_off_fod_summary">Usar leitor de digital mesmo quando a tela estiver desligada</string>
     <!-- IME button space -->
+    <string name="navigation_bar_ime_space_title">Espaço do botão IME</string>
+    <string name="navigation_bar_ime_space_summary">Mostrar o espaço do botão IME abaixo do teclado</string>
+    <!-- Display cutout -->
+    <!-- Smart pulldown-->
+    <!-- Sensor block per-package -->
+    <!-- Battery Bar -->
+    <!-- Status Bar Ticker -->
+    <!-- Headset ringtone audio focus -->
+    <!-- QS tile tint -->
+    <!-- QS statusbar background -->
+    <!-- Notification count -->
+    <!-- Dashboard -->
+    <!-- Pulse -->
 </resources>

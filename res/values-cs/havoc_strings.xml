@@ -38,17 +38,17 @@
     <string name="statusbar_title">Stavový řádek</string>
     <string name="statusbar_summary">Hodiny, logo, ikony stavu</string>
     <string name="battery_title">Šetření baterie</string>
-    <string name="battery_saving_summary">Smart Pixels, akce po zhasnutí obrazovky</string>
+    <string name="battery_saving_summary">Akce po zhasnutí obrazovky, blokování senzorů</string>
     <string name="ambient_display_custom_title">Ambientní displej</string>
     <string name="ambient_display_custom_summary">Vždy zapnuto, hudební oznámení, gesta</string>
     <string name="screen_title">Obrazovka</string>
     <string name="screen_summary">Zaoblení rohů, škálování starších aplikací</string>
     <!-- About -->
-    <string name="developers_category_title">Vývojáři</string>
-    <string name="support_category_title">Tým podpory</string>
-    <string name="maintainers_category_title">Správci</string>
-    <string name="device_maintainers_title">Oficiální zařízení</string>
-    <string name="device_maintainers_title_summary">Seznam oficiálních zařízení a jejich správci</string>
+    <string name="team_category_title">Tým</string>
+    <string name="group_mods_title">Moderátoři skupiny podpory</string>
+    <string name="group_mods_summary">Seznam všech našich moderátorů skupiny podpory</string>
+    <string name="device_maintainers_title">Správci zařízení</string>
+    <string name="device_maintainers_title_summary">Seznam oficiálně podporovaných zařízení a jejich správci</string>
     <string name="changelog_title">Seznam změn</string>
     <string name="changelog_title_summary">Zobrazit nedávné změny v ROM</string>
     <string name="changelog_error">Nelze načíst seznam změn</string>
@@ -131,6 +131,7 @@
     <string name="powermenu_screenrecord_title">Videozáznam obrazovky</string>
     <string name="powermenu_torch">Svítilna</string>
     <string name="powermenu_category_visibility">Zamykací obrazovka</string>
+    <string name="powermenu_lockscreen_title">Viditelnost na zamykací obrazovce</string>
     <string name="powermenu_lockscreen_summary">Zobrazit a používat dialogové okno menu napájení na obrazovce uzamčení</string>
     <string name="powermenu_ls_reboot_summary">Zobrazit možnost Restartovat na obrazovce uzamčení</string>
     <string name="powermenu_ls_advanced_reboot_summary">Zobrazit možnost Rozšířený restart na obrazovce uzamčení</string>
@@ -214,13 +215,17 @@
     <string name="roaming_indicator_icon_summary">V režimu roamingu zobrazit indikátor „R“ v ikoně signálu</string>
     <!-- Statusbar net monitor -->
     <string name="statusbar_ntraffic">Síť</string>
-    <string name="network_traffic_state_title">Síťový provoz</string>
-    <string name="network_traffic_disabled">Vypnuto</string>
+    <string name="network_traffic_state_title">Rychlost sítě</string>
+    <string name="network_traffic_state_summary">Zobrazit rychlost sítě na stavovém řádku</string>
+    <string name="network_traffic_location_title">Umístění</string>
     <string name="network_traffic_statusbar">Stavový řádek</string>
     <string name="network_traffic_qs_header">Záhlaví QS</string>
+    <string name="network_traffic_mode_title">Režim zobrazení</string>
+    <string name="network_traffic_dynamic">Dynamický</string>
+    <string name="network_traffic_download">Stahování</string>
+    <string name="network_traffic_upload">Nahrávání</string>
     <string name="network_traffic_autohide_threshold_title">Práh automatického skrytí</string>
-    <string name="network_traffic_arrow_title">Šipky aktivity sítě</string>
-    <string name="network_traffic_arrow_summary">Zobrazit šipky aktivity sítě</string>
+    <string name="network_traffic_refresh_interval_title">Interval obnovení</string>
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">Ikony stavu</string>
     <string name="statusbar_items_summary">Nastavit viditelnost ikon na stavovém řádku</string>
@@ -321,6 +326,8 @@
     <string name="screen_state_toggles_location_title">Poloha</string>
     <string name="screen_state_toggles_twog">Přepnout na 2G</string>
     <string name="screen_state_toggles_twog_summary">Po vypnutí obrazovky se mobilní síť přepne do režimu 2G</string>
+    <string name="screen_state_toggles_threeg">Přepnout na 3G</string>
+    <string name="screen_state_toggles_threeg_summary">Po vypnutí obrazovky se mobilní síť přepne do režimu 3G</string>
     <string name="screen_state_toggles_gps">Vypnout GPS</string>
     <string name="screen_state_toggles_gps_summary">Po vypnutí obrazovky bude služba určování polohy GPS vypnuta</string>
     <string name="screen_state_toggles_mobile_data">Vypnout mobilní data</string>
@@ -376,11 +383,12 @@
     <string name="status_bar_battery_style_circle">Kruh</string>
     <string name="status_bar_battery_style_dotted_circle">Kruh (tečkovaný)</string>
     <string name="status_bar_battery_style_filled_circle">Kruh (plný)</string>
+    <string name="status_bar_battery_style_text">Text</string>
     <string name="status_bar_battery_style_hidden">Skrytá</string>
     <string name="battery_percentage_title">Procenta baterie</string>
-    <string name="battery_percentage_off">Vypnuto</string>
-    <string name="battery_percentage_on">Zapnuto</string>
-    <string name="battery_percentage_charging">Zapnuto (během nabíjení)</string>
+    <string name="status_bar_battery_percentage_default">Nezobrazovat</string>
+    <string name="status_bar_battery_percentage_text_inside">Uvnitř ikony</string>
+    <string name="status_bar_battery_percentage_text_next">Vedle ikony</string>
     <!-- Quick pull down-->
     <string name="quick_pulldown_title">Rychlé stažení nabídky</string>
     <string name="quick_pulldown_summary">%1$s</string>
@@ -540,9 +548,6 @@
     <string name="file_header_select_title">Vyberte obrázek z úložiště</string>
     <string name="file_header_select_summary">Vyberte obrázek z interního úložiště</string>
     <string name="status_bar_custom_header_shadow_title">Zatmavit obrázek</string>
-    <!-- Volte icon -->
-    <string name="show_hd_icon_title">Ikona HD</string>
-    <string name="show_hd_icon_summary">Zobrazit ikonu HD namísto VoLTE</string>
     <!-- Per App aspect Ratio -->
     <string name="action_save">Uložit</string>
     <string name="aspect_ratio_category_title">Škálování starších aplikací</string>
@@ -580,6 +585,12 @@
     <string name="pulse_ambient_light_repeat_count_title">Počet opakování efektu</string>
     <string name="pulse_ambient_light_show_always_title">Zobrazovat vždy</string>
     <string name="pulse_ambient_light_show_always_summary">Zobrazit efekty pro všechny události doze a nejen oznámení</string>
+    <string name="pulse_ambient_light_repeat_direction_title">Režim opakování světla</string>
+    <string name="pulse_ambient_light_repeat_direction_restart">Restartovat</string>
+    <string name="pulse_ambient_light_repeat_direction_reverse">Obrácený</string>
+    <string name="pulse_ambient_light_layout_title">Zobrazení světla</string>
+    <string name="pulse_ambient_light_layout_solid">Plné</string>
+    <string name="pulse_ambient_light_layout_faded">Tlumené</string>
     <!-- QS footer icons -->
     <string name="qs_footer_title">Zápatí</string>
     <string name="qs_footer_settings_title">Ikona Nastavení</string>
@@ -667,8 +678,97 @@
     <string name="back_gesture_haptic_title">Hmatová odezva</string>
     <string name="back_gesture_haptic_summary">Vibrovat při provedení gesta Zpět</string>
     <!-- Media heads up -->
+    <string name="show_media_heads_up_title">Plovoucí oznámení médií</string>
+    <string name="show_media_heads_up_summary">Zobrazit plovoucí oznámení při přehrávání nové skladby</string>
     <!-- FOD animation -->
+    <string name="fod_recognizing_animation_title">Animace rozpoznání otisku prstu</string>
+    <string name="fod_recognizing_animation_summary">Zobrazit animaci při skenování otisku prstu</string>
     <!-- Adaptive Playback -->
+    <string name="media_title">Média</string>
+    <string name="adaptive_playback_title">Adaptivní přehrávání</string>
+    <string name="adaptive_playback_summary">Pozastavit média, je‑li ztlumena hlasitost a pokračovat v přehrávání zvyšováním hlasitosti v rozmezí časového limitu</string>
+    <string name="adaptive_playback_timeout_title">Časový limit přehrávání</string>
+    <string name="adaptive_playback_timeout_30_secs">30 sekund</string>
+    <string name="adaptive_playback_timeout_1_min">1 minuta</string>
+    <string name="adaptive_playback_timeout_2_min">2 minuty</string>
+    <string name="adaptive_playback_timeout_5_min">5 minut</string>
+    <string name="adaptive_playback_timeout_10_min">10 minut</string>
     <!-- Screen off FOD -->
+    <string name="screen_off_fod_title">FOD při vypnuté obrazovce</string>
+    <string name="screen_off_fod_summary">Použít čtečku otisků prstů i při vypnuté obrazovce</string>
+    <string name="screen_off_fod_icon_title">Zobrazit ikonu</string>
+    <string name="screen_off_fod_icon_summary">Zobrazit ikonu otisků prstů při vypnuté obrazovce</string>
     <!-- IME button space -->
+    <string name="navigation_bar_ime_space_title">Prostor pro přepínač IME</string>
+    <string name="navigation_bar_ime_space_summary">Zobrazit prostor pro tlačítko IME pod klávesnicí</string>
+    <!-- Display cutout -->
+    <string name="cutout_category_title">Výřez displeje</string>
+    <string name="display_cutout_mode_title">Režim výřezu</string>
+    <string name="display_cutout_mode_normal">Normální</string>
+    <string name="display_cutout_mode_immerse">Vnořený</string>
+    <string name="display_cutout_mode_hide">Skrytý</string>
+    <string name="stock_statusbar_in_hide">Výchozí výška stavového řádku</string>
+    <string name="stock_statusbar_in_hide_summary">Použít výchozí výšku stavového řádku při použití stylu Skrytý</string>
+    <!-- Smart pulldown-->
+    <string name="smart_pulldown_title">Chytré rozbalení QS</string>
+    <string name="smart_pulldown_off">Vyp.</string>
+    <string name="smart_pulldown_none">Žádná oznámení</string>
+    <string name="smart_pulldown_dismissable">Nezrušitelné oznámení</string>
+    <string name="smart_pulldown_ongoing">Neprobíhající oznámení</string>
+    <!-- Sensor block per-package -->
+    <string name="sensor_block_title">Blokování senzorů</string>
+    <string name="sensor_block_summary">Blokovat přístup k určitým senzorům pro vybrané aplikace</string>
+    <string name="sensor_block_app_picker_title">Blokovat senzory v těchto aplikacích</string>
+    <string name="add_sensor_block_package_title">Přidat aplikace, ve kterých budou blokovány senzory</string>
+    <string name="add_sensor_block_package_summary">V těchto aplikacích bude zablokováno zaznamenávání významného pohybu a senzory akcelerometru a lineární akcelerace</string>
+    <!-- Battery Bar -->
+    <string name="battery_bar_title">Pruh baterie</string>
+    <string name="battery_bar_summary">Přizpůsobení pruhu baterie</string>
+    <string name="battery_bar_location_title">Umístění</string>
+    <string name="battery_bar_location_statusbar_top">Nad stavovým řádkem</string>
+    <string name="battery_bar_location_statusbar_bottom">Pod stavovým řádkem</string>
+    <string name="battery_bar_location_navbar_top">Nad navigačním panelem</string>
+    <string name="battery_bar_location_navbar_bottom">Pod navigačním panelem</string>
+    <string name="battery_bar_color_title">Barva</string>
+    <string name="light_statusbar_title">Světlý stavový řádek</string>
+    <string name="dark_statusbar_title">Tmavý stavový řádek</string>
+    <string name="battery_bar_color_summary">Rozsah barev, který má být použit pro pruh baterie</string>
+    <string name="battery_bar_charging_color_title">Barva při nabíjení</string>
+    <string name="battery_bar_thickness_title">Tloušťka</string>
+    <string name="battery_bar_animate_title">Animace při nabíjení</string>
+    <string name="battery_bar_animate_summary">Animace pruhu baterie při připojení zařízení ke zdroji nabíjení</string>
+    <string name="battery_bar_style_title">Zarovnání</string>
+    <string name="battery_bar_style_regular">Klasické</string>
+    <string name="battery_bar_style_center_mirrored">Zrcadlově na střed</string>
+    <string name="battery_bar_style_reversed">Obrácené</string>
+    <string name="battery_bar_use_charging_color_title">Vlastní barva při nabíjení</string>
+    <string name="battery_bar_use_charging_color_summary">Použít vlastní barvu, když je zařízení připojeno ke zdroji nabíjení</string>
+    <string name="battery_blend_start">Prázdná</string>
+    <string name="battery_blend_end">Plná</string>
+    <string name="battery_blend_between">Střední</string>
+    <!-- Status Bar Ticker -->
+    <string name="ticker_screen_title">Text oznámení</string>
+    <string name="ticker_screen_summary">Styl textu oznámení ve stavovém řádku</string>
+    <string name="ticker_screen_footer">Text oznámení je viditelný pouze tehdy, když nejsou zobrazena plovoucí oznámení</string>
+    <string name="ticker_mode_title">Zobrazit text oznámení pro</string>
+    <string name="ticker_notifications">Oznámení</string>
+    <string name="ticker_media">Oznámení a hudba</string>
+    <string name="ticker_animation_mode_title">Styl animace</string>
+    <string name="ticker_animation_mode_alpha_fade">Slábnutí</string>
+    <string name="ticker_animation_mode_scroll">Rolování</string>
+    <string name="ticker_tick_duration_title">Délka zobrazení</string>
+    <!-- Headset ringtone audio focus -->
+    <string name="ringtone_focus_mode_title">Režim zaměření vyzvánění</string>
+    <string name="ringtone_focus_mode_dynamic">Sluchátka (při přehrávání médií)</string>
+    <string name="ringtone_focus_mode_stock">Reproduktor a sluchátka</string>
+    <!-- QS tile tint -->
+    <string name="qs_tile_accent_tint_title">Odstín dlaždic</string>
+    <string name="qs_tile_accent_tint_summary">Použít odstín barvy zvýraznění pro dlaždice QS</string>
+    <!-- QS statusbar background -->
+    <string name="qs_header_background_title">Pozadí stavového řádku</string>
+    <string name="qs_header_background_black">Černé</string>
+    <string name="qs_header_background_transparent">Průhledné</string>
+    <!-- Notification count -->
+    <!-- Dashboard -->
+    <!-- Pulse -->
 </resources>

@@ -38,17 +38,17 @@
     <string name="statusbar_title">Barra di stato</string>
     <string name="statusbar_summary">Orologio, logo, icone di stato</string>
     <string name="battery_title">Risparmio energetico</string>
-    <string name="battery_saving_summary">Pixel intelligenti, sospendi azioni</string>
+    <string name="battery_saving_summary">Sospendi le azioni, blocca i sensori</string>
     <string name="ambient_display_custom_title">Ambient Display</string>
     <string name="ambient_display_custom_summary">Display sempre attivo, ticker, gestures</string>
     <string name="screen_title">Schermo</string>
     <string name="screen_summary">Angoli arrotondati, ridimensionamento app legacy</string>
     <!-- About -->
-    <string name="developers_category_title">Sviluppatori</string>
-    <string name="support_category_title">Team di supporto</string>
-    <string name="maintainers_category_title">Manutentori</string>
-    <string name="device_maintainers_title">Dispositivi ufficiali</string>
-    <string name="device_maintainers_title_summary">Elenco dei dispositivi ufficiali e dei loro manutentori</string>
+    <string name="team_category_title">Team</string>
+    <string name="group_mods_title">Moderatori del gruppo di supporto</string>
+    <string name="group_mods_summary">Elenco di tutti i moderatori del nostro gruppo di supporto</string>
+    <string name="device_maintainers_title">Manutentori dei dispositivi</string>
+    <string name="device_maintainers_title_summary">Elenco dei dispositivi ufficialmente supportati e dei loro manutentori</string>
     <string name="changelog_title">Changelog</string>
     <string name="changelog_title_summary">Visualizza gli ultimi cambiamenti della ROM</string>
     <string name="changelog_error">Impossibile caricare il changelog</string>
@@ -131,6 +131,7 @@
     <string name="powermenu_screenrecord_title">Registra schermo</string>
     <string name="powermenu_torch">Torcia</string>
     <string name="powermenu_category_visibility">Schermata di blocco</string>
+    <string name="powermenu_lockscreen_title">Visibile sulla schermata di blocco</string>
     <string name="powermenu_lockscreen_summary">Mostra e usa il menù di spegnimento nella schermata di blocco</string>
     <string name="powermenu_ls_reboot_summary">Visualizza l\'opzione di riavvio nella schermata di blocco</string>
     <string name="powermenu_ls_advanced_reboot_summary">Visualizza l\'opzione di riavvio avanzato nella schermata di blocco</string>
@@ -214,13 +215,17 @@
     <string name="roaming_indicator_icon_summary">Mostra l\'indicatore di roaming nell\'icona del segnale quando si è in modalità roaming</string>
     <!-- Statusbar net monitor -->
     <string name="statusbar_ntraffic">Rete</string>
-    <string name="network_traffic_state_title">Traffico di rete</string>
-    <string name="network_traffic_disabled">Disabilitato</string>
+    <string name="network_traffic_state_title">Velocità di rete</string>
+    <string name="network_traffic_state_summary">Mostra la velocità di rete nella barra di stato</string>
+    <string name="network_traffic_location_title">Posizione</string>
     <string name="network_traffic_statusbar">Barra di stato</string>
     <string name="network_traffic_qs_header">Intestazione impostazioni rapide</string>
+    <string name="network_traffic_mode_title">Modalità di visualizzazione</string>
+    <string name="network_traffic_dynamic">Dinamico</string>
+    <string name="network_traffic_download">Download</string>
+    <string name="network_traffic_upload">Upload</string>
     <string name="network_traffic_autohide_threshold_title">Nascondi automaticamente la soglia</string>
-    <string name="network_traffic_arrow_title">Frecce di attività</string>
-    <string name="network_traffic_arrow_summary">Mostra le frecce dell\'indicatore di traffico di rete</string>
+    <string name="network_traffic_refresh_interval_title">Intervallo di aggiornamento</string>
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">Icone di stato</string>
     <string name="statusbar_items_summary">Configura la visibilità delle icone nella barra di stato</string>
@@ -321,6 +326,8 @@
     <string name="screen_state_toggles_location_title">Posizione</string>
     <string name="screen_state_toggles_twog">Passa al 2G</string>
     <string name="screen_state_toggles_twog_summary">La modalità dati mobili passerà al 2G a schermo spento</string>
+    <string name="screen_state_toggles_threeg">Passa al 3G</string>
+    <string name="screen_state_toggles_threeg_summary">La modalità dati mobili passerà al 3G a schermo spento</string>
     <string name="screen_state_toggles_gps">Disabilita GPS</string>
     <string name="screen_state_toggles_gps_summary">I servizi basati sulla posizione GPS saranno disattivati a schermo spento</string>
     <string name="screen_state_toggles_mobile_data">Disattivare i dati mobili</string>
@@ -376,11 +383,12 @@
     <string name="status_bar_battery_style_circle">Cerchio</string>
     <string name="status_bar_battery_style_dotted_circle">Cerchio (punteggiato)</string>
     <string name="status_bar_battery_style_filled_circle">Cerchio (riempito)</string>
+    <string name="status_bar_battery_style_text">Testo</string>
     <string name="status_bar_battery_style_hidden">Nascosto</string>
     <string name="battery_percentage_title">Percentuale batteria</string>
-    <string name="battery_percentage_off">Disabilitato</string>
-    <string name="battery_percentage_on">Abilitato</string>
-    <string name="battery_percentage_charging">Abilitato (durante la ricarica)</string>
+    <string name="status_bar_battery_percentage_default">Nascosta</string>
+    <string name="status_bar_battery_percentage_text_inside">All\'interno dell\'icona</string>
+    <string name="status_bar_battery_percentage_text_next">Accanto all\'icona</string>
     <!-- Quick pull down-->
     <string name="quick_pulldown_title">Tendina rapida</string>
     <string name="quick_pulldown_summary">%1$s</string>
@@ -540,9 +548,6 @@
     <string name="file_header_select_title">Scegli l\'immagine dalla memoria</string>
     <string name="file_header_select_summary">Seleziona un\'immagine dalla memoria interna</string>
     <string name="status_bar_custom_header_shadow_title">Scurisci l\'immagine</string>
-    <!-- Volte icon -->
-    <string name="show_hd_icon_title">Icona HD</string>
-    <string name="show_hd_icon_summary">Visualizza l\'icona HD nella barra di stato invece di VoLTE</string>
     <!-- Per App aspect Ratio -->
     <string name="action_save">Salva</string>
     <string name="aspect_ratio_category_title">Ridimensionamento delle app legacy</string>
@@ -580,6 +585,12 @@
     <string name="pulse_ambient_light_repeat_count_title">Conteggio delle ripetizioni della luce</string>
     <string name="pulse_ambient_light_show_always_title">Mostra sempre</string>
     <string name="pulse_ambient_light_show_always_summary">Mostra le luci per tutti gli eventi doze e non solo notifiche</string>
+    <string name="pulse_ambient_light_repeat_direction_title">Modalità delle ripetizioni del LED</string>
+    <string name="pulse_ambient_light_repeat_direction_restart">Riinizia</string>
+    <string name="pulse_ambient_light_repeat_direction_reverse">Inverso</string>
+    <string name="pulse_ambient_light_layout_title">Visualizzazione chiara</string>
+    <string name="pulse_ambient_light_layout_solid">Solido</string>
+    <string name="pulse_ambient_light_layout_faded">Sbiadito</string>
     <!-- QS footer icons -->
     <string name="qs_footer_title">In basso</string>
     <string name="qs_footer_settings_title">Icona Impostazioni</string>
@@ -667,8 +678,97 @@
     <string name="back_gesture_haptic_title">Vibrazione al tocco</string>
     <string name="back_gesture_haptic_summary">Vibra quando viene attivato il gesto indietro</string>
     <!-- Media heads up -->
+    <string name="show_media_heads_up_title">Notifiche fluttuanti per i multimedia</string>
+    <string name="show_media_heads_up_summary">Mostra le notifiche fluttuanti quando viene riprodotta una nuova traccia</string>
     <!-- FOD animation -->
+    <string name="fod_recognizing_animation_title">Animazione al riconoscimento</string>
+    <string name="fod_recognizing_animation_summary">Mostra un\'animazione durante la scansione dell\'impronta digitale</string>
     <!-- Adaptive Playback -->
+    <string name="media_title">Multimedia</string>
+    <string name="adaptive_playback_title">Riproduzione adattiva</string>
+    <string name="adaptive_playback_summary">Metti in pausa i media quando il volume è silenziato e riattivalo aumentando il volume entro il timeout</string>
+    <string name="adaptive_playback_timeout_title">Tempo di riproduzione</string>
+    <string name="adaptive_playback_timeout_30_secs">30 secondi</string>
+    <string name="adaptive_playback_timeout_1_min">1 minuto</string>
+    <string name="adaptive_playback_timeout_2_min">2 minuti</string>
+    <string name="adaptive_playback_timeout_5_min">5 minuti</string>
+    <string name="adaptive_playback_timeout_10_min">10 minuti</string>
     <!-- Screen off FOD -->
+    <string name="screen_off_fod_title">Impronta digitale a schermo spento</string>
+    <string name="screen_off_fod_summary">Usa il lettore di impronte digitali anche quando lo schermo è spento</string>
+    <string name="screen_off_fod_icon_title">Mostra icona</string>
+    <string name="screen_off_fod_icon_summary">Mostra l\'icona dell\'impronta digitale a schermo spento</string>
     <!-- IME button space -->
+    <string name="navigation_bar_ime_space_title">Spazio pulsante IME</string>
+    <string name="navigation_bar_ime_space_summary">Mostra lo spazio del pulsante IME sotto la tastiera</string>
+    <!-- Display cutout -->
+    <string name="cutout_category_title">Notch dello schermo</string>
+    <string name="display_cutout_mode_title">Modalità di ritaglio</string>
+    <string name="display_cutout_mode_normal">Normale</string>
+    <string name="display_cutout_mode_immerse">Immersivo</string>
+    <string name="display_cutout_mode_hide">Nascondi</string>
+    <string name="stock_statusbar_in_hide">Altezza della barra di stato predefinita</string>
+    <string name="stock_statusbar_in_hide_summary">Usa l\'altezza predefinita della barra di stato in modalità Nascondi</string>
+    <!-- Smart pulldown-->
+    <string name="smart_pulldown_title">Discesa intelligente</string>
+    <string name="smart_pulldown_off">Spento</string>
+    <string name="smart_pulldown_none">Nessuna notifica</string>
+    <string name="smart_pulldown_dismissable">Nessuna notifica removibile</string>
+    <string name="smart_pulldown_ongoing">Nessuna notifica in corso</string>
+    <!-- Sensor block per-package -->
+    <string name="sensor_block_title">Blocca i sensori</string>
+    <string name="sensor_block_summary">Blocca l\'accesso a determinati sensori per le app selezionate</string>
+    <string name="sensor_block_app_picker_title">Blocca i sensori per queste app</string>
+    <string name="add_sensor_block_package_title">Aggiungi app per il blocco sensori</string>
+    <string name="add_sensor_block_package_summary">I sensori di movimento, l\'accelerometro, i sensori di accelerazione lineare saranno bloccati per queste app</string>
+    <!-- Battery Bar -->
+    <string name="battery_bar_title">Barra della batteria</string>
+    <string name="battery_bar_summary">Personalizza le impostazioni per la barra della batteria</string>
+    <string name="battery_bar_location_title">Posizione</string>
+    <string name="battery_bar_location_statusbar_top">Sopra la barra di stato</string>
+    <string name="battery_bar_location_statusbar_bottom">Sotto la barra di stato</string>
+    <string name="battery_bar_location_navbar_top">Sopra la barra di navigazione</string>
+    <string name="battery_bar_location_navbar_bottom">Sotto la barra di navigazione</string>
+    <string name="battery_bar_color_title">Colore</string>
+    <string name="light_statusbar_title">Barra di stato chiara</string>
+    <string name="dark_statusbar_title">Barra di stato scura</string>
+    <string name="battery_bar_color_summary">Gamma di colori da usare per la barra</string>
+    <string name="battery_bar_charging_color_title">Colore durante la carica</string>
+    <string name="battery_bar_thickness_title">Spessore</string>
+    <string name="battery_bar_animate_title">Animazione caricamento</string>
+    <string name="battery_bar_animate_summary">Anima la barra della batteria quando il dispositivo è collegato</string>
+    <string name="battery_bar_style_title">Allineamento</string>
+    <string name="battery_bar_style_regular">Normale</string>
+    <string name="battery_bar_style_center_mirrored">Centrato speculare</string>
+    <string name="battery_bar_style_reversed">Al rovescio</string>
+    <string name="battery_bar_use_charging_color_title">Colore di ricarica personalizzato</string>
+    <string name="battery_bar_use_charging_color_summary">Usa un colore personalizzato quando il dispositivo è collegato</string>
+    <string name="battery_blend_start">Vuota</string>
+    <string name="battery_blend_end">Piena</string>
+    <string name="battery_blend_between">Tra</string>
+    <!-- Status Bar Ticker -->
+    <string name="ticker_screen_title">Ticker di notifica</string>
+    <string name="ticker_screen_summary">Notifiche nella barra di stato stile Ticker</string>
+    <string name="ticker_screen_footer">Il Ticker è visibile solo quando le notifiche heads-up non vengono visualizzate</string>
+    <string name="ticker_mode_title">Mostra ticker per</string>
+    <string name="ticker_notifications">Notifiche</string>
+    <string name="ticker_media">Notifiche e musica</string>
+    <string name="ticker_animation_mode_title">Stile animazione</string>
+    <string name="ticker_animation_mode_alpha_fade">Dissolvenza</string>
+    <string name="ticker_animation_mode_scroll">Scorrimento</string>
+    <string name="ticker_tick_duration_title">Durata</string>
+    <!-- Headset ringtone audio focus -->
+    <string name="ringtone_focus_mode_title">Modalità focus suoneria</string>
+    <string name="ringtone_focus_mode_dynamic">Cuffie (se il media è in riproduzione)</string>
+    <string name="ringtone_focus_mode_stock">Altoparlante e cuffie</string>
+    <!-- QS tile tint -->
+    <string name="qs_tile_accent_tint_title">Colore tile</string>
+    <string name="qs_tile_accent_tint_summary">Applica il colore d\'accento alle tile delle impostazioni rapide</string>
+    <!-- QS statusbar background -->
+    <string name="qs_header_background_title">Sfondo barra di stato</string>
+    <string name="qs_header_background_black">Nero</string>
+    <string name="qs_header_background_transparent">Trasparente</string>
+    <!-- Notification count -->
+    <!-- Dashboard -->
+    <!-- Pulse -->
 </resources>

@@ -38,17 +38,11 @@
     <string name="statusbar_title">نوار وضعیت</string>
     <string name="statusbar_summary">ساعت، لوگو، آیکون های وضعیت</string>
     <string name="battery_title">ذخیرهٔ باتری</string>
-    <string name="battery_saving_summary">پیکسل های هوشمند، تعلیق عملکرد ها</string>
     <string name="ambient_display_custom_title">نمایشگر محیط</string>
     <string name="ambient_display_custom_summary">همیشه روشن، کیلید های موسیقی، فرمان انگشتی</string>
     <string name="screen_title">صفحه نمایش</string>
     <string name="screen_summary">گوشه های گرد، مقیاس پیشفرض برنامه ها</string>
     <!-- About -->
-    <string name="developers_category_title">توسعه دهنده ها</string>
-    <string name="support_category_title">تیم پشتیبانی</string>
-    <string name="maintainers_category_title">بروزرسانی کنندگان</string>
-    <string name="device_maintainers_title">دستگاه های رسمی</string>
-    <string name="device_maintainers_title_summary">لیست دستگاه های رسمی و بروزرسانی کنندگان آنها</string>
     <string name="changelog_title">لیست تغییرات</string>
     <string name="changelog_title_summary">مشاهده تغییرات اخیر در رام</string>
     <string name="changelog_error">قادر به بارگذاری لیست تغییرات نیست</string>
@@ -214,13 +208,9 @@
     <string name="roaming_indicator_icon_summary">نشان دادن نمایشگر رومینگ هنگامی که در حالت رومینگ هستید</string>
     <!-- Statusbar net monitor -->
     <string name="statusbar_ntraffic">شبکه</string>
-    <string name="network_traffic_state_title">ترافیک شبکه</string>
-    <string name="network_traffic_disabled">غیر فعال</string>
     <string name="network_traffic_statusbar">نوار وضعیت</string>
     <string name="network_traffic_qs_header">بالای پانل تنظیمات سریع</string>
     <string name="network_traffic_autohide_threshold_title">مقدار مخفی شدن خودکار</string>
-    <string name="network_traffic_arrow_title">فلش های فعالیت</string>
-    <string name="network_traffic_arrow_summary">نمایش فلش های فعالیت شبکه</string>
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">آیکون های وضعیت</string>
     <string name="statusbar_items_summary">تنظیم کردن نمایش آیکون ها در نوار وضعیت</string>
@@ -378,9 +368,6 @@
     <string name="status_bar_battery_style_filled_circle">دایره‌ای (پر شده)</string>
     <string name="status_bar_battery_style_hidden">مخفی</string>
     <string name="battery_percentage_title">نمایش درصد باتری</string>
-    <string name="battery_percentage_off">غیر فعال</string>
-    <string name="battery_percentage_on">فعال</string>
-    <string name="battery_percentage_charging">فعال (فقط در هنگام شارژ)</string>
     <!-- Quick pull down-->
     <string name="quick_pulldown_title">پایین کشیدن سریع</string>
     <string name="quick_pulldown_summary">%1$s</string>
@@ -540,9 +527,6 @@
     <string name="file_header_select_title">از حافظه یک تصویر را انتخاب کنید</string>
     <string name="file_header_select_summary">از حافظه داخلی یک تصویر را انتخاب کنید</string>
     <string name="status_bar_custom_header_shadow_title">سیاه کردن عکس</string>
-    <!-- Volte icon -->
-    <string name="show_hd_icon_title">آیکون HD</string>
-    <string name="show_hd_icon_summary">نمایش آیکون HD به جای آیکون VoLTE در نوار وضعیت</string>
     <!-- Per App aspect Ratio -->
     <string name="action_save">ذخیره</string>
     <string name="aspect_ratio_category_title">مقیاس برنامه قدیمی</string>
@@ -671,4 +655,15 @@
     <!-- Adaptive Playback -->
     <!-- Screen off FOD -->
     <!-- IME button space -->
+    <!-- Display cutout -->
+    <!-- Smart pulldown-->
+    <!-- Sensor block per-package -->
+    <!-- Battery Bar -->
+    <!-- Status Bar Ticker -->
+    <!-- Headset ringtone audio focus -->
+    <!-- QS tile tint -->
+    <!-- QS statusbar background -->
+    <!-- Notification count -->
+    <!-- Dashboard -->
+    <!-- Pulse -->
 </resources>

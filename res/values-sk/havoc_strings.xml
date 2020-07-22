@@ -38,17 +38,11 @@
     <string name="statusbar_title">Stavový riadok</string>
     <string name="statusbar_summary">Hodiny, logo, stavové ikony</string>
     <string name="battery_title">Šetrenie batérie</string>
-    <string name="battery_saving_summary">Smart Pixels, odložené akcie</string>
     <string name="ambient_display_custom_title">Ambientné zobrazenie</string>
     <string name="ambient_display_custom_summary">Vždy zapnuté, hudobné oznámenia, gestá</string>
     <string name="screen_title">Obrazovka</string>
     <string name="screen_summary">Zaoblené rohy, škálovanie starších aplikácií</string>
     <!-- About -->
-    <string name="developers_category_title">Vývojári</string>
-    <string name="support_category_title">Podporný tím</string>
-    <string name="maintainers_category_title">Správcovia</string>
-    <string name="device_maintainers_title">Oficiálne zariadenia</string>
-    <string name="device_maintainers_title_summary">Zoznam oficiálne podporovaných zariadení a ich správcov</string>
     <string name="changelog_title">Zoznam zmien</string>
     <string name="changelog_title_summary">Zobraziť najnovšie zmeny v ROM</string>
     <string name="changelog_error">Nie je možné načítať zoznam zmien</string>
@@ -131,6 +125,7 @@
     <string name="powermenu_screenrecord_title">Nahrávanie obrazovky</string>
     <string name="powermenu_torch">Baterka</string>
     <string name="powermenu_category_visibility">Uzamykacia obrazovka</string>
+    <string name="powermenu_lockscreen_title">Viditeľnosť na uzamykacej obrazovke</string>
     <string name="powermenu_lockscreen_summary">Zobraziť a používať dialógové okno menu napájania na obrazovke uzamknutia</string>
     <string name="powermenu_ls_reboot_summary">Zobraziť voľby reštartovania na obrazovke uzamknutia</string>
     <string name="powermenu_ls_advanced_reboot_summary">Zobraziť rozšírené možnosti reštartovania na obrazovke uzamknutia</string>
@@ -214,13 +209,9 @@
     <string name="roaming_indicator_icon_summary">V režime roamingu zobraziť indikátor v ikone signálu</string>
     <!-- Statusbar net monitor -->
     <string name="statusbar_ntraffic">Sieť</string>
-    <string name="network_traffic_state_title">Sieťová prevádzka</string>
-    <string name="network_traffic_disabled">Vypnuté</string>
     <string name="network_traffic_statusbar">Stavový riadok</string>
     <string name="network_traffic_qs_header">Záhlavie Rýchlych nastavení</string>
     <string name="network_traffic_autohide_threshold_title">Prahová hodnota pre automatické skrytie</string>
-    <string name="network_traffic_arrow_title">Šípky aktivity siete</string>
-    <string name="network_traffic_arrow_summary">Zobraziť šípky prenosu dát</string>
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">Ikony stavu</string>
     <string name="statusbar_items_summary">Nastaviť viditeľnosť ikon na stavovom riadku</string>
@@ -378,9 +369,6 @@
     <string name="status_bar_battery_style_filled_circle">Kruh (plný)</string>
     <string name="status_bar_battery_style_hidden">Skrytá</string>
     <string name="battery_percentage_title">Percentá batérie</string>
-    <string name="battery_percentage_off">Vypnuté</string>
-    <string name="battery_percentage_on">Zapnuté</string>
-    <string name="battery_percentage_charging">Povolené (pri nabíjaní)</string>
     <!-- Quick pull down-->
     <string name="quick_pulldown_title">Rýchle stiahnutie ponuky</string>
     <string name="quick_pulldown_summary">%1$s</string>
@@ -540,9 +528,6 @@
     <string name="file_header_select_title">Vybrať obrázok z úložiska</string>
     <string name="file_header_select_summary">Vyberte obrázok z vnútorného úložiska</string>
     <string name="status_bar_custom_header_shadow_title">Stmaviť obrázok</string>
-    <!-- Volte icon -->
-    <string name="show_hd_icon_title">HD ikona</string>
-    <string name="show_hd_icon_summary">Zobraziť ikonu HD namiesto ikony VoLTE</string>
     <!-- Per App aspect Ratio -->
     <string name="action_save">Uložiť</string>
     <string name="aspect_ratio_category_title">Mierka starších aplikácií</string>
@@ -667,8 +652,36 @@
     <string name="back_gesture_haptic_title">Hmatová odozva</string>
     <string name="back_gesture_haptic_summary">Vibrovať pri spustení gesta späť</string>
     <!-- Media heads up -->
+    <string name="show_media_heads_up_title">Plávajúce oznámenia médií</string>
+    <string name="show_media_heads_up_summary">Zobrazovať plávajúce oznámenia pri prehrávaní novej skladby</string>
     <!-- FOD animation -->
+    <string name="fod_recognizing_animation_title">Animácia rozpoznania odtlačku prstu</string>
+    <string name="fod_recognizing_animation_summary">Zobraziť animáciu počas skenovania odtlačku prstu</string>
     <!-- Adaptive Playback -->
+    <string name="media_title">Médiá</string>
+    <string name="adaptive_playback_title">Adaptívne prehrávanie</string>
+    <string name="adaptive_playback_summary">Zastaviť prehrávanie pri znížení hlasitosti a znovu spustiť prehrávanie pri zvýšení hlasitosti v časovom limite</string>
+    <string name="adaptive_playback_timeout_title">Časový limit prehrávania</string>
+    <string name="adaptive_playback_timeout_30_secs">30 sekúnd</string>
+    <string name="adaptive_playback_timeout_1_min">1 minúta</string>
+    <string name="adaptive_playback_timeout_2_min">2 minúty</string>
+    <string name="adaptive_playback_timeout_5_min">5 minút</string>
+    <string name="adaptive_playback_timeout_10_min">10 minút</string>
     <!-- Screen off FOD -->
+    <string name="screen_off_fod_title">FOD pri vypnutej obrazovke</string>
+    <string name="screen_off_fod_summary">Používať čítačku odtlačkov prstov aj pri vypnutej obrazovke</string>
     <!-- IME button space -->
+    <string name="navigation_bar_ime_space_title">Priestor pre IME prepínač</string>
+    <string name="navigation_bar_ime_space_summary">Zobraziť pod klávesnicou priestor pre IME prepínač</string>
+    <!-- Display cutout -->
+    <!-- Smart pulldown-->
+    <!-- Sensor block per-package -->
+    <!-- Battery Bar -->
+    <!-- Status Bar Ticker -->
+    <!-- Headset ringtone audio focus -->
+    <!-- QS tile tint -->
+    <!-- QS statusbar background -->
+    <!-- Notification count -->
+    <!-- Dashboard -->
+    <!-- Pulse -->
 </resources>

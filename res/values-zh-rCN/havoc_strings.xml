@@ -38,17 +38,11 @@
     <string name="statusbar_title">状态栏</string>
     <string name="statusbar_summary">时钟，LOGO，状态图标</string>
     <string name="battery_title">省电</string>
-    <string name="battery_saving_summary">智能像素，暂停操作</string>
     <string name="ambient_display_custom_title">息屏显示</string>
     <string name="ambient_display_custom_summary">息屏显示，音乐感知，手势</string>
     <string name="screen_title">屏幕</string>
     <string name="screen_summary">屏幕圆角，旧版应用缩放</string>
     <!-- About -->
-    <string name="developers_category_title">开发人员</string>
-    <string name="support_category_title">支持团队</string>
-    <string name="maintainers_category_title">维护者</string>
-    <string name="device_maintainers_title">官方支持设备</string>
-    <string name="device_maintainers_title_summary">官方支持设备及维护者列表</string>
     <string name="changelog_title">更新日志</string>
     <string name="changelog_title_summary">查看ROM的最新变更</string>
     <string name="changelog_error">无法加载更新日志</string>
@@ -131,6 +125,7 @@
     <string name="powermenu_screenrecord_title">屏幕录制</string>
     <string name="powermenu_torch">手电筒</string>
     <string name="powermenu_category_visibility">锁屏界面</string>
+    <string name="powermenu_lockscreen_title">锁屏上可见性</string>
     <string name="powermenu_lockscreen_summary">在锁屏界面显示电源菜单</string>
     <string name="powermenu_ls_reboot_summary">在锁屏界面显示重启选项</string>
     <string name="powermenu_ls_advanced_reboot_summary">在锁屏界面显示高级重启选项</string>
@@ -214,13 +209,9 @@
     <string name="roaming_indicator_icon_summary">漫游模式下，信号旁边显示漫游指示器</string>
     <!-- Statusbar net monitor -->
     <string name="statusbar_ntraffic">网络</string>
-    <string name="network_traffic_state_title">网络流量</string>
-    <string name="network_traffic_disabled">不显示</string>
     <string name="network_traffic_statusbar">状态栏</string>
     <string name="network_traffic_qs_header">快速设置面板顶部</string>
     <string name="network_traffic_autohide_threshold_title">自动隐藏阀值</string>
-    <string name="network_traffic_arrow_title">活动箭头</string>
-    <string name="network_traffic_arrow_summary">显示流量活动箭头</string>
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">状态栏图标</string>
     <string name="statusbar_items_summary">配置状态栏中图标的可见性</string>
@@ -378,9 +369,6 @@
     <string name="status_bar_battery_style_filled_circle">圆圈 (填充)</string>
     <string name="status_bar_battery_style_hidden">隐藏</string>
     <string name="battery_percentage_title">电量百分比</string>
-    <string name="battery_percentage_off">停用</string>
-    <string name="battery_percentage_on">启用</string>
-    <string name="battery_percentage_charging">充电时启用</string>
     <!-- Quick pull down-->
     <string name="quick_pulldown_title">快速下拉</string>
     <string name="quick_pulldown_summary">%1$s</string>
@@ -540,9 +528,6 @@
     <string name="file_header_select_title">从储存中选择图像</string>
     <string name="file_header_select_summary">从内部储存中选择图像</string>
     <string name="status_bar_custom_header_shadow_title">暗色图像</string>
-    <!-- Volte icon -->
-    <string name="show_hd_icon_title">HD 图标</string>
-    <string name="show_hd_icon_summary">在状态栏显示 HD 图标而不是 VoLTE</string>
     <!-- Per App aspect Ratio -->
     <string name="action_save">保存</string>
     <string name="aspect_ratio_category_title">旧版应用程序缩放</string>
@@ -667,8 +652,36 @@
     <string name="back_gesture_haptic_title">触控反馈</string>
     <string name="back_gesture_haptic_summary">触发返回手势时振动</string>
     <!-- Media heads up -->
+    <string name="show_media_heads_up_title">媒体浮动通知</string>
+    <string name="show_media_heads_up_summary">播放新曲目时显示浮动通知</string>
     <!-- FOD animation -->
+    <string name="fod_recognizing_animation_title">屏幕指纹识别动画</string>
+    <string name="fod_recognizing_animation_summary">在识别指纹时显示动画</string>
     <!-- Adaptive Playback -->
+    <string name="media_title">媒体</string>
+    <string name="adaptive_playback_title">自适应播放</string>
+    <string name="adaptive_playback_summary">静音时暂停媒体，若在超时范围内增加音量则恢复播放</string>
+    <string name="adaptive_playback_timeout_title">回放超时</string>
+    <string name="adaptive_playback_timeout_30_secs">30 秒</string>
+    <string name="adaptive_playback_timeout_1_min">1 分钟</string>
+    <string name="adaptive_playback_timeout_2_min">2 分钟</string>
+    <string name="adaptive_playback_timeout_5_min">5 分钟</string>
+    <string name="adaptive_playback_timeout_10_min">10 分钟</string>
     <!-- Screen off FOD -->
+    <string name="screen_off_fod_title">息屏指纹</string>
+    <string name="screen_off_fod_summary">当屏幕关闭时也使用指纹识别</string>
     <!-- IME button space -->
+    <string name="navigation_bar_ime_space_title">输入法按键空间</string>
+    <string name="navigation_bar_ime_space_summary">在键盘下方显示输入法按键空间</string>
+    <!-- Display cutout -->
+    <!-- Smart pulldown-->
+    <!-- Sensor block per-package -->
+    <!-- Battery Bar -->
+    <!-- Status Bar Ticker -->
+    <!-- Headset ringtone audio focus -->
+    <!-- QS tile tint -->
+    <!-- QS statusbar background -->
+    <!-- Notification count -->
+    <!-- Dashboard -->
+    <!-- Pulse -->
 </resources>

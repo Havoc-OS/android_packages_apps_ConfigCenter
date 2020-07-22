@@ -38,17 +38,11 @@
     <string name="statusbar_title">Pasek stanu</string>
     <string name="statusbar_summary">Zegar, logo, ikony statusu</string>
     <string name="battery_title">Oszczędzanie baterii</string>
-    <string name="battery_saving_summary">Inteligentne piksele, wstrzymywanie akcji</string>
     <string name="ambient_display_custom_title">Ekran dostosowany do otoczenia</string>
     <string name="ambient_display_custom_summary">Zawsze włączony, informacje o muzyce, gesty</string>
     <string name="screen_title">Ekran</string>
     <string name="screen_summary">Zaokrąglone narożniki, skalowanie starszych aplikacji</string>
     <!-- About -->
-    <string name="developers_category_title">Deweloperzy</string>
-    <string name="support_category_title">Zespół wsparcia</string>
-    <string name="maintainers_category_title">Opiekunowie</string>
-    <string name="device_maintainers_title">Oficjalne urządzenia</string>
-    <string name="device_maintainers_title_summary">Lista oficjalnych urządzeń oraz ich opiekunów</string>
     <string name="changelog_title">Dziennik zmian</string>
     <string name="changelog_title_summary">Zobacz ostatnie zmiany w ROMie</string>
     <string name="changelog_error">Nie można wczytać dziennika zmian</string>
@@ -131,6 +125,7 @@
     <string name="powermenu_screenrecord_title">Nagrywanie ekranu</string>
     <string name="powermenu_torch">Latarka</string>
     <string name="powermenu_category_visibility">Ekran blokady</string>
+    <string name="powermenu_lockscreen_title">Widoczność na ekranie blokady</string>
     <string name="powermenu_lockscreen_summary">Menu zasilania dostępne na ekranie blokady</string>
     <string name="powermenu_ls_reboot_summary">Pokaż opcję restartu na ekranie blokady</string>
     <string name="powermenu_ls_advanced_reboot_summary">Pokaż opcję zaawansowanego restartu na ekranie blokady</string>
@@ -214,13 +209,9 @@
     <string name="roaming_indicator_icon_summary">Wyświetlaj ikonę wskaźnika roamingu, gdy urządzenie jest w trybie roamingu</string>
     <!-- Statusbar net monitor -->
     <string name="statusbar_ntraffic">Sieć</string>
-    <string name="network_traffic_state_title">Ruch sieciowy</string>
-    <string name="network_traffic_disabled">Wyłączone</string>
     <string name="network_traffic_statusbar">Pasek stanu</string>
     <string name="network_traffic_qs_header">Nagłówek szybkich ustawień</string>
     <string name="network_traffic_autohide_threshold_title">Próg automatycznego ukrywania</string>
-    <string name="network_traffic_arrow_title">Strzałki aktywności</string>
-    <string name="network_traffic_arrow_summary">Pokaż strzałki monitora aktywności sieci</string>
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">Ikona statusu</string>
     <string name="statusbar_items_summary">Skonfiguruj widoczność ikon na pasku stanu</string>
@@ -378,9 +369,6 @@
     <string name="status_bar_battery_style_filled_circle">Okrąg (wypełniony)</string>
     <string name="status_bar_battery_style_hidden">Ukryty</string>
     <string name="battery_percentage_title">Procent baterii</string>
-    <string name="battery_percentage_off">Wyłączone</string>
-    <string name="battery_percentage_on">Włączone</string>
-    <string name="battery_percentage_charging">Włączone (podczas ładowania)</string>
     <!-- Quick pull down-->
     <string name="quick_pulldown_title">Szybkie rozwijanie</string>
     <string name="quick_pulldown_summary">%1$s</string>
@@ -540,9 +528,6 @@
     <string name="file_header_select_title">Wybierz obrazek z pamięci</string>
     <string name="file_header_select_summary">Wybierz obraz z pamięci wewnętrznej</string>
     <string name="status_bar_custom_header_shadow_title">Przyciemnij obraz</string>
-    <!-- Volte icon -->
-    <string name="show_hd_icon_title">Ikona HD</string>
-    <string name="show_hd_icon_summary">Wyświetl ikonę HD na pasku statusu zamiast VoLTE</string>
     <!-- Per App aspect Ratio -->
     <string name="action_save">Zapisz</string>
     <string name="aspect_ratio_category_title">Skalowanie starszych aplikacji</string>
@@ -667,8 +652,36 @@
     <string name="back_gesture_haptic_title">Wibracje przy naciśnięciu</string>
     <string name="back_gesture_haptic_summary">Wibruj po uruchomieniu gestu wstecz</string>
     <!-- Media heads up -->
+    <string name="show_media_heads_up_title">Wyskakujące powiadomienia multimediów</string>
+    <string name="show_media_heads_up_summary">Pokaż wyskakujące powiadomienie, gdy odtwarzany jest nowy utwór</string>
     <!-- FOD animation -->
+    <string name="fod_recognizing_animation_title">Animacja rozpoznawania</string>
+    <string name="fod_recognizing_animation_summary">Pokaż animację podczas czytania odcisku palca</string>
     <!-- Adaptive Playback -->
+    <string name="media_title">Multimedia</string>
+    <string name="adaptive_playback_title">Odtwarzanie adaptacyjne</string>
+    <string name="adaptive_playback_summary">Wstrzymaj media, gdy głośność jest wyciszona i wznawiaj ją przez zwiększenie głośności w czasie</string>
+    <string name="adaptive_playback_timeout_title">Limit czasu odtwarzania</string>
+    <string name="adaptive_playback_timeout_30_secs">30 sekund</string>
+    <string name="adaptive_playback_timeout_1_min">1 minuta</string>
+    <string name="adaptive_playback_timeout_2_min">2 minuty</string>
+    <string name="adaptive_playback_timeout_5_min">5 minut</string>
+    <string name="adaptive_playback_timeout_10_min">10 minut</string>
     <!-- Screen off FOD -->
+    <string name="screen_off_fod_title">Wyłącz ekran</string>
+    <string name="screen_off_fod_summary">Użyj czytnika linii papilarnych również gdy ekran jest wyłączony</string>
     <!-- IME button space -->
+    <string name="navigation_bar_ime_space_title">Miejsce przycisku IME</string>
+    <string name="navigation_bar_ime_space_summary">Pokaż przestrzeń przycisków IME pod klawiaturą</string>
+    <!-- Display cutout -->
+    <!-- Smart pulldown-->
+    <!-- Sensor block per-package -->
+    <!-- Battery Bar -->
+    <!-- Status Bar Ticker -->
+    <!-- Headset ringtone audio focus -->
+    <!-- QS tile tint -->
+    <!-- QS statusbar background -->
+    <!-- Notification count -->
+    <!-- Dashboard -->
+    <!-- Pulse -->
 </resources>

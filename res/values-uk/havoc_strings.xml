@@ -38,17 +38,12 @@
     <string name="statusbar_title">Рядок стану</string>
     <string name="statusbar_summary">Годинник, логотип, значки стану</string>
     <string name="battery_title">Економія батареї</string>
-    <string name="battery_saving_summary">Розумні пікселі, припинення дій</string>
     <string name="ambient_display_custom_title">Активний дисплей</string>
     <string name="ambient_display_custom_summary">Завжди активний екран, інформація про музику, жести</string>
     <string name="screen_title">Екран</string>
     <string name="screen_summary">Заокруглені кути, масштабування старих додатків</string>
     <!-- About -->
-    <string name="developers_category_title">Розробники</string>
-    <string name="support_category_title">Команда підтримки</string>
-    <string name="maintainers_category_title">Супроводжуючі</string>
-    <string name="device_maintainers_title">Офіційні пристрої</string>
-    <string name="device_maintainers_title_summary">Список офіційних пристроїв та їх супроводжувачів</string>
+    <string name="team_category_title">Команда</string>
     <string name="changelog_title">Список змін</string>
     <string name="changelog_title_summary">Переглянути останні зміни в прошивці</string>
     <string name="changelog_error">Не вдається завантажити список змін</string>
@@ -214,13 +209,9 @@
     <string name="roaming_indicator_icon_summary">Відображати індикатор роумінгу на іконці сигналу коли у роумінгу</string>
     <!-- Statusbar net monitor -->
     <string name="statusbar_ntraffic">Мережа</string>
-    <string name="network_traffic_state_title">Мережевий трафік</string>
-    <string name="network_traffic_disabled">Вимкнений</string>
     <string name="network_traffic_statusbar">Рядок стану</string>
     <string name="network_traffic_qs_header">Заголовок швидких налаштувань</string>
     <string name="network_traffic_autohide_threshold_title">Поріг неактивності</string>
-    <string name="network_traffic_arrow_title">Стрілки активності</string>
-    <string name="network_traffic_arrow_summary">Показувати стрілки індикатора мережевого трафіку</string>
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">Іконки стану</string>
     <string name="statusbar_items_summary">Налаштування видимості іконок в рядку стану</string>
@@ -378,9 +369,6 @@
     <string name="status_bar_battery_style_filled_circle">Кільце (заповнене)</string>
     <string name="status_bar_battery_style_hidden">Приховано</string>
     <string name="battery_percentage_title">Відсоток заряду батареї</string>
-    <string name="battery_percentage_off">Вимкнено</string>
-    <string name="battery_percentage_on">Увімкнено</string>
-    <string name="battery_percentage_charging">Увімкнено (при заряджанні)</string>
     <!-- Quick pull down-->
     <string name="quick_pulldown_title">Швидке розгортання</string>
     <string name="quick_pulldown_summary">%1$s</string>
@@ -540,9 +528,6 @@
     <string name="file_header_select_title">Оберіть зображення з пристрою</string>
     <string name="file_header_select_summary">Виберіть зображення з внутрішньої пам\'яті пристрою</string>
     <string name="status_bar_custom_header_shadow_title">Затемнення зображення</string>
-    <!-- Volte icon -->
-    <string name="show_hd_icon_title">Значок HD</string>
-    <string name="show_hd_icon_summary">Показувати значок HD у рядку стану замість VoLTE</string>
     <!-- Per App aspect Ratio -->
     <string name="action_save">Зберегти</string>
     <string name="aspect_ratio_category_title">Масштабування старих додатків</string>
@@ -671,4 +656,19 @@
     <!-- Adaptive Playback -->
     <!-- Screen off FOD -->
     <!-- IME button space -->
+    <!-- Display cutout -->
+    <!-- Smart pulldown-->
+    <!-- Sensor block per-package -->
+    <!-- Battery Bar -->
+    <string name="battery_bar_location_title">Місцезнаходження</string>
+    <string name="battery_bar_color_title">Колір</string>
+    <string name="battery_bar_use_charging_color_title">Користувацький колір при заряджанні</string>
+    <string name="battery_bar_use_charging_color_summary">Використовувати користувацький колір, коли пристрій підключено</string>
+    <!-- Status Bar Ticker -->
+    <!-- Headset ringtone audio focus -->
+    <!-- QS tile tint -->
+    <!-- QS statusbar background -->
+    <!-- Notification count -->
+    <!-- Dashboard -->
+    <!-- Pulse -->
 </resources>

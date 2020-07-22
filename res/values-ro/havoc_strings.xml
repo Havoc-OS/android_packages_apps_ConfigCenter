@@ -38,17 +38,11 @@
     <string name="statusbar_title">Bară de stare</string>
     <string name="statusbar_summary">Ceas, siglă, pictograme de stare</string>
     <string name="battery_title">Economisire baterie</string>
-    <string name="battery_saving_summary">Pixeli inteligenți, acțiuni la suspendare</string>
     <string name="ambient_display_custom_title">Afișaj ambiental</string>
     <string name="ambient_display_custom_summary">Activ permanent, muzică, gesturi</string>
     <string name="screen_title">Ecran</string>
     <string name="screen_summary">Colțuri rotunjite, scalare aplicații vechi</string>
     <!-- About -->
-    <string name="developers_category_title">Dezvoltatori</string>
-    <string name="support_category_title">Echipa de asistență</string>
-    <string name="maintainers_category_title">Responsabili</string>
-    <string name="device_maintainers_title">Dispozitive oficiale</string>
-    <string name="device_maintainers_title_summary">Lista dispozitivelor oficiale și a susținătorilor acestora</string>
     <string name="changelog_title">Istoric modificări</string>
     <string name="changelog_title_summary">Vizualizați modificările recente în ROM</string>
     <string name="changelog_error">Nu s-a putut încărca jurnalul cu modificări</string>
@@ -214,13 +208,9 @@
     <string name="roaming_indicator_icon_summary">Afișați indicatorul de roaming în modul roaming</string>
     <!-- Statusbar net monitor -->
     <string name="statusbar_ntraffic">Rețea</string>
-    <string name="network_traffic_state_title">Trafic de rețea</string>
-    <string name="network_traffic_disabled">Dezactivat</string>
     <string name="network_traffic_statusbar">Bară de stare</string>
     <string name="network_traffic_qs_header">Antet setări rapide</string>
     <string name="network_traffic_autohide_threshold_title">Prag de ascundere automată</string>
-    <string name="network_traffic_arrow_title">Săgeți de activitate</string>
-    <string name="network_traffic_arrow_summary">Se afișează săgeţile în indicatorul de trafic</string>
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">Pictograme bară de stare</string>
     <string name="statusbar_items_summary">Configurați vizibilitatea pictogramelor în bara de stare</string>
@@ -378,9 +368,6 @@
     <string name="status_bar_battery_style_filled_circle">Cerc (umplut)</string>
     <string name="status_bar_battery_style_hidden">Ascunsă</string>
     <string name="battery_percentage_title">Procentaj baterie</string>
-    <string name="battery_percentage_off">Dezactivat</string>
-    <string name="battery_percentage_on">Activat</string>
-    <string name="battery_percentage_charging">Activat (în timpul încărcării)</string>
     <!-- Quick pull down-->
     <string name="quick_pulldown_title">Derulare rapidă în jos</string>
     <string name="quick_pulldown_summary">%1$s</string>
@@ -540,9 +527,6 @@
     <string name="file_header_select_title">Alegeți imaginea din memorie</string>
     <string name="file_header_select_summary">Selectați o imagine din memoria internă</string>
     <string name="status_bar_custom_header_shadow_title">Imagine întunecată</string>
-    <!-- Volte icon -->
-    <string name="show_hd_icon_title">Pictogramă HD</string>
-    <string name="show_hd_icon_summary">Afișare pictogramă HD în bara de stare în loc de VoLTE</string>
     <!-- Per App aspect Ratio -->
     <string name="action_save">Salvaţi</string>
     <string name="aspect_ratio_category_title">Scalarea aplicațiilor vechi</string>
@@ -671,4 +655,15 @@
     <!-- Adaptive Playback -->
     <!-- Screen off FOD -->
     <!-- IME button space -->
+    <!-- Display cutout -->
+    <!-- Smart pulldown-->
+    <!-- Sensor block per-package -->
+    <!-- Battery Bar -->
+    <!-- Status Bar Ticker -->
+    <!-- Headset ringtone audio focus -->
+    <!-- QS tile tint -->
+    <!-- QS statusbar background -->
+    <!-- Notification count -->
+    <!-- Dashboard -->
+    <!-- Pulse -->
 </resources>

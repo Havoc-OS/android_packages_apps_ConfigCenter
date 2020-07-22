@@ -38,17 +38,11 @@
     <string name="statusbar_title">Statusleiste</string>
     <string name="statusbar_summary">Uhr, Logo, Statussymbole</string>
     <string name="battery_title">Energiesparmodus</string>
-    <string name="battery_saving_summary">Smarte Pixel, Prozesse pausieren</string>
     <string name="ambient_display_custom_title">Inaktivitätsdisplay</string>
     <string name="ambient_display_custom_summary">Immer aktiv, Musikticker, Gesten</string>
     <string name="screen_title">Bildschirm</string>
     <string name="screen_summary">Eckenradius, Skalierung alter Apps</string>
     <!-- About -->
-    <string name="developers_category_title">Entwickler*innen</string>
-    <string name="support_category_title">Support Team</string>
-    <string name="maintainers_category_title">Betreuer*innen</string>
-    <string name="device_maintainers_title">Offizielle Geräte</string>
-    <string name="device_maintainers_title_summary">Liste der offiziellen Geräte und deren Betreuer*innen</string>
     <string name="changelog_title">Änderungsprotokoll</string>
     <string name="changelog_title_summary">Letzte Änderungen im ROM anzeigen</string>
     <string name="changelog_error">Changelog konnte nicht geladen werden</string>
@@ -131,6 +125,7 @@
     <string name="powermenu_screenrecord_title">Bildschirmaufnahme</string>
     <string name="powermenu_torch">Taschenlampe</string>
     <string name="powermenu_category_visibility">Sperrbildschirm</string>
+    <string name="powermenu_lockscreen_title">Auf dem Sperrbildschirm sichtbar</string>
     <string name="powermenu_lockscreen_summary">Zeige und benutze den Ein/Aus-Menü-Dialog auf dem Sperrbildschirm</string>
     <string name="powermenu_ls_reboot_summary">Zeige Neustartoption auf dem Sperrbildschirm</string>
     <string name="powermenu_ls_advanced_reboot_summary">Zeige erweiterte Neustartoption auf dem Sperrbildschirm</string>
@@ -214,13 +209,9 @@
     <string name="roaming_indicator_icon_summary">Roaming-Indikator in Signalstärke-Symbol anzeigen, wenn das Gerät im Roaming-Modus ist</string>
     <!-- Statusbar net monitor -->
     <string name="statusbar_ntraffic">Netzwerk</string>
-    <string name="network_traffic_state_title">Netzwerk-Datenverkehr</string>
-    <string name="network_traffic_disabled">Deaktiviert</string>
     <string name="network_traffic_statusbar">Statusleiste</string>
     <string name="network_traffic_qs_header">Kopfzeile Schnelleinstellungen</string>
     <string name="network_traffic_autohide_threshold_title">Grenzwert für automatisches Ausblenden</string>
-    <string name="network_traffic_arrow_title">Datenverkehr-Anzeige</string>
-    <string name="network_traffic_arrow_summary">Pfeilsymbole für Datenverkehr-Anzeige anzeigen</string>
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">Statusbarsymbole</string>
     <string name="statusbar_items_summary">Anzeige der Symbole in der Statusbar konfigurieren</string>
@@ -378,9 +369,6 @@
     <string name="status_bar_battery_style_filled_circle">Kreis (gefüllt)</string>
     <string name="status_bar_battery_style_hidden">Ausgeblendet</string>
     <string name="battery_percentage_title">Akkustand in Prozent</string>
-    <string name="battery_percentage_off">Deaktiviert</string>
-    <string name="battery_percentage_on">Aktiviert</string>
-    <string name="battery_percentage_charging">Aktiviert (beim Aufladen)</string>
     <!-- Quick pull down-->
     <string name="quick_pulldown_title">Schnelles Herunterziehen</string>
     <string name="quick_pulldown_summary">%1$s</string>
@@ -540,9 +528,6 @@
     <string name="file_header_select_title">Bild aus dem internen Speicher auswählen</string>
     <string name="file_header_select_summary">Wählen Sie ein Bild aus dem internen Speicher aus</string>
     <string name="status_bar_custom_header_shadow_title">Bild abdunkeln</string>
-    <!-- Volte icon -->
-    <string name="show_hd_icon_title">HD-Symbol</string>
-    <string name="show_hd_icon_summary">HD-Symbol anstelle von VoLTE anzeigen</string>
     <!-- Per App aspect Ratio -->
     <string name="action_save">Speichern</string>
     <string name="aspect_ratio_category_title">Skalierung für ältere Apps</string>
@@ -580,6 +565,7 @@
     <string name="pulse_ambient_light_repeat_count_title">Anzahl der Leuchtwiederholungen</string>
     <string name="pulse_ambient_light_show_always_title">Immer anzeigen</string>
     <string name="pulse_ambient_light_show_always_summary">Kantenbeleuchtung für alle Schlummer-Ereignisse und nicht nur Benachrichtigungen anzeigen</string>
+    <string name="pulse_ambient_light_repeat_direction_restart">Neustarten</string>
     <!-- QS footer icons -->
     <string name="qs_footer_title">Fußzeile</string>
     <string name="qs_footer_settings_title">Einstellungen-Symbol</string>
@@ -667,8 +653,36 @@
     <string name="back_gesture_haptic_title">Haptisches Feedback</string>
     <string name="back_gesture_haptic_summary">Vibrieren, wenn die Zurück-Geste ausgelöst wird</string>
     <!-- Media heads up -->
+    <string name="show_media_heads_up_title">Medien-Pop-Up</string>
+    <string name="show_media_heads_up_summary">Pop-Up-Benachrichtigung anzeigen, wenn ein neuer Track abgespielt wird</string>
     <!-- FOD animation -->
+    <string name="fod_recognizing_animation_title">Animation erkennen</string>
+    <string name="fod_recognizing_animation_summary">Zeige eine Animation beim Erfassen des Fingerabdrucks</string>
     <!-- Adaptive Playback -->
+    <string name="media_title">Medien</string>
+    <string name="adaptive_playback_title">Adaptive Wiedergabe</string>
+    <string name="adaptive_playback_summary">Medien anhalten wenn Lautstärke stumm ist und durch Erhöhung der Lautstärke innerhalb des Timeouts fortsetzen</string>
+    <string name="adaptive_playback_timeout_title">Wiedergabe-Timeout</string>
+    <string name="adaptive_playback_timeout_30_secs">30 Sekunden</string>
+    <string name="adaptive_playback_timeout_1_min">1 Minute</string>
+    <string name="adaptive_playback_timeout_2_min">2 Minuten</string>
+    <string name="adaptive_playback_timeout_5_min">5 Minuten</string>
+    <string name="adaptive_playback_timeout_10_min">10 Minuten</string>
     <!-- Screen off FOD -->
+    <string name="screen_off_fod_title">Bildschirm aus FOD</string>
+    <string name="screen_off_fod_summary">Fingerabdruckleser auch verwenden, wenn der Bildschirm ausgeschaltet ist</string>
     <!-- IME button space -->
+    <string name="navigation_bar_ime_space_title">IME-Schaltflächenbereich</string>
+    <string name="navigation_bar_ime_space_summary">IME-Schaltflächenbereich unter der Tastatur anzeigen</string>
+    <!-- Display cutout -->
+    <!-- Smart pulldown-->
+    <!-- Sensor block per-package -->
+    <!-- Battery Bar -->
+    <!-- Status Bar Ticker -->
+    <!-- Headset ringtone audio focus -->
+    <!-- QS tile tint -->
+    <!-- QS statusbar background -->
+    <!-- Notification count -->
+    <!-- Dashboard -->
+    <!-- Pulse -->
 </resources>

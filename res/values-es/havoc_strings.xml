@@ -75,7 +75,6 @@
     <!-- Statusbar logo -->
     <!-- QS background opacity -->
     <!-- QS header image -->
-    <!-- Volte icon -->
     <!-- Per App aspect Ratio -->
     <!-- Rounded corners -->
     <!-- QS battery estimates -->
@@ -100,4 +99,15 @@
     <!-- Adaptive Playback -->
     <!-- Screen off FOD -->
     <!-- IME button space -->
+    <!-- Display cutout -->
+    <!-- Smart pulldown-->
+    <!-- Sensor block per-package -->
+    <!-- Battery Bar -->
+    <!-- Status Bar Ticker -->
+    <!-- Headset ringtone audio focus -->
+    <!-- QS tile tint -->
+    <!-- QS statusbar background -->
+    <!-- Notification count -->
+    <!-- Dashboard -->
+    <!-- Pulse -->
 </resources>
