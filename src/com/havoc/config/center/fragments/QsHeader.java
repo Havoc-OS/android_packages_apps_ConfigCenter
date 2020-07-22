@@ -145,6 +145,7 @@ public class QsHeader extends SettingsPreferenceFragment implements
         mFileHeader.setEnabled(enabled);
         mHeaderShadow.setEnabled(enabled);
         mDaylightHeaderPack.setEnabled(enabled);
+        updateEnablement();
     }
 
     @Override
@@ -158,6 +159,7 @@ public class QsHeader extends SettingsPreferenceFragment implements
         mFileHeader.setEnabled(isChecked);
         mHeaderShadow.setEnabled(isChecked);
         mDaylightHeaderPack.setEnabled(isChecked);
+        updateEnablement();
     }
 
     private void updateHeaderProviderSummary(boolean headerEnabled) {
@@ -262,6 +264,8 @@ public class QsHeader extends SettingsPreferenceFragment implements
     }
 
     private void updateEnablement() {
+        boolean headerEnabled = Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_CUSTOM_HEADER, 0) == 1;
         String providerName = Settings.System.getString(getContentResolver(),
                 Settings.System.STATUS_BAR_CUSTOM_HEADER_PROVIDER);
         if (providerName == null) {
@@ -273,9 +277,9 @@ public class QsHeader extends SettingsPreferenceFragment implements
         int valueIndex = mHeaderProvider.findIndexOfValue(providerName);
         mHeaderProvider.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
         mHeaderProvider.setSummary(mHeaderProvider.getEntry());
-        mDaylightHeaderPack.setEnabled(providerName.equals(mDaylightHeaderProvider));
-        mFileHeader.setEnabled(providerName.equals(mFileHeaderProvider));
-        mHeaderBrowse.setEnabled(isBrowseHeaderAvailable() && providerName.equals(mFileHeaderProvider));
+        mDaylightHeaderPack.setEnabled(providerName.equals(mDaylightHeaderProvider) && headerEnabled);
+        mFileHeader.setEnabled(providerName.equals(mFileHeaderProvider) && headerEnabled);
+        mHeaderBrowse.setEnabled(isBrowseHeaderAvailable() && providerName.equals(mFileHeaderProvider) && headerEnabled);
     }
 
     @Override

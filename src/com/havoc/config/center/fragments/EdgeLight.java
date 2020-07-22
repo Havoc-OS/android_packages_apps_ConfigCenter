@@ -36,16 +36,19 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.havoc.support.colorpicker.ColorPickerPreference;
 import com.havoc.support.preferences.CustomSeekBarPreference;
+import com.havoc.support.preferences.SystemSettingListPreference;
 import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
 public class EdgeLight extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
 
     public static final String TAG = "EdgeLight";
+    private static final String AMBIENT_LIGHT_LAYOUT = "ambient_light_layout";
     private static final String AMBIENT_LIGHT_COLOR = "ambient_light_color";
     private static final String AMBIENT_LIGHT_CUSTOM_COLOR = "ambient_light_custom_color";
     private static final String AMBIENT_LIGHT_DURATION = "ambient_light_duration";
     private static final String AMBIENT_LIGHT_REPEAT_COUNT = "ambient_light_repeat_count";
+    private static final String AMBIENT_LIGHT_REPEAT_DIRECTION = "ambient_light_repeat_direction";
     private static final String AMBIENT_LIGHT_ALWAYS = "ambient_light_pulse_for_all";
 
     private SystemSettingSwitchPreference mEdgeLightAlways;
@@ -53,6 +56,8 @@ public class EdgeLight extends SettingsPreferenceFragment implements
     private ColorPickerPreference mEdgeLightColor;
     private CustomSeekBarPreference mEdgeLightDuration;
     private CustomSeekBarPreference mEdgeLightRepeatCount;
+    private SystemSettingListPreference mEdgeLightRepeatDirection;
+    private SystemSettingListPreference mEdgeLightLayout;
 
     private TextView mTextView;
     private View mSwitchBar;
@@ -63,6 +68,8 @@ public class EdgeLight extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.edge_light);
 
         mEdgeLightAlways = (SystemSettingSwitchPreference) findPreference(AMBIENT_LIGHT_ALWAYS);
+        mEdgeLightRepeatDirection = (SystemSettingListPreference) findPreference(AMBIENT_LIGHT_REPEAT_DIRECTION);
+        mEdgeLightLayout = (SystemSettingListPreference) findPreference(AMBIENT_LIGHT_LAYOUT);
 
         mEdgeLightColorMode = (ListPreference) findPreference(AMBIENT_LIGHT_COLOR);
         int edgeLightColorMode = Settings.System.getIntForUser(getContentResolver(),
@@ -132,6 +139,8 @@ public class EdgeLight extends SettingsPreferenceFragment implements
         mEdgeLightColor.setEnabled(enabled);
         mEdgeLightDuration.setEnabled(enabled);
         mEdgeLightRepeatCount.setEnabled(enabled);
+        mEdgeLightRepeatDirection.setEnabled(enabled);
+        mEdgeLightLayout.setEnabled(enabled);
     }
 
     @Override
@@ -146,6 +155,8 @@ public class EdgeLight extends SettingsPreferenceFragment implements
         mEdgeLightColor.setEnabled(isChecked);
         mEdgeLightDuration.setEnabled(isChecked);
         mEdgeLightRepeatCount.setEnabled(isChecked);
+        mEdgeLightRepeatDirection.setEnabled(isChecked);
+        mEdgeLightLayout.setEnabled(isChecked);
     }
 
     @Override
