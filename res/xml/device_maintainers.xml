@@ -578,6 +578,16 @@
                 android:data="https://t.me/Lightvortex242" />
         </Preference>
 
+        <Preference
+            android:id="@+id/device_andromeda"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_andromeda_summary"
+            android:title="@string/device_andromeda" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Inkypen" />
+        </Preference>
+
         <!--<Preference
             android:id="@+id/device_clover"
             android:icon="@drawable/havoc_device"
