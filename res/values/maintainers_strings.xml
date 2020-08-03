@@ -197,6 +197,9 @@
     <string name="device_chiron" translatable="false">Xiaomi Mi Mix 2</string>
     <string name="device_chiron_summary" translatable="false">chiron\nRishi Shukla (lightvortex)</string>
 
+    <string name="device_andromeda" translatable="false">Xiaomi Mi Mix 3 5G</string>
+    <string name="device_andromeda_summary" translatable="false">andromeda\nNicholas Magill (Inkypen)</string>
+
     <string name="device_clover" translatable="false">Xiaomi Mi Pad 4/4 Plus</string>
     <string name="device_clover_summary" translatable="false">clover\nMax Weffers (rcstar6696)</string>
 
