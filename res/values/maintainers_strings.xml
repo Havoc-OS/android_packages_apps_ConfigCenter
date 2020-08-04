@@ -36,6 +36,7 @@
     <string name="device_category_yu_title" translatable="false">YU</string>
     <string name="device_category_zuk_title" translatable="false">ZUK</string>
     <string name="device_category_huawei_title" translatable="false">Huawei</string>
+    <string name="device_category_nokia_title" translatable="false">Nokia</string>
 
     <!-- Devices & Maintainers -->
     <string name="device_generic" translatable="false">Generic System Image</string>
