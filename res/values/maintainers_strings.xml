@@ -300,4 +300,7 @@
     <string name="device_angler" translatable="false">Nexus 6P</string>
     <string name="device_angler_summary" translatable="false">angler\nHardik Kumar (hk1271)</string>
 
+    <string name="device_Dragon" translatable="false">Nokia 6.1 Plus</string>
+    <string name="device_Dragon_summary" translatable="false">Dragon\nRaghu Varma (RaghuVarma)</string>
+
 </resources>

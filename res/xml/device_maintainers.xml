@@ -968,4 +968,20 @@
                 android:data="https://t.me/roxxannee" />
         </Preference>
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:id="@+id/device_category_nokia"
+        android:title="@string/device_category_nokia_title">
+
+	    <Preference
+            android:id="@+id/device_Dragon"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_Dragon_summary"
+            android:title="@string/device_Dragon">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/RaghuVarma" />
+        </Preference>
+    </PreferenceCategory>
+
 </PreferenceScreen>
