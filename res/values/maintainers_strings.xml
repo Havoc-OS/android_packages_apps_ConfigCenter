@@ -36,6 +36,7 @@
     <string name="device_category_yu_title" translatable="false">YU</string>
     <string name="device_category_zuk_title" translatable="false">ZUK</string>
     <string name="device_category_huawei_title" translatable="false">Huawei</string>
+    <string name="device_category_nokia_title" translatable="false">Nokia</string>
 
     <!-- Devices & Maintainers -->
     <string name="device_generic" translatable="false">Generic System Image</string>
@@ -301,5 +302,17 @@
 
     <string name="device_angler" translatable="false">Nexus 6P</string>
     <string name="device_angler_summary" translatable="false">angler\nHardik Kumar (hk1271)</string>
+
+    <string name="device_plate2" translatable="false">Nokia 6.1</string>
+    <string name="device_plate2_summary" translatable="false">Plate2\nRaghu Varma</string>
+
+    <string name="device_dragon" translatable="false">Nokia 6.1 Plus</string>
+    <string name="device_dragon_summary" translatable="false">Dragon\nRaghu Varma</string>
+
+    <string name="device_onyx" translatable="false">Nokia 7 Plus</string>
+    <string name="device_onyx_summary" translatable="false">Onyx\nRaghu Varma</string>
+
+    <string name="device_crystal" translatable="false">Nokia 7.1</string>
+    <string name="device_crystal_summary" translatable="false">Crystal\nRaghu Varma</string>
 
 </resources>

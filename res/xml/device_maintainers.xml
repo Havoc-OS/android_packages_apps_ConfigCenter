@@ -978,4 +978,49 @@
                 android:data="https://t.me/roxxannee" />
         </Preference>
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:id="@+id/device_category_nokia"
+        android:title="@string/device_category_nokia_title">
+
+	    <Preference
+            android:id="@+id/device_plate2"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_plate2_summary"
+            android:title="@string/device_plate2">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/RaghuVarma" />
+        </Preference>
+
+	    <Preference
+            android:id="@+id/device_dragon"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_dragon_summary"
+            android:title="@string/device_dragon">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/RaghuVarma" />
+        </Preference>
+
+	    <Preference
+            android:id="@+id/device_onyx"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_onyx_summary"
+            android:title="@string/device_onyx">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/RaghuVarma" />
+        </Preference>
+
+	    <Preference
+            android:id="@+id/device_crystal"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_crystal_summary"
+            android:title="@string/device_crystal">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/RaghuVarma" />
+        </Preference>
+    </PreferenceCategory>
 </PreferenceScreen>
