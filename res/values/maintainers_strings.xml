@@ -306,4 +306,7 @@
     <string name="device_Onyx" translatable="false">Nokia 7 Plus</string>
     <string name="device_Onyx_summary" translatable="false">Onyx\nRaghu Varma (RaghuVarma)</string>
 
+    <string name="device_Crystal" translatable="false">Nokia 7.1</string>
+    <string name="device_Crystal_summary" translatable="false">Crystal\nRaghu Varma (RaghuVarma)</string>
+
 </resources>
