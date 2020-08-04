@@ -309,4 +309,7 @@
     <string name="device_Crystal" translatable="false">Nokia 7.1</string>
     <string name="device_Crystal_summary" translatable="false">Crystal\nRaghu Varma (RaghuVarma)</string>
 
+    <string name="device_Plate2" translatable="false">Nokia 6.1</string>
+    <string name="device_Plate2_summary" translatable="false">Plate2\nRaghu Varma (RaghuVarma)</string>
+
 </resources>
