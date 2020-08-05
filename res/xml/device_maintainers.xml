@@ -254,7 +254,7 @@
             android:title="@string/device_crownlte">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/varunsoma" />
+                android:data="https://t.me/garett_09" />
         </Preference>
 
         <!--<Preference
@@ -324,7 +324,7 @@
             android:title="@string/device_starlte">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/varunsoma" />
+                android:data="https://t.me/garett_09" />
         </Preference>
 
         <Preference
@@ -334,7 +334,7 @@
             android:title="@string/device_star2lte">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/varunsoma" />
+                android:data="https://t.me/garett_09" />
         </Preference>
     </PreferenceCategory>
 

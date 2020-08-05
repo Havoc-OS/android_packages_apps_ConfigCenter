@@ -103,7 +103,7 @@
     <string name="device_greatlte_summary" translatable="false">greatlte\nEvgeny Brin (EugW)</string>
 
     <string name="device_crownlte" translatable="false">Samsung Galaxy Note 9 (exynos)</string>
-    <string name="device_crownlte_summary" translatable="false">crownlte\nVarun Soma (vsoma)</string>
+    <string name="device_crownlte_summary" translatable="false">crownlte\nAdrian Sian (garett_09)</string>
 
     <string name="device_ks01ltex" translatable="false">Samsung Galaxy S4 i9506</string>
     <string name="device_ks01ltex_summary" translatable="false">ks01ltex\nKhalvat-M (khalvat)</string>
@@ -124,10 +124,10 @@
     <string name="device_dream2lte_summary" translatable="false">dream2lte\nEvgeny Brin (EugW)</string>
 
     <string name="device_starlte" translatable="false">Samsung Galaxy S9 (exynos)</string>
-    <string name="device_starlte_summary" translatable="false">starlte\nVarun Soma (vsoma)</string>
+    <string name="device_starlte_summary" translatable="false">starlte\nAdrian Sian (garett_09)</string>
     
     <string name="device_star2lte" translatable="false">Samsung Galaxy S9+ (exynos)</string>
-    <string name="device_star2lte_summary" translatable="false">star2lte\nVarun Soma (vsoma)</string>
+    <string name="device_star2lte_summary" translatable="false">star2lte\nAdrian Sian (garett_09)</string>
 
     <string name="device_potter" translatable="false">Moto G5 Plus</string>
     <string name="device_potter_summary" translatable="false">potter\nAbhijit Tudu (abhijit1998)</string>
