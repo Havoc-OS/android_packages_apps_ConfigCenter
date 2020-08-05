@@ -982,11 +982,6 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/RaghuVarma" />
         </Preference>
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:id="@+id/device_category_nokia"
-        android:title="@string/device_category_nokia_title">
 
 	    <Preference
             android:id="@+id/device_Onyx"
@@ -997,11 +992,6 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/RaghuVarma" />
         </Preference>
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:id="@+id/device_category_nokia"
-        android:title="@string/device_category_nokia_title">
 
 	    <Preference
             android:id="@+id/device_Crystal"
@@ -1012,11 +1002,6 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/RaghuVarma" />
         </Preference>
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:id="@+id/device_category_nokia"
-        android:title="@string/device_category_nokia_title">
 
 	    <Preference
             android:id="@+id/device_Plate2"
