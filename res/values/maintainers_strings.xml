@@ -301,15 +301,15 @@
     <string name="device_angler_summary" translatable="false">angler\nHardik Kumar (hk1271)</string>
 
     <string name="device_Dragon" translatable="false">Nokia 6.1 Plus</string>
-    <string name="device_Dragon_summary" translatable="false">Dragon\nRaghu Varma (RaghuVarma)</string>
+    <string name="device_Dragon_summary" translatable="false">Dragon\nRaghu Varma (Mr.Varma)</string>
 
     <string name="device_Onyx" translatable="false">Nokia 7 Plus</string>
-    <string name="device_Onyx_summary" translatable="false">Onyx\nRaghu Varma (RaghuVarma)</string>
+    <string name="device_Onyx_summary" translatable="false">Onyx\nRaghu Varma (Mr.Varma)</string>
 
     <string name="device_Crystal" translatable="false">Nokia 7.1</string>
-    <string name="device_Crystal_summary" translatable="false">Crystal\nRaghu Varma (RaghuVarma)</string>
+    <string name="device_Crystal_summary" translatable="false">Crystal\nRaghu Varma (Mr.Varma)</string>
 
     <string name="device_Plate2" translatable="false">Nokia 6.1</string>
-    <string name="device_Plate2_summary" translatable="false">Plate2\nRaghu Varma (RaghuVarma)</string>
+    <string name="device_Plate2_summary" translatable="false">Plate2\nRaghu Varma (Mr.Varma)</string>
 
 </resources>
