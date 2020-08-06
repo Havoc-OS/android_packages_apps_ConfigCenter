@@ -97,7 +97,7 @@
             android:defaultValue="false"
             android:dependency="force_show_navbar" />
 
-        <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
+        <com.havoc.support.preferences.SecureSettingMasterSwitchPreference
             android:key="navbar_pulse_enabled"
             android:fragment="com.havoc.config.center.fragments.PulseSettings"
             android:title="@string/pulse_settings"

@@ -41,7 +41,7 @@ import com.android.settings.gestures.SystemNavigationGestureSettings;
 import com.havoc.support.preferences.SecureSettingSwitchPreference;
 import com.havoc.support.preferences.SwitchPreference;
 import com.havoc.support.preferences.SystemSettingListPreference;
-import com.havoc.support.preferences.SystemSettingMasterSwitchPreference;
+import com.havoc.support.preferences.SecureSettingMasterSwitchPreference;
 import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
 public class Buttons extends SettingsPreferenceFragment implements
@@ -142,7 +142,7 @@ public class Buttons extends SettingsPreferenceFragment implements
     private SystemSettingSwitchPreference mNavigationIMESpace;
     private SystemSettingListPreference mTimeout;
     private SystemSettingListPreference mBackSwipeType;
-    private SystemSettingMasterSwitchPreference mNavbarPulse;
+    private SecureSettingMasterSwitchPreference mNavbarPulse;
 
     private int deviceKeys;
 
@@ -431,9 +431,9 @@ public class Buttons extends SettingsPreferenceFragment implements
     }
 
     private void updateMasterPrefs() {
-        mNavbarPulse = (SystemSettingMasterSwitchPreference) findPreference(KEY_NAVBAR_PULSE_ENABLED);
-        boolean navbarPulse = Settings.System.getIntForUser(getActivity().getContentResolver(),
-                Settings.System.PULSE_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
+        mNavbarPulse = (SecureSettingMasterSwitchPreference) findPreference(KEY_NAVBAR_PULSE_ENABLED);
+        boolean navbarPulse = Settings.Secure.getIntForUser(getActivity().getContentResolver(),
+                Settings.Secure.NAVBAR_PULSE_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
         mNavbarPulse.setChecked(navbarPulse);
         mNavbarPulse.setOnPreferenceChangeListener(this);
     }
@@ -638,8 +638,8 @@ public class Buttons extends SettingsPreferenceFragment implements
             return true;
         } else if (preference == mNavbarPulse) {
             boolean value = (Boolean) objValue;
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.PULSE_ENABLED, value ? 1 : 0,
+            Settings.Secure.putIntForUser(getContentResolver(),
+                    Settings.Secure.NAVBAR_PULSE_ENABLED, value ? 1 : 0,
                     UserHandle.USER_CURRENT);
             return true;
         }
