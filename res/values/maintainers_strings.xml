@@ -24,6 +24,7 @@
     <string name="device_category_oneplus_title" translatable="false">OnePlus</string>
     <string name="device_category_google_title" translatable="false">Google</string>
     <string name="device_category_samsung_title" translatable="false">Samsung</string>
+    <string name="device_category_sony_title" translatable="false">Sony</string>
     <string name="device_category_motorola_title" translatable="false">Motorola</string>
     <string name="device_category_xiaomi_title" translatable="false">Xiaomi</string>
     <string name="device_category_lenovo_title" translatable="false">Lenovo</string>
@@ -298,5 +299,8 @@
 
     <string name="device_angler" translatable="false">Nexus 6P</string>
     <string name="device_angler_summary" translatable="false">angler\nHardik Kumar (hk1271)</string>
+
+    <string name="device_lilac" translatable="false">Xperia XZ1 Compact</string>
+    <string name="device_lilac_summary" translatable="false">lilac\nShashank Verma (shank03)</string>
 
 </resources>
