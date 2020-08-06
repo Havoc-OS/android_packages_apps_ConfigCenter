@@ -497,15 +497,15 @@
                 android:data="https://t.me/dimasyudha" />
         </Preference>
 
-        <!--<Preference
+        <Preference
             android:id="@+id/device_cepheus"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_cepheus_summary"
             android:title="@string/device_cepheus" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/fjsantim" />
-        </Preference>-->
+                android:data="https://t.me/savsir" />
+        </Preference>
 
         <Preference
             android:id="@+id/device_tissot"
