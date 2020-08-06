@@ -643,15 +643,15 @@
                 android:data="https://t.me/ShihabZzz" />
         </Preference>
 
-        <!--<Preference
+        <Preference
             android:id="@+id/device_rolex"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_rolex_summary"
             android:title="@string/device_rolex" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/Ankan005" />
-        </Preference>-->
+                android:data="https://t.me/XtremeQ" />
+        </Preference>
 
         <Preference
             android:id="@+id/device_santoni"
