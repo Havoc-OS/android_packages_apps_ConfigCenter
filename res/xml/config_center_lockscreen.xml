@@ -50,13 +50,6 @@
             android:defaultValue="100"
             android:dependency="lockscreen_media_metadata" />
 
-        <com.havoc.support.preferences.SecureSettingMasterSwitchPreference
-            android:key="lockscreen_visualizer_enabled"
-            android:fragment="com.havoc.config.center.fragments.Visualizer"
-            android:title="@string/lockscreen_visualizer_enable"
-            android:summary="@string/lockscreen_visualizer_enable_summary"
-            android:defaultValue="false" />
-
     </PreferenceCategory>
 
     <PreferenceCategory

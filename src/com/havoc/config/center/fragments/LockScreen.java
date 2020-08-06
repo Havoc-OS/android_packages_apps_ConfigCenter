@@ -29,19 +29,16 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.havoc.support.preferences.SecureSettingMasterSwitchPreference;
 import com.havoc.support.preferences.SwitchPreference;
 import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
 public class LockScreen extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    private static final String LOCKSCREEN_VISUALIZER_ENABLED = "lockscreen_visualizer_enabled";
     private static final String FOD_ANIMATION_PREF = "fod_recognizing_animation";
     private static final String KEY_SCREEN_OFF_FOD = "screen_off_fod";
     private static final String KEY_SCREEN_OFF_FOD_ICON = "screen_off_fod_icon";
 
-    private SecureSettingMasterSwitchPreference mVisualizerEnabled;
     private SystemSettingSwitchPreference mFODAnimationEnabled;
     private SwitchPreference mScreenOffFOD;
     private SystemSettingSwitchPreference mScreenOffFODIcon;
@@ -69,44 +66,17 @@ public class LockScreen extends SettingsPreferenceFragment implements
             mScreenOffFOD.setVisible(false);
             mScreenOffFODIcon.setVisible(false);
         }
-
-        updateMasterPrefs();
-    }
-
-    private void updateMasterPrefs() {
-        mVisualizerEnabled = (SecureSettingMasterSwitchPreference) findPreference(LOCKSCREEN_VISUALIZER_ENABLED);
-        mVisualizerEnabled.setOnPreferenceChangeListener(this);
-        int visualizerEnabled = Settings.Secure.getInt(getActivity().getContentResolver(),
-                LOCKSCREEN_VISUALIZER_ENABLED, 0);
-        mVisualizerEnabled.setChecked(visualizerEnabled != 0);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mVisualizerEnabled) {
-            boolean value = (Boolean) newValue;
-            Settings.Secure.putInt(getContentResolver(),
-		            LOCKSCREEN_VISUALIZER_ENABLED, value ? 1 : 0);
-            return true;
-        } else if (preference == mScreenOffFOD) {
+        if (preference == mScreenOffFOD) {
             int mScreenOffFODValue = (Boolean) newValue ? 1 : 0;
             Settings.System.putInt(resolver, Settings.System.SCREEN_OFF_FOD, mScreenOffFODValue);
             Settings.Secure.putInt(resolver, Settings.Secure.DOZE_ALWAYS_ON, mScreenOffFODValue);
             return true;
         }
         return false;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        updateMasterPrefs();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        updateMasterPrefs();
     }
 
     @Override
