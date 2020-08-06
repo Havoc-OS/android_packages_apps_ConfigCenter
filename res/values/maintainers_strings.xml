@@ -24,6 +24,7 @@
     <string name="device_category_oneplus_title" translatable="false">OnePlus</string>
     <string name="device_category_google_title" translatable="false">Google</string>
     <string name="device_category_samsung_title" translatable="false">Samsung</string>
+    <string name="device_category_sony_title" translatable="false">Sony</string>
     <string name="device_category_motorola_title" translatable="false">Motorola</string>
     <string name="device_category_xiaomi_title" translatable="false">Xiaomi</string>
     <string name="device_category_lenovo_title" translatable="false">Lenovo</string>
@@ -128,6 +129,9 @@
     
     <string name="device_star2lte" translatable="false">Samsung Galaxy S9+ (exynos)</string>
     <string name="device_star2lte_summary" translatable="false">star2lte\nAdrian Sian (garett_09)</string>
+
+    <string name="device_lilac" translatable="false">Xperia XZ1 Compact</string>
+    <string name="device_lilac_summary" translatable="false">lilac\nShashank Verma (shank03)</string>
 
     <string name="device_potter" translatable="false">Moto G5 Plus</string>
     <string name="device_potter_summary" translatable="false">potter\nAbhijit Tudu (abhijit1998)</string>

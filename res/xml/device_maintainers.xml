@@ -339,6 +339,21 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:id="@+id/device_category_sony"
+        android:title="@string/device_category_sony_title">
+
+        <Preference
+            android:id="@+id/device_lilac"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_lilac_summary"
+            android:title="@string/device_lilac">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/shank03" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:id="@+id/device_category_motorola"
         android:title="@string/device_category_motorola_title">
 
