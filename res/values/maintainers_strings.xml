@@ -218,6 +218,9 @@
     <string name="device_santoni" translatable="false">Xiaomi Redmi 4X</string>
     <string name="device_santoni_summary" translatable="false">santoni\nViraj Patil (Stargazer19)</string>
 
+    <string name="device_ugglite" translatable="false">Xiaomi Redmi Note 5A Lite</string>
+    <string name="device_ugglite_summary" translatable="false">ugglite\nHeinz Der Flugel (heinzdf)</string>
+
     <string name="device_rosy" translatable="false">Xiaomi Redmi 5</string>
     <string name="device_rosy_summary" translatable="false">rosy\nSukrut Bhagwat (Sukrut4778)</string>
 

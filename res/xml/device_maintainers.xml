@@ -638,6 +638,16 @@
                 android:data="https://t.me/beingstargazer" />
         </Preference>
 
+        <Preference
+            android:id="@+id/device_ugglite"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_ugglite_summary"
+            android:title="@string/device_ugglite">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/fortifying" />
+        </Preference>
+
         <!--<Preference
             android:id="@+id/device_rosy"
             android:icon="@drawable/havoc_device"
