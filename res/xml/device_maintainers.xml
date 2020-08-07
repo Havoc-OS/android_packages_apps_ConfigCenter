@@ -507,6 +507,16 @@
                 android:data="https://t.me/fjsantim" />
         </Preference>-->
 
+        </Preference
+            android:id="@+id/device_Curtana"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_Curtana_summary"
+            android:title="@string/device_Curtana" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/ahmed_tohamy" />
+        </Preference
+
         <Preference
             android:id="@+id/device_tissot"
             android:icon="@drawable/havoc_device"
