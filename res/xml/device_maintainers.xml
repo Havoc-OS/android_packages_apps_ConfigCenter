@@ -804,6 +804,16 @@
         </Preference>
 
         <Preference
+            android:id="@+id/device_curtana"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_curtana_summary"
+            android:title="@string/device_curtana" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/ahmed_tohamy" />
+        </Preference>
+
+        <Preference
             android:id="@+id/device_ysl"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_ysl_summary"

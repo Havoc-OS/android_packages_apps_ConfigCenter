@@ -265,6 +265,9 @@
     <string name="device_violet" translatable="false">Xiaomi Redmi Note 7 Pro</string>
     <string name="device_violet_summary" translatable="false">violet\nAthul Dinesan (athul_05)</string>
 
+    <string name="device_curtana" translatable="false">Xiaomi Redmi Note 9S</string>
+    <string name="device_curtana_summary" translatable="false">curtana\nAhmed Tohamy (ahmed.tohamy)</string>
+
     <string name="device_ysl" translatable="false">Xiaomi Redmi S2</string>
     <string name="device_ysl_summary" translatable="false">ysl\nTushar Mahajan (mahajant99)</string>
 
