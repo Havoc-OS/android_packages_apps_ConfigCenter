@@ -899,6 +899,26 @@
         </Preference>
 
         <Preference 
+            android:id="@+id/device_X00QD" 
+            android:icon="@drawable/havoc_device" 
+            android:summary="@string/device_X00QD_summary" 
+            android:title="@string/device_X00QD"> 
+            <intent 
+                android:action="android.intent.action.VIEW" 
+                android:data="https://t.me/edwardwu0223" /> 
+        </Preference>
+
+        <Preference 
+            android:id="@+id/device_Z01R" 
+            android:icon="@drawable/havoc_device" 
+            android:summary="@string/device_Z01R_summary" 
+            android:title="@string/device_Z01R"> 
+            <intent 
+                android:action="android.intent.action.VIEW" 
+                android:data="https://t.me/edwardwu0223" /> 
+        </Preference>
+
+        <Preference 
             android:id="@+id/device_I01WD" 
             android:icon="@drawable/havoc_device" 
             android:summary="@string/device_I01WD_summary" 

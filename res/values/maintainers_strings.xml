@@ -289,6 +289,12 @@
     <string name="device_I001D" translatable="false">Asus ROG Phone II</string>
     <string name="device_I001D_summary" translatable="false">I001D\nRăileanu Cosmin (Comico)</string>
 
+    <string name="device_X00QD" translatable="false">Asus Zenfone 5 (2018)</string>
+    <string name="device_X00QD_summary" translatable="false">X00QD\nEdward Wu (edwardwu0223)</string>
+
+    <string name="device_Z01R" translatable="false">Asus Zenfone 5Z</string>
+    <string name="device_Z01R_summary" translatable="false">Z01R\nEdwardWu (edwardwu0223)</string>
+
     <string name="device_I01WD" translatable="false">Asus Zenfone 6 (2019)</string>
     <string name="device_I01WD_summary" translatable="false">I01WD\nRăileanu Cosmin (Comico)</string>
 
