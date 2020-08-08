@@ -290,11 +290,17 @@
     <string name="device_lettuce" translatable="false">YU Yuphoria</string>
     <string name="device_lettuce_summary" translatable="false">lettuce\nGaurav Kumar (Gaurav24)</string>
 
+    <string name="device_X00QD" translatable="false">Asus Zenfone 5 (2018)</string>
+    <string name="device_X00QD_summary" translatable="false">X00QD\nEdward Wu (edwardwu0223)</string>
+
     <string name="device_yureka2" translatable="false">YU Yureka 2</string>
     <string name="device_yureka2_summary" translatable="false">YUREKA2\nJathin (jmjxperia)</string>
 
     <string name="device_z2_plus">Zuk Z2 Plus</string>
     <string name="device_z2_plus_summary">z2_plus\nNikhil Gohil (nikhil.gohil3)</string>
+
+    <string name="device_Z01R" translatable="false">Asus Zenfone 5Z</string>
+    <string name="device_Z01R_summary" translatable="false">Z01R\nEdwardWu (edwardwu0223)</string>
 
     <string name="device_angler" translatable="false">Nexus 6P</string>
     <string name="device_angler_summary" translatable="false">angler\nHardik Kumar (hk1271)</string>
