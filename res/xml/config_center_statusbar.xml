@@ -61,11 +61,12 @@
             android:summary="@string/network_traffic_state_summary"
             android:defaultValue="false" />
 
-        <Preference
-            android:key="carrier_label"
+        <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
+            android:key="carrier_label_enabled"
+            android:fragment="com.havoc.config.center.fragments.CustomCarrierLabel"
             android:title="@string/carrier_label_settings_title"
             android:summary="@string/carrier_label_settings_summary"
-            android:fragment="com.havoc.config.center.fragments.CustomCarrierLabel" />
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 

@@ -42,11 +42,13 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private static final String KEY_USE_OLD_MOBILETYPE = "use_old_mobiletype";
     private static final String NETWORK_TRAFFIC = "network_traffic_state";
     private static final String BATTERY_BAR = "statusbar_battery_bar";
+    private static final String CARRIER_LABEL = "carrier_label_enabled";
 
     private SystemSettingMasterSwitchPreference mStatusBarClockShow;
     private SystemSettingMasterSwitchPreference mStatusBarLogo;
     private SystemSettingMasterSwitchPreference mNetworkTraffic;
     private SystemSettingMasterSwitchPreference mBatteryBar;
+    private SystemSettingMasterSwitchPreference mCarrierLabel;
     private SwitchPreference mUseOldMobileType;
     private boolean mConfigUseOldMobileType;
     private ListPreference mBatteryStyle;
@@ -109,6 +111,11 @@ public class StatusBar extends SettingsPreferenceFragment implements
         mBatteryBar.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.STATUSBAR_BATTERY_BAR, 0) == 1));
         mBatteryBar.setOnPreferenceChangeListener(this);
+
+        mCarrierLabel = (SystemSettingMasterSwitchPreference) findPreference(CARRIER_LABEL);
+        mCarrierLabel.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.CARRIER_LABEL_ENABLED, 1) == 1));
+        mCarrierLabel.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -150,7 +157,7 @@ public class StatusBar extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0);
             return true;
-	} else if (preference == mBatteryBar) {
+	    } else if (preference == mBatteryBar) {
             if (mIsBarSwitchingMode) {
                 return false;
             }
@@ -165,6 +172,11 @@ public class StatusBar extends SettingsPreferenceFragment implements
                     mIsBarSwitchingMode = false;
                 }
             }, 1500);
+            return true;
+        } else if (preference == mCarrierLabel) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.CARRIER_LABEL_ENABLED, value ? 1 : 0);
             return true;
         }
         return false;
