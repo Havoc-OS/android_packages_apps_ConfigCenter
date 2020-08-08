@@ -891,5 +891,10 @@
     <string name="pulse_custom_div">Bar spacing</string>
     <string name="pulse_filled_block_size">Block size</string>
     <string name="pulse_empty_block_size">Block spacing</string>
+    <string name="pulse_location_title">Location</string>
+    <string name="pulse_location_lockscreen">Lockscreen</string>
+    <string name="pulse_location_navbar">Navbar</string>
+    <string name="pulse_location_both">Both</string>
+    <string name="pulse_location_both_summary">Lockscreen and Navbar</string>
 
 </resources>

@@ -20,6 +20,13 @@
     android:title="@string/pulse_settings" >
 
     <com.havoc.support.preferences.SecureSettingListPreference
+        android:key="pulse_location"
+        android:title="@string/pulse_location_title"
+        android:entries="@array/pulse_location_entries"
+        android:entryValues="@array/pulse_location_values"
+        android:defaultValue="0" />
+
+    <com.havoc.support.preferences.SecureSettingListPreference
         android:key="pulse_render_style"
         android:title="@string/pulse_render_mode_title"
         android:entries="@array/pulse_render_mode_entries"

@@ -46,6 +46,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
 
     private static final String TAG = PulseSettings.class.getSimpleName();
+    private static final String PULSE_LOCATION_KEY = "pulse_location";
     private static final String PULSE_COLOR_MODE_KEY = "pulse_color_mode";
     private static final String PULSE_COLOR_MODE_CHOOSER_KEY = "pulse_color_user";
     private static final String PULSE_COLOR_MODE_LAVA_SPEED_KEY = "pulse_lavalamp_speed";
@@ -67,6 +68,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private ColorPickerPreference mColorPickerPref;
     private Preference mLavaSpeedPref;
     private SecureSettingSwitchPreference mSmoothingPref;
+    private ListPreference mLocation;
 
     private TextView mTextView;
     private View mSwitchBar;
@@ -106,8 +108,14 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         int renderMode = Settings.Secure.getIntForUser(getContentResolver(),
                 Settings.Secure.PULSE_RENDER_STYLE, 0, UserHandle.USER_CURRENT);
 
+        mLocation = (ListPreference) findPreference(PULSE_LOCATION_KEY);
+        mLocation.setOnPreferenceChangeListener(this);
+        int location = Settings.Secure.getIntForUser(getContentResolver(),
+                Settings.Secure.PULSE_LOCATION, 0, UserHandle.USER_CURRENT);
+
         updateColorPrefs(colorMode);
         updateRenderCategories(renderMode);
+        updateLocationSummary(location);
     }
 
     @Override
@@ -123,7 +131,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         super.onViewCreated(view, savedInstanceState);
 
         boolean enabled = Settings.Secure.getInt(getContentResolver(),
-                Settings.Secure.NAVBAR_PULSE_ENABLED, 0) == 1;
+                Settings.Secure.PULSE_ENABLED, 0) == 1;
 
         mTextView = view.findViewById(R.id.switch_text);
         mTextView.setText(getString(enabled ?
@@ -139,6 +147,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
             mSwitchBar.setActivated(switchWidget.isChecked());
         });
 
+        mLocation.setEnabled(enabled);
         mLavaSpeedPref.setEnabled(enabled);
         mColorModePref.setEnabled(enabled);
         mColorPickerPref.setEnabled(enabled);
@@ -151,10 +160,11 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
         Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.NAVBAR_PULSE_ENABLED, isChecked ? 1 : 0);
+                Settings.Secure.PULSE_ENABLED, isChecked ? 1 : 0);
         mTextView.setText(getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text));
         mSwitchBar.setActivated(isChecked);
 
+        mLocation.setEnabled(isChecked);
         mLavaSpeedPref.setEnabled(isChecked);
         mColorModePref.setEnabled(isChecked);
         mColorPickerPref.setEnabled(isChecked);
@@ -184,6 +194,9 @@ public class PulseSettings extends SettingsPreferenceFragment implements
             Settings.Secure.putInt(getContentResolver(),
                     Settings.Secure.PULSE_COLOR_USER, intHex);
             return true;
+        } else if (preference.equals(mLocation)) {
+            updateLocationSummary(Integer.valueOf(String.valueOf(newValue)));
+            return true;
         }
         return false;
     }
@@ -212,6 +225,22 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private void updateRenderCategories(int mode) {
         mFadingBarsCat.setVisible(mode == RENDER_STYLE_FADING_BARS);
         mSolidBarsCat.setVisible(mode == RENDER_STYLE_SOLID_LINES);
+    }
+
+    private void updateLocationSummary(int location) {
+        String prefix = (String) mLocation.getEntries()
+                [mLocation.findIndexOfValue(String.valueOf(location))];
+        switch (location) {
+            case 0:
+                mLocation.setSummary(getResources().getString(R.string.pulse_location_lockscreen, prefix));
+                break;
+            case 1:
+                mLocation.setSummary(getResources().getString(R.string.pulse_location_navbar, prefix));
+                break;
+            case 2:
+                mLocation.setSummary(getResources().getString(R.string.pulse_location_both_summary, prefix));
+                break;
+        }
     }
 
     @Override

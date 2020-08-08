@@ -59,7 +59,7 @@ public class Buttons extends SettingsPreferenceFragment implements
     private static final String KEY_GESTURE_SYSTEM = "gesture_system_navigation";
     private static final String KEY_BUTTON_BACKLIGHT = "button_backlight";
     private static final String KEY_SWAP_KEYS = "swap_navigation_keys";
-    private static final String KEY_NAVBAR_PULSE_ENABLED = "navbar_pulse_enabled";
+    private static final String KEY_PULSE_ENABLED = "pulse_enabled";
 
     private static final String KEY_BACK_LONG_PRESS_ACTION = "back_key_long_press";
     private static final String KEY_BACK_LONG_PRESS_CUSTOM_APP = "back_key_long_press_custom_app";
@@ -431,9 +431,9 @@ public class Buttons extends SettingsPreferenceFragment implements
     }
 
     private void updateMasterPrefs() {
-        mNavbarPulse = (SecureSettingMasterSwitchPreference) findPreference(KEY_NAVBAR_PULSE_ENABLED);
+        mNavbarPulse = (SecureSettingMasterSwitchPreference) findPreference(KEY_PULSE_ENABLED);
         boolean navbarPulse = Settings.Secure.getIntForUser(getActivity().getContentResolver(),
-                Settings.Secure.NAVBAR_PULSE_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
+                Settings.Secure.PULSE_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
         mNavbarPulse.setChecked(navbarPulse);
         mNavbarPulse.setOnPreferenceChangeListener(this);
     }
@@ -639,7 +639,7 @@ public class Buttons extends SettingsPreferenceFragment implements
         } else if (preference == mNavbarPulse) {
             boolean value = (Boolean) objValue;
             Settings.Secure.putIntForUser(getContentResolver(),
-                    Settings.Secure.NAVBAR_PULSE_ENABLED, value ? 1 : 0,
+                    Settings.Secure.PULSE_ENABLED, value ? 1 : 0,
                     UserHandle.USER_CURRENT);
             return true;
         }
