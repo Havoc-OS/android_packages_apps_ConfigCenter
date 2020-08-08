@@ -757,6 +757,26 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/athuld" />
         </Preference>
+        
+        <Preference
+            android:id="@+id/device_ginkgo"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_ginkgo_summary"
+            android:title="@string/device_ginkgo">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/SarisanSe" />
+        </Preference>
+        
+        <Preference
+            android:id="@+id/device_willow"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_willow_summary"
+            android:title="@string/device_willow">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/SarisanSe" />
+        </Preference>
 
         <Preference
             android:id="@+id/device_ysl"
