@@ -50,32 +50,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="media"
-        android:title="@string/media_title">
-
-        <com.havoc.support.preferences.SystemSettingSwitchPreference
-            android:key="adaptive_playback_enabled"
-            android:title="@string/adaptive_playback_title"
-            android:summary="@string/adaptive_playback_summary"
-            android:defaultValue="false" />
-
-        <com.havoc.support.preferences.SystemSettingListPreference
-            android:key="adaptive_playback_timeout"
-            android:title="@string/adaptive_playback_timeout_title"
-            android:entries="@array/adaptive_playback_timeout_entries"
-            android:entryValues="@array/adaptive_playback_timeout_values"
-            android:defaultValue="30000"
-            android:dependency="adaptive_playback_enabled" />
-
-        <com.havoc.support.preferences.GlobalSettingListPreference
-            android:key="ringtone_focus_mode"
-            android:title="@string/ringtone_focus_mode_title"
-            android:entries="@array/ringtone_focus_mode_entries"
-            android:entryValues="@array/ringtone_focus_mode_values"
-            android:defaultValue="1" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="dashboard_category"
         android:title="@string/dashboard_category">
 

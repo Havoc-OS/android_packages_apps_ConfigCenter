@@ -24,12 +24,12 @@
     <string name="about_summary">Learn more about Havoc-OS</string>
     <string name="animations_title">Animations</string>
     <string name="animations_summary">System animations, QS tile animations</string>
-    <string name="buttons_title">Buttons</string>
+    <string name="buttons_title">Buttons &amp; Navigation</string>
     <string name="buttons_summary">Hardware keys, Navigation bar</string>
     <string name="gestures_title">Gestures</string>
     <string name="gestures_summary">Jump to camera, swipe to screenshot</string>
     <string name="lockscreen_title">Lock Screen</string>
-    <string name="lockscreen_summary">Music visualizer, pocket detection</string>
+    <string name="lockscreen_summary">Pocket detection, charging info</string>
     <string name="misc_title">Miscellaneous</string>
     <string name="misc_summary">Gaming mode, charging animation</string>
     <string name="navigation_title">Navigation</string>
@@ -45,6 +45,8 @@
     <string name="ambient_display_custom_summary">Always on, music ticker, gestures</string>
     <string name="screen_title">Screen</string>
     <string name="screen_summary">Rounded corners, legacy app scaling</string>
+    <string name="media_title">Media</string>
+    <string name="media_summary">Adaptive playback, music visualizer</string>
 
     <!-- About -->
 	<string name="team_category_title">Team</string>
@@ -231,9 +233,8 @@
     <string name="swap_volume_buttons_summary">Invert volume keys when the device is rotated</string>
     
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">Music</string>
     <string name="media_art_title">Media artwork</string>
-    <string name="media_art_summary">Show the media art of the song that\'s playing</string>
+    <string name="media_art_summary">Display album art of the currently playing song on the lockscreen</string>
 
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Media artwork blur level</string>
@@ -758,7 +759,6 @@
     <string name="fod_recognizing_animation_summary">Show an animation while reading your fingerprint</string>
 
     <!-- Adaptive Playback -->
-    <string name="media_title">Media</string>
     <string name="adaptive_playback_title">Adaptive playback</string>
     <string name="adaptive_playback_summary">Pause media when volume is muted and resume it by increasing volume within the timeout</string>
     <string name="adaptive_playback_timeout_title">Playback timeout</string>
@@ -866,8 +866,8 @@
 
     <!-- Pulse -->
     <string name="pulse_help_policy_notice_summary">Pulse does not work with some audio sources when listening on device speaker</string>
-    <string name="pulse_settings">Pulse</string>
-    <string name="pulse_settings_summary">Navigation bar audio graphic equalizer</string>
+    <string name="pulse_settings">Music visualizer</string>
+    <string name="pulse_settings_summary">Show graphic equalizer while music\'s playing</string>
     <string name="pulse_render_mode_title">Render mode</string>
     <string name="pulse_render_mode_fading_bars">Fading blocks</string>
     <string name="pulse_render_mode_solid_lines">Solid lines</string>

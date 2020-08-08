@@ -104,6 +104,14 @@
             android:fragment="com.havoc.config.center.fragments.Animations"
             android:icon="@drawable/ic_settings_animations"/>
 
+        <!-- Media -->
+        <Preference
+            android:key="media_category"
+            android:title="@string/media_title"
+            android:summary="@string/media_summary"
+            android:fragment="com.havoc.config.center.fragments.Media"
+            android:icon="@drawable/ic_settings_media"/>
+
         <!-- Misc -->
         <Preference
             android:key="misc_category"

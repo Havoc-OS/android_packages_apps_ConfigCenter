@@ -16,13 +16,12 @@
 
 package com.havoc.config.center.fragments;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
-import android.os.SystemProperties;
 import android.provider.Settings;
 
+import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 
 import com.android.internal.logging.nano.MetricsProto; 
@@ -30,38 +29,48 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.havoc.support.preferences.SystemSettingMasterSwitchPreference;
+import com.havoc.support.preferences.SecureSettingMasterSwitchPreference;
 
-public class Misc extends SettingsPreferenceFragment implements
+public class Media extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    public static final String TAG = "Misc";
+    public static final String TAG = "Media";
 
-    private static final String GAMING_MODE_ENABLED = "gaming_mode_enabled";
+    private static final String PULSE_ENABLED = "pulse_enabled";
+    private static final String KEY_RINGTONE_FOCUS_MODE = "ringtone_focus_mode";
 
-    private SystemSettingMasterSwitchPreference mGamingMode;
+    private SecureSettingMasterSwitchPreference mPulse;
+    private ListPreference mRingtoneFocusMode;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.config_center_misc);
+        addPreferencesFromResource(R.xml.config_center_media);
+
+        final Resources res = getResources();
+
+        mRingtoneFocusMode = (ListPreference) findPreference(KEY_RINGTONE_FOCUS_MODE);
+
+        if (!res.getBoolean(com.android.internal.R.bool.config_deviceRingtoneFocusMode)) {
+            mRingtoneFocusMode.setVisible(false);
+        }
 
         updateMasterPrefs();
     }
 
     private void updateMasterPrefs() {
-        mGamingMode = (SystemSettingMasterSwitchPreference) findPreference(GAMING_MODE_ENABLED);
-        mGamingMode.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.GAMING_MODE_ENABLED, 0) == 1));
-        mGamingMode.setOnPreferenceChangeListener(this);
+        mPulse = (SecureSettingMasterSwitchPreference) findPreference(PULSE_ENABLED);
+        mPulse.setChecked((Settings.Secure.getInt(getActivity().getContentResolver(),
+                Settings.Secure.PULSE_ENABLED, 0) == 1));
+        mPulse.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-		if (preference == mGamingMode) {
+		if (preference == mPulse) {
             boolean value = (Boolean) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.GAMING_MODE_ENABLED, value ? 1 : 0);
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.PULSE_ENABLED, value ? 1 : 0);
             return true;
         }
         return false;
