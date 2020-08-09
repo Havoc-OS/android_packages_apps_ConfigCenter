@@ -275,6 +275,9 @@
     <string name="device_x01bd" translatable="false">Asus Zenfone Max Pro M2</string>
     <string name="device_x01bd_summary" translatable="false">X01BD\nSonal Singh (SonalSingh18)</string>
 
+    <string name="device_X00R" translatable="false">Asus Zenfone Lite L1</string>
+    <string name="device_X00R_summary" translatable="false">X00R\nInder (Inder)</string>
+
     <string name="device_RMX1921" translatable="false">Realme XT</string>
     <string name="device_RMX1921_summary" translatable="false">RMX1921\nProbir Ghosh (officialpro)</string>
 
