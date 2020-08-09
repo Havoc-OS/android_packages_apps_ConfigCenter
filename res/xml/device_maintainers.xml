@@ -929,6 +929,16 @@
         </Preference>
 
         <Preference
+            android:id="@+id/device_X00R"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_X00R_summary"
+            android:title="@string/device_X00R">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/ishant86" />
+        </Preference>
+
+        <Preference
             android:id="@+id/device_x00t"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_x00t_summary"
