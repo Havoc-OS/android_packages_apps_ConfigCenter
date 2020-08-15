@@ -22,12 +22,10 @@
     <string name="about_summary">Dowiedz się więcej na temat Havoc-OS</string>
     <string name="animations_title">Animacje</string>
     <string name="animations_summary">Animacje systemowe, animacje kafelków szybkich ustawień</string>
-    <string name="buttons_title">Przyciski</string>
     <string name="buttons_summary">Przyciski sprzętowe, pasek nawigacji</string>
     <string name="gestures_title">Gesty</string>
     <string name="gestures_summary">Przejdź do aparatu, przesuń palcem aby zrobić zrzut ekranu</string>
     <string name="lockscreen_title">Ekran blokady</string>
-    <string name="lockscreen_summary">Wizualizacja muzyki, wykrywanie kontaktu z ciałem - wykrywanie \"kieszeni\"</string>
     <string name="misc_title">Inne</string>
     <string name="misc_summary">Tryb gry, animacja ładowania</string>
     <string name="navigation_title">Nawigacja</string>
@@ -42,6 +40,7 @@
     <string name="ambient_display_custom_summary">Zawsze włączony, informacje o muzyce, gesty</string>
     <string name="screen_title">Ekran</string>
     <string name="screen_summary">Zaokrąglone narożniki, skalowanie starszych aplikacji</string>
+    <string name="media_title">Multimedia</string>
     <!-- About -->
     <string name="changelog_title">Dziennik zmian</string>
     <string name="changelog_title_summary">Zobacz ostatnie zmiany w ROMie</string>
@@ -196,9 +195,7 @@
     <string name="swap_volume_buttons_title">Zamień przyciski</string>
     <string name="swap_volume_buttons_summary">Odwróć klawisze głośności, gdy urządzenie jest obracane</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">Muzyka</string>
     <string name="media_art_title">Grafika multimediów</string>
-    <string name="media_art_summary">Pokaż grafikę odtwarzanej piosenki</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Poziom rozmycia grafiki multimediów</string>
     <!-- Data disabled icon -->
@@ -228,19 +225,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">Stan baterii Bluetooth</string>
     <string name="bluetooth_battery_summary">Pokaż aktualny stan baterii podłączonego urządzenia Bluetooth, jeśli jest dostępny</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">Wizualizacje muzyczne</string>
-    <string name="lockscreen_visualizer_enable_summary">Pokaż wizualizację podczas odtwarzania muzyki</string>
-    <string name="lockscreen_autocolor_title">Automatyczny kolor</string>
-    <string name="lockscreen_autocolor_summary">Synchronizuj kolor z tłem ekranu blokady</string>
-    <string name="lockscreen_autocolor_lavalamp">Wymaga wyłączonej lampy lawowej</string>
-    <string name="lockscreen_lavalamp_title">Lampa lawowa</string>
-    <string name="lockscreen_lavalamp_summary">Użyj płynnej animacji mieszania kolorów w stylu lampy lawowej</string>
-    <string name="lockscreen_lavalamp_speed_title">Interwał mieszania kolorów</string>
-    <string name="lockscreen_solid_lines_category">Linie ciągłe</string>
-    <string name="lockscreen_solid_units_count_title">Liczba linii</string>
-    <string name="lockscreen_solid_fudge_factor_title">Poziom rozsądku</string>
-    <string name="lockscreen_solid_units_opacity_title">Przezroczystość linii</string>
     <!-- Notification light -->
     <string name="notification_lights">Światła</string>
     <string name="notification_light_settings">Dioda powiadomień</string>
@@ -444,12 +428,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Czas wyświetlania</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Nazwa operatora</string>
-    <string name="carrier_label_settings_summary">Wyświetlaj nazwę sieci na pasku stanu</string>
-    <string name="custom_carrier_label_title">Własna etykieta sieci</string>
     <string name="custom_carrier_label_explain">Wprowadź własną etykietę. Pozostaw puste, aby użyć nazwy sieci</string>
     <string name="custom_carrier_label_notset">Własna etykieta nie jest ustawiona</string>
-    <string name="show_carrier_title">Położenie etykiety operatora</string>
-    <string name="show_carrier_disabled">Wyłączone</string>
     <string name="show_carrier_keyguard">Ekran blokady</string>
     <string name="show_carrier_statusbar">Pasek stanu</string>
     <string name="show_carrier_enabled">Obydwa</string>
@@ -658,7 +638,6 @@
     <string name="fod_recognizing_animation_title">Animacja rozpoznawania</string>
     <string name="fod_recognizing_animation_summary">Pokaż animację podczas czytania odcisku palca</string>
     <!-- Adaptive Playback -->
-    <string name="media_title">Multimedia</string>
     <string name="adaptive_playback_title">Odtwarzanie adaptacyjne</string>
     <string name="adaptive_playback_summary">Wstrzymaj media, gdy głośność jest wyciszona i wznawiaj ją przez zwiększenie głośności w czasie</string>
     <string name="adaptive_playback_timeout_title">Limit czasu odtwarzania</string>

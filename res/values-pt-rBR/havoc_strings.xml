@@ -22,12 +22,10 @@
     <string name="about_summary">Saiba mais sobre a Havoc-OS</string>
     <string name="animations_title">Animações</string>
     <string name="animations_summary">Animações do sistema, animações das configurações rápidas</string>
-    <string name="buttons_title">Botões</string>
     <string name="buttons_summary">Botões físicos, Barra de navegação</string>
     <string name="gestures_title">Gestos</string>
     <string name="gestures_summary">Ir para a câmera, deslize para capturar a tela</string>
     <string name="lockscreen_title">Tela de Bloqueio</string>
-    <string name="lockscreen_summary">Visualizador de música, detecção de bolso</string>
     <string name="misc_title">Diversos</string>
     <string name="misc_summary">Modo de jogo, animação de carregamento</string>
     <string name="navigation_title">Navegação</string>
@@ -42,6 +40,7 @@
     <string name="ambient_display_custom_summary">Sempre ligado, faixa da música, gestos</string>
     <string name="screen_title">Tela</string>
     <string name="screen_summary">Cantos arredondados, dimensionamento de aplicativos legados</string>
+    <string name="media_title">Mídia</string>
     <!-- About -->
     <string name="changelog_title">Lista de mudanças</string>
     <string name="changelog_title_summary">Ver as mudanças recentes na ROM</string>
@@ -196,9 +195,7 @@
     <string name="swap_volume_buttons_title">Trocar os botões</string>
     <string name="swap_volume_buttons_summary">Inverter botões de volume quando girar o dispositivo</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">Música</string>
     <string name="media_art_title">Capa de mídia</string>
-    <string name="media_art_summary">Mostrar a capa da mídia da música em reprodução</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Nível de desfoque da capa do álbum</string>
     <!-- Data disabled icon -->
@@ -228,19 +225,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">Status de bateria em dispositivos Bluetooth</string>
     <string name="bluetooth_battery_summary">Mostra o estado da bateria do dispositivo Bluetooth conectado, se disponível</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">Visualizador de música</string>
-    <string name="lockscreen_visualizer_enable_summary">Mostrar barras do visualizador enquanto estiver reproduzindo música</string>
-    <string name="lockscreen_autocolor_title">Cor automática</string>
-    <string name="lockscreen_autocolor_summary">Sincronizar cor com fundo da tela de bloqueio</string>
-    <string name="lockscreen_autocolor_lavalamp">Lâmpada de lava desativada</string>
-    <string name="lockscreen_lavalamp_title">Lâmpada de lava</string>
-    <string name="lockscreen_lavalamp_summary">Use uma mistura de animações de cores de estilo de lâmpada de lava suave</string>
-    <string name="lockscreen_lavalamp_speed_title">Intervalo de mistura de cores</string>
-    <string name="lockscreen_solid_lines_category">Linhas sólidas</string>
-    <string name="lockscreen_solid_units_count_title">Número de linhas</string>
-    <string name="lockscreen_solid_fudge_factor_title">Nível de sanidade</string>
-    <string name="lockscreen_solid_units_opacity_title">Opacidade das linhas</string>
     <!-- Notification light -->
     <string name="notification_lights">Luzes</string>
     <string name="notification_light_settings">LED de notificação</string>
@@ -444,12 +428,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Exibir duração</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Nome da operadora</string>
-    <string name="carrier_label_settings_summary">Exibir o nome da rede na barra de status</string>
-    <string name="custom_carrier_label_title">Personalizar nome de operadora</string>
     <string name="custom_carrier_label_explain">Insira um nome de operadora personalizado. Deixe em branco para usar o nome predefinido da sua operadora</string>
     <string name="custom_carrier_label_notset">Rótulo personalizado não definido</string>
-    <string name="show_carrier_title">Localização do rótulo de operadora</string>
-    <string name="show_carrier_disabled">Desativado</string>
     <string name="show_carrier_keyguard">Tela de bloqueio</string>
     <string name="show_carrier_statusbar">Barra de status</string>
     <string name="show_carrier_enabled">Ambos</string>
@@ -658,7 +638,6 @@
     <string name="fod_recognizing_animation_title">Animação de reconhecimento da impressão digital na tela</string>
     <string name="fod_recognizing_animation_summary">Mostrar uma animação enquanto lê a impressão digital</string>
     <!-- Adaptive Playback -->
-    <string name="media_title">Mídia</string>
     <string name="adaptive_playback_title">Reprodução adaptável</string>
     <string name="adaptive_playback_summary">Pausar mídia quando o volume é silenciado e retomá-la aumentando o volume dentro do tempo limite</string>
     <string name="adaptive_playback_timeout_title">Tempo limite de reprodução</string>

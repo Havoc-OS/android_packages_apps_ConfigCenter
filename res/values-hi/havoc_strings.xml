@@ -22,12 +22,10 @@
     <string name="about_summary">Havoc-OS के बारे में अधिक जानें</string>
     <string name="animations_title">एनीमेशंस</string>
     <string name="animations_summary">सिस्टम एनीमेशंस, क्विक सेटिंग्स टाइल एनीमेशंस</string>
-    <string name="buttons_title">बटन्स</string>
     <string name="buttons_summary">हार्डवेयर बटन्स, नेविगेशन पट्टी</string>
     <string name="gestures_title">इशारे</string>
     <string name="gestures_summary">कैमरा खोले, स्क्रीनशॉट के लिए स्वाइप करें</string>
     <string name="lockscreen_title">लॉक स्क्रीन</string>
-    <string name="lockscreen_summary">संगीत विजुअलाइजर, जेब का पता करना</string>
     <string name="misc_title">विविध</string>
     <string name="misc_summary">गेमिंग मोड, चार्जिंग एनीमेशन</string>
     <string name="navigation_title">नेविगेशन</string>
@@ -42,6 +40,7 @@
     <string name="ambient_display_custom_summary">हमेशा चालू, संगीत टिकर, इशारे</string>
     <string name="screen_title">स्क्रीन</string>
     <string name="screen_summary">गोल कोने, लेगेसी ऐप परिमाण</string>
+    <string name="media_title">मीडिया</string>
     <!-- About -->
     <string name="changelog_title">परिवर्तन</string>
     <string name="changelog_title_summary">रोम में हुए हाल ही के परिवर्तन देखें</string>
@@ -196,9 +195,7 @@
     <string name="swap_volume_buttons_title">बटन की अदला बदली करें</string>
     <string name="swap_volume_buttons_summary">फोन घुमाने पर वॉल्यूम बटन उल्टा करें</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">संगीत</string>
     <string name="media_art_title">संगीत कलाचित्र</string>
-    <string name="media_art_summary">चल रहे गाने का कला चित्र दिखाएं</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">मीडिया आवरण चित्र के धुंधलेपन का स्तर</string>
     <!-- Data disabled icon -->
@@ -228,19 +225,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">ब्लूटूथ की बैटरी की स्थिति</string>
     <string name="bluetooth_battery_summary">उपलब्ध होने पर ब्लूटूथ डिवाइस की बैटरी की स्थिति दिखाएं</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">संगीत विज़ुअलाइज़र</string>
-    <string name="lockscreen_visualizer_enable_summary">संगीत चलाते समय विजुअलाइजर लाइन्स दिखाएं</string>
-    <string name="lockscreen_autocolor_title">स्वत: रंग</string>
-    <string name="lockscreen_autocolor_summary">लॉकस्क्रीन बैकग्राउंड के साथ रंग को सिंक्रनाइज़ करें</string>
-    <string name="lockscreen_autocolor_lavalamp">लावा लैंप अक्षम की आवश्यकता है</string>
-    <string name="lockscreen_lavalamp_title">लावा लैंप</string>
-    <string name="lockscreen_lavalamp_summary">एक सरल लावा लैंप शैली का रंग मिश्रण एनिमेशन उपयोग करें</string>
-    <string name="lockscreen_lavalamp_speed_title">रंग मिश्रण अंतराल</string>
-    <string name="lockscreen_solid_lines_category">ठोस रेखाएँ</string>
-    <string name="lockscreen_solid_units_count_title">रेखाओं की संख्या</string>
-    <string name="lockscreen_solid_fudge_factor_title">स्थिरता स्तर</string>
-    <string name="lockscreen_solid_units_opacity_title">लाइनों की अस्पष्टता</string>
     <!-- Notification light -->
     <string name="notification_lights">रोशनी</string>
     <string name="notification_light_settings">नोटिफिकेशन एलईडी</string>
@@ -444,12 +428,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">दिखाने की अवधि</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">कैरियर लेबल</string>
-    <string name="carrier_label_settings_summary">स्टेटस बार में नेटवर्क का नाम दिखाएं</string>
-    <string name="custom_carrier_label_title">इच्छित कैरियर लेबल</string>
     <string name="custom_carrier_label_explain">एक इच्छित लेबल दर्ज करें अपने नेटवर्क नाम का उपयोग करने के लिए खाली छोड़ दें</string>
     <string name="custom_carrier_label_notset">वर्तमान में इच्छित लेबल सेट नहीं है</string>
-    <string name="show_carrier_title">कैरियर लेबल का स्थान</string>
-    <string name="show_carrier_disabled">बंद</string>
     <string name="show_carrier_keyguard">लॉकस्क्रीन</string>
     <string name="show_carrier_statusbar">स्टेटस बार</string>
     <string name="show_carrier_enabled">दोनों</string>
@@ -658,7 +638,6 @@
     <string name="fod_recognizing_animation_title">एनीमेशन पहचान रहा है</string>
     <string name="fod_recognizing_animation_summary">आपकी उंगली पहचानते समय एक एनीमेशन दिखाएं</string>
     <!-- Adaptive Playback -->
-    <string name="media_title">मीडिया</string>
     <string name="adaptive_playback_title">अनुकुलित प्लेबैक</string>
     <string name="adaptive_playback_summary">ध्वनि स्तर शून्य होने पर गाना चलाना रोकें और समय अंतराल के अंदर ध्वनि स्तर बढ़ने पर गाना चलाना अपने आप शुरू करें</string>
     <string name="adaptive_playback_timeout_title">समय अंतराल</string>

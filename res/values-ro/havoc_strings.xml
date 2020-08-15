@@ -22,12 +22,10 @@
     <string name="about_summary">Aflaţi mai multe despre Havoc-OS</string>
     <string name="animations_title">Animaţii</string>
     <string name="animations_summary">Animații de sistem, animații dale setări rapide</string>
-    <string name="buttons_title">Butoane</string>
     <string name="buttons_summary">Taste hardware, bară de navigare</string>
     <string name="gestures_title">Gesturi</string>
     <string name="gestures_summary">Sari la cameră, glisează pentru captură de ecran</string>
     <string name="lockscreen_title">Ecran de blocare</string>
-    <string name="lockscreen_summary">Vizualizator muzică, detectare buzunar</string>
     <string name="misc_title">Diverse</string>
     <string name="misc_summary">Mod joc, animaţie încărcare</string>
     <string name="navigation_title">Navigare</string>
@@ -195,9 +193,7 @@
     <string name="swap_volume_buttons_title">Schimbă tastele</string>
     <string name="swap_volume_buttons_summary">Inversează tastele de volum atunci când dispozitivul este rotit</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">Muzică</string>
     <string name="media_art_title">Copertă album</string>
-    <string name="media_art_summary">Arată coperta piesei care se redă</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Nivelul de estompare a copertelor media</string>
     <!-- Data disabled icon -->
@@ -227,19 +223,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">Stare baterie Bluetooth</string>
     <string name="bluetooth_battery_summary">Se afișează nivelul bateriei pentru dispozitivul bluetooth conectat, dacă este disponibil</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">Animații muzică</string>
-    <string name="lockscreen_visualizer_enable_summary">Arată barele de vizualizare în timp ce muzica este redată</string>
-    <string name="lockscreen_autocolor_title">Culoare automată</string>
-    <string name="lockscreen_autocolor_summary">Se sincronizează culoarea cu fundalul ecranului de blocare</string>
-    <string name="lockscreen_autocolor_lavalamp">Necesită lampă de lavă dezactivată</string>
-    <string name="lockscreen_lavalamp_title">Lampa cu lavă</string>
-    <string name="lockscreen_lavalamp_summary">Folosiţi un amestec de culoare pentru stil lampă de lavă</string>
-    <string name="lockscreen_lavalamp_speed_title">Interval de amestecare culoare</string>
-    <string name="lockscreen_solid_lines_category">Linii solide</string>
-    <string name="lockscreen_solid_units_count_title">Numărul de linii</string>
-    <string name="lockscreen_solid_fudge_factor_title">Nivel echilibrat</string>
-    <string name="lockscreen_solid_units_opacity_title">Opacitate linii</string>
     <!-- Notification light -->
     <string name="notification_lights">Lumini</string>
     <string name="notification_light_settings">Notificare LED</string>
@@ -443,12 +426,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Durată de afişare</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Etichetă operator</string>
-    <string name="carrier_label_settings_summary">Afișează numele rețelei în bara de stare</string>
-    <string name="custom_carrier_label_title">Etichetă operator personalizată</string>
     <string name="custom_carrier_label_explain">Introduceți o etichetă personalizată. Lăsați necompletat pentru a utiliza numele rețelei</string>
     <string name="custom_carrier_label_notset">Eticheta personalizată nu este setată în prezent</string>
-    <string name="show_carrier_title">Locație etichetă operator</string>
-    <string name="show_carrier_disabled">Dezactivată</string>
     <string name="show_carrier_keyguard">Ecran de blocare</string>
     <string name="show_carrier_statusbar">Bară de status</string>
     <string name="show_carrier_enabled">Ambele</string>

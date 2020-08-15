@@ -22,12 +22,10 @@
     <string name="about_summary">Erfahre mehr über Havoc-OS</string>
     <string name="animations_title">Animationen</string>
     <string name="animations_summary">Systemanimationen, QS-Tile-Animationen</string>
-    <string name="buttons_title">Schaltflächen</string>
     <string name="buttons_summary">Hardware-Tasten, Navigationsleiste</string>
     <string name="gestures_title">Gesten</string>
     <string name="gestures_summary">Zur Kamera springen, zum Screenshot wischen</string>
     <string name="lockscreen_title">Sperrbildschirm</string>
-    <string name="lockscreen_summary">Musikvisualisierung, Taschenerkennung</string>
     <string name="misc_title">Sonstiges</string>
     <string name="misc_summary">Gaming-Modus, Ladeanimation</string>
     <string name="navigation_title">Steuerung</string>
@@ -42,6 +40,7 @@
     <string name="ambient_display_custom_summary">Immer aktiv, Musikticker, Gesten</string>
     <string name="screen_title">Bildschirm</string>
     <string name="screen_summary">Eckenradius, Skalierung alter Apps</string>
+    <string name="media_title">Medien</string>
     <!-- About -->
     <string name="changelog_title">Änderungsprotokoll</string>
     <string name="changelog_title_summary">Letzte Änderungen im ROM anzeigen</string>
@@ -196,9 +195,7 @@
     <string name="swap_volume_buttons_title">Tasten tauschen</string>
     <string name="swap_volume_buttons_summary">Belegung der Lautstärketasten umkehren, wenn das Gerät gedreht wird</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">Musik</string>
     <string name="media_art_title">Mediencover</string>
-    <string name="media_art_summary">Mediencover des gespielten Songs anzeigen</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Unschärfegrad für Mediencover</string>
     <!-- Data disabled icon -->
@@ -228,19 +225,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">Bluetooth-Akkustand</string>
     <string name="bluetooth_battery_summary">Akkustand des verbundenen Bluetooth-Geräts anzeigen, falls verfügbar</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">Musikvisualisierung</string>
-    <string name="lockscreen_visualizer_enable_summary">Visualisierung anzeigen, während Musik abgespielt wird</string>
-    <string name="lockscreen_autocolor_title">Automatische Farbe</string>
-    <string name="lockscreen_autocolor_summary">Farbe des Sperrbildschirm-Hintergrunds verwenden</string>
-    <string name="lockscreen_autocolor_lavalamp">Erfordert, dass die Lavalampe deaktiviert ist</string>
-    <string name="lockscreen_lavalamp_title">Lavalampe</string>
-    <string name="lockscreen_lavalamp_summary">Eine weiche Farbanimation im Stil einer Lavalampe verwenden</string>
-    <string name="lockscreen_lavalamp_speed_title">Farbmischintervall</string>
-    <string name="lockscreen_solid_lines_category">Durchgehende Linien</string>
-    <string name="lockscreen_solid_units_count_title">Anzahl der Zeilen</string>
-    <string name="lockscreen_solid_fudge_factor_title">Vernünftiger Pegel</string>
-    <string name="lockscreen_solid_units_opacity_title">Liniendeckkraft</string>
     <!-- Notification light -->
     <string name="notification_lights">Benachrichtigungs-LED</string>
     <string name="notification_light_settings">Benachrichtigungs-LED</string>
@@ -444,12 +428,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Anzeigedauer</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Netzbetreiber-Anzeige</string>
-    <string name="carrier_label_settings_summary">Netzwerkname in Statusleiste anzeigen</string>
-    <string name="custom_carrier_label_title">Benutzerdefinierte Bezeichnung des Netzbetreibers</string>
     <string name="custom_carrier_label_explain">Eigene Bezeichnung eingeben. Leer lassen, um Netzwerknamen zu verwenden.</string>
     <string name="custom_carrier_label_notset">Keine benutzerdefinierte Bezeichung festgelegt</string>
-    <string name="show_carrier_title">Position der Netzbetreiber-Anzeige</string>
-    <string name="show_carrier_disabled">Deaktiviert</string>
     <string name="show_carrier_keyguard">Sperrbildschirm</string>
     <string name="show_carrier_statusbar">Statusleiste</string>
     <string name="show_carrier_enabled">Beide</string>
@@ -659,7 +639,6 @@
     <string name="fod_recognizing_animation_title">Animation erkennen</string>
     <string name="fod_recognizing_animation_summary">Zeige eine Animation beim Erfassen des Fingerabdrucks</string>
     <!-- Adaptive Playback -->
-    <string name="media_title">Medien</string>
     <string name="adaptive_playback_title">Adaptive Wiedergabe</string>
     <string name="adaptive_playback_summary">Medien anhalten wenn Lautstärke stumm ist und durch Erhöhung der Lautstärke innerhalb des Timeouts fortsetzen</string>
     <string name="adaptive_playback_timeout_title">Wiedergabe-Timeout</string>

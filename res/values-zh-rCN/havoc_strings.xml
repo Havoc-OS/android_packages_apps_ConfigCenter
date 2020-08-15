@@ -22,12 +22,10 @@
     <string name="about_summary">详细了解 Havoc-OS</string>
     <string name="animations_title">动画</string>
     <string name="animations_summary">系统动画，快速设置磁贴动画</string>
-    <string name="buttons_title">按钮</string>
     <string name="buttons_summary">实体按键，导航栏</string>
     <string name="gestures_title">手势</string>
     <string name="gestures_summary">跳转到相机，滑动截图</string>
     <string name="lockscreen_title">锁屏</string>
-    <string name="lockscreen_summary">音乐可视化，口袋检测</string>
     <string name="misc_title">杂项</string>
     <string name="misc_summary">游戏模式，充电动画</string>
     <string name="navigation_title">导航</string>
@@ -42,6 +40,7 @@
     <string name="ambient_display_custom_summary">息屏显示，音乐感知，手势</string>
     <string name="screen_title">屏幕</string>
     <string name="screen_summary">屏幕圆角，旧版应用缩放</string>
+    <string name="media_title">媒体</string>
     <!-- About -->
     <string name="changelog_title">更新日志</string>
     <string name="changelog_title_summary">查看ROM的最新变更</string>
@@ -196,9 +195,7 @@
     <string name="swap_volume_buttons_title">交换音量按键</string>
     <string name="swap_volume_buttons_summary">旋转设备时交换音量键</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">音乐</string>
     <string name="media_art_title">媒体封面</string>
-    <string name="media_art_summary">锁屏时将专辑封面设置为锁屏背景</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">媒体封面模糊程度</string>
     <!-- Data disabled icon -->
@@ -228,19 +225,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">蓝牙设备电量</string>
     <string name="bluetooth_battery_summary">显示支持的蓝牙设备的电量</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">音乐可视化</string>
-    <string name="lockscreen_visualizer_enable_summary">在音乐播放时显示</string>
-    <string name="lockscreen_autocolor_title">自动颜色</string>
-    <string name="lockscreen_autocolor_summary">颜色与锁屏背景同步</string>
-    <string name="lockscreen_autocolor_lavalamp">需要停用霓虹灯</string>
-    <string name="lockscreen_lavalamp_title">霓虹灯</string>
-    <string name="lockscreen_lavalamp_summary">使用颜色平滑变化的混合动画</string>
-    <string name="lockscreen_lavalamp_speed_title">颜色混合间隔</string>
-    <string name="lockscreen_solid_lines_category">实线</string>
-    <string name="lockscreen_solid_units_count_title">线条数量</string>
-    <string name="lockscreen_solid_fudge_factor_title">高度</string>
-    <string name="lockscreen_solid_units_opacity_title">线条透明度</string>
     <!-- Notification light -->
     <string name="notification_lights">呼吸灯</string>
     <string name="notification_light_settings">通知指示灯</string>
@@ -444,12 +428,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">显示持续时间</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">运营商标签</string>
-    <string name="carrier_label_settings_summary">在状态栏中显示网络名称</string>
-    <string name="custom_carrier_label_title">自定义运营商标签</string>
     <string name="custom_carrier_label_explain">输入自定义标签，保留空白则显示默认的运营商</string>
     <string name="custom_carrier_label_notset">当前未设置运营商标签</string>
-    <string name="show_carrier_title">运营商标签位置</string>
-    <string name="show_carrier_disabled">不显示</string>
     <string name="show_carrier_keyguard">锁屏</string>
     <string name="show_carrier_statusbar">状态栏</string>
     <string name="show_carrier_enabled">锁屏和状态栏</string>
@@ -658,7 +638,6 @@
     <string name="fod_recognizing_animation_title">屏幕指纹识别动画</string>
     <string name="fod_recognizing_animation_summary">在识别指纹时显示动画</string>
     <!-- Adaptive Playback -->
-    <string name="media_title">媒体</string>
     <string name="adaptive_playback_title">自适应播放</string>
     <string name="adaptive_playback_summary">静音时暂停媒体，若在超时范围内增加音量则恢复播放</string>
     <string name="adaptive_playback_timeout_title">回放超时</string>

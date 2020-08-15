@@ -22,12 +22,10 @@
     <string name="about_summary">Další informace o systému Havoc-OS</string>
     <string name="animations_title">Animace</string>
     <string name="animations_summary">Systémové animace, animace dlaždic QS</string>
-    <string name="buttons_title">Tlačítka</string>
     <string name="buttons_summary">Hardwarová tlačítka, navigační panel</string>
     <string name="gestures_title">Gesta</string>
     <string name="gestures_summary">Spuštění fotoaparátu, pořízení snímku obrazovky</string>
     <string name="lockscreen_title">Zamykací obrazovka</string>
-    <string name="lockscreen_summary">Hudební vizualizace, detekce uložení v kapse</string>
     <string name="misc_title">Různé</string>
     <string name="misc_summary">Herní režim, animace při nabíjení</string>
     <string name="navigation_title">Navigace</string>
@@ -43,6 +41,7 @@
     <string name="ambient_display_custom_summary">Vždy zapnuto, hudební oznámení, gesta</string>
     <string name="screen_title">Obrazovka</string>
     <string name="screen_summary">Zaoblení rohů, škálování starších aplikací</string>
+    <string name="media_title">Média</string>
     <!-- About -->
     <string name="team_category_title">Tým</string>
     <string name="group_mods_title">Moderátoři skupiny podpory</string>
@@ -202,9 +201,7 @@
     <string name="swap_volume_buttons_title">Prohodit tlačítka</string>
     <string name="swap_volume_buttons_summary">V případě otočení obrazovky bude převrácen i smysl tlačítek hlasitosti</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">Hudba</string>
     <string name="media_art_title">Obal interpreta</string>
-    <string name="media_art_summary">Zobrazit obal interpreta přehrávané skladby</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Úroveň rozostření obalu interpreta</string>
     <!-- Data disabled icon -->
@@ -242,19 +239,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">Stav baterie Bluetooth zařízení</string>
     <string name="bluetooth_battery_summary">Zobrazit stav baterie připojeného Bluetooth zařízení, je‑li dostupné</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">Hudební vizualizace</string>
-    <string name="lockscreen_visualizer_enable_summary">Zobrazit vizualizační pruhy během přehrávání hudby</string>
-    <string name="lockscreen_autocolor_title">Automatická barva</string>
-    <string name="lockscreen_autocolor_summary">Synchronizovat barvu s pozadím zamykací obrazovky</string>
-    <string name="lockscreen_autocolor_lavalamp">Vyžaduje vypnutí Lávové lampy</string>
-    <string name="lockscreen_lavalamp_title">Lávová lampa</string>
-    <string name="lockscreen_lavalamp_summary">Použít hladkou barevnou animaci ve stylu lávové lampy</string>
-    <string name="lockscreen_lavalamp_speed_title">Interval míchání barev</string>
-    <string name="lockscreen_solid_lines_category">Plné čáry</string>
-    <string name="lockscreen_solid_units_count_title">Počet čar</string>
-    <string name="lockscreen_solid_fudge_factor_title">Úroveň výkonu</string>
-    <string name="lockscreen_solid_units_opacity_title">Neprůhlednost čar</string>
     <!-- Notification light -->
     <string name="notification_lights">Světla</string>
     <string name="notification_light_settings">Notifikační dioda</string>
@@ -464,12 +448,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Délka zobrazení</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Název operátora</string>
-    <string name="carrier_label_settings_summary">Zobrazí název sítě na stavovém řádku</string>
-    <string name="custom_carrier_label_title">Vlastní název operátora</string>
     <string name="custom_carrier_label_explain">Zadejte vlastní název. Chcete-li použít název vaší sítě, ponechte prázdné</string>
     <string name="custom_carrier_label_notset">V současné době není nastaven vlastní název operátora</string>
-    <string name="show_carrier_title">Pozice názvu operátora</string>
-    <string name="show_carrier_disabled">Zakázáno</string>
     <string name="show_carrier_keyguard">Zamykací obrazovka</string>
     <string name="show_carrier_statusbar">Stavový řádek</string>
     <string name="show_carrier_enabled">Obojí</string>
@@ -684,7 +664,6 @@
     <string name="fod_recognizing_animation_title">Animace rozpoznání otisku prstu</string>
     <string name="fod_recognizing_animation_summary">Zobrazit animaci při skenování otisku prstu</string>
     <!-- Adaptive Playback -->
-    <string name="media_title">Média</string>
     <string name="adaptive_playback_title">Adaptivní přehrávání</string>
     <string name="adaptive_playback_summary">Pozastavit média, je‑li ztlumena hlasitost a pokračovat v přehrávání zvyšováním hlasitosti v rozmezí časového limitu</string>
     <string name="adaptive_playback_timeout_title">Časový limit přehrávání</string>
@@ -769,6 +748,37 @@
     <string name="qs_header_background_black">Černé</string>
     <string name="qs_header_background_transparent">Průhledné</string>
     <!-- Notification count -->
+    <string name="status_bar_notif_count_title">Počet oznámení</string>
+    <string name="status_bar_notif_count_summary">Zobrazí počet nezobrazených upozornění v oznamovací oblasti</string>
     <!-- Dashboard -->
+    <string name="dashboard_category">Nastavení hlavního panelu</string>
+    <string name="dashboard_conditions_title">Karty s podmínkami</string>
+    <string name="dashboard_conditions_summary">Zobrazit karty s podmínkami na hlavním panelu</string>
+    <string name="dashboard_suggestions_title">Karty s návrhy</string>
+    <string name="dashboard_suggestions_summary">Zobrazit karty s návrhy na hlavním panelu</string>
     <!-- Pulse -->
+    <string name="pulse_help_policy_notice_summary">Pulse nefunguje s některými zdroji zvuku při poslechu z reproduktoru zařízení</string>
+    <string name="pulse_render_mode_title">Režim vykreslení</string>
+    <string name="pulse_render_mode_fading_bars">Vyblednutí bloků</string>
+    <string name="pulse_render_mode_solid_lines">Sloupce</string>
+    <string name="pulse_color">Barva</string>
+    <string name="pulse_color_mode">Barevný režim</string>
+    <string name="pulse_color_accent">Odstín</string>
+    <string name="pulse_color_custom">Vlastní</string>
+    <string name="pulse_color_lava_lamp">Lávová lampa</string>
+    <string name="pulse_color_auto">Automaticky (obal interpreta)</string>
+    <string name="pulse_color_chooser">Vlastní barva</string>
+    <string name="smoothing_enabled_title">Vyhlazování animací</string>
+    <string name="smoothing_enabled_summary">Hladce animovat každý pulzující sloupec</string>
+    <string name="pulse_legacy_mode_advanced_category">Vyblednutí bloků</string>
+    <string name="pulse_custom_fudge_factor">Úroveň výkonu</string>
+    <string name="lavamp_speed_title">Rychlost lávové lampy</string>
+    <string name="pulse_solid_units_count">Počet sloupců</string>
+    <string name="pulse_solid_lines_count">Počet sloupců</string>
+    <string name="pulse_solid_units_opacity">Neprůhlednost sloupců</string>
+    <string name="pulse_solid_dimen_category">Sloupce</string>
+    <string name="pulse_custom_dimen">Šířka sloupce</string>
+    <string name="pulse_custom_div">Mezera mezi sloupci</string>
+    <string name="pulse_filled_block_size">Výška bloku</string>
+    <string name="pulse_empty_block_size">Odsazení bloků</string>
 </resources>

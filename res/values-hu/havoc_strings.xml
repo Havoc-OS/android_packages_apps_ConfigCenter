@@ -22,12 +22,10 @@
     <string name="about_summary">Tudjon meg többet a Havoc-OS-ről</string>
     <string name="animations_title">Animációk</string>
     <string name="animations_summary">Rendszer animációk, Gyors beállítás csempe animációk</string>
-    <string name="buttons_title">Gombok</string>
     <string name="buttons_summary">Hardver kulcsok, navigációs sáv</string>
     <string name="gestures_title">Kézmozdulatok</string>
     <string name="gestures_summary">Ugrás a fényképezőgépre, húzás a képernyőképhez</string>
     <string name="lockscreen_title">Zárképernyő</string>
-    <string name="lockscreen_summary">Zene vizualizáció, zsebészlelés</string>
     <string name="misc_title">Egyebek</string>
     <string name="misc_summary">Játékmód, töltés animáció</string>
     <string name="navigation_title">Navigáció</string>
@@ -42,6 +40,7 @@
     <string name="ambient_display_custom_summary">Mindig be van kapcsolva, zene jelölő, gesztusok</string>
     <string name="screen_title">Képernyő</string>
     <string name="screen_summary">Lekerekített sarkok, a régi alkalmazás méretezése</string>
+    <string name="media_title">Média</string>
     <!-- About -->
     <string name="changelog_title">Változtatások</string>
     <string name="changelog_title_summary">A legfrissebb ROM-változások megtekintése</string>
@@ -196,9 +195,7 @@
     <string name="swap_volume_buttons_title">Gombok cseréje</string>
     <string name="swap_volume_buttons_summary">Fordítsa meg a hangerő-szabályozó gombokat, amikor az eszköz el van forgatva</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">Zene</string>
     <string name="media_art_title">Média borító</string>
-    <string name="media_art_summary">Mutassa meg a lejátszott dal média borítóját</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">A médiaborító elhomályosítási szintje</string>
     <!-- Data disabled icon -->
@@ -228,19 +225,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">Bluetooth-akkumulátorállapot</string>
     <string name="bluetooth_battery_summary">Jelenítse meg a csatlakoztatott Bluetooth-eszköz töltöttségi szintjét, ha rendelkezésre áll</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">Zenei vizualizáció</string>
-    <string name="lockscreen_visualizer_enable_summary">A vizualizációs sávok megjelenítése a zene lejátszása közben</string>
-    <string name="lockscreen_autocolor_title">Automatikus szín</string>
-    <string name="lockscreen_autocolor_summary">A sávok színe a háttér színéhez igazodik</string>
-    <string name="lockscreen_autocolor_lavalamp">Szükséges hozzá, hogy a Lávalámpa le legyen tiltva</string>
-    <string name="lockscreen_lavalamp_title">Lávalámpa</string>
-    <string name="lockscreen_lavalamp_summary">Lávalámpához hasonló színátmenetes animáció használata</string>
-    <string name="lockscreen_lavalamp_speed_title">Színkeverési intervallum</string>
-    <string name="lockscreen_solid_lines_category">Folytonos vonalak</string>
-    <string name="lockscreen_solid_units_count_title">Sorok száma</string>
-    <string name="lockscreen_solid_fudge_factor_title">Ésszerűség szint</string>
-    <string name="lockscreen_solid_units_opacity_title">Sávok áttetszősége</string>
     <!-- Notification light -->
     <string name="notification_lights">Fények</string>
     <string name="notification_light_settings">Értesítési LED</string>
@@ -444,12 +428,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">A megjelenítés hossza</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Szolgáltatói címke</string>
-    <string name="carrier_label_settings_summary">Hálózati név megjelenítése az állapotsorban</string>
-    <string name="custom_carrier_label_title">Egyéni szolgáltató címke</string>
     <string name="custom_carrier_label_explain">Adjon meg egy egyéni feliratot. Hagyja üresen, ha a valódi hálózat nevét szeretné látni</string>
     <string name="custom_carrier_label_notset">Egyéni címke jelenleg nincs beállítva</string>
-    <string name="show_carrier_title">Szolgáltatói címke helye</string>
-    <string name="show_carrier_disabled">Letiltva</string>
     <string name="show_carrier_keyguard">Zárképernyő</string>
     <string name="show_carrier_statusbar">Értesítési sáv</string>
     <string name="show_carrier_enabled">Mindkettő</string>
@@ -658,7 +638,6 @@
     <string name="fod_recognizing_animation_title">Az animáció felismerése</string>
     <string name="fod_recognizing_animation_summary">Mutasson animációt az ujjlenyomat olvasása közben</string>
     <!-- Adaptive Playback -->
-    <string name="media_title">Média</string>
     <string name="adaptive_playback_title">Adaptív lejátszás</string>
     <string name="adaptive_playback_summary">Megállítja a lejátszást, ha a média elnémul, de folytatja ha gyosan időkorláton belül felhangosításra kerül</string>
     <string name="adaptive_playback_timeout_title">Lejátszási időkorlát</string>

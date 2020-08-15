@@ -22,12 +22,10 @@
     <string name="about_summary">Havoc-OS hakkında daha fazla bilgi edinin</string>
     <string name="animations_title">Animasyonlar</string>
     <string name="animations_summary">Sistem animasyonları, Hızlı ayarlar kare animasyonları</string>
-    <string name="buttons_title">Tuşlar</string>
     <string name="buttons_summary">Donanım tuşları, Gezinme çubuğu</string>
     <string name="gestures_title">Hareketler</string>
     <string name="gestures_summary">Kameraya geç, ekran görüntüsü al</string>
     <string name="lockscreen_title">Kilit ekranı</string>
-    <string name="lockscreen_summary">Müzik görselleştirici, cep algılama</string>
     <string name="misc_title">Çeşitli</string>
     <string name="misc_summary">Oyun modu, şarj animasyonu</string>
     <string name="navigation_title">Gezinme</string>
@@ -43,6 +41,7 @@
     <string name="ambient_display_custom_summary">Her zaman açık, müzik bilgisi, hareketler</string>
     <string name="screen_title">Ekran</string>
     <string name="screen_summary">Yuvarlatılmış köşeler, eski uygulama ölçeklendirme</string>
+    <string name="media_title">Medya</string>
     <!-- About -->
     <string name="team_category_title">Takım</string>
     <string name="group_mods_title">Destek Grubu Moderatörleri</string>
@@ -202,9 +201,7 @@
     <string name="swap_volume_buttons_title">Tuşları değiştir</string>
     <string name="swap_volume_buttons_summary">Cihaz döndürüldüğünde ses seviyesi tuşlarını ters çevir</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">Müzik</string>
     <string name="media_art_title">Medya resmi</string>
-    <string name="media_art_summary">Çalmakta olan şarkının medya kapak resmini göster</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Medya resmi bulanıklık seviyesi</string>
     <!-- Data disabled icon -->
@@ -242,19 +239,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">Bluetooth pil durumu</string>
     <string name="bluetooth_battery_summary">Eğer mümkün ise bağlı olan bluetooth cihazının pil durumunu gösterir</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">Müzik görselleştirici</string>
-    <string name="lockscreen_visualizer_enable_summary">Müzik çalıyorken görselleştirici çubuklarını göster</string>
-    <string name="lockscreen_autocolor_title">Otomatik renk</string>
-    <string name="lockscreen_autocolor_summary">Rengi kilit ekranı arkaplanı ile eşitle</string>
-    <string name="lockscreen_autocolor_lavalamp">Lav lambasının devre dışı olması gerekir</string>
-    <string name="lockscreen_lavalamp_title">Lav lambası</string>
-    <string name="lockscreen_lavalamp_summary">Pürüzsüz bir lav lambası tarzı renk karışımı animasyonu kullanın</string>
-    <string name="lockscreen_lavalamp_speed_title">Renk karışım aralığı</string>
-    <string name="lockscreen_solid_lines_category">Düz çizgiler</string>
-    <string name="lockscreen_solid_units_count_title">Çizgi sayısı</string>
-    <string name="lockscreen_solid_fudge_factor_title">Davranış düzeyi</string>
-    <string name="lockscreen_solid_units_opacity_title">Çizgi saydamlığı</string>
     <!-- Notification light -->
     <string name="notification_lights">Işıklar</string>
     <string name="notification_light_settings">LED bildirimi</string>
@@ -464,12 +448,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Gösterme süresi</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Operatör etiketi</string>
-    <string name="carrier_label_settings_summary">Durum çubuğunda ağ adını göster</string>
-    <string name="custom_carrier_label_title">Özel operatör etiketi</string>
     <string name="custom_carrier_label_explain">Özel bir etiket girin. Ağ isminizi görmek için boşluk bırakın</string>
     <string name="custom_carrier_label_notset">Özel etiket şu anda tanımlı değil</string>
-    <string name="show_carrier_title">Operatör etiketi konumu</string>
-    <string name="show_carrier_disabled">Devre dışı</string>
     <string name="show_carrier_keyguard">Kilit ekranı</string>
     <string name="show_carrier_statusbar">Durum çubuğu</string>
     <string name="show_carrier_enabled">Her ikisi de</string>
@@ -684,7 +664,6 @@
     <string name="fod_recognizing_animation_title">Tanıma animasyonu</string>
     <string name="fod_recognizing_animation_summary">Parmak izinizi okurken bir animasyon gösterir</string>
     <!-- Adaptive Playback -->
-    <string name="media_title">Medya</string>
     <string name="adaptive_playback_title">Uyarlanabilir oynatma</string>
     <string name="adaptive_playback_summary">Ses kapatılınca medyayı duraklatır ve zaman aşımı süresi içerisinde ses seviyesini artırarak devam ettirir</string>
     <string name="adaptive_playback_timeout_title">Oynatma zaman aşımı</string>
@@ -769,6 +748,37 @@
     <string name="qs_header_background_black">Siyah</string>
     <string name="qs_header_background_transparent">Şeffaf</string>
     <!-- Notification count -->
+    <string name="status_bar_notif_count_title">Bildirim sayısı</string>
+    <string name="status_bar_notif_count_summary">Bekleyen bildirimlerin sayısını görüntüle</string>
     <!-- Dashboard -->
+    <string name="dashboard_category">Ayarlar Paneli</string>
+    <string name="dashboard_conditions_title">Durum kartları</string>
+    <string name="dashboard_conditions_summary">Durum kartlarını ayarlar menüsünde göster</string>
+    <string name="dashboard_suggestions_title">Öneri kartları</string>
+    <string name="dashboard_suggestions_summary">Öneri kartlarını ayarlar menüsünde göster</string>
     <!-- Pulse -->
+    <string name="pulse_help_policy_notice_summary">Pulse, cihaz hoparlörü kullanılırken bazı ses kaynaklarıyla çalışmayabilir</string>
+    <string name="pulse_render_mode_title">İşleme modu</string>
+    <string name="pulse_render_mode_fading_bars">Solan bloklar</string>
+    <string name="pulse_render_mode_solid_lines">Düz çizgiler</string>
+    <string name="pulse_color">Renk</string>
+    <string name="pulse_color_mode">Renk modu</string>
+    <string name="pulse_color_accent">Vurgu rengi</string>
+    <string name="pulse_color_custom">Özel</string>
+    <string name="pulse_color_lava_lamp">Lav lambası</string>
+    <string name="pulse_color_auto">Otomatik (Albüm kapağı)</string>
+    <string name="pulse_color_chooser">Özel renk</string>
+    <string name="smoothing_enabled_title">Pürüzsüz animasyon</string>
+    <string name="smoothing_enabled_summary">Her pulse çubuğunu daha pürüzsüz hareketlendir</string>
+    <string name="pulse_legacy_mode_advanced_category">Solan bloklar</string>
+    <string name="pulse_custom_fudge_factor">Davranış seviyesi</string>
+    <string name="lavamp_speed_title">Lav lambası hızı</string>
+    <string name="pulse_solid_units_count">Çizgi sayısı</string>
+    <string name="pulse_solid_lines_count">Çizgi sayısı</string>
+    <string name="pulse_solid_units_opacity">Çizgi saydamlığı</string>
+    <string name="pulse_solid_dimen_category">Düz çizgiler</string>
+    <string name="pulse_custom_dimen">Çubuk genişliği</string>
+    <string name="pulse_custom_div">Çubuk aralığı</string>
+    <string name="pulse_filled_block_size">Blok boyutu</string>
+    <string name="pulse_empty_block_size">Blok aralığı</string>
 </resources>

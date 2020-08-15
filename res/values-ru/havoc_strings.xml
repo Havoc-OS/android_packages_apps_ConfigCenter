@@ -22,12 +22,10 @@
     <string name="about_summary">Узнайте больше о Havoc-OS</string>
     <string name="animations_title">Анимации</string>
     <string name="animations_summary">Системные анимации, анимации плиток быстрых настроек</string>
-    <string name="buttons_title">Кнопки</string>
     <string name="buttons_summary">Аппаратные кнопки, Панель навигации</string>
     <string name="gestures_title">Жесты</string>
     <string name="gestures_summary">Открытие камеры, свайп для скриншота</string>
     <string name="lockscreen_title">Экран Блокировки</string>
-    <string name="lockscreen_summary">Музыка на экране блокировки, блокировка в кармане</string>
     <string name="misc_title">Разное</string>
     <string name="misc_summary">Игровой режим, анимация зарядки</string>
     <string name="navigation_title">Навигация</string>
@@ -43,6 +41,7 @@
     <string name="ambient_display_custom_summary">Всегда включенный экран, индикатор трека, жесты</string>
     <string name="screen_title">Экран</string>
     <string name="screen_summary">Скругленные углы, масштабирование старых приложений</string>
+    <string name="media_title">Мультимедиа</string>
     <!-- About -->
     <string name="team_category_title">Команда</string>
     <string name="group_mods_title">Модераторы группы поддержки</string>
@@ -202,9 +201,7 @@
     <string name="swap_volume_buttons_title">Поменять кнопки местами</string>
     <string name="swap_volume_buttons_summary">Менять местами кнопки регулировки громкости при повороте экрана</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">Музыка</string>
     <string name="media_art_title">Обложка альбома</string>
-    <string name="media_art_summary">Показать обложку альбома проигрываемого трека</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Уровень размытия медиа-обложки</string>
     <!-- Data disabled icon -->
@@ -242,19 +239,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">Уровень заряда Bluetooth</string>
     <string name="bluetooth_battery_summary">Показывать заряд батареи подключенных Bluetooth-устройств, если доступно</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">Визуализация спектра музыки</string>
-    <string name="lockscreen_visualizer_enable_summary">Включать визуализатор во время воспроизведения музыки</string>
-    <string name="lockscreen_autocolor_title">Автоматический цвет</string>
-    <string name="lockscreen_autocolor_summary">Синхронизировать цвет с фоном экрана блокировки</string>
-    <string name="lockscreen_autocolor_lavalamp">Требует отключения лавы</string>
-    <string name="lockscreen_lavalamp_title">Лавовая лампа</string>
-    <string name="lockscreen_lavalamp_summary">Использовать плавную анимацию смешивания цветов в стиле лавовой лампы</string>
-    <string name="lockscreen_lavalamp_speed_title">Интервал смешивания цветов</string>
-    <string name="lockscreen_solid_lines_category">Сплошные линии</string>
-    <string name="lockscreen_solid_units_count_title">Количество сплошных линий</string>
-    <string name="lockscreen_solid_fudge_factor_title">Уровень чувствительности</string>
-    <string name="lockscreen_solid_units_opacity_title">Прозрачность сплошных линий</string>
     <!-- Notification light -->
     <string name="notification_lights">Огни</string>
     <string name="notification_light_settings">LED-Индикатор уведомлений</string>
@@ -464,12 +448,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Длительность отображения</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Логотип оператора</string>
-    <string name="carrier_label_settings_summary">Показывать название сети в строке состояния</string>
-    <string name="custom_carrier_label_title">Пользовательский логотип</string>
     <string name="custom_carrier_label_explain">Введите свое название. Оставьте пустым, чтобы использовать текущее имя сети</string>
     <string name="custom_carrier_label_notset">Пользовательское название оператора не установлено</string>
-    <string name="show_carrier_title">Расположение названия оператора</string>
-    <string name="show_carrier_disabled">Отключён</string>
     <string name="show_carrier_keyguard">Экран блокировки</string>
     <string name="show_carrier_statusbar">Строка состояния</string>
     <string name="show_carrier_enabled">Оба</string>
@@ -684,7 +664,6 @@
     <string name="fod_recognizing_animation_title">Анимация распознавания отпечатка</string>
     <string name="fod_recognizing_animation_summary">Показывать анимацию при распознавании отпечатка</string>
     <!-- Adaptive Playback -->
-    <string name="media_title">Мультимедиа</string>
     <string name="adaptive_playback_title">Адаптивное воспроизведение</string>
     <string name="adaptive_playback_summary">Приостанавливать воспроизведение при выключенном звуке и возобновлять его, увеличивая громкость в пределах таймаута</string>
     <string name="adaptive_playback_timeout_title">Таймаут воспроизведения</string>

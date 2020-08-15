@@ -22,12 +22,10 @@
     <string name="about_summary">Scopri di più su Havoc-OS</string>
     <string name="animations_title">Animazioni</string>
     <string name="animations_summary">Animazioni di sistema, animazioni delle impostazioni rapide</string>
-    <string name="buttons_title">Pulsanti</string>
     <string name="buttons_summary">Tasti fisici, barra di navigazione</string>
     <string name="gestures_title">Gestures</string>
     <string name="gestures_summary">Vai alla fotocamera, scorri per screenshot</string>
     <string name="lockscreen_title">Schermata di blocco</string>
-    <string name="lockscreen_summary">Visualizzatore musicale, rilevamento tasca</string>
     <string name="misc_title">Varie</string>
     <string name="misc_summary">Modalità gaming, animazione di ricarica</string>
     <string name="navigation_title">Navigazione</string>
@@ -43,6 +41,7 @@
     <string name="ambient_display_custom_summary">Display sempre attivo, ticker, gestures</string>
     <string name="screen_title">Schermo</string>
     <string name="screen_summary">Angoli arrotondati, ridimensionamento app legacy</string>
+    <string name="media_title">Multimedia</string>
     <!-- About -->
     <string name="team_category_title">Team</string>
     <string name="group_mods_title">Moderatori del gruppo di supporto</string>
@@ -202,9 +201,7 @@
     <string name="swap_volume_buttons_title">Scambia tasti</string>
     <string name="swap_volume_buttons_summary">Scambia i pulsanti volume quando il dispositivo viene ruotato</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">Musica</string>
     <string name="media_art_title">Copertina multimediale</string>
-    <string name="media_art_summary">Mostra la copertina multimediale della canzone in riproduzione</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Livello di sfocatura copertina</string>
     <!-- Data disabled icon -->
@@ -242,19 +239,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">Stato batteria Bluetooth</string>
     <string name="bluetooth_battery_summary">Mostra lo stato della batteria per il dispositivo bluetooth attualmente connesso, se disponibile</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">Visualizzatore musicale</string>
-    <string name="lockscreen_visualizer_enable_summary">Mostra le barre del visualizzatore durante la riproduzione di musica</string>
-    <string name="lockscreen_autocolor_title">Colore automatico</string>
-    <string name="lockscreen_autocolor_summary">Sincronizza il colore con lo sfondo del blocco schermo</string>
-    <string name="lockscreen_autocolor_lavalamp">Richiede l\'effetto lampada di lava disabilitato</string>
-    <string name="lockscreen_lavalamp_title">Lampada di lava</string>
-    <string name="lockscreen_lavalamp_summary">Usa un\'animazione di sfumatura di colori in stile lampada di lava</string>
-    <string name="lockscreen_lavalamp_speed_title">Intervallo di sfumatura colore</string>
-    <string name="lockscreen_solid_lines_category">Linee continue</string>
-    <string name="lockscreen_solid_units_count_title">Linee totali</string>
-    <string name="lockscreen_solid_fudge_factor_title">Livello di sicurezza</string>
-    <string name="lockscreen_solid_units_opacity_title">Opacità delle linee</string>
     <!-- Notification light -->
     <string name="notification_lights">Luci</string>
     <string name="notification_light_settings">LED di notifica</string>
@@ -464,12 +448,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Mostra durata</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Nome operatore telefonico</string>
-    <string name="carrier_label_settings_summary">Mostra il nome dell\'operatore telefonico nella barra di stato</string>
-    <string name="custom_carrier_label_title">Etichetta personalizzata operatore telefonico</string>
     <string name="custom_carrier_label_explain">Inserisci un\'etichetta personalizzata. Lascia vuoto per usare il nome della tua rete</string>
     <string name="custom_carrier_label_notset">Nome personalizzato non impostato</string>
-    <string name="show_carrier_title">Posizione etichetta operatore</string>
-    <string name="show_carrier_disabled">Disabilitato</string>
     <string name="show_carrier_keyguard">Schermata di blocco</string>
     <string name="show_carrier_statusbar">Barra di stato</string>
     <string name="show_carrier_enabled">Entrambe</string>
@@ -684,7 +664,6 @@
     <string name="fod_recognizing_animation_title">Animazione al riconoscimento</string>
     <string name="fod_recognizing_animation_summary">Mostra un\'animazione durante la scansione dell\'impronta digitale</string>
     <!-- Adaptive Playback -->
-    <string name="media_title">Multimedia</string>
     <string name="adaptive_playback_title">Riproduzione adattiva</string>
     <string name="adaptive_playback_summary">Metti in pausa i media quando il volume è silenziato e riattivalo aumentando il volume entro il timeout</string>
     <string name="adaptive_playback_timeout_title">Tempo di riproduzione</string>
@@ -769,6 +748,37 @@
     <string name="qs_header_background_black">Nero</string>
     <string name="qs_header_background_transparent">Trasparente</string>
     <!-- Notification count -->
+    <string name="status_bar_notif_count_title">Contatore notifiche</string>
+    <string name="status_bar_notif_count_summary">Mostra il numero di notifiche in sospeso</string>
     <!-- Dashboard -->
+    <string name="dashboard_category">Elementi dashboard delle impostazioni</string>
+    <string name="dashboard_conditions_title">Condizioni</string>
+    <string name="dashboard_conditions_summary">Mostra condizioni sulla dashboard</string>
+    <string name="dashboard_suggestions_title">Suggerimenti</string>
+    <string name="dashboard_suggestions_summary">Mostra suggerimenti sulla dashboard</string>
     <!-- Pulse -->
+    <string name="pulse_help_policy_notice_summary">Pulse non funziona con alcune sorgenti audio durante l\'ascolto sull\'altoparlante del dispositivo</string>
+    <string name="pulse_render_mode_title">Modalità render</string>
+    <string name="pulse_render_mode_fading_bars">Blocchi in dissolvenza</string>
+    <string name="pulse_render_mode_solid_lines">Linee continue</string>
+    <string name="pulse_color">Colore</string>
+    <string name="pulse_color_mode">Modalità colore</string>
+    <string name="pulse_color_accent">Colore primario</string>
+    <string name="pulse_color_custom">Personalizzato</string>
+    <string name="pulse_color_lava_lamp">Lampada di lava</string>
+    <string name="pulse_color_auto">Automatico (Copertina album)</string>
+    <string name="pulse_color_chooser">Colore personalizzato</string>
+    <string name="smoothing_enabled_title">Regolazione animazione</string>
+    <string name="smoothing_enabled_summary">Anima ogni barra degli impulsi in modo più regolare</string>
+    <string name="pulse_legacy_mode_advanced_category">Blocchi in dissolvenza</string>
+    <string name="pulse_custom_fudge_factor">Livello di sicurezza</string>
+    <string name="lavamp_speed_title">Velocità lampada di lava</string>
+    <string name="pulse_solid_units_count">Conteggio linee</string>
+    <string name="pulse_solid_lines_count">Conteggio linee</string>
+    <string name="pulse_solid_units_opacity">Opacità linee</string>
+    <string name="pulse_solid_dimen_category">Linee continue</string>
+    <string name="pulse_custom_dimen">Larghezza barra</string>
+    <string name="pulse_custom_div">Spaziatura barra</string>
+    <string name="pulse_filled_block_size">Dimensione blocchi</string>
+    <string name="pulse_empty_block_size">Spaziatura blocchi</string>
 </resources>

@@ -22,12 +22,10 @@
     <string name="about_summary">Докладніше про Havoc-OS</string>
     <string name="animations_title">Анімації</string>
     <string name="animations_summary">Системні анімації, анімації плиток швидких налаштувань</string>
-    <string name="buttons_title">Кнопки</string>
     <string name="buttons_summary">Апаратні кнопки, Панель навігації</string>
     <string name="gestures_title">Жести</string>
     <string name="gestures_summary">Перейти до камери, свайп для знімку екрану</string>
     <string name="lockscreen_title">Екран блокування</string>
-    <string name="lockscreen_summary">Візуалізатор музики, режим \"у кишені\"</string>
     <string name="misc_title">Різне</string>
     <string name="misc_summary">Ігровий режим, анімація заряджання</string>
     <string name="navigation_title">Навігація</string>
@@ -196,9 +194,7 @@
     <string name="swap_volume_buttons_title">Поміняти клавіші місцями</string>
     <string name="swap_volume_buttons_summary">Інвертувати клавіші гучності, коли пристрій повернено</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">Музика</string>
     <string name="media_art_title">Обкладинка альбому</string>
-    <string name="media_art_summary">Показувати обкладинку альбому пісні, яка грає</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Рівень розмиття обкладинки альбому</string>
     <!-- Data disabled icon -->
@@ -228,19 +224,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">Заряд Bluetooth-пристроя</string>
     <string name="bluetooth_battery_summary">Відображати заряд акумулятора під\'єднаних в даний час bluetooth-пристроїв, якщо доступно</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">Візуалізація музики</string>
-    <string name="lockscreen_visualizer_enable_summary">Показувати візуалізацію, коли грає музика</string>
-    <string name="lockscreen_autocolor_title">Автоматичний колір</string>
-    <string name="lockscreen_autocolor_summary">Синхронізувати колір з фоном екрану блокування</string>
-    <string name="lockscreen_autocolor_lavalamp">Потребує вимкненої лавової лампи</string>
-    <string name="lockscreen_lavalamp_title">Лавова лампа</string>
-    <string name="lockscreen_lavalamp_summary">Використовувати плавний стиль лавової лампи зі змішуванням кольорів</string>
-    <string name="lockscreen_lavalamp_speed_title">Інтервал зміни кольору</string>
-    <string name="lockscreen_solid_lines_category">Суцільні лінії</string>
-    <string name="lockscreen_solid_units_count_title">Кількість рядків</string>
-    <string name="lockscreen_solid_fudge_factor_title">Безпечний рівень</string>
-    <string name="lockscreen_solid_units_opacity_title">Прозорість ліній</string>
     <!-- Notification light -->
     <string name="notification_lights">Індикація</string>
     <string name="notification_light_settings">Діод сповіщень</string>
@@ -444,12 +427,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Тривалість відображення</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Назва оператора</string>
-    <string name="carrier_label_settings_summary">Показувати назву мережі в рядку стану</string>
-    <string name="custom_carrier_label_title">Власна назва оператора</string>
     <string name="custom_carrier_label_explain">Введіть свою назву оператора. Залиште порожнім, щоб використовувати поточне ім\'я мережі</string>
     <string name="custom_carrier_label_notset">Власну назву оператора не встановлено</string>
-    <string name="show_carrier_title">Розташування назви оператора</string>
-    <string name="show_carrier_disabled">Вимкнено</string>
     <string name="show_carrier_keyguard">Екран блокування</string>
     <string name="show_carrier_statusbar">Рядок стану</string>
     <string name="show_carrier_enabled">Обидва</string>

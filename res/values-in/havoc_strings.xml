@@ -22,12 +22,10 @@
     <string name="about_summary">Selengkapnya tentang Havoc-OS</string>
     <string name="animations_title">Animasi</string>
     <string name="animations_summary">Animasi sistem, animasi QS tile</string>
-    <string name="buttons_title">Tombol</string>
     <string name="buttons_summary">Tombol fisik, Bilah navigasi</string>
     <string name="gestures_title">Gerakan</string>
     <string name="gestures_summary">Jalan pintas kamera, usap untuk menangkap layar</string>
     <string name="lockscreen_title">Layar Kunci</string>
-    <string name="lockscreen_summary">Visualisasi musik, deteksi saku</string>
     <string name="misc_title">Lainnya</string>
     <string name="misc_summary">Mode permainan, animasi pengisian baterai</string>
     <string name="navigation_title">Navigasi</string>
@@ -43,6 +41,7 @@
     <string name="ambient_display_custom_summary">Selalu menyala, penanda musik, gestur</string>
     <string name="screen_title">Layar</string>
     <string name="screen_summary">Pojok melengkung, pengaturan skala aplikasi lawas</string>
+    <string name="media_title">Media</string>
     <!-- About -->
     <string name="team_category_title">Tim</string>
     <string name="group_mods_title">Dukung Grup Mod</string>
@@ -202,9 +201,7 @@
     <string name="swap_volume_buttons_title">Tukar tombol volume</string>
     <string name="swap_volume_buttons_summary">Membalik fungsi tombol volume saat perangkat diputar</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">Musik</string>
     <string name="media_art_title">Media artwork</string>
-    <string name="media_art_summary">Menampilkan seni media dari lagu yang sedang diputar di layar kunci</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Level kekaburan media artwork</string>
     <!-- Data disabled icon -->
@@ -242,19 +239,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">Status baterai bluetooth</string>
     <string name="bluetooth_battery_summary">Tampilkan level baterai untuk perangkat bluetooth yang terhubung, jika tersedia</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">Visualizer musik</string>
-    <string name="lockscreen_visualizer_enable_summary">Tampilkan bilah visualizer saat musik sedang diputar di layar kunci</string>
-    <string name="lockscreen_autocolor_title">Warna otomatis</string>
-    <string name="lockscreen_autocolor_summary">Sinkronkan warna dengan latar belakang layar kunci</string>
-    <string name="lockscreen_autocolor_lavalamp">Memerlukan lampu lava dinonaktifkan</string>
-    <string name="lockscreen_lavalamp_title">Lampu lava</string>
-    <string name="lockscreen_lavalamp_summary">Gunakan animasi perpaduan gaya warna lampu lava yang halus</string>
-    <string name="lockscreen_lavalamp_speed_title">Interval perpaduan warna</string>
-    <string name="lockscreen_solid_lines_category">Garis Padat</string>
-    <string name="lockscreen_solid_units_count_title">Jumlah garis</string>
-    <string name="lockscreen_solid_fudge_factor_title">Tingkat kewajaran</string>
-    <string name="lockscreen_solid_units_opacity_title">Opasitas garis</string>
     <!-- Notification light -->
     <string name="notification_lights">Lampu</string>
     <string name="notification_light_settings">LED Notifikasi</string>
@@ -464,12 +448,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Tampilkan durasi</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Nama operator</string>
-    <string name="carrier_label_settings_summary">Tampilkan nama jaringan di bilah status</string>
-    <string name="custom_carrier_label_title">Nama operator khusus</string>
     <string name="custom_carrier_label_explain">Masukkan label khusus. Biarkan kosong untuk menggunakan nama jaringan yang asli</string>
     <string name="custom_carrier_label_notset">Tidak diatur label khusus untuk saat ini</string>
-    <string name="show_carrier_title">Lokasi label operator</string>
-    <string name="show_carrier_disabled">Nonaktif</string>
     <string name="show_carrier_keyguard">Layar kunci</string>
     <string name="show_carrier_statusbar">Bilah status</string>
     <string name="show_carrier_enabled">Keduanya</string>
@@ -684,7 +664,6 @@
     <string name="fod_recognizing_animation_title">Mengenali animasi</string>
     <string name="fod_recognizing_animation_summary">Perlihatkan animasi ketika sedang membaca sidik jari Anda</string>
     <!-- Adaptive Playback -->
-    <string name="media_title">Media</string>
     <string name="adaptive_playback_title">Pemutaran adaptif</string>
     <string name="adaptive_playback_summary">Jedakan media ketika volume dibisukan dan lanjutkan media dengan meningkatkan volume dalam batas waktu</string>
     <string name="adaptive_playback_timeout_title">Batas waktu pemutaran ulang</string>

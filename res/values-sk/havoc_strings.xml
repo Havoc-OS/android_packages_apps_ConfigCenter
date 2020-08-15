@@ -22,12 +22,10 @@
     <string name="about_summary">Zistite viac o Havoc-OS</string>
     <string name="animations_title">Animácie</string>
     <string name="animations_summary">Systémové animácie, animácie dlaždíč rýchlych nastavení</string>
-    <string name="buttons_title">Tlačidlá</string>
     <string name="buttons_summary">Hardvérové tlačidlá, Navigačná lišta</string>
     <string name="gestures_title">Gestá</string>
     <string name="gestures_summary">Spustenie fotoaparátu, snímka obrazovky pomocou gesta</string>
     <string name="lockscreen_title">Zamykacia obrazovka</string>
-    <string name="lockscreen_summary">Hudobný vizualizér, detekcia uloženia vo vrecku</string>
     <string name="misc_title">Rôzne</string>
     <string name="misc_summary">Herný režim, animácia nabíjania</string>
     <string name="navigation_title">Navigácia</string>
@@ -42,6 +40,7 @@
     <string name="ambient_display_custom_summary">Vždy zapnuté, hudobné oznámenia, gestá</string>
     <string name="screen_title">Obrazovka</string>
     <string name="screen_summary">Zaoblené rohy, škálovanie starších aplikácií</string>
+    <string name="media_title">Médiá</string>
     <!-- About -->
     <string name="changelog_title">Zoznam zmien</string>
     <string name="changelog_title_summary">Zobraziť najnovšie zmeny v ROM</string>
@@ -196,9 +195,7 @@
     <string name="swap_volume_buttons_title">Prehodiť tlačidlá</string>
     <string name="swap_volume_buttons_summary">Prehodiť tlačidlá hlasitosti pri otočení zariadenia</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">Hudba</string>
     <string name="media_art_title">Obal interpreta</string>
-    <string name="media_art_summary">Zobraziť obal interpreta prehrávanej skladby</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Úroveň rozostrenia obalu interpreta</string>
     <!-- Data disabled icon -->
@@ -228,19 +225,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">Stav batérie Bluetooth zariadenia</string>
     <string name="bluetooth_battery_summary">Zobraziť stav batérie aktuálne pripojeného Bluetooth zariadenia, ak je k dispozícii</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">Vizualizácia hudby</string>
-    <string name="lockscreen_visualizer_enable_summary">Zobraziť vyzualizáciu pri prehrávaní hudby</string>
-    <string name="lockscreen_autocolor_title">Automatická farba</string>
-    <string name="lockscreen_autocolor_summary">Synchronizovať farbu s pozadím obrazovky uzamknutia</string>
-    <string name="lockscreen_autocolor_lavalamp">Vyžaduje vypnutie lávovej lampy</string>
-    <string name="lockscreen_lavalamp_title">Lávová lampa</string>
-    <string name="lockscreen_lavalamp_summary">Použít jemnú farebnú animáciu v štýle lávovej lampy</string>
-    <string name="lockscreen_lavalamp_speed_title">Interval miešania farieb</string>
-    <string name="lockscreen_solid_lines_category">Plné čiary</string>
-    <string name="lockscreen_solid_units_count_title">Počet čiar</string>
-    <string name="lockscreen_solid_fudge_factor_title">Úroveň výkonu</string>
-    <string name="lockscreen_solid_units_opacity_title">Nepriehľadnosť čiar</string>
     <!-- Notification light -->
     <string name="notification_lights">Svetlá</string>
     <string name="notification_light_settings">Notifikačná dióda</string>
@@ -444,12 +428,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Dĺžka zobrazenia</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Názov operátora</string>
-    <string name="carrier_label_settings_summary">Zobraziť názov siete v stavovom riadku</string>
-    <string name="custom_carrier_label_title">Vlastný názov operátora</string>
     <string name="custom_carrier_label_explain">Zadajte vlastný názov. Ak chcete použiť názov siete, ponechajte prázdne</string>
     <string name="custom_carrier_label_notset">Vlastný názov momentálne nie je nastavený</string>
-    <string name="show_carrier_title">Pozícia názvu operátora</string>
-    <string name="show_carrier_disabled">Zakázané</string>
     <string name="show_carrier_keyguard">Uzamykacia obrazovka</string>
     <string name="show_carrier_statusbar">Stavový riadok</string>
     <string name="show_carrier_enabled">Oboje</string>
@@ -658,7 +638,6 @@
     <string name="fod_recognizing_animation_title">Animácia rozpoznania odtlačku prstu</string>
     <string name="fod_recognizing_animation_summary">Zobraziť animáciu počas skenovania odtlačku prstu</string>
     <!-- Adaptive Playback -->
-    <string name="media_title">Médiá</string>
     <string name="adaptive_playback_title">Adaptívne prehrávanie</string>
     <string name="adaptive_playback_summary">Zastaviť prehrávanie pri znížení hlasitosti a znovu spustiť prehrávanie pri zvýšení hlasitosti v časovom limite</string>
     <string name="adaptive_playback_timeout_title">Časový limit prehrávania</string>

@@ -22,12 +22,10 @@
     <string name="about_summary">اطلاعات بیشتر درباره سیستم عامل Havoc</string>
     <string name="animations_title">جلوه‌های حرکتی</string>
     <string name="animations_summary">جلوه های حرکتی سیستم، انیمیشن های منو دسترسی سریع</string>
-    <string name="buttons_title">دکمه‌‌ها</string>
     <string name="buttons_summary">کلیدهای سخت‌افزاری، نوار جهت‌ها</string>
     <string name="gestures_title">حركات انگشتی</string>
     <string name="gestures_summary">پرش به دوربین، کشیدن دست برای عکس گرفتن از صفحه</string>
     <string name="lockscreen_title">صفحه قفل</string>
-    <string name="lockscreen_summary">رقص نور موسیقی، حالت تشخیص جیب</string>
     <string name="misc_title">متفرقه</string>
     <string name="misc_summary">حالت بازی، جلوه حرکتی شارژ</string>
     <string name="navigation_title">پیمایش</string>
@@ -195,9 +193,7 @@
     <string name="swap_volume_buttons_title">جابه‌جایی کیلید ها</string>
     <string name="swap_volume_buttons_summary">تعویض کلید های صدا زمانی که گوشی چرخیده می‌شود</string>
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_category">موسیقی</string>
     <string name="media_art_title">کاور موسیقی</string>
-    <string name="media_art_summary">نمایش کاور موسیقی که درحال پخش است</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">تار کننده کاور موسیقی</string>
     <!-- Data disabled icon -->
@@ -227,19 +223,6 @@
     <!-- Bluetooth battery status -->
     <string name="bluetooth_battery_title">وضعیت باتری دستگاه بولوتوث</string>
     <string name="bluetooth_battery_summary">نشان دادن مقدار باتری دستگاه متصل شده بولوتوثی، در صورت موجود بودن</string>
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_enable">رقص نور موسیقی</string>
-    <string name="lockscreen_visualizer_enable_summary">نشان دادن رقص نور موسیقی هنگامی که آهنگ درحال پخش است</string>
-    <string name="lockscreen_autocolor_title">رنگ خودکار</string>
-    <string name="lockscreen_autocolor_summary">همگام سازی رنگ با پس‌زمینه صفحه قفل</string>
-    <string name="lockscreen_autocolor_lavalamp">بایستی لامپ مذابی غیرفعال باشد</string>
-    <string name="lockscreen_lavalamp_title">لامپ مذابی</string>
-    <string name="lockscreen_lavalamp_summary">از یک انیمیشن شبیه به لامپ مذابی استفاده میکند</string>
-    <string name="lockscreen_lavalamp_speed_title">فاصله درهم آمیختن رنگ</string>
-    <string name="lockscreen_solid_lines_category">خطوط تک رنگ</string>
-    <string name="lockscreen_solid_units_count_title">تعداد خطوط</string>
-    <string name="lockscreen_solid_fudge_factor_title">سطح سلامتی</string>
-    <string name="lockscreen_solid_units_opacity_title">شفافیت خطوط</string>
     <!-- Notification light -->
     <string name="notification_lights">نور ها</string>
     <string name="notification_light_settings">چراغ اعلان</string>
@@ -443,12 +426,8 @@
     <string name="status_bar_clock_auto_hide_sdur_title">مدت زمان نشان دادن</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">نام سرویس دهنده</string>
-    <string name="carrier_label_settings_summary">نشان دادن نام شبکه در نوار وضعیت</string>
-    <string name="custom_carrier_label_title">تغییر دادن نام سرویس دهنده</string>
     <string name="custom_carrier_label_explain">یک نام انتخابی وارد کنید. برای ‌‌ استفاده از نام پیشفرض اینجا را خالی بگذارید</string>
     <string name="custom_carrier_label_notset">درحال حاضر نام سفارشی تنظیم نشده است</string>
-    <string name="show_carrier_title">مکان نام سرویس دهنده</string>
-    <string name="show_carrier_disabled">غیر فعال</string>
     <string name="show_carrier_keyguard">صفحه قفل</string>
     <string name="show_carrier_statusbar">نوار وضعیت</string>
     <string name="show_carrier_enabled">هردو</string>
