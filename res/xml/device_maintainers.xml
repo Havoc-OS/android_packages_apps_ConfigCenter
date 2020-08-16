@@ -351,6 +351,16 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/shank03" />
         </Preference>
+        
+        <Preference
+            android:id="@+id/device_maple"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_maple_summary"
+            android:title="@string/device_maple">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/shujath" />
+        </Preference>
     </PreferenceCategory>
 
     <PreferenceCategory

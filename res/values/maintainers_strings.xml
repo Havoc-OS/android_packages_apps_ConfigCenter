@@ -342,5 +342,8 @@
 
     <string name="device_crystal" translatable="false">Nokia 7.1</string>
     <string name="device_crystal_summary" translatable="false">Crystal\nRaghu Varma</string>
+    
+    <string name="device_maple" translatable="false">Xperia XZ Premium</string>
+    <string name="device_maple_summary" translatable="false">maple\nShujath</string>
 
 </resources>
