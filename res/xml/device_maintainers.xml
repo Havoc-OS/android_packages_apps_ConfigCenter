@@ -523,6 +523,16 @@
         </Preference>
 
         <Preference
+            android:id="@+id/device_pyxis"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_pyxis_summary"
+            android:title="@string/device_pyxis">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/NaassomDourado" />
+        </Preference>
+
+        <Preference
             android:id="@+id/device_tissot"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_tissot_summary"
@@ -732,7 +742,7 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/blacksuan19" />
         </Preference>
-	    
+
         <!--<Preference
             android:id="@+id/device_kenzo"
             android:icon="@drawable/havoc_device"
@@ -812,7 +822,7 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/SarisanSe" />
         </Preference>
-        
+
         <Preference
             android:id="@+id/device_willow"
             android:icon="@drawable/havoc_device"
@@ -898,34 +908,34 @@
                 android:data="https://t.me/ComicoX" />
         </Preference>
 
-        <Preference 
-            android:id="@+id/device_X00QD" 
-            android:icon="@drawable/havoc_device" 
-            android:summary="@string/device_X00QD_summary" 
-            android:title="@string/device_X00QD"> 
-            <intent 
-                android:action="android.intent.action.VIEW" 
-                android:data="https://t.me/edwardwu0223" /> 
+        <Preference
+            android:id="@+id/device_X00QD"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_X00QD_summary"
+            android:title="@string/device_X00QD">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/edwardwu0223" />
         </Preference>
 
-        <Preference 
-            android:id="@+id/device_Z01R" 
-            android:icon="@drawable/havoc_device" 
-            android:summary="@string/device_Z01R_summary" 
-            android:title="@string/device_Z01R"> 
-            <intent 
-                android:action="android.intent.action.VIEW" 
-                android:data="https://t.me/edwardwu0223" /> 
+        <Preference
+            android:id="@+id/device_Z01R"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_Z01R_summary"
+            android:title="@string/device_Z01R">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/edwardwu0223" />
         </Preference>
 
-        <Preference 
-            android:id="@+id/device_I01WD" 
-            android:icon="@drawable/havoc_device" 
-            android:summary="@string/device_I01WD_summary" 
-            android:title="@string/device_I01WD"> 
-            <intent 
-                android:action="android.intent.action.VIEW" 
-                android:data="https://t.me/ComicoX" /> 
+        <Preference
+            android:id="@+id/device_I01WD"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_I01WD_summary"
+            android:title="@string/device_I01WD">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/ComicoX" />
         </Preference>
 
         <Preference

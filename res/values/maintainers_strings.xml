@@ -126,7 +126,7 @@
 
     <string name="device_starlte" translatable="false">Samsung Galaxy S9 (exynos)</string>
     <string name="device_starlte_summary" translatable="false">starlte\nAdrian Sian (garett_09)</string>
-    
+
     <string name="device_star2lte" translatable="false">Samsung Galaxy S9+ (exynos)</string>
     <string name="device_star2lte_summary" translatable="false">star2lte\nAdrian Sian (garett_09)</string>
 
@@ -181,6 +181,9 @@
     <string name="device_cepheus" translatable="false">Xiaomi Mi 9</string>
     <string name="device_cepheus_summary" translatable="false">cepheus\nSavsır Cankat Özbay (savsir)</string>
 
+    <string name="device_pyxis" translatable="false">Mi 9 Lite</string>
+    <string name="device_pyxis_summary" translatable="false">pyxis\nNaassom Dourado (NaassomDourado)</string>
+
     <string name="device_tissot" translatable="false">Xiaomi Mi A1</string>
     <string name="device_tissot_summary" translatable="false">tissot\nMountaser Halak</string>
 
@@ -213,7 +216,7 @@
 
     <string name="device_phoenix" translatable="false">Xiaomi Poco X2 / Redmi K30</string>
     <string name="device_phoenix_summary" translatable="false">phoenix\nAbubakar Yagoub (Blacksuan19)</string>
-    
+
     <string name="device_land" translatable="false">Xiaomi Redmi 3S</string>
     <string name="device_land_summary" translatable="false">land\nSairam Majgaonkar (Sairam60)</string>
 
@@ -267,7 +270,7 @@
 
     <string name="device_ginkgo" translatable="false">Xiaomi Redmi Note 8</string>
     <string name="device_ginkgo_summary" translatable="false">ginkgo\nAlexander Saleev (Sarisan)</string>
-    
+
     <string name="device_willow" translatable="false">Xiaomi Redmi Note 8T</string>
     <string name="device_willow_summary" translatable="false">willow\nAlexander Saleev (Sarisan)</string>
 
