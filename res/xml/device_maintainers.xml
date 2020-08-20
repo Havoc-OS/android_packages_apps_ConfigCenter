@@ -94,7 +94,7 @@
             android:title="@string/device_enchilada">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/rdjr5" />
+                android:data="https://t.me/ClintT1" />
         </Preference>
 
         <Preference
@@ -104,7 +104,7 @@
             android:title="@string/device_fajita">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/SKULSHADY" />
+                android:data="https://t.me/ClintT1" />
         </Preference>
 
         <Preference
