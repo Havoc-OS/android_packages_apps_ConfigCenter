@@ -972,6 +972,20 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/officialpro" />
         </Preference>
+        android:id="@+id/device_category_realme"
+        android:title="@string/device_category_realme_title" >
+
+        <Preference
+            android:id="@+id/device_X2"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_X2_summary"
+            android:title="@string/device_X2" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/TH3_GUNN3R" />
+        </Preference>
+
+
     </PreferenceCategory>
 
     <!--<PreferenceCategory

@@ -310,6 +310,9 @@
     <string name="device_RMX1921" translatable="false">Realme XT</string>
     <string name="device_RMX1921_summary" translatable="false">RMX1921\nProbir Ghosh (officialpro)</string>
 
+    <string name="device_X2" translatable="false">Realme X2</string>
+    <string name="device_X2_summary" translatable="false">X2\nBibhuti Bhushan Mohapatra (TH3_GUNN3R)</string>
+
     <string name="device_s2" translatable="false">LeEco Le 2</string>
     <string name="device_s2_summary" translatable="false">s2\nHimanshu Kumar (Hk26)</string>
 
