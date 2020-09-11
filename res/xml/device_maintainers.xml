@@ -972,6 +972,16 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/officialpro" />
         </Preference>
+ 
+        <Preference
+            android:id="@+id/device_RMX1901"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_RMX1901_summary"
+            android:title="@string/device_RMX1901" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/BaabuBhaiyaa" />
+        </Preference>
     </PreferenceCategory>
 
     <!--<PreferenceCategory
