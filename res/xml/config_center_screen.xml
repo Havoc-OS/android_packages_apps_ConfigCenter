@@ -72,29 +72,4 @@
             android:dependency="sysui_rounded_fwvals" />
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="aspect_ratio_category"
-        android:title="@string/aspect_ratio_category_title">
-
-        <com.havoc.support.preferences.SystemSettingSwitchPreference
-            android:key="aspect_ratio_apps_enabled"
-            android:title="@string/aspect_ratio_apps_enabled_title"
-            android:summary="@string/aspect_ratio_apps_enabled_summary"
-            android:defaultValue="false" />
-
-        <com.havoc.config.center.preferences.AppMultiSelectListPreference
-            android:key="aspect_ratio_apps_list"
-            android:title="@string/aspect_ratio_apps_list_title"
-            android:summary="@string/aspect_ratio_apps_list_summary"
-            android:dependency="aspect_ratio_apps_enabled"
-            android:persistent="false" />
-
-        <com.havoc.config.center.preferences.ScrollAppsViewPreference
-            android:key="aspect_ratio_apps_list_scroller"
-            android:dependency="aspect_ratio_apps_enabled"
-            android:persistent="false"
-            android:selectable="false" />
-
-    </PreferenceCategory>
-
 </PreferenceScreen>

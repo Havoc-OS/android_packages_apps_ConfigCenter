@@ -602,15 +602,6 @@
     <string name="file_header_select_summary">Select an image from internal storage</string>
     <string name="status_bar_custom_header_shadow_title">Darken image</string>
 
-    <!-- Per App aspect Ratio -->
-    <string name="action_save">Save</string>
-    <string name="aspect_ratio_category_title">Legacy app scaling</string>
-    <string name="aspect_ratio_apps_enabled_title">Force higher aspect ratio</string>
-    <string name="aspect_ratio_apps_enabled_summary">Allow the selected legacy apps to use full screen</string>
-    <string name="aspect_ratio_apps_list_title">Select apps</string>
-    <string name="aspect_ratio_apps_list_summary">Force full screen for these apps</string>
-    <string name="aspect_ratio_footer_text">Restart the apps in order for the changes to take effect</string>
-
     <!-- Rounded corners -->
     <string name="corners_category_title">Corners</string>
     <string name="corner_radius">Rounded corner radius</string>
