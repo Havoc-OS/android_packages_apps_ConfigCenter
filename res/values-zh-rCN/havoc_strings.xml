@@ -508,14 +508,6 @@
     <string name="file_header_select_title">从储存中选择图像</string>
     <string name="file_header_select_summary">从内部储存中选择图像</string>
     <string name="status_bar_custom_header_shadow_title">暗色图像</string>
-    <!-- Per App aspect Ratio -->
-    <string name="action_save">保存</string>
-    <string name="aspect_ratio_category_title">旧版应用程序缩放</string>
-    <string name="aspect_ratio_apps_enabled_title">强制宽高比</string>
-    <string name="aspect_ratio_apps_enabled_summary">允许选定的旧版应用使用全屏显示</string>
-    <string name="aspect_ratio_apps_list_title">选择应用</string>
-    <string name="aspect_ratio_apps_list_summary">为这些应用强制全屏显示</string>
-    <string name="aspect_ratio_footer_text">重新启动应用以使更改生效</string>
     <!-- Rounded corners -->
     <string name="corners_category_title">边角</string>
     <string name="corner_radius">圆角半径</string>

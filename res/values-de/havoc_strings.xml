@@ -508,14 +508,6 @@
     <string name="file_header_select_title">Bild aus dem internen Speicher auswählen</string>
     <string name="file_header_select_summary">Wählen Sie ein Bild aus dem internen Speicher aus</string>
     <string name="status_bar_custom_header_shadow_title">Bild abdunkeln</string>
-    <!-- Per App aspect Ratio -->
-    <string name="action_save">Speichern</string>
-    <string name="aspect_ratio_category_title">Skalierung für ältere Apps</string>
-    <string name="aspect_ratio_apps_enabled_title">Höheres Seitenverhältnis erzwingen</string>
-    <string name="aspect_ratio_apps_enabled_summary">Den ausgewählten älteren Apps erlauben, Vollbild zu verwenden</string>
-    <string name="aspect_ratio_apps_list_title">Apps auswählen</string>
-    <string name="aspect_ratio_apps_list_summary">Vollbildmodus für diese Apps erzwingen</string>
-    <string name="aspect_ratio_footer_text">Starten Sie die Apps neu, damit die Änderungen wirksam werden</string>
     <!-- Rounded corners -->
     <string name="corners_category_title">Ecken</string>
     <string name="corner_radius">Radius der abgerundeten Ecken</string>

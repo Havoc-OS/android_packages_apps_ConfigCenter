@@ -508,14 +508,6 @@
     <string name="file_header_select_title">Vybrať obrázok z úložiska</string>
     <string name="file_header_select_summary">Vyberte obrázok z vnútorného úložiska</string>
     <string name="status_bar_custom_header_shadow_title">Stmaviť obrázok</string>
-    <!-- Per App aspect Ratio -->
-    <string name="action_save">Uložiť</string>
-    <string name="aspect_ratio_category_title">Mierka starších aplikácií</string>
-    <string name="aspect_ratio_apps_enabled_title">Vynútiť vyšší pomer strán</string>
-    <string name="aspect_ratio_apps_enabled_summary">Povoliť vybraným starším aplikáciám používať celú obrazovku</string>
-    <string name="aspect_ratio_apps_list_title">Vybrať aplikácie</string>
-    <string name="aspect_ratio_apps_list_summary">Vynútiť zobrazenie na celú obrazovku pre tieto aplikácie</string>
-    <string name="aspect_ratio_footer_text">Reštartujte aplikácie, aby sa prejavili zmeny</string>
     <!-- Rounded corners -->
     <string name="corners_category_title">Rohy</string>
     <string name="corner_radius">Polomer zaoblenia rohov</string>

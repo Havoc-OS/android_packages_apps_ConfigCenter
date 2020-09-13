@@ -506,14 +506,6 @@
     <string name="file_header_select_title">Alegeți imaginea din memorie</string>
     <string name="file_header_select_summary">Selectați o imagine din memoria internă</string>
     <string name="status_bar_custom_header_shadow_title">Imagine întunecată</string>
-    <!-- Per App aspect Ratio -->
-    <string name="action_save">Salvaţi</string>
-    <string name="aspect_ratio_category_title">Scalarea aplicațiilor vechi</string>
-    <string name="aspect_ratio_apps_enabled_title">Forțați raportul de aspect mai mare</string>
-    <string name="aspect_ratio_apps_enabled_summary">Permiteți aplicațiilor vechi selectate să utilizeze ecranul complet</string>
-    <string name="aspect_ratio_apps_list_title">Selectați aplicaţii</string>
-    <string name="aspect_ratio_apps_list_summary">Forțați ecranul complet pentru aceste aplicații</string>
-    <string name="aspect_ratio_footer_text">Reporniți aplicațiile pentru ca modificările să aibă efect</string>
     <!-- Rounded corners -->
     <string name="corners_category_title">Colţuri</string>
     <string name="corner_radius">Raza colţului rotunjit</string>

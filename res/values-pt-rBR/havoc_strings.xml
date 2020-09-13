@@ -508,14 +508,6 @@
     <string name="file_header_select_title">Selecionar imagem a partir do armazenamento</string>
     <string name="file_header_select_summary">Selecione uma imagem do armazenamento interno</string>
     <string name="status_bar_custom_header_shadow_title">Escurecer imagem</string>
-    <!-- Per App aspect Ratio -->
-    <string name="action_save">Salvar</string>
-    <string name="aspect_ratio_category_title">Dimensionamento de aplicativos legados</string>
-    <string name="aspect_ratio_apps_enabled_title">Forçar proporção mais alta</string>
-    <string name="aspect_ratio_apps_enabled_summary">Permitir que aplicativos antigos usem a tela cheia</string>
-    <string name="aspect_ratio_apps_list_title">Selecionar apps</string>
-    <string name="aspect_ratio_apps_list_summary">Forçar tela cheia para estes apps</string>
-    <string name="aspect_ratio_footer_text">Reinicie os apps para que as alterações tenham efeito</string>
     <!-- Rounded corners -->
     <string name="corners_category_title">Cantos</string>
     <string name="corner_radius">Raio dos cantos arredondados</string>

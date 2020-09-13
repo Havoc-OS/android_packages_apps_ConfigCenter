@@ -22,10 +22,12 @@
     <string name="about_summary">Узнайте больше о Havoc-OS</string>
     <string name="animations_title">Анимации</string>
     <string name="animations_summary">Системные анимации, анимации плиток быстрых настроек</string>
+    <string name="buttons_title">Кнопки и навигация</string>
     <string name="buttons_summary">Аппаратные кнопки, Панель навигации</string>
     <string name="gestures_title">Жесты</string>
     <string name="gestures_summary">Открытие камеры, свайп для скриншота</string>
     <string name="lockscreen_title">Экран Блокировки</string>
+    <string name="lockscreen_summary">Обнаружение кармана, информация о зарядке</string>
     <string name="misc_title">Разное</string>
     <string name="misc_summary">Игровой режим, анимация зарядки</string>
     <string name="navigation_title">Навигация</string>
@@ -42,6 +44,7 @@
     <string name="screen_title">Экран</string>
     <string name="screen_summary">Скругленные углы, масштабирование старых приложений</string>
     <string name="media_title">Мультимедиа</string>
+    <string name="media_summary">Адаптивное воспроизведение, визуализатор музыки</string>
     <!-- About -->
     <string name="team_category_title">Команда</string>
     <string name="group_mods_title">Модераторы группы поддержки</string>
@@ -202,6 +205,7 @@
     <string name="swap_volume_buttons_summary">Менять местами кнопки регулировки громкости при повороте экрана</string>
     <!-- Lock screen cover art -->
     <string name="media_art_title">Обложка альбома</string>
+    <string name="media_art_summary">Показывать обложку текущей песни на экране блокировки</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Уровень размытия медиа-обложки</string>
     <!-- Data disabled icon -->
@@ -448,10 +452,14 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Длительность отображения</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Логотип оператора</string>
+    <string name="carrier_label_settings_summary">Показывать название сети в строке состояния</string>
+    <string name="custom_carrier_label_title">Пользовательский текст</string>
     <string name="custom_carrier_label_explain">Введите свое название. Оставьте пустым, чтобы использовать текущее имя сети</string>
     <string name="custom_carrier_label_notset">Пользовательское название оператора не установлено</string>
+    <string name="show_carrier_title">Местоположение</string>
     <string name="show_carrier_keyguard">Экран блокировки</string>
     <string name="show_carrier_statusbar">Строка состояния</string>
+    <string name="show_carrier_both">Экран блокировки и строка состояния</string>
     <string name="show_carrier_enabled">Оба</string>
     <!-- Statusbar logo -->
     <string name="status_bar_logo_title">Логотип</string>
@@ -528,14 +536,6 @@
     <string name="file_header_select_title">Выбрать изображение из памяти</string>
     <string name="file_header_select_summary">Выберите изображение из внутренней памяти</string>
     <string name="status_bar_custom_header_shadow_title">Затемнить изображение</string>
-    <!-- Per App aspect Ratio -->
-    <string name="action_save">Сохранить</string>
-    <string name="aspect_ratio_category_title">Масштабирование устаревших приложений</string>
-    <string name="aspect_ratio_apps_enabled_title">Принудительно увеличить соотношение сторон</string>
-    <string name="aspect_ratio_apps_enabled_summary">Разрешить выбранным устаревшим приложениям использовать полноэкранный режим</string>
-    <string name="aspect_ratio_apps_list_title">Выберите приложения</string>
-    <string name="aspect_ratio_apps_list_summary">Принудительно использовать полноэкранный режим для этих приложений</string>
-    <string name="aspect_ratio_footer_text">Перезапустите приложения, чтобы изменения вступили в силу</string>
     <!-- Rounded corners -->
     <string name="corners_category_title">Закругление углов</string>
     <string name="corner_radius">Радиус скругления углов</string>
@@ -748,6 +748,44 @@
     <string name="qs_header_background_black">Чёрный</string>
     <string name="qs_header_background_transparent">Прозрачный</string>
     <!-- Notification count -->
+    <string name="status_bar_notif_count_title">Счётчик уведомлений</string>
+    <string name="status_bar_notif_count_summary">Показывать количество не просмотренных уведомлений</string>
     <!-- Dashboard -->
+    <string name="dashboard_category">Настройки панели настроек</string>
+    <string name="dashboard_conditions_title">Карточки состояния</string>
+    <string name="dashboard_conditions_summary">Показывать карточки предложений на панели инструментов</string>
+    <string name="dashboard_suggestions_title">Карточки предложений</string>
+    <string name="dashboard_suggestions_summary">Показать карточки предложений на панели настроек</string>
     <!-- Pulse -->
+    <string name="pulse_help_policy_notice_summary">Pulse не работает с некоторыми источниками аудио во время прослушивания через динамик устройства</string>
+    <string name="pulse_settings">Визуализатор музыки</string>
+    <string name="pulse_settings_summary">Включать визуализатор во время воспроизведения музыки</string>
+    <string name="pulse_render_mode_title">Режим визуализации</string>
+    <string name="pulse_render_mode_fading_bars">Затухающие блоки</string>
+    <string name="pulse_render_mode_solid_lines">Сплошные линии</string>
+    <string name="pulse_color">Цвет</string>
+    <string name="pulse_color_mode">Режим цвета</string>
+    <string name="pulse_color_accent">Акцент</string>
+    <string name="pulse_color_custom">Пользовательский</string>
+    <string name="pulse_color_lava_lamp">Лавовая лампа</string>
+    <string name="pulse_color_auto">Автоматически (обложка альбома)</string>
+    <string name="pulse_color_chooser">Пользовательский цвет</string>
+    <string name="smoothing_enabled_title">Сглаживание анимации</string>
+    <string name="smoothing_enabled_summary">Анимировать каждый импульс более плавно</string>
+    <string name="pulse_legacy_mode_advanced_category">Затухающие блоки</string>
+    <string name="pulse_custom_fudge_factor">Уровень чувствительности</string>
+    <string name="lavamp_speed_title">Скорость Лавовой лампы</string>
+    <string name="pulse_solid_units_count">Количество линий</string>
+    <string name="pulse_solid_lines_count">Количество линий</string>
+    <string name="pulse_solid_units_opacity">Непрозрачность линий</string>
+    <string name="pulse_solid_dimen_category">Сплошные линии</string>
+    <string name="pulse_custom_dimen">Ширина линий</string>
+    <string name="pulse_custom_div">Расстояние между линиями</string>
+    <string name="pulse_filled_block_size">Размер блока</string>
+    <string name="pulse_empty_block_size">Расстояние между блоками</string>
+    <string name="pulse_location_title">Местоположение</string>
+    <string name="pulse_location_lockscreen">Экран блокировки</string>
+    <string name="pulse_location_navbar">Панель навигации</string>
+    <string name="pulse_location_both">Оба</string>
+    <string name="pulse_location_both_summary">Экран блокировки и панель навигации</string>
 </resources>

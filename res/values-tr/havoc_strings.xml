@@ -22,10 +22,12 @@
     <string name="about_summary">Havoc-OS hakkında daha fazla bilgi edinin</string>
     <string name="animations_title">Animasyonlar</string>
     <string name="animations_summary">Sistem animasyonları, Hızlı ayarlar kare animasyonları</string>
+    <string name="buttons_title">Tuşlar ve Gezinme</string>
     <string name="buttons_summary">Donanım tuşları, Gezinme çubuğu</string>
     <string name="gestures_title">Hareketler</string>
     <string name="gestures_summary">Kameraya geç, ekran görüntüsü al</string>
     <string name="lockscreen_title">Kilit ekranı</string>
+    <string name="lockscreen_summary">Cep algılama, şarj bilgileri</string>
     <string name="misc_title">Çeşitli</string>
     <string name="misc_summary">Oyun modu, şarj animasyonu</string>
     <string name="navigation_title">Gezinme</string>
@@ -42,6 +44,7 @@
     <string name="screen_title">Ekran</string>
     <string name="screen_summary">Yuvarlatılmış köşeler, eski uygulama ölçeklendirme</string>
     <string name="media_title">Medya</string>
+    <string name="media_summary">Uyarlanabilir oynatma, müzik görselleştirici</string>
     <!-- About -->
     <string name="team_category_title">Takım</string>
     <string name="group_mods_title">Destek Grubu Moderatörleri</string>
@@ -202,6 +205,7 @@
     <string name="swap_volume_buttons_summary">Cihaz döndürüldüğünde ses seviyesi tuşlarını ters çevir</string>
     <!-- Lock screen cover art -->
     <string name="media_art_title">Medya resmi</string>
+    <string name="media_art_summary">Çalan şarkının albüm kapağını kilit ekranında görüntüler</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Medya resmi bulanıklık seviyesi</string>
     <!-- Data disabled icon -->
@@ -448,10 +452,14 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Gösterme süresi</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Operatör etiketi</string>
+    <string name="carrier_label_settings_summary">Durum çubuğunda mevcut ağ adını görüntüler</string>
+    <string name="custom_carrier_label_title">Özel metin</string>
     <string name="custom_carrier_label_explain">Özel bir etiket girin. Ağ isminizi görmek için boşluk bırakın</string>
     <string name="custom_carrier_label_notset">Özel etiket şu anda tanımlı değil</string>
+    <string name="show_carrier_title">Konum</string>
     <string name="show_carrier_keyguard">Kilit ekranı</string>
     <string name="show_carrier_statusbar">Durum çubuğu</string>
+    <string name="show_carrier_both">Kilit ekranı ve Durum çubuğu</string>
     <string name="show_carrier_enabled">Her ikisi de</string>
     <!-- Statusbar logo -->
     <string name="status_bar_logo_title">Logo</string>
@@ -528,14 +536,6 @@
     <string name="file_header_select_title">Depolamadan bir resim seçin</string>
     <string name="file_header_select_summary">Dahili depolamadan resim seç</string>
     <string name="status_bar_custom_header_shadow_title">Koyu resim</string>
-    <!-- Per App aspect Ratio -->
-    <string name="action_save">Kaydet</string>
-    <string name="aspect_ratio_category_title">Eski uygulama ölçeklendirme</string>
-    <string name="aspect_ratio_apps_enabled_title">Daha yüksek en boy oranını zorla</string>
-    <string name="aspect_ratio_apps_enabled_summary">Seçilen eski uygulamaların tam ekran kullanmasına izin ver</string>
-    <string name="aspect_ratio_apps_list_title">Uygulama seçin</string>
-    <string name="aspect_ratio_apps_list_summary">Bu uygulamalar için tam ekranı zorla</string>
-    <string name="aspect_ratio_footer_text">Değişikliklerin etkili olması için uygulamaları yeniden başlatın</string>
     <!-- Rounded corners -->
     <string name="corners_category_title">Köşeler</string>
     <string name="corner_radius">Yuvarlak köşe yarıçapı</string>
@@ -758,6 +758,8 @@
     <string name="dashboard_suggestions_summary">Öneri kartlarını ayarlar menüsünde göster</string>
     <!-- Pulse -->
     <string name="pulse_help_policy_notice_summary">Pulse, cihaz hoparlörü kullanılırken bazı ses kaynaklarıyla çalışmayabilir</string>
+    <string name="pulse_settings">Müzik görselleştirici</string>
+    <string name="pulse_settings_summary">Müzik çalarken grafik ekolayzırı göster</string>
     <string name="pulse_render_mode_title">İşleme modu</string>
     <string name="pulse_render_mode_fading_bars">Solan bloklar</string>
     <string name="pulse_render_mode_solid_lines">Düz çizgiler</string>
@@ -781,4 +783,9 @@
     <string name="pulse_custom_div">Çubuk aralığı</string>
     <string name="pulse_filled_block_size">Blok boyutu</string>
     <string name="pulse_empty_block_size">Blok aralığı</string>
+    <string name="pulse_location_title">Konum</string>
+    <string name="pulse_location_lockscreen">Kilit ekranı</string>
+    <string name="pulse_location_navbar">Gezinme çubuğu</string>
+    <string name="pulse_location_both">Her ikisi de</string>
+    <string name="pulse_location_both_summary">Kilit ekranı ve Gezinme çubuğu</string>
 </resources>

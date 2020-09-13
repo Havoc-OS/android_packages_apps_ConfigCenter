@@ -508,14 +508,6 @@
     <string name="file_header_select_title">मेमोरी से फोटो चुनें</string>
     <string name="file_header_select_summary">फोन मेमोरी से फोटो का चयन करें</string>
     <string name="status_bar_custom_header_shadow_title">फोटो को डार्क करें</string>
-    <!-- Per App aspect Ratio -->
-    <string name="action_save">सेव करें</string>
-    <string name="aspect_ratio_category_title">लेगैसी ऐप्स परिमाप</string>
-    <string name="aspect_ratio_apps_enabled_title">जबरन ज्यादा स्क्रीन अनुपात</string>
-    <string name="aspect_ratio_apps_enabled_summary">कुछ ऐप्स को फुल स्क्रीन प्रयोग करने की अनुमति दें</string>
-    <string name="aspect_ratio_apps_list_title">ऐप्स चुनें</string>
-    <string name="aspect_ratio_apps_list_summary">इन ऐप्स के लिए जबरन फुल स्क्रीन</string>
-    <string name="aspect_ratio_footer_text">बदलावों को देखने के लिए ऐप्स दोबारा चालू करें</string>
     <!-- Rounded corners -->
     <string name="corners_category_title">कोने</string>
     <string name="corner_radius">कोने की गोलाई</string>

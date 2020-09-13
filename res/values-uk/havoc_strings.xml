@@ -507,14 +507,6 @@
     <string name="file_header_select_title">Оберіть зображення з пристрою</string>
     <string name="file_header_select_summary">Виберіть зображення з внутрішньої пам\'яті пристрою</string>
     <string name="status_bar_custom_header_shadow_title">Затемнення зображення</string>
-    <!-- Per App aspect Ratio -->
-    <string name="action_save">Зберегти</string>
-    <string name="aspect_ratio_category_title">Масштабування старих додатків</string>
-    <string name="aspect_ratio_apps_enabled_title">Примусове підвищення співвідношення сторін</string>
-    <string name="aspect_ratio_apps_enabled_summary">Дозволити вибраним застарілим додаткам працювати у повноекранному режимі</string>
-    <string name="aspect_ratio_apps_list_title">Виберіть додатки</string>
-    <string name="aspect_ratio_apps_list_summary">Примусово використовувати повноекранний режим для цих додатків</string>
-    <string name="aspect_ratio_footer_text">Перезапустіть додаток, щоб зміни набули чинності</string>
     <!-- Rounded corners -->
     <string name="corners_category_title">Кути</string>
     <string name="corner_radius">Радіус округлення кутів</string>

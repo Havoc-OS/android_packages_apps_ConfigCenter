@@ -508,14 +508,6 @@
     <string name="file_header_select_title">Wybierz obrazek z pamięci</string>
     <string name="file_header_select_summary">Wybierz obraz z pamięci wewnętrznej</string>
     <string name="status_bar_custom_header_shadow_title">Przyciemnij obraz</string>
-    <!-- Per App aspect Ratio -->
-    <string name="action_save">Zapisz</string>
-    <string name="aspect_ratio_category_title">Skalowanie starszych aplikacji</string>
-    <string name="aspect_ratio_apps_enabled_title">Wymuś wyższy współczynnik proporcji</string>
-    <string name="aspect_ratio_apps_enabled_summary">Zezwalaj wybranym starszym aplikacjom na używanie pełnego ekranu</string>
-    <string name="aspect_ratio_apps_list_title">Wybierz aplikacje</string>
-    <string name="aspect_ratio_apps_list_summary">Wymuś pełny ekran dla tych aplikacji</string>
-    <string name="aspect_ratio_footer_text">Uruchom ponownie aplikacje, aby zmiany zaczęły obowiązywać</string>
     <!-- Rounded corners -->
     <string name="corners_category_title">Narożniki</string>
     <string name="corner_radius">Promień zaokrąglonych narożników</string>

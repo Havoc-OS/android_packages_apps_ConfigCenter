@@ -506,14 +506,6 @@
     <string name="file_header_select_title">از حافظه یک تصویر را انتخاب کنید</string>
     <string name="file_header_select_summary">از حافظه داخلی یک تصویر را انتخاب کنید</string>
     <string name="status_bar_custom_header_shadow_title">سیاه کردن عکس</string>
-    <!-- Per App aspect Ratio -->
-    <string name="action_save">ذخیره</string>
-    <string name="aspect_ratio_category_title">مقیاس برنامه قدیمی</string>
-    <string name="aspect_ratio_apps_enabled_title">اجبار به بیشتر کردن نسب صفحه نمایش</string>
-    <string name="aspect_ratio_apps_enabled_summary">اجازه یه برنامه های قدیمی انتخاب شده برای استفاده از تمام صفحه</string>
-    <string name="aspect_ratio_apps_list_title">انتخاب برنامه ها</string>
-    <string name="aspect_ratio_apps_list_summary">اجبار برای استفاده از تمام صفحه برای این برنامه ها</string>
-    <string name="aspect_ratio_footer_text">برای اعمال تغییرات برنامه ها بسته و مجدداً بار کنید</string>
     <!-- Rounded corners -->
     <string name="corners_category_title">گوشه ها</string>
     <string name="corner_radius">شعاع گوشه های گرد</string>

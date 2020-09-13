@@ -22,10 +22,12 @@
     <string name="about_summary">Další informace o systému Havoc-OS</string>
     <string name="animations_title">Animace</string>
     <string name="animations_summary">Systémové animace, animace dlaždic QS</string>
+    <string name="buttons_title">Tlačítka a navigace</string>
     <string name="buttons_summary">Hardwarová tlačítka, navigační panel</string>
     <string name="gestures_title">Gesta</string>
     <string name="gestures_summary">Spuštění fotoaparátu, pořízení snímku obrazovky</string>
     <string name="lockscreen_title">Zamykací obrazovka</string>
+    <string name="lockscreen_summary">Detekce uložení v kapse, informace o nabíjení</string>
     <string name="misc_title">Různé</string>
     <string name="misc_summary">Herní režim, animace při nabíjení</string>
     <string name="navigation_title">Navigace</string>
@@ -42,6 +44,7 @@
     <string name="screen_title">Obrazovka</string>
     <string name="screen_summary">Zaoblení rohů, škálování starších aplikací</string>
     <string name="media_title">Média</string>
+    <string name="media_summary">Adaptivní přehrávání, hudební vizualizace</string>
     <!-- About -->
     <string name="team_category_title">Tým</string>
     <string name="group_mods_title">Moderátoři skupiny podpory</string>
@@ -202,6 +205,7 @@
     <string name="swap_volume_buttons_summary">V případě otočení obrazovky bude převrácen i smysl tlačítek hlasitosti</string>
     <!-- Lock screen cover art -->
     <string name="media_art_title">Obal interpreta</string>
+    <string name="media_art_summary">Zobrazit obal interpreta aktuálně přehrávané skladby na zamykací obrazovce</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Úroveň rozostření obalu interpreta</string>
     <!-- Data disabled icon -->
@@ -448,10 +452,14 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Délka zobrazení</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Název operátora</string>
+    <string name="carrier_label_settings_summary">Zobrazí aktuální název sítě na stavovém řádku</string>
+    <string name="custom_carrier_label_title">Vlastní text</string>
     <string name="custom_carrier_label_explain">Zadejte vlastní název. Chcete-li použít název vaší sítě, ponechte prázdné</string>
     <string name="custom_carrier_label_notset">V současné době není nastaven vlastní název operátora</string>
+    <string name="show_carrier_title">Umístění</string>
     <string name="show_carrier_keyguard">Zamykací obrazovka</string>
     <string name="show_carrier_statusbar">Stavový řádek</string>
+    <string name="show_carrier_both">Zamykací obrazovka a stavový řádek</string>
     <string name="show_carrier_enabled">Obojí</string>
     <!-- Statusbar logo -->
     <string name="status_bar_logo_title">Logo</string>
@@ -528,14 +536,6 @@
     <string name="file_header_select_title">Vyberte obrázek z úložiště</string>
     <string name="file_header_select_summary">Vyberte obrázek z interního úložiště</string>
     <string name="status_bar_custom_header_shadow_title">Zatmavit obrázek</string>
-    <!-- Per App aspect Ratio -->
-    <string name="action_save">Uložit</string>
-    <string name="aspect_ratio_category_title">Škálování starších aplikací</string>
-    <string name="aspect_ratio_apps_enabled_title">Vynutit vyšší poměr stran</string>
-    <string name="aspect_ratio_apps_enabled_summary">Povolit vybraným starším aplikacím používat celou obrazovku</string>
-    <string name="aspect_ratio_apps_list_title">Vybrat aplikace</string>
-    <string name="aspect_ratio_apps_list_summary">Pro tyto aplikace vynutit zobrazení na celou obrazovku</string>
-    <string name="aspect_ratio_footer_text">Aby se změny projevily, restartujte aplikace</string>
     <!-- Rounded corners -->
     <string name="corners_category_title">Rohy</string>
     <string name="corner_radius">Poloměr zaoblených rohů</string>
@@ -758,6 +758,8 @@
     <string name="dashboard_suggestions_summary">Zobrazit karty s návrhy na hlavním panelu</string>
     <!-- Pulse -->
     <string name="pulse_help_policy_notice_summary">Pulse nefunguje s některými zdroji zvuku při poslechu z reproduktoru zařízení</string>
+    <string name="pulse_settings">Hudební vizualizace</string>
+    <string name="pulse_settings_summary">Při přehrávání hudby zobrazit grafický ekvalizér</string>
     <string name="pulse_render_mode_title">Režim vykreslení</string>
     <string name="pulse_render_mode_fading_bars">Vyblednutí bloků</string>
     <string name="pulse_render_mode_solid_lines">Sloupce</string>
@@ -781,4 +783,9 @@
     <string name="pulse_custom_div">Mezera mezi sloupci</string>
     <string name="pulse_filled_block_size">Výška bloku</string>
     <string name="pulse_empty_block_size">Odsazení bloků</string>
+    <string name="pulse_location_title">Umístění</string>
+    <string name="pulse_location_lockscreen">Zamykací obrazovka</string>
+    <string name="pulse_location_navbar">Navigační panel</string>
+    <string name="pulse_location_both">Obojí</string>
+    <string name="pulse_location_both_summary">Zamykací obrazovka a navigační panel</string>
 </resources>

@@ -22,10 +22,12 @@
     <string name="about_summary">Scopri di più su Havoc-OS</string>
     <string name="animations_title">Animazioni</string>
     <string name="animations_summary">Animazioni di sistema, animazioni delle impostazioni rapide</string>
+    <string name="buttons_title">Pulsanti &amp; Navigazione</string>
     <string name="buttons_summary">Tasti fisici, barra di navigazione</string>
     <string name="gestures_title">Gestures</string>
     <string name="gestures_summary">Vai alla fotocamera, scorri per screenshot</string>
     <string name="lockscreen_title">Schermata di blocco</string>
+    <string name="lockscreen_summary">Rilevazione tasca, informazioni di ricarica</string>
     <string name="misc_title">Varie</string>
     <string name="misc_summary">Modalità gaming, animazione di ricarica</string>
     <string name="navigation_title">Navigazione</string>
@@ -42,6 +44,7 @@
     <string name="screen_title">Schermo</string>
     <string name="screen_summary">Angoli arrotondati, ridimensionamento app legacy</string>
     <string name="media_title">Multimedia</string>
+    <string name="media_summary">Riproduzione adattiva, visualizzatore musicale</string>
     <!-- About -->
     <string name="team_category_title">Team</string>
     <string name="group_mods_title">Moderatori del gruppo di supporto</string>
@@ -202,6 +205,7 @@
     <string name="swap_volume_buttons_summary">Scambia i pulsanti volume quando il dispositivo viene ruotato</string>
     <!-- Lock screen cover art -->
     <string name="media_art_title">Copertina multimediale</string>
+    <string name="media_art_summary">Visualizza l\'album della canzone attualmente in riproduzione nella schermata di blocco</string>
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Livello di sfocatura copertina</string>
     <!-- Data disabled icon -->
@@ -448,10 +452,14 @@
     <string name="status_bar_clock_auto_hide_sdur_title">Mostra durata</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Nome operatore telefonico</string>
+    <string name="carrier_label_settings_summary">Mostra il nome dell\'operatore telefonico nella barra di stato</string>
+    <string name="custom_carrier_label_title">Testo personalizzato</string>
     <string name="custom_carrier_label_explain">Inserisci un\'etichetta personalizzata. Lascia vuoto per usare il nome della tua rete</string>
     <string name="custom_carrier_label_notset">Nome personalizzato non impostato</string>
+    <string name="show_carrier_title">Posizione</string>
     <string name="show_carrier_keyguard">Schermata di blocco</string>
     <string name="show_carrier_statusbar">Barra di stato</string>
+    <string name="show_carrier_both">Schermata di blocco &amp; barra di stato</string>
     <string name="show_carrier_enabled">Entrambe</string>
     <!-- Statusbar logo -->
     <string name="status_bar_logo_title">Logo</string>
@@ -528,14 +536,6 @@
     <string name="file_header_select_title">Scegli l\'immagine dalla memoria</string>
     <string name="file_header_select_summary">Seleziona un\'immagine dalla memoria interna</string>
     <string name="status_bar_custom_header_shadow_title">Scurisci l\'immagine</string>
-    <!-- Per App aspect Ratio -->
-    <string name="action_save">Salva</string>
-    <string name="aspect_ratio_category_title">Ridimensionamento delle app legacy</string>
-    <string name="aspect_ratio_apps_enabled_title">Forza rapporto d\'aspetto</string>
-    <string name="aspect_ratio_apps_enabled_summary">Consenti alle app legacy di utilizzare lo schermo intero</string>
-    <string name="aspect_ratio_apps_list_title">Seleziona app</string>
-    <string name="aspect_ratio_apps_list_summary">Forza schermo intero per queste app</string>
-    <string name="aspect_ratio_footer_text">Riavvia le app per rendere effettive le modifiche</string>
     <!-- Rounded corners -->
     <string name="corners_category_title">Angoli</string>
     <string name="corner_radius">Raggio degli angoli arrotondati</string>
@@ -758,6 +758,8 @@
     <string name="dashboard_suggestions_summary">Mostra suggerimenti sulla dashboard</string>
     <!-- Pulse -->
     <string name="pulse_help_policy_notice_summary">Pulse non funziona con alcune sorgenti audio durante l\'ascolto sull\'altoparlante del dispositivo</string>
+    <string name="pulse_settings">Visualizzatore musicale</string>
+    <string name="pulse_settings_summary">Mostra equalizzatore grafico durante la riproduzione della musica</string>
     <string name="pulse_render_mode_title">Modalità render</string>
     <string name="pulse_render_mode_fading_bars">Blocchi in dissolvenza</string>
     <string name="pulse_render_mode_solid_lines">Linee continue</string>
@@ -781,4 +783,9 @@
     <string name="pulse_custom_div">Spaziatura barra</string>
     <string name="pulse_filled_block_size">Dimensione blocchi</string>
     <string name="pulse_empty_block_size">Spaziatura blocchi</string>
+    <string name="pulse_location_title">Posizione</string>
+    <string name="pulse_location_lockscreen">Schermata di blocco</string>
+    <string name="pulse_location_navbar">Barra di navigazione</string>
+    <string name="pulse_location_both">Entrambe</string>
+    <string name="pulse_location_both_summary">Schermata di blocco e barra di navigazione</string>
 </resources>
