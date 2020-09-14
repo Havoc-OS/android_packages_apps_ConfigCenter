@@ -110,7 +110,7 @@
             android:icon="@drawable/havoc_website">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://sourceforge.net/projects/havoc-os/"/>
+                android:data="https://havoc-os.com/"/>
         </Preference>
 
         <Preference
