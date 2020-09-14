@@ -833,7 +833,7 @@
                 android:data="https://t.me/SarisanSe" />
         </Preference>
 
-        <Preference
+        <!--<Preference
             android:id="@+id/device_curtana"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_curtana_summary"
@@ -841,7 +841,7 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/ahmed_tohamy" />
-        </Preference>
+        </Preference>-->
 
         <Preference
             android:id="@+id/device_ysl"
