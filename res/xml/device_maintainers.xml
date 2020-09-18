@@ -187,6 +187,16 @@
         android:id="@+id/device_category_samsung"
         android:title="@string/device_category_samsung_title">
 
+	<Preference
+	    android:id="@+id/device_a10"
+	    android:icon="@drawable/havoc_device"
+	    android:summary="@string/device_a10_summary"
+	    android:title="@string/device_a10" >
+	    <intent
+		android:action="android.intent.action.VIEW"
+		android:data="https://t.me/Dark998" />
+	</Preference>
+
         <!--<Preference
             android:id="@+id/device_j7xelte"
             android:icon="@drawable/havoc_device"
