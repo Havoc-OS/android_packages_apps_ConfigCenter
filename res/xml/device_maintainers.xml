@@ -794,10 +794,10 @@
         </Preference>
 
         <Preference
-            android:id="@+id/device_ugglite"
+            android:id="@+id/device_ulysse"
             android:icon="@drawable/havoc_device"
-            android:summary="@string/device_ugglite_summary"
-            android:title="@string/device_ugglite">
+            android:summary="@string/device_ulysse_summary"
+            android:title="@string/device_ulysse">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/heinzdf" />
