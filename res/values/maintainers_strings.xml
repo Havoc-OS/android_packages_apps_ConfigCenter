@@ -220,7 +220,7 @@
     <string name="device_beryllium" translatable="false">Xiaomi Poco F1</string>
     <string name="device_beryllium_summary" translatable="false">beryllium\nNinad Patil (blitzfire3)</string>
 
-    <string name="device_phoenix" translatable="false">Xiaomi Poco X2 / Redmi K30</string>
+    <string name="device_phoenix" translatable="false">Xiaomi Poco X2/Redmi K30</string>
     <string name="device_phoenix_summary" translatable="false">phoenix\nAbubakar Yagoub (Blacksuan19)</string>
 
     <string name="device_land" translatable="false">Xiaomi Redmi 3S</string>
@@ -280,8 +280,8 @@
     <string name="device_willow" translatable="false">Xiaomi Redmi Note 8T</string>
     <string name="device_willow_summary" translatable="false">willow\nAlexander Saleev (Sarisan)</string>
 
-    <string name="device_curtana" translatable="false">Xiaomi Redmi Note 9S</string>
-    <string name="device_curtana_summary" translatable="false">curtana\nAhmed Tohamy (ahmed.tohamy)</string>
+    <string name="device_miatoll" translatable="false">Xiaomi Redmi Note 9S/9 Pro/9 Pro Max/Poco M2 Pro [Unified]</string>
+    <string name="device_miatoll_summary" translatable="false">miatoll\nRizak Kamal (ijak)</string>
 
     <string name="device_ysl" translatable="false">Xiaomi Redmi S2</string>
     <string name="device_ysl_summary" translatable="false">ysl\nTushar Mahajan (mahajant99)</string>
