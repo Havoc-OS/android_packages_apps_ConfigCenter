@@ -274,11 +274,8 @@
     <string name="device_violet" translatable="false">Xiaomi Redmi Note 7 Pro</string>
     <string name="device_violet_summary" translatable="false">violet\nAthul Dinesan (athul_05)</string>
 
-    <string name="device_ginkgo" translatable="false">Xiaomi Redmi Note 8</string>
+    <string name="device_ginkgo" translatable="false">Xiaomi Redmi Note 8/T [Unified]</string>
     <string name="device_ginkgo_summary" translatable="false">ginkgo\nAlexander Saleev (Sarisan)</string>
-
-    <string name="device_willow" translatable="false">Xiaomi Redmi Note 8T</string>
-    <string name="device_willow_summary" translatable="false">willow\nAlexander Saleev (Sarisan)</string>
 
     <string name="device_miatoll" translatable="false">Xiaomi Redmi Note 9S/9 Pro/9 Pro Max/Poco M2 Pro [Unified]</string>
     <string name="device_miatoll_summary" translatable="false">miatoll\nRizak Kamal (ijak)</string>
