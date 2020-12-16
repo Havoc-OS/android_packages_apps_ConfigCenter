@@ -47,7 +47,7 @@
     <string name="media_summary">自適應播放，音樂可視化</string>
     <!-- About -->
     <string name="team_category_title">團隊</string>
-    <string name="group_mods_title">維護團隊模組</string>
+    <string name="group_mods_title">開發團隊</string>
     <string name="group_mods_summary">所有維護團隊主持人列表</string>
     <string name="device_maintainers_title">裝置維護者</string>
     <string name="device_maintainers_title_summary">官方維護設備以及維護者列表</string>
