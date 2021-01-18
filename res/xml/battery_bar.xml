@@ -19,7 +19,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <ListPreference
+    <com.havoc.support.preferences.SystemSettingListPreference
         android:key="statusbar_battery_bar_location"
         android:title="@string/battery_bar_location_title"
         android:defaultValue="1" />

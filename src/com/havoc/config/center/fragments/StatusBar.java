@@ -31,6 +31,7 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.havoc.support.preferences.SecureSettingMasterSwitchPreference;
 import com.havoc.support.preferences.SwitchPreference;
 import com.havoc.support.preferences.SystemSettingMasterSwitchPreference;
 
@@ -44,13 +45,12 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private static final String BATTERY_BAR = "statusbar_battery_bar";
     private static final String CARRIER_LABEL = "carrier_label_enabled";
 
-    private SystemSettingMasterSwitchPreference mStatusBarClockShow;
+    private SecureSettingMasterSwitchPreference mStatusBarClockShow;
     private SystemSettingMasterSwitchPreference mStatusBarLogo;
     private SystemSettingMasterSwitchPreference mNetworkTraffic;
     private SystemSettingMasterSwitchPreference mBatteryBar;
     private SystemSettingMasterSwitchPreference mCarrierLabel;
     private SwitchPreference mUseOldMobileType;
-    private boolean mConfigUseOldMobileType;
     private ListPreference mBatteryStyle;
     private ListPreference mBatteryPercent;
     private int mBatteryPercentValue;
@@ -66,11 +66,9 @@ public class StatusBar extends SettingsPreferenceFragment implements
 
         mHandler = new Handler();
 
-        mConfigUseOldMobileType = getResources().getBoolean(com.android.internal.R.bool.config_useOldMobileIcons);
-        int useOldMobileIcons = (mConfigUseOldMobileType ? 1 : 0);
         mUseOldMobileType = (SwitchPreference) findPreference(KEY_USE_OLD_MOBILETYPE);
         mUseOldMobileType.setChecked((Settings.System.getInt(resolver,
-                Settings.System.USE_OLD_MOBILETYPE, useOldMobileIcons) == 1));
+                Settings.System.USE_OLD_MOBILETYPE, 0) == 1));
         mUseOldMobileType.setOnPreferenceChangeListener(this);
 
         mBatteryStyle = (ListPreference) findPreference("status_bar_battery_style");
@@ -92,9 +90,9 @@ public class StatusBar extends SettingsPreferenceFragment implements
     }
 
     private void updateMasterPrefs() {
-        mStatusBarClockShow = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_CLOCK);
-        mStatusBarClockShow.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.STATUS_BAR_CLOCK, 1) == 1));
+        mStatusBarClockShow = (SecureSettingMasterSwitchPreference) findPreference(STATUS_BAR_CLOCK);
+        mStatusBarClockShow.setChecked((Settings.Secure.getInt(getActivity().getContentResolver(),
+                Settings.Secure.STATUS_BAR_CLOCK, 1) == 1));
         mStatusBarClockShow.setOnPreferenceChangeListener(this);
     
         mStatusBarLogo = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_LOGO);
@@ -122,8 +120,8 @@ public class StatusBar extends SettingsPreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mStatusBarClockShow) {
             boolean value = (Boolean) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.STATUS_BAR_CLOCK, value ? 1 : 0);
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.STATUS_BAR_CLOCK, value ? 1 : 0);
             return true;
 		} else if (preference == mStatusBarLogo) {
             boolean value = (Boolean) newValue;

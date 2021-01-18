@@ -24,7 +24,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
 import com.android.internal.logging.nano.MetricsProto; 
-import com.android.internal.util.havoc.Utils; 
+import com.android.internal.util.custom.Utils; 
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -36,17 +36,15 @@ public class Notifications extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "Notifications";
-    private static final String LIGHTS_CATEGORY = "notification_lights";
-    private static final String BATTERY_LIGHT_ENABLED = "battery_light_enabled";
+    // private static final String LIGHTS_CATEGORY = "notification_lights";
     private static final String HEADS_UP_NOTIFICATIONS_ENABLED = "heads_up_notifications_enabled";
-    private static final String AMBIENT_NOTIFICATION_LIGHT = "ambient_notification_light";
-    private static final String STATUS_BAR_SHOW_TICKER = "status_bar_show_ticker";
+    private static final String AMBIENT_NOTIFICATION_LIGHT = "pulse_ambient_light";
+    // private static final String STATUS_BAR_SHOW_TICKER = "status_bar_show_ticker";
 
-    private PreferenceCategory mLightsCategory;
-    private SystemSettingMasterSwitchPreference mBatteryLightEnabled;
+    // private PreferenceCategory mLightsCategory;
     private GlobalSettingMasterSwitchPreference mHeadsUpEnabled;
     private SystemSettingMasterSwitchPreference mEdgeLightEnabled;
-    private SystemSettingMasterSwitchPreference mTickerEnabled;
+    // private SystemSettingMasterSwitchPreference mTickerEnabled;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,17 +55,6 @@ public class Notifications extends SettingsPreferenceFragment implements
     }
 
     private void updateMasterPrefs() {
-        mBatteryLightEnabled = (SystemSettingMasterSwitchPreference) findPreference(BATTERY_LIGHT_ENABLED);
-        mBatteryLightEnabled.setOnPreferenceChangeListener(this);
-        int batteryLightEnabled = Settings.System.getInt(getContentResolver(),
-                BATTERY_LIGHT_ENABLED, 1);
-        mBatteryLightEnabled.setChecked(batteryLightEnabled != 0);
-
-        mLightsCategory = (PreferenceCategory) findPreference(LIGHTS_CATEGORY);
-        if (!getResources().getBoolean(com.android.internal.R.bool.config_hasNotificationLed)) {
-            mLightsCategory.setVisible(false);
-        }
-
         mHeadsUpEnabled = (GlobalSettingMasterSwitchPreference) findPreference(HEADS_UP_NOTIFICATIONS_ENABLED);
         mHeadsUpEnabled.setOnPreferenceChangeListener(this);
         int headsUpEnabled = Settings.Global.getInt(getContentResolver(),
@@ -80,15 +67,15 @@ public class Notifications extends SettingsPreferenceFragment implements
                 AMBIENT_NOTIFICATION_LIGHT, 0);
         mEdgeLightEnabled.setChecked(edgeLightEnabled != 0);
 
-        mTickerEnabled = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_SHOW_TICKER);
-        mTickerEnabled.setOnPreferenceChangeListener(this);
-        int tickerEnabled = Settings.System.getInt(getContentResolver(),
-                STATUS_BAR_SHOW_TICKER, 0);
-        mTickerEnabled.setChecked(tickerEnabled != 0);
+        // mTickerEnabled = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_SHOW_TICKER);
+        // mTickerEnabled.setOnPreferenceChangeListener(this);
+        // int tickerEnabled = Settings.System.getInt(getContentResolver(),
+        //         STATUS_BAR_SHOW_TICKER, 0);
+        // mTickerEnabled.setChecked(tickerEnabled != 0);
 
-        if (Utils.hasNotch(getActivity())) {
-            mTickerEnabled.setVisible(false);
-        }
+        // if (Utils.hasNotch(getActivity())) {
+        //     mTickerEnabled.setVisible(false);
+        // }
     }
 
     @Override
@@ -110,21 +97,16 @@ public class Notifications extends SettingsPreferenceFragment implements
             Settings.Global.putInt(getContentResolver(),
 		            HEADS_UP_NOTIFICATIONS_ENABLED, value ? 1 : 0);
             return true;
-        } else if (preference == mBatteryLightEnabled) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(getContentResolver(),
-		            BATTERY_LIGHT_ENABLED, value ? 1 : 0);
-            return true;
         } else if (preference == mEdgeLightEnabled) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(),
                     AMBIENT_NOTIFICATION_LIGHT, value ? 1 : 0);
             return true;
-        } else if (preference == mTickerEnabled) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(getContentResolver(),
-                    STATUS_BAR_SHOW_TICKER, value ? 1 : 0);
-            return true;
+        // } else if (preference == mTickerEnabled) {
+        //     boolean value = (Boolean) newValue;
+        //     Settings.System.putInt(getContentResolver(),
+        //             STATUS_BAR_SHOW_TICKER, value ? 1 : 0);
+        //     return true;
         }
         return false;
     }

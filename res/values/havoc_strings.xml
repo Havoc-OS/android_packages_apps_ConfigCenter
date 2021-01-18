@@ -463,6 +463,11 @@
     <string name="gaming_mode_notifications_all_title">Show toasts and notification</string>
     <string name="gaming_mode_dynamic_title">Dynamic mode</string>
     <string name="gaming_mode_dynamic_summary">Try detecting and adding gaming apps automatically</string>
+    <string name="gaming_mode_headsup_allow">Allow all headsup notifications</string>
+    <string name="gaming_mode_headsup_dnc">Block all headsup notifications except calls &amp; alarms</string>
+    <string name="gaming_mode_headsup_clock">Block all headsup notifications except alarms</string>
+    <string name="gaming_mode_headsup_dialer">Block all headsup notifications except calls</string>
+    <string name="gaming_mode_headsup_stop">Block all headsup notifications</string>
 
     <!-- Volume key answer -->
     <string name="volume_answer_call_title">Answer call</string>
@@ -641,6 +646,17 @@
     <string name="pulse_ambient_light_layout_title">Light view</string>
     <string name="pulse_ambient_light_layout_solid">Solid</string>
     <string name="pulse_ambient_light_layout_faded">Faded</string>
+    <string name="ambient_notification_light_enabled_title">Show on AOD</string>
+    <string name="ambient_notification_light_enabled_summary">Show lights on Always On Display</string>
+    <string name="ambient_notification_light_hide_aod_title">Hide AOD content</string>
+    <string name="ambient_notification_light_hide_aod_summary">Hide AOD content when lights are showing</string>
+    <string name="ambient_notification_light_timeout_title">Timeout</string>
+    <string name="ambient_notification_light_timeout_forever">Forever</string>
+    <string name="ambient_notification_light_timeout_half_minute">30 seconds</string>
+    <string name="ambient_notification_light_timeout_minute">1 minute</string>
+    <string name="ambient_notification_light_timeout_three_minutes">3 minutes</string>
+    <string name="ambient_notification_light_timeout_five_minutes">5 minutes</string>
+    <string name="ambient_notification_light_timeout_ten_minutes">10 minutes</string>
 
     <!-- QS footer icons -->
     <string name="qs_footer_title">Footer</string>
@@ -887,5 +903,9 @@
     <string name="pulse_location_navbar">Navbar</string>
     <string name="pulse_location_both">Both</string>
     <string name="pulse_location_both_summary">Lockscreen and Navbar</string>
+
+    <!-- Notch: Full screen apps -->
+    <string name="display_cutout_force_fullscreen_title">Full screen apps</string>
+    <string name="display_cutout_force_fullscreen_summary">Force apps to ignore notch space</string>
 
 </resources>

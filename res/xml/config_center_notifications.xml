@@ -18,30 +18,7 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title="@string/notifications_title">
 
-    <PreferenceCategory
-        android:key="notification_lights"
-        android:title="@string/notification_lights">
-
-        <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
-            android:key="battery_light_enabled"
-            android:fragment="com.havoc.config.center.fragments.BatteryLightSettings"
-            android:title="@string/battery_light_settings"
-            android:summary="@string/battery_light_settings_summary"
-            android:defaultValue="true" />
-
-        <Preference
-            android:key="notification_light"
-            android:fragment="com.android.settings.applications.manageapplications.ManageApplications"
-            android:title="@string/notification_light_settings"
-            android:summary="@string/notification_light_settings_summary" >
-            <extra
-                android:name="classname"
-                android:value="com.android.settings.Settings$NotificationAppListActivity" />
-        </Preference>
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
+    <!--<PreferenceCategory
         android:key="notification_flash"
         android:title="@string/notification_flash_title" >
 
@@ -57,20 +34,18 @@
             android:title="@string/flashlight_on_call_wait_title"
             android:summary="@string/flashlight_on_call_wait_summary"
             android:defaultValue="false" />
-
-    </PreferenceCategory>
+    </PreferenceCategory>-->
 
     <PreferenceCategory
         android:key="notification_screen"
         android:title="@string/notification_screen_title" >
 
         <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
-            android:key="ambient_notification_light"
+            android:key="pulse_ambient_light"
             android:fragment="com.havoc.config.center.fragments.EdgeLight"
             android:title="@string/pulse_ambient_light_title"
             android:summary="@string/pulse_ambient_light_summary"
             android:defaultValue="false" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -84,24 +59,12 @@
             android:summary="@string/heads_up_notifications_summary"
             android:defaultValue="true" />
 
-        <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
+        <!--<com.havoc.support.preferences.SystemSettingMasterSwitchPreference
             android:key="status_bar_show_ticker"
             android:fragment="com.havoc.config.center.fragments.Ticker"
             android:title="@string/ticker_screen_title"
             android:summary="@string/ticker_screen_summary"
-            android:defaultValue="false" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="notification_messages"
-        android:title="@string/notification_messages">
-        
-        <com.havoc.support.preferences.SystemSettingSwitchPreference  
-            android:key="enable_fc_notifications" 
-            android:title="@string/enable_fc_notifications_title" 
-            android:summary="@string/enable_fc_notifications_summary" 
-            android:defaultValue="true" /> 
-
+            android:defaultValue="false" />-->
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -119,6 +82,5 @@
             android:title="@string/notification_sound_vib_screen_on_title"
             android:summary="@string/notification_sound_vib_screen_on_summary"
             android:defaultValue="true" />
-
     </PreferenceCategory>
 </PreferenceScreen>

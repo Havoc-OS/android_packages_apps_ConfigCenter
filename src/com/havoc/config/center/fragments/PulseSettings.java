@@ -78,9 +78,6 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.pulse_settings);
 
-        mFooterPreferenceMixin.createFooterPreference()
-                .setTitle(R.string.pulse_help_policy_notice_summary);
-
         mFadingBarsCat = (PreferenceCategory) findPreference(PULSE_RENDER_CATEGORY_FADING);
         mSolidBarsCat = (PreferenceCategory) findPreference(PULSE_RENDER_CATEGORY_SOLID);
         mLavaSpeedPref = findPreference(PULSE_COLOR_MODE_LAVA_SPEED_KEY);

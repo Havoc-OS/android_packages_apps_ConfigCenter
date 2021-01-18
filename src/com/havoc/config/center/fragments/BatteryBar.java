@@ -30,7 +30,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.havoc.Utils;
+import com.android.internal.util.custom.Utils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -43,7 +43,7 @@ import com.havoc.support.preferences.SystemSettingSwitchPreference;
 public class BatteryBar extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
 
-    private ListPreference mLocation;
+    private SystemSettingListPreference mLocation;
     private SystemSettingSeekBarPreference mThickness;
     private SystemSettingListPreference mStyle;
     private SystemSettingSwitchPreference mAnimate;
@@ -72,9 +72,9 @@ public class BatteryBar extends SettingsPreferenceFragment implements
         boolean isButtonNavigation = (Utils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")
                 || Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton"));
 
-        mLocation = (ListPreference) findPreference("statusbar_battery_bar_location");
+        mLocation = (SystemSettingListPreference) findPreference("statusbar_battery_bar_location");
         int batteryBarLocation = Settings.System.getInt(getContentResolver(),
-                Settings.System.STATUSBAR_BATTERY_BAR_LOCATION, 0);
+                Settings.System.STATUSBAR_BATTERY_BAR_LOCATION, 1);
         CharSequence[] ButtonNavEntries = { getResources().getString(R.string.battery_bar_location_statusbar_top),
                 getResources().getString(R.string.battery_bar_location_statusbar_bottom),
                 getResources().getString(R.string.battery_bar_location_navbar_top),

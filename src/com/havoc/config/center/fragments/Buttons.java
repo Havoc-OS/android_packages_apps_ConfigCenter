@@ -12,7 +12,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+
 
 package com.havoc.config.center.fragments;
 
@@ -32,7 +32,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto; 
-import com.android.internal.util.havoc.Utils;
+import com.android.internal.util.custom.Utils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -48,7 +48,6 @@ public class Buttons extends SettingsPreferenceFragment implements
 
     public static final String TAG = "Buttons";
 
-    private static final String TORCH_POWER_BUTTON_GESTURE = "torch_power_button_gesture";
     private static final String NAV_BAR_LAYOUT = "nav_bar_layout";
     private static final String SYSUI_NAV_BAR = "sysui_nav_bar";
     private static final String KEY_NAVIGATION_BAR_ENABLED = "force_show_navbar";
@@ -118,7 +117,6 @@ public class Buttons extends SettingsPreferenceFragment implements
     private Preference mGestureSystemNavigation;
     private Preference mHomeLongPressCustomApp;
     private Preference mHomeDoubleTapCustomApp;
-    private ListPreference mTorchPowerButton;
     private ListPreference mNavBarLayout;
     private Preference mLeftSwipeAppSelection;
     private Preference mRightSwipeAppSelection;
@@ -153,13 +151,6 @@ public class Buttons extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.config_center_buttons);
         resolver = getActivity().getContentResolver();
         final PreferenceScreen prefSet = getPreferenceScreen();
-
-        mTorchPowerButton = (ListPreference) findPreference(TORCH_POWER_BUTTON_GESTURE);
-        int mTorchPowerButtonValue = Settings.Secure.getInt(resolver,
-                Settings.Secure.TORCH_POWER_BUTTON_GESTURE, 0);
-        mTorchPowerButton.setValue(Integer.toString(mTorchPowerButtonValue));
-        mTorchPowerButton.setSummary(mTorchPowerButton.getEntry());
-        mTorchPowerButton.setOnPreferenceChangeListener(this);
 
         mNavBarLayout = (ListPreference) findPreference(NAV_BAR_LAYOUT);
         mNavBarLayout.setOnPreferenceChangeListener(this);
@@ -350,12 +341,12 @@ public class Buttons extends SettingsPreferenceFragment implements
 
         mLeftSwipeAppSelection = (Preference) findPreference("left_swipe_app_action");
         boolean isAppSelection = Settings.System.getIntForUser(resolver,
-                Settings.System.LEFT_LONG_BACK_SWIPE_ACTION, 0, UserHandle.USER_CURRENT) == 5/*action_app_action*/;
+                Settings.System.LEFT_LONG_BACK_SWIPE_ACTION, 0, UserHandle.USER_CURRENT) == 5;
         mLeftSwipeAppSelection.setEnabled(isAppSelection);
 
         mRightSwipeAppSelection = (Preference) findPreference("right_swipe_app_action");
         isAppSelection = Settings.System.getIntForUser(resolver,
-                Settings.System.RIGHT_LONG_BACK_SWIPE_ACTION, 0, UserHandle.USER_CURRENT) == 5/*action_app_action*/;
+                Settings.System.RIGHT_LONG_BACK_SWIPE_ACTION, 0, UserHandle.USER_CURRENT) == 5;
         mRightSwipeAppSelection.setEnabled(isAppSelection);
 
         mTimeout = (SystemSettingListPreference) findPreference("long_back_swipe_timeout");
@@ -430,23 +421,7 @@ public class Buttons extends SettingsPreferenceFragment implements
         resolver = getActivity().getContentResolver();
         boolean DoubleTapPowerGesture = Settings.Secure.getInt(resolver,
                     Settings.Secure.CAMERA_DOUBLE_TAP_POWER_GESTURE_DISABLED, 1) == 0;
-        if (preference == mTorchPowerButton) {
-            int mTorchPowerButtonValue = Integer.valueOf((String) objValue);
-            int index = mTorchPowerButton.findIndexOfValue((String) objValue);
-            mTorchPowerButton.setSummary(
-                    mTorchPowerButton.getEntries()[index]);
-            Settings.Secure.putInt(resolver, Settings.Secure.TORCH_POWER_BUTTON_GESTURE,
-                    mTorchPowerButtonValue);
-            if (mTorchPowerButtonValue == 1 && DoubleTapPowerGesture) {
-                //if doubletap for torch is enabled, switch off double tap for camera
-                Settings.Secure.putInt(resolver, Settings.Secure.CAMERA_DOUBLE_TAP_POWER_GESTURE_DISABLED,
-                        1);
-                Toast.makeText(getActivity(),
-                    (R.string.torch_power_button_gesture_dt_toast),
-                    Toast.LENGTH_SHORT).show();
-            }
-            return true;
-        } else if (preference == mNavBarLayout) {
+        if (preference == mNavBarLayout) {
             Settings.Secure.putString(resolver, SYSUI_NAV_BAR, (String) objValue);
             return true;
         } else if (preference == mNavigationIMESpace) {
@@ -815,4 +790,4 @@ public class Buttons extends SettingsPreferenceFragment implements
     private IOverlayManager getOverlayManager() {
         return IOverlayManager.Stub.asInterface(ServiceManager.getService(Context.OVERLAY_SERVICE));
     }
-}
+} */

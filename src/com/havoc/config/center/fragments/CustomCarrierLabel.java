@@ -40,7 +40,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.havoc.Utils;
+import com.android.internal.util.custom.Utils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;

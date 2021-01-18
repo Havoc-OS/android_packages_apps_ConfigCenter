@@ -22,7 +22,7 @@
         android:key="qs_gesture_category"
         android:title="@string/gestures_title">
 
-        <com.havoc.support.preferences.SystemSettingListPreference
+        <com.havoc.support.preferences.SecureSettingListPreference
             android:key="status_bar_quick_qs_pulldown"
             android:title="@string/quick_pulldown_title"
             android:entries="@array/quick_pulldown_entries" 
@@ -42,7 +42,7 @@
         android:title="@string/battery_category_title">
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
-            android:key="qs_show_battery_estimate"
+            android:key="qs_header_show_battery_percent"
             android:title="@string/qs_show_battery_estimate_title"
             android:summary="@string/qs_show_battery_estimate_summary"
             android:defaultValue="true"/>
@@ -53,20 +53,13 @@
         android:key="qs_theme_category"
         android:title="@string/qs_theme_category">
 
-        <com.havoc.support.preferences.SystemSettingSeekBarPreference
+        <!--<com.havoc.support.preferences.SystemSettingSeekBarPreference
             android:key="qs_panel_bg_alpha"
             android:title="@string/qs_panel_alpha_title"
             android:max="255"
             settings:min="100"
             settings:interval="5"
             android:defaultValue="255" />
-
-        <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
-            android:key="qs_background_blur"
-            android:fragment="com.havoc.config.center.fragments.QsBlur"
-            android:title="@string/qs_blur_title"
-            android:summary="@string/qs_blur_summary"
-            android:defaultValue="false" />
 
         <com.havoc.support.preferences.SystemSettingListPreference
             android:key="qs_header_background"
@@ -80,7 +73,7 @@
             android:fragment="com.havoc.config.center.fragments.QsHeader"
             android:title="@string/status_bar_custom_header_title"
             android:summary="@string/status_bar_custom_header_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" />-->
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="qs_tile_accent_tint"
@@ -113,14 +106,6 @@
             android:persistent="false" />
 
         <com.havoc.support.preferences.CustomSeekBarPreference
-            android:key="qs_columns_quickbar"
-            android:title="@string/sysui_qqs_count_title"
-            android:max="8"
-            settings:min="6"
-            android:defaultValue="6"
-            android:persistent="false" />
-
-        <com.havoc.support.preferences.CustomSeekBarPreference
             android:key="qs_rows_portrait"
             android:title="@string/qs_rows_portrait_title"
             android:max="4"
@@ -135,24 +120,18 @@
             android:max="2"
             settings:min="1"
             settings:units=""
-            android:defaultValue="2"
+            android:defaultValue="1"
             android:persistent="false" />
 
-        <com.havoc.support.preferences.SystemSettingSwitchPreference 
-            android:key="qs_tile_title_visibility" 
-            android:title="@string/qs_tile_title_visibility_title" 
-            android:summary="@string/qs_tile_title_visibility_summary" 
-            android:defaultValue="true" /> 
-
-        <com.havoc.support.preferences.SecureSettingSwitchPreference
-            android:key="quick_settings_vibrate"
-            android:title="@string/quick_settings_vibrate_title"
-            android:summary="@string/quick_settings_vibrate_summary"
-            android:defaultValue="false"/>
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="qs_tile_title_visibility"
+            android:title="@string/qs_tile_title_visibility_title"
+            android:summary="@string/qs_tile_title_visibility_summary"
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!--<PreferenceCategory
         android:key="brightness_slider"
         android:title="@string/qs_brightness_slider">
 
@@ -174,7 +153,7 @@
             android:title="@string/qs_show_brightness_buttons_title"
             android:summary="@string/qs_show_brightness_buttons_summary"
             android:defaultValue="true" />
-    </PreferenceCategory>
+    </PreferenceCategory>-->
 
     <PreferenceCategory
         android:key="qs_footer"
