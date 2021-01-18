@@ -1,4 +1,4 @@
-package com.havoc.config.center.fragments.navbar;
+/* package com.havoc.config.center.fragments.navbar;
 
 import android.content.pm.ActivityInfo;
 import android.provider.Settings;
@@ -20,5 +20,4 @@ public class AppSwitchDoubleTap extends BackLongPress {
                 getContentResolver(), Settings.System.KEY_APP_SWITCH_DOUBLE_TAP_CUSTOM_ACTIVITY,
                 ai != null ? ai.name : "NONE");
     }
-}
-
+} */

@@ -35,47 +35,47 @@ import com.havoc.support.preferences.SystemSettingSwitchPreference;
 public class LockScreen extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    private static final String FOD_ANIMATION_PREF = "fod_recognizing_animation";
-    private static final String KEY_SCREEN_OFF_FOD = "screen_off_fod";
-    private static final String KEY_SCREEN_OFF_FOD_ICON = "screen_off_fod_icon";
+    // private static final String FOD_ANIMATION_PREF = "fod_recognizing_animation";
+    // private static final String KEY_SCREEN_OFF_FOD = "screen_off_fod";
+    // private static final String KEY_SCREEN_OFF_FOD_ICON = "screen_off_fod_icon";
 
-    private SystemSettingSwitchPreference mFODAnimationEnabled;
-    private SwitchPreference mScreenOffFOD;
-    private SystemSettingSwitchPreference mScreenOffFODIcon;
+    // private SystemSettingSwitchPreference mFODAnimationEnabled;
+    // private SwitchPreference mScreenOffFOD;
+    // private SystemSettingSwitchPreference mScreenOffFODIcon;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.config_center_lockscreen);
 
-        PackageManager packageManager = getPackageManager();
+        // PackageManager packageManager = getPackageManager();
 
-        mFODAnimationEnabled = (SystemSettingSwitchPreference) findPreference(FOD_ANIMATION_PREF);
+        // mFODAnimationEnabled = (SystemSettingSwitchPreference) findPreference(FOD_ANIMATION_PREF);
 
-        boolean mScreenOffFODValue = Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.SCREEN_OFF_FOD, 0) != 0;
+        // boolean mScreenOffFODValue = Settings.System.getInt(getActivity().getContentResolver(),
+        //         Settings.System.SCREEN_OFF_FOD, 0) != 0;
 
-        mScreenOffFOD = (SwitchPreference) findPreference(KEY_SCREEN_OFF_FOD);
-        mScreenOffFOD.setChecked(mScreenOffFODValue);
-        mScreenOffFOD.setOnPreferenceChangeListener(this);
+        // mScreenOffFOD = (SwitchPreference) findPreference(KEY_SCREEN_OFF_FOD);
+        // mScreenOffFOD.setChecked(mScreenOffFODValue);
+        // mScreenOffFOD.setOnPreferenceChangeListener(this);
 
-        mScreenOffFODIcon = (SystemSettingSwitchPreference) findPreference(KEY_SCREEN_OFF_FOD_ICON);
+        // mScreenOffFODIcon = (SystemSettingSwitchPreference) findPreference(KEY_SCREEN_OFF_FOD_ICON);
 
-        if (!packageManager.hasSystemFeature(LineageContextConstants.Features.FOD)) {
-            mFODAnimationEnabled.setVisible(false);
-            mScreenOffFOD.setVisible(false);
-            mScreenOffFODIcon.setVisible(false);
-        }
+        // if (!packageManager.hasSystemFeature(LineageContextConstants.Features.FOD)) {
+        //     mFODAnimationEnabled.setVisible(false);
+        //     mScreenOffFOD.setVisible(false);
+        //     mScreenOffFODIcon.setVisible(false);
+        // }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mScreenOffFOD) {
-            int mScreenOffFODValue = (Boolean) newValue ? 1 : 0;
-            Settings.System.putInt(resolver, Settings.System.SCREEN_OFF_FOD, mScreenOffFODValue);
-            Settings.Secure.putInt(resolver, Settings.Secure.DOZE_ALWAYS_ON, mScreenOffFODValue);
-            return true;
-        }
+        // if (preference == mScreenOffFOD) {
+        //     int mScreenOffFODValue = (Boolean) newValue ? 1 : 0;
+        //     Settings.System.putInt(resolver, Settings.System.SCREEN_OFF_FOD, mScreenOffFODValue);
+        //     Settings.Secure.putInt(resolver, Settings.Secure.DOZE_ALWAYS_ON, mScreenOffFODValue);
+        //     return true;
+        // }
         return false;
     }
 

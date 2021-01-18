@@ -43,21 +43,27 @@ public class EdgeLight extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
 
     public static final String TAG = "EdgeLight";
+    private static final String AMBIENT_LIGHT_ENABLED = "ambient_notification_light_enabled";
+    private static final String AMBIENT_LIGHT_HIDE_AOD = "ambient_notification_light_hide_aod";
     private static final String AMBIENT_LIGHT_LAYOUT = "ambient_light_layout";
-    private static final String AMBIENT_LIGHT_COLOR = "ambient_light_color";
-    private static final String AMBIENT_LIGHT_CUSTOM_COLOR = "ambient_light_custom_color";
-    private static final String AMBIENT_LIGHT_DURATION = "ambient_light_duration";
-    private static final String AMBIENT_LIGHT_REPEAT_COUNT = "ambient_light_repeat_count";
+    private static final String AMBIENT_LIGHT_COLOR = "ambient_notification_color_mode";
+    private static final String AMBIENT_LIGHT_CUSTOM_COLOR = "ambient_notification_light_color";
+    private static final String AMBIENT_LIGHT_DURATION = "ambient_notification_light_duration";
+    private static final String AMBIENT_LIGHT_REPEAT_COUNT = "ambient_notification_light_repeats";
     private static final String AMBIENT_LIGHT_REPEAT_DIRECTION = "ambient_light_repeat_direction";
     private static final String AMBIENT_LIGHT_ALWAYS = "ambient_light_pulse_for_all";
+    private static final String AMBIENT_LIGHT_TIMEOUT = "ambient_notification_light_timeout";
 
+    private SystemSettingSwitchPreference mEdgeLightEnabled;
+    private SystemSettingSwitchPreference mEdgeLightHideAod;
     private SystemSettingSwitchPreference mEdgeLightAlways;
-    private ListPreference mEdgeLightColorMode;
+    private SystemSettingListPreference mEdgeLightColorMode;
     private ColorPickerPreference mEdgeLightColor;
     private CustomSeekBarPreference mEdgeLightDuration;
     private CustomSeekBarPreference mEdgeLightRepeatCount;
     private SystemSettingListPreference mEdgeLightRepeatDirection;
     private SystemSettingListPreference mEdgeLightLayout;
+    private SystemSettingListPreference mEdgeLightTimeout;
 
     private TextView mTextView;
     private View mSwitchBar;
@@ -67,23 +73,26 @@ public class EdgeLight extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.edge_light);
 
+        mEdgeLightEnabled = (SystemSettingSwitchPreference) findPreference(AMBIENT_LIGHT_ENABLED);
+        mEdgeLightHideAod = (SystemSettingSwitchPreference) findPreference(AMBIENT_LIGHT_HIDE_AOD);
         mEdgeLightAlways = (SystemSettingSwitchPreference) findPreference(AMBIENT_LIGHT_ALWAYS);
         mEdgeLightRepeatDirection = (SystemSettingListPreference) findPreference(AMBIENT_LIGHT_REPEAT_DIRECTION);
         mEdgeLightLayout = (SystemSettingListPreference) findPreference(AMBIENT_LIGHT_LAYOUT);
+        mEdgeLightTimeout = (SystemSettingListPreference) findPreference(AMBIENT_LIGHT_TIMEOUT);
 
-        mEdgeLightColorMode = (ListPreference) findPreference(AMBIENT_LIGHT_COLOR);
+        mEdgeLightColorMode = (SystemSettingListPreference) findPreference(AMBIENT_LIGHT_COLOR);
         int edgeLightColorMode = Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.AMBIENT_LIGHT_COLOR, 0, UserHandle.USER_CURRENT);
+                Settings.System.NOTIFICATION_PULSE_COLOR_MODE, 0, UserHandle.USER_CURRENT);
         mEdgeLightColorMode.setValue(String.valueOf(edgeLightColorMode));
         mEdgeLightColorMode.setSummary(mEdgeLightColorMode.getEntry());
         mEdgeLightColorMode.setOnPreferenceChangeListener(this);
 
         mEdgeLightColor = (ColorPickerPreference) findPreference(AMBIENT_LIGHT_CUSTOM_COLOR);
         int edgeLightColor = Settings.System.getInt(getContentResolver(),
-                Settings.System.AMBIENT_LIGHT_CUSTOM_COLOR, 0xFF3980FF);
+                Settings.System.NOTIFICATION_PULSE_COLOR, 0xFFFFFFFF);
         mEdgeLightColor.setNewPreviewColor(edgeLightColor);
-        String edgeLightColorHex = String.format("#%08x", (0xFF3980FF & edgeLightColor));
-        if (edgeLightColorHex.equals("#ff3980ff")) {
+        String edgeLightColorHex = String.format("#%08x", (0xFFFFFFFF & edgeLightColor));
+        if (edgeLightColorHex.equals("#ffffffff")) {
             mEdgeLightColor.setSummary(R.string.default_string);
         } else {
             mEdgeLightColor.setSummary(edgeLightColorHex);
@@ -92,13 +101,13 @@ public class EdgeLight extends SettingsPreferenceFragment implements
 
         mEdgeLightDuration = (CustomSeekBarPreference) findPreference(AMBIENT_LIGHT_DURATION);
         int lightDuration = Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.AMBIENT_LIGHT_DURATION, 2, UserHandle.USER_CURRENT);
+                Settings.System.NOTIFICATION_PULSE_DURATION, 2, UserHandle.USER_CURRENT);
         mEdgeLightDuration.setValue(lightDuration);
         mEdgeLightDuration.setOnPreferenceChangeListener(this);
 
         mEdgeLightRepeatCount = (CustomSeekBarPreference) findPreference(AMBIENT_LIGHT_REPEAT_COUNT);
         int edgeLightRepeatCount = Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.AMBIENT_LIGHT_REPEAT_COUNT, 0, UserHandle.USER_CURRENT);
+                Settings.System.NOTIFICATION_PULSE_REPEATS, 0, UserHandle.USER_CURRENT);
         mEdgeLightRepeatCount.setValue(edgeLightRepeatCount);
         mEdgeLightRepeatCount.setOnPreferenceChangeListener(this);
 
@@ -118,7 +127,7 @@ public class EdgeLight extends SettingsPreferenceFragment implements
         super.onViewCreated(view, savedInstanceState);
 
         boolean enabled = Settings.System.getInt(getContentResolver(),
-                Settings.System.AMBIENT_NOTIFICATION_LIGHT, 0) == 1;
+                Settings.System.NOTIFICATION_PULSE, 0) == 1;
 
         mTextView = view.findViewById(R.id.switch_text);
         mTextView.setText(getString(enabled ?
@@ -134,6 +143,8 @@ public class EdgeLight extends SettingsPreferenceFragment implements
             mSwitchBar.setActivated(switchWidget.isChecked());
         });
 
+        mEdgeLightEnabled.setEnabled(enabled);
+        mEdgeLightHideAod.setEnabled(enabled);
         mEdgeLightAlways.setEnabled(enabled);
         mEdgeLightColorMode.setEnabled(enabled);
         mEdgeLightColor.setEnabled(enabled);
@@ -141,15 +152,18 @@ public class EdgeLight extends SettingsPreferenceFragment implements
         mEdgeLightRepeatCount.setEnabled(enabled);
         mEdgeLightRepeatDirection.setEnabled(enabled);
         mEdgeLightLayout.setEnabled(enabled);
+        mEdgeLightTimeout.setEnabled(enabled);
     }
 
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
         Settings.System.putInt(getContentResolver(),
-                Settings.System.AMBIENT_NOTIFICATION_LIGHT, isChecked ? 1 : 0);
+                Settings.System.NOTIFICATION_PULSE, isChecked ? 1 : 0);
         mTextView.setText(getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text));
         mSwitchBar.setActivated(isChecked);
 
+        mEdgeLightEnabled.setEnabled(isChecked);
+        mEdgeLightHideAod.setEnabled(isChecked);
         mEdgeLightAlways.setEnabled(isChecked);
         mEdgeLightColorMode.setEnabled(isChecked);
         mEdgeLightColor.setEnabled(isChecked);
@@ -157,6 +171,7 @@ public class EdgeLight extends SettingsPreferenceFragment implements
         mEdgeLightRepeatCount.setEnabled(isChecked);
         mEdgeLightRepeatDirection.setEnabled(isChecked);
         mEdgeLightLayout.setEnabled(isChecked);
+        mEdgeLightTimeout.setEnabled(isChecked);
     }
 
     @Override
@@ -170,31 +185,31 @@ public class EdgeLight extends SettingsPreferenceFragment implements
             int edgeLightColorMode = Integer.valueOf((String) newValue);
             int index = mEdgeLightColorMode.findIndexOfValue((String) newValue);
             Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.AMBIENT_LIGHT_COLOR, edgeLightColorMode, UserHandle.USER_CURRENT);
+                    Settings.System.NOTIFICATION_PULSE_COLOR_MODE, edgeLightColorMode, UserHandle.USER_CURRENT);
             mEdgeLightColorMode.setSummary(mEdgeLightColorMode.getEntries()[index]);
             updateColorPrefs(edgeLightColorMode);
             return true;
         } else if (preference == mEdgeLightColor) {
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
-            if (hex.equals("#ff3980ff")) {
+            if (hex.equals("#ffffffff")) {
                 preference.setSummary(R.string.default_string);
             } else {
                 preference.setSummary(hex);
             }
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(getContentResolver(),
-                    Settings.System.AMBIENT_LIGHT_CUSTOM_COLOR, intHex);
+                    Settings.System.NOTIFICATION_PULSE_COLOR, intHex);
             return true;
         } else if (preference == mEdgeLightDuration) {
             int value = (Integer) newValue;
             Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.AMBIENT_LIGHT_DURATION, value, UserHandle.USER_CURRENT);
+                    Settings.System.NOTIFICATION_PULSE_DURATION, value, UserHandle.USER_CURRENT);
             return true;
         } else if (preference == mEdgeLightRepeatCount) {
             int value = (Integer) newValue;
             Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.AMBIENT_LIGHT_REPEAT_COUNT, value, UserHandle.USER_CURRENT);
+                    Settings.System.NOTIFICATION_PULSE_REPEATS, value, UserHandle.USER_CURRENT);
             return true;
         }
         return false;

@@ -13,7 +13,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+
 
 package com.havoc.config.center.fragments;
 
@@ -295,7 +295,7 @@ public class DisplayCutoutForceFullscreenSettings extends SettingsPreferenceFrag
              * find 4 in the array and thus will return -insertPosition-1, i.e. -3.
              * To get from that number to the expected value of 1 we need to negate
              * and subtract 2.
-             */
+            
             return index >= 0 ? index : -index - 2;
         }
 
@@ -372,4 +372,4 @@ public class DisplayCutoutForceFullscreenSettings extends SettingsPreferenceFrag
     public int getMetricsCategory() {
         return MetricsEvent.HAVOC_SETTINGS;
     }
-}
+} */

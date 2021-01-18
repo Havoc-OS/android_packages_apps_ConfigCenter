@@ -12,7 +12,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+
 
 package com.havoc.config.center.fragments;
 
@@ -29,7 +29,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.havoc.Utils;
+import com.android.internal.util.custom.Utils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -138,4 +138,4 @@ public class Screen extends SettingsPreferenceFragment implements
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.HAVOC_SETTINGS;
     }
-}
+} */

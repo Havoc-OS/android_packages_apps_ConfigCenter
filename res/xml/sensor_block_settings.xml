@@ -27,4 +27,10 @@
             android:icon="@drawable/ic_menu_add_white"
             android:title="@string/add_sensor_block_package_title" />
     </PreferenceCategory>
+
+    <com.android.settingslib.widget.FooterPreference
+        android:key="sensor_block_footer"
+        android:title="@string/add_sensor_block_package_summary"
+        android:selectable="false"
+        settings:searchable="false"/>
 </PreferenceScreen>

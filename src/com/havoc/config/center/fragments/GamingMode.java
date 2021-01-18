@@ -70,7 +70,7 @@ public class GamingMode extends SettingsPreferenceFragment implements
     private SystemSettingListPreference mRingerMode;
     private SystemSettingListPreference mGamingNotification;
     private SystemSettingSwitchPreference mHeadsUpDisable;
-    private SystemSettingSwitchPreference mHardwareKeysDisable;
+    // private SystemSettingSwitchPreference mHardwareKeysDisable;
     private SystemSettingSwitchPreference mManualBrightness;
     private SystemSettingSwitchPreference mDynamicMode;
 
@@ -97,20 +97,18 @@ public class GamingMode extends SettingsPreferenceFragment implements
         // Get launch-able applications
         addPreferencesFromResource(R.xml.gaming_mode_settings);
 
-        mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.add_gaming_mode_package_summary);
-
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
         mRingerMode = (SystemSettingListPreference) findPreference("gaming_mode_ringer_mode");
         mGamingNotification = (SystemSettingListPreference) findPreference("gaming_mode_notifications");
         mHeadsUpDisable = (SystemSettingSwitchPreference) findPreference("gaming_mode_headsup_toggle");
-        mHardwareKeysDisable = (SystemSettingSwitchPreference) findPreference("gaming_mode_hw_keys_toggle");
+        // mHardwareKeysDisable = (SystemSettingSwitchPreference) findPreference("gaming_mode_hw_keys_toggle");
         mManualBrightness = (SystemSettingSwitchPreference) findPreference("gaming_mode_manual_brightness_toggle");
         mDynamicMode = (SystemSettingSwitchPreference) findPreference("gaming_mode_dynamic_state");
 
-        if (!hasHWkeys()) {
+        /* if (!hasHWkeys()) {
             prefScreen.removePreference(mHardwareKeysDisable);
-        }
+        } */
         
         mPackageManager = getPackageManager();
         mPackageAdapter = new PackageListAdapter(getActivity());
@@ -162,7 +160,7 @@ public class GamingMode extends SettingsPreferenceFragment implements
         mRingerMode.setEnabled(enabled);
         mGamingNotification.setEnabled(enabled);
         mHeadsUpDisable.setEnabled(enabled);
-        mHardwareKeysDisable.setEnabled(enabled);
+        // mHardwareKeysDisable.setEnabled(enabled);
         mManualBrightness.setEnabled(enabled);
         mDynamicMode.setEnabled(enabled);
         mAddGamingPref.setEnabled(enabled);
@@ -178,7 +176,7 @@ public class GamingMode extends SettingsPreferenceFragment implements
         mRingerMode.setEnabled(isChecked);
         mGamingNotification.setEnabled(isChecked);
         mHeadsUpDisable.setEnabled(isChecked);
-        mHardwareKeysDisable.setEnabled(isChecked);
+        // mHardwareKeysDisable.setEnabled(isChecked);
         mManualBrightness.setEnabled(isChecked);
         mDynamicMode.setEnabled(isChecked);
         mAddGamingPref.setEnabled(isChecked);
@@ -289,7 +287,7 @@ public class GamingMode extends SettingsPreferenceFragment implements
 
     };
 
-    private boolean hasHWkeys() {
+    /* private boolean hasHWkeys() {
         final int deviceKeys = getContext().getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
 
@@ -300,7 +298,7 @@ public class GamingMode extends SettingsPreferenceFragment implements
         final boolean hasAppSwitchKey = (deviceKeys & KEY_MASK_APP_SWITCH) != 0;
 
         return (hasHomeKey || hasBackKey || hasMenuKey || hasAppSwitchKey);
-    }
+    } */
 
     private void refreshCustomApplicationPrefs() {
         if (!parsePackageList()) {

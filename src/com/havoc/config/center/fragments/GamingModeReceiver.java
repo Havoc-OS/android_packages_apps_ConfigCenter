@@ -22,7 +22,7 @@ import android.content.Intent;
 import android.provider.Settings;
 import android.util.Log;
 
-import com.android.internal.util.gaming.GamingModeController;
+import com.android.internal.util.custom.GamingModeController;
 
 import com.android.settings.R;
 

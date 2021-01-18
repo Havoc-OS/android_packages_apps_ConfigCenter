@@ -1,4 +1,4 @@
-package com.havoc.config.center.fragments.navbar;
+/* package com.havoc.config.center.fragments.navbar;
 
 import android.content.pm.ActivityInfo;
 import android.provider.Settings;
@@ -51,4 +51,4 @@ public class BackLongPress extends AppPicker {
                 getContentResolver(), Settings.System.KEY_BACK_LONG_PRESS_CUSTOM_ACTIVITY,
                 ai != null ? ai.name : "NONE");
     }
-}
+} */

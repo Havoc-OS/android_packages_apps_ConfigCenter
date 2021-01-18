@@ -499,8 +499,8 @@
     </string-array>
 
     <string-array name="pulse_ambient_light_layout_entries">
-        <item>@string/pulse_ambient_light_layout_solid</item>
         <item>@string/pulse_ambient_light_layout_faded</item>
+        <item>@string/pulse_ambient_light_layout_solid</item>
     </string-array>
     <string-array name="pulse_ambient_light_layout_values" translatable="false">
         <item>0</item>
@@ -514,6 +514,24 @@
     <string-array name="pulse_ambient_light_repeat_direction_values" translatable="false">
         <item>0</item>
         <item>1</item>
+    </string-array>
+
+    <!-- Edge lightning timeout -->
+    <string-array name="ambient_notification_light_timeout_entries" translatable="false">
+        <item>@string/ambient_notification_light_timeout_forever</item>
+        <item>@string/ambient_notification_light_timeout_half_minute</item>
+        <item>@string/ambient_notification_light_timeout_minute</item>
+        <item>@string/ambient_notification_light_timeout_three_minutes</item>
+        <item>@string/ambient_notification_light_timeout_five_minutes</item>
+        <item>@string/ambient_notification_light_timeout_ten_minutes</item>
+    </string-array>
+    <string-array name="ambient_notification_light_timeout_values" translatable="false">
+        <item>0</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>300</item>
+        <item>600</item>
     </string-array>
 
     <!-- Active edge actions -->

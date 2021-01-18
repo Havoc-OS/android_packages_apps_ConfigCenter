@@ -18,114 +18,106 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/config_center_title" >
 
-        <!-- Status Bar -->
-        <Preference
-            android:key="statusbar_category"
-            android:title="@string/statusbar_title"
-            android:summary="@string/statusbar_summary"
-            android:fragment="com.havoc.config.center.fragments.StatusBar" 
-            android:icon="@drawable/ic_settings_statusbar"/>
+    <!-- Status Bar -->
+    <Preference
+        android:key="statusbar_category"
+        android:title="@string/statusbar_title"
+        android:summary="@string/statusbar_summary"
+        android:fragment="com.havoc.config.center.fragments.StatusBar" 
+        android:icon="@drawable/ic_settings_statusbar"/>
 
-        <!-- Quick Settings -->
-        <Preference
-            android:key="quicksettings_category"
-            android:title="@string/quicksettings_title"
-            android:summary="@string/quicksettings_summary"
-            android:fragment="com.havoc.config.center.fragments.QuickSettings"
-            android:icon="@drawable/ic_settings_quicksettings"/>
+    <!-- Quick Settings -->
+    <Preference
+        android:key="quicksettings_category"
+        android:title="@string/quicksettings_title"
+        android:summary="@string/quicksettings_summary"
+        android:fragment="com.havoc.config.center.fragments.QuickSettings"
+        android:icon="@drawable/ic_settings_quicksettings"/>
 
-        <!-- Lock Screen -->
-        <Preference
-            android:key="lockscreen_category"
-            android:title="@string/lockscreen_title"
-            android:summary="@string/lockscreen_summary"
-            android:fragment="com.havoc.config.center.fragments.LockScreen"
-            android:icon="@drawable/ic_settings_lockscreen"/>
+    <!-- Lock Screen -->
+    <Preference
+        android:key="lockscreen_category"
+        android:title="@string/lockscreen_title"
+        android:summary="@string/lockscreen_summary"
+        android:fragment="com.havoc.config.center.fragments.LockScreen"
+        android:icon="@drawable/ic_settings_lockscreen"/>
 
-        <!-- Ambient Display -->
-        <Preference
-            android:key="ambient_display_custom"
-            android:persistent="false"
-            android:title="@string/ambient_display_custom_title"
-            android:summary="@string/ambient_display_custom_summary"
-            android:icon="@drawable/ic_settings_ambient" >
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.custom.ambient.display"
-                android:targetClass="com.custom.ambient.display.DozeSettings" />
-        </Preference>
+    <!-- Ambient Display -->
+    <Preference
+        android:key="ambient_display_custom"
+        android:persistent="false"
+        android:title="@string/ambient_display_custom_title"
+        android:summary="@string/ambient_display_custom_summary"
+        android:icon="@drawable/ic_settings_ambient" >
+        <intent
+        android:action="android.intent.action.MAIN"
+        android:targetPackage="com.custom.ambient.display"
+        android:targetClass="com.custom.ambient.display.DozeSettings" />
+    </Preference>
 
-        <!-- Buttons -->
-        <Preference
-            android:key="buttons_category"
-            android:title="@string/buttons_title"
-            android:summary="@string/buttons_summary"
-            android:fragment="com.havoc.config.center.fragments.Buttons"
-            android:icon="@drawable/ic_settings_buttons"/>
-        
-        <!-- Gestures -->
-        <Preference
-            android:key="gesture_settings"
-            android:title="@string/gesture_preference_title"
-            android:summary="@string/gestures_summary"
-            android:icon="@drawable/ic_settings_gesture"
-            android:fragment="com.android.settings.gestures.GestureSettings"
-            settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
+    <!-- Buttons
+    <Preference
+        android:key="buttons_category"
+        android:title="@string/buttons_title"
+        android:summary="@string/buttons_summary"
+        android:fragment="com.havoc.config.center.fragments.Buttons"
+        android:icon="@drawable/ic_settings_buttons"/> -->
+    
+    <!-- Gestures -->
+    <Preference
+        android:key="gesture_settings"
+        android:title="@string/gesture_preference_title"
+        android:summary="@string/gestures_summary"
+        android:icon="@drawable/ic_settings_gestures"
+        android:fragment="com.android.settings.gestures.GestureSettings"
+        settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
 
-        <!-- Notifications -->
-        <Preference
-            android:key="notifications_category"
-            android:title="@string/notifications_title"
-            android:summary="@string/notifications_summary"
-            android:fragment="com.havoc.config.center.fragments.Notifications"
-            android:icon="@drawable/ic_settings_notifications"/>
+    <!-- Notifications -->
+    <Preference
+        android:key="notifications_category"
+        android:title="@string/notifications_title"
+        android:summary="@string/notifications_summary"
+        android:fragment="com.havoc.config.center.fragments.Notifications"
+        android:icon="@drawable/ic_settings_notifications"/>
 
-        <!-- Battery Saving -->
-        <Preference
-            android:key="battery_category"
-            android:title="@string/battery_title"
-            android:summary="@string/battery_saving_summary"
-            android:fragment="com.havoc.config.center.fragments.Battery"
-            android:icon="@drawable/ic_settings_batterysave"/>
+    <!-- Battery Saving -->
+    <Preference
+        android:key="battery_category"
+        android:title="@string/battery_title"
+        android:summary="@string/battery_saving_summary"
+        android:fragment="com.havoc.config.center.fragments.Battery"
+        android:icon="@drawable/ic_settings_batterysave"/>
 
-        <!-- Screen -->
-        <Preference
-            android:key="screen_category"
-            android:title="@string/screen_title"
-            android:summary="@string/screen_summary"
-            android:fragment="com.havoc.config.center.fragments.Screen"
-            android:icon="@drawable/ic_settings_screen"/>
+    <!-- Screen
+    <Preference
+        android:key="screen_category"
+        android:title="@string/screen_title"
+        android:summary="@string/screen_summary"
+        android:fragment="com.havoc.config.center.fragments.Screen"
+        android:icon="@drawable/ic_settings_screen"/> -->
 
-        <!-- Animation -->
-        <Preference
-            android:key="animations_category"
-            android:title="@string/animations_title"
-            android:summary="@string/animations_summary"
-            android:fragment="com.havoc.config.center.fragments.Animations"
-            android:icon="@drawable/ic_settings_animations"/>
+    <!-- Media -->
+    <Preference
+        android:key="media_category"
+        android:title="@string/media_title"
+        android:summary="@string/media_summary"
+        android:fragment="com.havoc.config.center.fragments.Media"
+        android:icon="@drawable/ic_settings_media"/>
 
-        <!-- Media -->
-        <Preference
-            android:key="media_category"
-            android:title="@string/media_title"
-            android:summary="@string/media_summary"
-            android:fragment="com.havoc.config.center.fragments.Media"
-            android:icon="@drawable/ic_settings_media"/>
+    <!-- Misc -->
+    <Preference
+        android:key="misc_category"
+        android:title="@string/misc_title"
+        android:summary="@string/misc_summary"
+        android:fragment="com.havoc.config.center.fragments.Misc"
+        android:icon="@drawable/ic_settings_misc"/>
 
-        <!-- Misc -->
-        <Preference
-            android:key="misc_category"
-            android:title="@string/misc_title"
-            android:summary="@string/misc_summary"
-            android:fragment="com.havoc.config.center.fragments.Misc"
-            android:icon="@drawable/ic_settings_misc"/>
-
-        <!-- About -->
-        <Preference
-            android:key="about_category"
-            android:title="@string/about_title"
-            android:summary="@string/about_summary"
-            android:fragment="com.havoc.config.center.fragments.About"
-            android:icon="@drawable/ic_settings_about"/>
+    <!-- About -->
+    <Preference
+        android:key="about_category"
+        android:title="@string/about_title"
+        android:summary="@string/about_summary"
+        android:fragment="com.havoc.config.center.fragments.About"
+        android:icon="@drawable/ic_settings_about"/>
 
 </PreferenceScreen>

@@ -25,18 +25,18 @@
         android:summary="@string/gaming_mode_summary"
         android:defaultValue="false" />
 
-    <com.havoc.support.preferences.SystemSettingListPreference
+    <!--<com.havoc.support.preferences.SystemSettingListPreference
         android:key="screenshot_type"
         android:title="@string/screenshot_type_title"
         android:entries="@array/screenshot_type_entries"
         android:entryValues="@array/screenshot_type_values"
-        android:defaultValue="0" />
+        android:defaultValue="0" />-->
 
     <PreferenceCategory
         android:key="charge"
         android:title="@string/charge_title">
 
-        <com.havoc.support.preferences.GlobalSettingSwitchPreference
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
             android:title="@string/wakeup_when_plugged_unplugged_title"
             android:summary="@string/wakeup_when_plugged_unplugged_summary"
@@ -46,23 +46,6 @@
             android:key="charging_animation"
             android:title="@string/charging_animation_title"
             android:summary="@string/charging_animation_summary"
-            android:defaultValue="true" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="dashboard_category"
-        android:title="@string/dashboard_category">
-
-        <com.havoc.support.preferences.SystemSettingSwitchPreference
-            android:key="settings_show_conditions"
-            android:title="@string/dashboard_conditions_title"
-            android:summary="@string/dashboard_conditions_summary"
-            android:defaultValue="true" />
-
-        <com.havoc.support.preferences.SystemSettingSwitchPreference
-            android:key="settings_show_suggestions"
-            android:title="@string/dashboard_suggestions_title"
-            android:summary="@string/dashboard_suggestions_summary"
             android:defaultValue="true" />
     </PreferenceCategory>
 </PreferenceScreen>
