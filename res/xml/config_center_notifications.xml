@@ -72,6 +72,12 @@
         android:title="@string/notification_misc">
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="notification_headers"
+            android:title="@string/notification_headers_title"
+            android:summary="@string/notification_headers_summary"
+            android:defaultValue="true" />
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="notification_guts_kill_app_button"
             android:title="@string/notification_guts_kill_app_button_title"
             android:summary="@string/notification_guts_kill_app_button_summary"
