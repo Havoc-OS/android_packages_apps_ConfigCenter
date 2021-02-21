@@ -76,6 +76,15 @@
     <string name="device_hotdog" translatable="false">OnePlus 7T Pro</string>
     <string name="device_hotdog_summary" translatable="false">hotdog\nAnushek Prasal (SKULSHADY)</string>
 
+    <string name="device_instantnoodle" translatable="false">OnePlus 8</string>
+    <string name="device_instantnoodle_summary" translatable="false">instantnoodle\nChris Chen (cjh1249131356)</string>
+
+    <string name="device_instantnoodlep" translatable="false">OnePlus 8 Pro</string>
+    <string name="device_instantnoodlep_summary" translatable="false">instantnoodlep\nChris Chen (cjh1249131356)</string>
+
+    <string name="device_kebab" translatable="false">OnePlus 8T</string>
+    <string name="device_kebab_summary" translatable="false">kebab\nChris Chen (cjh1249131356)</string>
+
     <string name="device_taimen" translatable="false">Google Pixel 2 XL</string>
     <string name="device_taimen_summary" translatable="false">taimen\nSteve Provancal (slothdabski)</string>
 

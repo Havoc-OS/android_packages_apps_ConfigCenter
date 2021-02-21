@@ -146,6 +146,36 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/SKULSHADY" />
         </Preference>
+
+        <Preference
+            android:id="@+id/device_instantnoodle"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_instantnoodle_summary"
+            android:title="@string/device_instantnoodle">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/cjh1249131356" />
+        </Preference>
+
+        <Preference
+            android:id="@+id/device_instantnoodlep"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_instantnoodlep_summary"
+            android:title="@string/device_instantnoodlep">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/cjh1249131356" />
+        </Preference>
+
+        <Preference
+            android:id="@+id/device_kebab"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_kebab_summary"
+            android:title="@string/device_kebab">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/cjh1249131356" />
+        </Preference>
     </PreferenceCategory>
 
     <PreferenceCategory
