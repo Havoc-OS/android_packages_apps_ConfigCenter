@@ -12,7 +12,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
-
+*/
 
 package com.havoc.config.center.fragments;
 
@@ -46,21 +46,20 @@ import java.util.List;
 public class Screen extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    private static final String SYSUI_ROUNDED_SIZE = "sysui_rounded_size";
-    private static final String SYSUI_ROUNDED_CONTENT_PADDING = "sysui_rounded_content_padding";
-    private static final String SYSUI_ROUNDED_FWVALS = "sysui_rounded_fwvals";
+    // private static final String SYSUI_ROUNDED_SIZE = "sysui_rounded_size";
+    // private static final String SYSUI_ROUNDED_CONTENT_PADDING = "sysui_rounded_content_padding";
+    // private static final String SYSUI_ROUNDED_FWVALS = "sysui_rounded_fwvals";
     private static final String KEY_CUTOUT_CATEGORY = "cutout_category";
 
-    private CustomSeekBarPreference mCornerRadius;
-    private CustomSeekBarPreference mContentPadding;
-    private SecureSettingSwitchPreference mRoundedFwvals;
-    private SecureSettingSwitchPreference mCutoutCategory;
+    // private CustomSeekBarPreference mCornerRadius;
+    // private CustomSeekBarPreference mContentPadding;
+    // private SecureSettingSwitchPreference mRoundedFwvals;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.config_center_screen);
-        ContentResolver resolver = getActivity().getContentResolver();
+        /* ContentResolver resolver = getActivity().getContentResolver();
         Resources res = null;
         Context ctx = getContext();
         float density = Resources.getSystem().getDisplayMetrics().density;
@@ -69,15 +68,15 @@ public class Screen extends SettingsPreferenceFragment implements
             res = ctx.getPackageManager().getResourcesForApplication("com.android.systemui");
         } catch (NameNotFoundException e) {
             e.printStackTrace();
-        }
+        } */
 
-        final PreferenceCategory cutoutCategory =
+        /* final PreferenceCategory cutoutCategory =
             (PreferenceCategory) getPreferenceScreen().findPreference(KEY_CUTOUT_CATEGORY);
         if (!Utils.hasNotch(getContext())) {
             getPreferenceScreen().removePreference(cutoutCategory);
-        }
+        } */
 
-        // Rounded Corner Radius
+        /* // Rounded Corner Radius
         mCornerRadius = (CustomSeekBarPreference) findPreference(SYSUI_ROUNDED_SIZE);
         int resourceIdRadius = (int) ctx.getResources().getDimension(com.android.internal.R.dimen.rounded_corner_radius);
         int cornerRadius = Settings.Secure.getIntForUser(ctx.getContentResolver(), Settings.Secure.SYSUI_ROUNDED_SIZE,
@@ -97,12 +96,12 @@ public class Screen extends SettingsPreferenceFragment implements
 
         // Rounded use Framework Values
         mRoundedFwvals = (SecureSettingSwitchPreference) findPreference(SYSUI_ROUNDED_FWVALS);
-        mRoundedFwvals.setOnPreferenceChangeListener(this);
+        mRoundedFwvals.setOnPreferenceChangeListener(this); */
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mCornerRadius) {
+        /* if (preference == mCornerRadius) {
             Settings.Secure.putIntForUser(getContext().getContentResolver(), Settings.Secure.SYSUI_ROUNDED_SIZE,
                     (int) newValue, UserHandle.USER_CURRENT);
             return true;
@@ -113,11 +112,11 @@ public class Screen extends SettingsPreferenceFragment implements
         } else if (preference == mRoundedFwvals) {
             restoreCorners();
             return true;
-        }
+        } */
         return false;
     }
 
-    private void restoreCorners() {
+    /* private void restoreCorners() {
         Resources res = null;
         float density = Resources.getSystem().getDisplayMetrics().density;
         Context ctx = getContext();
@@ -132,10 +131,10 @@ public class Screen extends SettingsPreferenceFragment implements
         int resourceIdPadding = res.getIdentifier("com.android.systemui:dimen/rounded_corner_content_padding", null, null);
         mCornerRadius.setValue((int) (resourceIdRadius / density));
         mContentPadding.setValue((int) (res.getDimension(resourceIdPadding) / density));
-    }
+    } */
 
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.HAVOC_SETTINGS;
     }
-} */
+}

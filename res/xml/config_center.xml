@@ -88,13 +88,13 @@
         android:fragment="com.havoc.config.center.fragments.Battery"
         android:icon="@drawable/ic_settings_batterysave"/>
 
-    <!-- Screen
+    <!-- Screen -->
     <Preference
         android:key="screen_category"
         android:title="@string/screen_title"
         android:summary="@string/screen_summary"
         android:fragment="com.havoc.config.center.fragments.Screen"
-        android:icon="@drawable/ic_settings_screen"/> -->
+        android:icon="@drawable/ic_settings_screen"/>
 
     <!-- Media -->
     <Preference

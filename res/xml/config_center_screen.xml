@@ -42,7 +42,7 @@
             android:fragment="com.havoc.config.center.fragments.DisplayCutoutForceFullscreenSettings" />
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!--<PreferenceCategory
         android:key="corners_category"
         android:title="@string/corners_category_title">
 
@@ -70,6 +70,6 @@
             settings:units="dp"
             android:persistent="false"
             android:dependency="sysui_rounded_fwvals" />
-    </PreferenceCategory>
+    </PreferenceCategory>-->
 
 </PreferenceScreen>
