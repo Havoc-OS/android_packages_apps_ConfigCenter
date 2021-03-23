@@ -22,19 +22,6 @@
         android:key="cutout_category"
         android:title="@string/cutout_category_title">
 
-        <com.havoc.support.preferences.SystemSettingListPreference
-            android:key="display_cutout_mode"
-            android:title="@string/display_cutout_mode_title"
-            android:entries="@array/display_cutout_mode_entries"
-            android:entryValues="@array/display_cutout_mode_values"
-            android:defaultValue="0" />
-
-        <com.havoc.support.preferences.SystemSettingSwitchPreference
-            android:key="stock_statusbar_in_hide"
-            android:title="@string/stock_statusbar_in_hide"
-            android:summary="@string/stock_statusbar_in_hide_summary"
-            android:defaultValue="true" />
-
         <Preference
             android:key="display_cutout_force_fullscreen_settings"
             android:title="@string/display_cutout_force_fullscreen_title"
