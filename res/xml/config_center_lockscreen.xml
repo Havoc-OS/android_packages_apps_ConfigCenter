@@ -29,7 +29,7 @@
             android:defaultValue="true" />
     </PreferenceCategory>
 
-    <!--<PreferenceCategory
+    <PreferenceCategory
         android:key="ls_fingerprint"
         android:title="@string/ls_fingerprint">
 
@@ -46,12 +46,12 @@
             android:defaultValue="true"
             android:dependency="screen_off_fod" />
 
-        <com.havoc.support.preferences.SystemSettingSwitchPreference
+        <!--<com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="fod_recognizing_animation"
             android:title="@string/fod_recognizing_animation_title"
             android:summary="@string/fod_recognizing_animation_summary"
-            android:defaultValue="true" />
-    </PreferenceCategory>-->
+            android:defaultValue="true" />-->
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="ls_disable_elements"
