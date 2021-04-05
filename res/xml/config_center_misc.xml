@@ -20,7 +20,7 @@
 
     <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
         android:key="gaming_mode_enabled"
-        android:fragment="com.havoc.config.center.fragments.GamingMode"
+        android:fragment="com.havoc.config.center.fragments.GamingModeSettings"
         android:title="@string/gaming_mode_title"
         android:summary="@string/gaming_mode_summary"
         android:defaultValue="false" />
