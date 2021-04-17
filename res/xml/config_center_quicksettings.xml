@@ -111,7 +111,7 @@
             android:max="4"
             settings:min="1"
             settings:units=""
-            android:defaultValue="3"
+            android:defaultValue="2"
             android:persistent="false" />
 
         <com.havoc.support.preferences.CustomSeekBarPreference
@@ -128,32 +128,7 @@
             android:title="@string/qs_tile_title_visibility_title"
             android:summary="@string/qs_tile_title_visibility_summary"
             android:defaultValue="true" />
-
     </PreferenceCategory>
-
-    <!--<PreferenceCategory
-        android:key="brightness_slider"
-        android:title="@string/qs_brightness_slider">
-
-        <com.havoc.support.preferences.SecureSettingListPreference
-            android:key="qs_show_brightness_slider"
-            android:title="@string/qs_brightness_slider_title"
-            android:entries="@array/qs_brightness_slider_entries"
-            android:entryValues="@array/qs_brightness_slider_values"
-            android:defaultValue="1" />
-
-        <com.havoc.support.preferences.SecureSettingSwitchPreference
-            android:key="qs_show_auto_brightness"
-            android:title="@string/brightness_icon_title"
-            android:summary="@string/brightness_icon_summary"
-            android:defaultValue="true" />
-
-        <com.havoc.support.preferences.SecureSettingSwitchPreference
-            android:key="qs_show_brightness_buttons"
-            android:title="@string/qs_show_brightness_buttons_title"
-            android:summary="@string/qs_show_brightness_buttons_summary"
-            android:defaultValue="true" />
-    </PreferenceCategory>-->
 
     <PreferenceCategory
         android:key="qs_footer"
@@ -170,12 +145,6 @@
             android:title="@string/qs_footer_services_title"
             android:summary="@string/qs_footer_services_summary"
             android:defaultValue="false" />
-
-        <com.havoc.support.preferences.SystemSettingSwitchPreference
-            android:key="qs_footer_show_user"
-            android:title="@string/qs_footer_user_title"
-            android:summary="@string/qs_footer_user_summary"
-            android:defaultValue="true" />
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="qs_footer_show_edit"
