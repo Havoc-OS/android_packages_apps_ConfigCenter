@@ -27,11 +27,11 @@
         android:summary="%s"
         android:defaultValue="1" />
 
-    <!--<com.havoc.support.preferences.SystemSettingSwitchPreference
+    <com.havoc.support.preferences.SystemSettingSwitchPreference
         android:key="gaming_mode_hw_keys_toggle"
         android:title="@string/gaming_mode_hardware_keys_title"
         android:summary="@string/gaming_mode_hardware_keys_summary"
-        android:defaultValue="false" />-->
+        android:defaultValue="false" />
 
     <com.havoc.support.preferences.SystemSettingSwitchPreference
         android:key="gaming_mode_manual_brightness_toggle"

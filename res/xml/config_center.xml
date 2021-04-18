@@ -55,13 +55,13 @@
         android:targetClass="com.custom.ambient.display.DozeSettings" />
     </Preference>
 
-    <!-- Buttons
+    <!-- Buttons -->
     <Preference
         android:key="buttons_category"
         android:title="@string/buttons_title"
         android:summary="@string/buttons_summary"
         android:fragment="com.havoc.config.center.fragments.Buttons"
-        android:icon="@drawable/ic_settings_buttons"/> -->
+        android:icon="@drawable/ic_settings_buttons"/>
     
     <!-- Gestures -->
     <Preference
