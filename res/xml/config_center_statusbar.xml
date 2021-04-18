@@ -108,11 +108,6 @@
                 android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
         </Preference>
 
-        <com.havoc.support.preferences.SwitchPreference
-            android:key="use_old_mobiletype"
-            android:title="@string/use_old_mobiletype_title"
-            android:summary="@string/use_old_mobiletype_summary" />
-
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="status_bar_notif_count"
             android:title="@string/status_bar_notif_count_title"

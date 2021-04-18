@@ -39,7 +39,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
 
     private static final String STATUSBAR_CLOCK = "statusbar_clock";
     private static final String STATUS_BAR_LOGO = "status_bar_logo";
-    private static final String KEY_USE_OLD_MOBILETYPE = "use_old_mobiletype";
     private static final String NETWORK_TRAFFIC = "network_traffic_state";
     private static final String BATTERY_BAR = "statusbar_battery_bar";
     private static final String CARRIER_LABEL = "carrier_label_enabled";
@@ -49,7 +48,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private SystemSettingMasterSwitchPreference mNetworkTraffic;
     private SystemSettingMasterSwitchPreference mBatteryBar;
     private SystemSettingMasterSwitchPreference mCarrierLabel;
-    private SwitchPreference mUseOldMobileType;
     private ListPreference mBatteryStyle;
     private ListPreference mBatteryPercent;
     private int mBatteryPercentValue;
@@ -64,11 +62,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
 
         mHandler = new Handler();
-
-        mUseOldMobileType = (SwitchPreference) findPreference(KEY_USE_OLD_MOBILETYPE);
-        mUseOldMobileType.setChecked((Settings.System.getInt(resolver,
-                Settings.System.USE_OLD_MOBILETYPE, 0) == 1));
-        mUseOldMobileType.setOnPreferenceChangeListener(this);
 
         mBatteryStyle = (ListPreference) findPreference("status_bar_battery_style");
         int batterystyle = Settings.System.getIntForUser(resolver,
@@ -126,11 +119,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUS_BAR_LOGO, value ? 1 : 0);
-            return true;
-        } else if (preference == mUseOldMobileType) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.USE_OLD_MOBILETYPE, value ? 1 : 0);
             return true;
 		} else if (preference == mBatteryStyle) {
             int batterystyle = Integer.parseInt((String) newValue);
