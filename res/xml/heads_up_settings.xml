@@ -30,16 +30,16 @@
         android:entryValues="@array/heads_up_snooze_values"
         android:persistent="false" />
 
-	<!--<com.havoc.support.preferences.SystemSettingSwitchPreference
-        android:key="show_media_heads_up"
-        android:title="@string/show_media_heads_up_title"
-        android:summary="@string/show_media_heads_up_summary"
-        android:defaultValue="false" />-->
-
 	<com.havoc.support.preferences.SystemSettingSwitchPreference
         android:key="less_boring_heads_up"
         android:title="@string/less_boring_heads_up_title"
         android:summary="@string/less_boring_heads_up_summary"
+        android:defaultValue="false" />
+
+	<com.havoc.support.preferences.SystemSettingSwitchPreference
+        android:key="dont_touch_headsup"
+        android:title="@string/dont_touch_headsup_title"
+        android:summary="@string/dont_touch_headsup_summary"
         android:defaultValue="false" />
 
     <PreferenceCategory

@@ -73,7 +73,7 @@ public class HeadsUp extends SettingsPreferenceFragment implements
     private ListPreference mHeadsUpTimeOut;
     private ListPreference mHeadsUpSnoozeTime;
     private SystemSettingSwitchPreference mLessBoring;
-    // private SystemSettingSwitchPreference mMediaHeadsUp;
+    private SystemSettingSwitchPreference mDisableLaunch;
 
     private String mStoplistPackageList;
     private String mBlacklistPackageList;
@@ -114,7 +114,7 @@ public class HeadsUp extends SettingsPreferenceFragment implements
         }
 
         mLessBoring = (SystemSettingSwitchPreference) findPreference("less_boring_heads_up");
-        // mMediaHeadsUp = (SystemSettingSwitchPreference) findPreference("show_media_heads_up");
+        mDisableLaunch = (SystemSettingSwitchPreference) findPreference("dont_touch_headsup");
 
         int defaultTimeOut = systemUiResources.getInteger(systemUiResources.getIdentifier(
                     "com.android.systemui:integer/heads_up_notification_decay", null, null));
@@ -167,6 +167,7 @@ public class HeadsUp extends SettingsPreferenceFragment implements
         mHeadsUpTimeOut.setEnabled(enabled);
         mHeadsUpSnoozeTime.setEnabled(enabled);
         mLessBoring.setEnabled(enabled);
+        mDisableLaunch.setEnabled(enabled);
         mAddStoplistPref.setEnabled(enabled);
         mAddBlacklistPref.setEnabled(enabled);
         // mMediaHeadsUp.setEnabled(enabled);
@@ -182,6 +183,7 @@ public class HeadsUp extends SettingsPreferenceFragment implements
         mHeadsUpTimeOut.setEnabled(isChecked);
         mHeadsUpSnoozeTime.setEnabled(isChecked);
         mLessBoring.setEnabled(isChecked);
+        mDisableLaunch.setEnabled(isChecked);
         mAddStoplistPref.setEnabled(isChecked);
         mAddBlacklistPref.setEnabled(isChecked);
         // mMediaHeadsUp.setEnabled(isChecked);
