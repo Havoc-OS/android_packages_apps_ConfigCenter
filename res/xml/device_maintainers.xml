@@ -152,15 +152,15 @@
         android:id="@+id/device_category_google"
         android:title="@string/device_category_google_title">
 
-        <!--<Preference
+        <Preference
             android:id="@+id/device_taimen"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_taimen_summary"
             android:title="@string/device_taimen" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/steveproski" />
-        </Preference>-->
+                android:data="https://t.me/bravesoul349" />
+        </Preference>
 
         <Preference
             android:id="@+id/device_blueline"
