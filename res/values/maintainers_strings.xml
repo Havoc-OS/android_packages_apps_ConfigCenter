@@ -76,6 +76,9 @@
     <string name="device_hotdog" translatable="false">OnePlus 7T Pro</string>
     <string name="device_hotdog_summary" translatable="false">hotdog\nAnushek Prasal (SKULSHADY)</string>
 
+    <string name="device_walleye" translatable="false">Google Pixel 2</string>
+    <string name="device_walleye_summary" translatable="false">walleye\nSaurabh Jarial (bravesoul349)</string>
+
     <string name="device_taimen" translatable="false">Google Pixel 2 XL</string>
     <string name="device_taimen_summary" translatable="false">taimen\nSaurabh Jarial (bravesoul349)</string>
 

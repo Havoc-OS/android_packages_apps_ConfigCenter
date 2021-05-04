@@ -153,6 +153,16 @@
         android:title="@string/device_category_google_title">
 
         <Preference
+            android:id="@+id/device_walleye"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_walleye_summary"
+            android:title="@string/device_walleye" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/bravesoul349" />
+        </Preference>
+
+        <Preference
             android:id="@+id/device_taimen"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_taimen_summary"
