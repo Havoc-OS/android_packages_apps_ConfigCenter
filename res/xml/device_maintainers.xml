@@ -854,6 +854,16 @@
         </Preference>
 
         <Preference
+            android:id="@+id/device_juice"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_juice_summary"
+            android:title="@string/device_juice" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/el_senyor" />
+        </Preference>
+
+        <Preference
             android:id="@+id/device_ysl"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_ysl_summary"

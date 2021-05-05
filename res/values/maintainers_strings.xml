@@ -280,6 +280,9 @@
     <string name="device_miatoll" translatable="false">Xiaomi Redmi Note 9S/9 Pro/9 Pro Max/Poco M2 Pro [Unified]</string>
     <string name="device_miatoll_summary" translatable="false">miatoll\nRizak Kamal (ijak)</string>
 
+    <string name="device_juice" translatable="false">Xiaomi Redmi 9T/Note 9 4G/9 Power/Poco M3 [Unified]</string>
+    <string name="device_juice_summary" translatable="false">juice\nJoaquin Guzman (el_senyor)</string>
+
     <string name="device_ysl" translatable="false">Xiaomi Redmi S2</string>
     <string name="device_ysl_summary" translatable="false">ysl\nTushar Mahajan (mahajant99)</string>
 
