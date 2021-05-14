@@ -59,12 +59,12 @@
             android:summary="@string/heads_up_notifications_summary"
             android:defaultValue="true" />
 
-        <!--<com.havoc.support.preferences.SystemSettingMasterSwitchPreference
+        <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
             android:key="status_bar_show_ticker"
             android:fragment="com.havoc.config.center.fragments.Ticker"
             android:title="@string/ticker_screen_title"
             android:summary="@string/ticker_screen_summary"
-            android:defaultValue="false" />-->
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
