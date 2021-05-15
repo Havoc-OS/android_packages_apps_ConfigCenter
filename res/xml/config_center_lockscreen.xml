@@ -57,11 +57,11 @@
         android:key="ls_disable_elements"
         android:title="@string/ls_disable_elements">
 
-        <!--<com.havoc.support.preferences.SystemSettingSwitchPreference
-            android:key="lockscreen_show_status_bar"
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_status_bar"
             android:title="@string/lockscreen_show_status_bar_title"
             android:summary="@string/lockscreen_show_status_bar_summary"
-            android:defaultValue="true" />-->
+            android:defaultValue="true" />
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="status_bar_locked_on_secure_keyguard"
