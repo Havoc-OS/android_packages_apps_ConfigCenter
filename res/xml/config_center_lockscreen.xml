@@ -57,6 +57,15 @@
         android:key="ls_disable_elements"
         android:title="@string/interface_title">
 
+        <com.havoc.support.preferences.SystemSettingSeekBarPreference
+            android:key="lockscreen_blur"
+            android:title="@string/lockscreen_blur_title"
+            android:max="100"
+            settings:min="0"
+            settings:units="%"
+            settings:interval="5"
+            android:defaultValue="0" />
+
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_status_bar"
             android:title="@string/lockscreen_show_status_bar_title"

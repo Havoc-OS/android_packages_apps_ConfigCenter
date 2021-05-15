@@ -963,4 +963,7 @@
     <string name="backlight_summary_enabled_with_timeout">Enabled for <xliff:g id="timeout">%s</xliff:g></string>
     <string name="backlight_summary_enabled">Enabled</string>
 
+    <!-- Lockscreen blur -->
+    <string name="lockscreen_blur_title">Background blur</string>
+
 </resources>

@@ -31,6 +31,7 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.havoc.config.center.preferences.Utils;
 import com.havoc.support.preferences.SwitchPreference;
 import com.havoc.support.preferences.SystemSettingSeekBarPreference;
 import com.havoc.support.preferences.SystemSettingSwitchPreference;
@@ -39,10 +40,12 @@ public class LockScreen extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String KEY_SCREEN_OFF_FOD = "screen_off_fod";
+    private static final String KEY_LOCKSCREEN_BLUR = "lockscreen_blur";
     private static final String KEY_FOD_CATEGORY = "ls_fingerprint";
 
     private PreferenceCategory mFODCategory;
     private SwitchPreference mScreenOffFOD;
+    private SystemSettingSeekBarPreference mLockscreenBlur;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -61,6 +64,11 @@ public class LockScreen extends SettingsPreferenceFragment implements
         mFODCategory = (PreferenceCategory) findPreference(KEY_FOD_CATEGORY);
         if (!packageManager.hasSystemFeature(LineageContextConstants.Features.FOD)) {
             mFODCategory.setVisible(false);
+        }
+
+        mLockscreenBlur = (SystemSettingSeekBarPreference) findPreference(KEY_LOCKSCREEN_BLUR);
+        if (!Utils.isBlurSupported()) {
+            mLockscreenBlur.setVisible(false);
         }
     }
 
