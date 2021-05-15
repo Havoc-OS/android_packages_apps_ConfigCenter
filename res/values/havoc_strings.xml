@@ -102,7 +102,7 @@
     <string name="double_tap_custom_app_title">Double tap custom app</string>
 
     <!-- Lockscreen Categories -->
-    <string name="ls_disable_elements">Elements</string>
+    <string name="interface_title">Interface</string>
 
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Charging info</string>

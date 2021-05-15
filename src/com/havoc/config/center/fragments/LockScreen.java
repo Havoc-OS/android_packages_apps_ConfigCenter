@@ -21,7 +21,9 @@ import android.content.ContentResolver;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.provider.Settings;
+
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 
 import com.android.internal.custom.app.LineageContextConstants;
 import com.android.internal.logging.nano.MetricsProto;
@@ -30,18 +32,17 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.havoc.support.preferences.SwitchPreference;
+import com.havoc.support.preferences.SystemSettingSeekBarPreference;
 import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
 public class LockScreen extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    // private static final String FOD_ANIMATION_PREF = "fod_recognizing_animation";
     private static final String KEY_SCREEN_OFF_FOD = "screen_off_fod";
-    private static final String KEY_SCREEN_OFF_FOD_ICON = "screen_off_fod_icon";
+    private static final String KEY_FOD_CATEGORY = "ls_fingerprint";
 
-    // private SystemSettingSwitchPreference mFODAnimationEnabled;
+    private PreferenceCategory mFODCategory;
     private SwitchPreference mScreenOffFOD;
-    private SystemSettingSwitchPreference mScreenOffFODIcon;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -50,8 +51,6 @@ public class LockScreen extends SettingsPreferenceFragment implements
 
         PackageManager packageManager = getPackageManager();
 
-        // mFODAnimationEnabled = (SystemSettingSwitchPreference) findPreference(FOD_ANIMATION_PREF);
-
         boolean mScreenOffFODValue = Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.SCREEN_OFF_FOD, 0) != 0;
 
@@ -59,12 +58,9 @@ public class LockScreen extends SettingsPreferenceFragment implements
         mScreenOffFOD.setChecked(mScreenOffFODValue);
         mScreenOffFOD.setOnPreferenceChangeListener(this);
 
-        mScreenOffFODIcon = (SystemSettingSwitchPreference) findPreference(KEY_SCREEN_OFF_FOD_ICON);
-
+        mFODCategory = (PreferenceCategory) findPreference(KEY_FOD_CATEGORY);
         if (!packageManager.hasSystemFeature(LineageContextConstants.Features.FOD)) {
-            // mFODAnimationEnabled.setVisible(false);
-            mScreenOffFOD.setVisible(false);
-            mScreenOffFODIcon.setVisible(false);
+            mFODCategory.setVisible(false);
         }
     }
 
