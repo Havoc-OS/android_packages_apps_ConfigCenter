@@ -61,8 +61,8 @@
             android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings"
             settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController" />
 
-        <!--<ListPreference
-            android:key="nav_bar_layout"
+        <ListPreference
+            android:key="navbar_layout_views"
             android:title="@string/nav_bar_layout"
             android:summary="%s"
             android:defaultValue="default"
@@ -71,22 +71,22 @@
             android:entryValues="@array/nav_bar_layouts_values" />
 
         <com.havoc.support.preferences.SecureSettingSwitchPreference
-            android:key="sysui_nav_bar_inverse"
+            android:key="navbar_inverse_layout"
             android:title="@string/navbar_invert_layout_title"
             android:summary="@string/navbar_invert_layout_summary"
             android:defaultValue="false" />
 
-        <com.havoc.support.preferences.SystemSettingSwitchPreference
+        <!--<com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="navigation_bar_ime_space"
             android:title="@string/navigation_bar_ime_space_title"
             android:summary="@string/navigation_bar_ime_space_summary"
-            android:defaultValue="true" />
+            android:defaultValue="true" />-->
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="navigation_bar_menu_arrow_keys"
             android:title="@string/navigation_bar_arrow_keys_title"
             android:summary="@string/navigation_bar_arrow_keys_summary"
-            android:defaultValue="false" />-->
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -99,8 +99,8 @@
             android:summary="@string/swap_volume_buttons_summary"
             android:defaultValue="false" />
 
-        <!--<com.havoc.support.preferences.SystemSettingSwitchPreference
-            android:key="volume_rocker_wake"
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="volume_wake_screen"
             android:summary="@string/volume_rocker_wake_summary"
             android:title="@string/volume_rocker_wake_title"
             android:defaultValue="false" />
@@ -117,7 +117,7 @@
             android:title="@string/volume_key_cursor_control_title"
             android:entries="@array/volume_key_cursor_control_entries"
             android:entryValues="@array/volume_key_cursor_control_values"
-            android:defaultValue="0" />-->
+            android:defaultValue="0" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -129,6 +129,12 @@
             android:title="@string/button_wake_title"
             android:summary="@string/button_wake_summary"
             android:defaultValue="true" />
+
+        <com.havoc.support.preferences.SwitchPreference
+            android:key="home_answer_call"
+            android:title="@string/home_answer_call_title"
+            android:summary="@string/home_answer_call_summary"
+            android:persistent="false"/>
 
         <ListPreference
             android:key="hardware_keys_home_long_press"

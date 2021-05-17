@@ -45,7 +45,9 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.custom.preference.CustomDialogPreference;
 
 import com.havoc.config.center.preferences.ButtonSettingsUtils;
+import com.havoc.support.preferences.SecureSettingSwitchPreference;
 import com.havoc.support.preferences.SwitchPreference;
+import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
 import java.util.List;
 import java.util.UUID;
@@ -57,6 +59,7 @@ public class Buttons extends SettingsPreferenceFragment implements
     private static final String KEY_HWKEYS_ENABLED = "hardware_keys_enable";
     private static final String KEY_ANBI = "anbi_enabled";
     private static final String KEY_BUTTON_BACKLIGHT = "button_backlight";
+    private static final String KEY_HOME_ANSWER_CALL = "home_answer_call";
     private static final String KEY_HOME_LONG_PRESS = "hardware_keys_home_long_press";
     private static final String KEY_HOME_DOUBLE_TAP = "hardware_keys_home_double_tap";
     private static final String KEY_BACK_LONG_PRESS = "hardware_keys_back_long_press";
@@ -69,6 +72,9 @@ public class Buttons extends SettingsPreferenceFragment implements
     private static final String KEY_GESTURE_SYSTEM = "gesture_system_navigation";
     private static final String DISABLE_NAV_KEYS = "disable_nav_keys";
     private static final String KEY_SWAP_CAPACITIVE_KEYS = "swap_capacitive_keys";
+    private static final String KEY_NAV_BAR_LAYOUT = "navbar_layout_views";
+    private static final String KEY_SWAP_NAVBAR = "navbar_inverse_layout";
+    private static final String KEY_NAVIGATION_BAR_ARROWS = "navigation_bar_menu_arrow_keys";
 
     private static final String CATEGORY_HW = "hw_keys";
     private static final String CATEGORY_HOME = "home_key";
@@ -79,6 +85,7 @@ public class Buttons extends SettingsPreferenceFragment implements
     private static final String CATEGORY_CAMERA = "camera_key";
     private static final String CATEGORY_BACKLIGHT = "key_backlight";
 
+    private SwitchPreference mHomeAnswerCall;
     private ListPreference mHomeLongPressAction;
     private ListPreference mHomeDoubleTapAction;
     private ListPreference mBackLongPressAction;
@@ -97,6 +104,9 @@ public class Buttons extends SettingsPreferenceFragment implements
     private SwitchPreference mSwapCapacitiveKeys;
     private Preference mGestureSystemNavigation;
     private ButtonBacklightBrightness backlight;
+    private ListPreference mNavBarLayout;
+    private SecureSettingSwitchPreference mSwapNavbar;
+    private SystemSettingSwitchPreference mNavigationArrowKeys;
 
     private Handler mHandler;
 
@@ -146,6 +156,18 @@ public class Buttons extends SettingsPreferenceFragment implements
         // Force Navigation bar related options
         mDisableNavigationKeys = findPreference(DISABLE_NAV_KEYS);
 
+        mNavBarLayout = (ListPreference) findPreference(KEY_NAV_BAR_LAYOUT);
+        mNavBarLayout.setOnPreferenceChangeListener(this);
+        String navBarLayoutValue = Settings.Secure.getString(resolver, Settings.Secure.NAVBAR_LAYOUT_VIEWS);
+        if (navBarLayoutValue != null) {
+            mNavBarLayout.setValue(navBarLayoutValue);
+        } else {
+            mNavBarLayout.setValueIndex(0);
+        }
+
+        mSwapNavbar = (SecureSettingSwitchPreference) findPreference(KEY_SWAP_NAVBAR);
+        mNavigationArrowKeys = (SystemSettingSwitchPreference) findPreference(KEY_NAVIGATION_BAR_ARROWS);
+
         mHardwareKeysEnable = (SwitchPreference) findPreference(KEY_HWKEYS_ENABLED);
         if (mHardwareKeysEnable != null && isKeyDisablerSupported(getActivity())) {
             mHardwareKeysEnable.setOnPreferenceChangeListener(this);
@@ -193,6 +215,9 @@ public class Buttons extends SettingsPreferenceFragment implements
             mDisableNavigationKeys.setChecked(true);
             mDisableNavigationKeys.setEnabled(false);
         }
+
+        // Home button answers calls.
+        mHomeAnswerCall = findPreference(KEY_HOME_ANSWER_CALL);
 
         if (hasHomeKey) {
             if (!showHomeWake) {
@@ -313,13 +338,22 @@ public class Buttons extends SettingsPreferenceFragment implements
 
         if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
             mGestureSystemNavigation.setSummary(getString(R.string.legacy_navigation_title));
+            mNavBarLayout.setVisible(true);
+            mSwapNavbar.setVisible(true);
+            mNavigationArrowKeys.setVisible(true);
         } else if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.twobutton")) {
             mGestureSystemNavigation.setSummary(getString(R.string.swipe_up_to_switch_apps_title));
+            mNavBarLayout.setVisible(true);
+            mSwapNavbar.setVisible(true);
+            mNavigationArrowKeys.setVisible(true);
         } else if (Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural")
                 || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_wide_back")
                 || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_extra_wide_back")
                 || Utils.isThemeEnabled("com.android.internal.systemui.navbar.gestural_narrow_back")) {
             mGestureSystemNavigation.setSummary(getString(R.string.edge_to_edge_navigation_title));
+            mNavBarLayout.setVisible(false);
+            mSwapNavbar.setVisible(false);
+            mNavigationArrowKeys.setVisible(false);
         }
 
         if (!hasHomeKey && !hasBackKey && !hasMenuKey && !hasAssistKey && !hasAppSwitchKey) {
@@ -349,6 +383,23 @@ public class Buttons extends SettingsPreferenceFragment implements
     @Override
     public void onResume() {
         super.onResume();
+
+        // Home button answers calls.
+        if (mHomeAnswerCall != null) {
+            final int incallHomeBehavior = Settings.Secure.getInt(getContentResolver(),
+                    Settings.Secure.RING_HOME_BUTTON_BEHAVIOR,
+                    Settings.Secure.RING_HOME_BUTTON_BEHAVIOR_DEFAULT);
+            final boolean homeButtonAnswersCall =
+                (incallHomeBehavior == Settings.Secure.RING_HOME_BUTTON_BEHAVIOR_ANSWER);
+            mHomeAnswerCall.setChecked(homeButtonAnswersCall);
+        }
+    }
+
+    private void handleToggleHomeButtonAnswersCallPreferenceClick() {
+        Settings.Secure.putInt(getContentResolver(),
+                Settings.Secure.RING_HOME_BUTTON_BEHAVIOR, (mHomeAnswerCall.isChecked()
+                        ? Settings.Secure.RING_HOME_BUTTON_BEHAVIOR_ANSWER
+                        : Settings.Secure.RING_HOME_BUTTON_BEHAVIOR_DO_NOTHING));
     }
 
     private ListPreference initList(String key, Action value) {
@@ -389,6 +440,9 @@ public class Buttons extends SettingsPreferenceFragment implements
                 backlight.setEnabled(!value);
             }
             return true;
+        } else if (preference == mHomeAnswerCall) {
+            handleToggleHomeButtonAnswersCallPreferenceClick();
+            return true;
         } else if (preference == mHomeLongPressAction) {
             handleListChange((ListPreference) preference, newValue,
                     Settings.System.KEY_HOME_LONG_PRESS_ACTION);
@@ -424,6 +478,10 @@ public class Buttons extends SettingsPreferenceFragment implements
         } else if (preference == mAppSwitchLongPressAction) {
             handleListChange((ListPreference) preference, newValue,
                     Settings.System.KEY_APP_SWITCH_LONG_PRESS_ACTION);
+            return true;
+        } else if (preference == mNavBarLayout) {
+            Settings.Secure.putString(getActivity().getContentResolver(),
+                    Settings.Secure.NAVBAR_LAYOUT_VIEWS, (String) newValue);
             return true;
         }
         return false;
@@ -472,6 +530,18 @@ public class Buttons extends SettingsPreferenceFragment implements
         }
         if (mSwapCapacitiveKeys != null) {
             mSwapCapacitiveKeys.setEnabled(!navbarEnabled);
+        }
+        if (mGestureSystemNavigation != null) {
+            mGestureSystemNavigation.setEnabled(navbarEnabled);
+        }
+        if (mNavBarLayout != null) {
+            mNavBarLayout.setEnabled(navbarEnabled);
+        }
+        if (mSwapNavbar != null) {
+            mSwapNavbar.setEnabled(navbarEnabled);
+        }
+        if (mNavigationArrowKeys != null) {
+            mNavigationArrowKeys.setEnabled(navbarEnabled);
         }
     }
 

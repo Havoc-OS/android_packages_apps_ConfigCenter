@@ -266,9 +266,13 @@
     <string name="statusbar_items_summary">Configure the visibility of icons in the status bar</string>
 
     <!-- Navbar options -->
-    <string name="navbar_invert_layout_title">Invert layout</string>
-    <string name="navbar_invert_layout_summary">Use inverted layout for navbar buttons</string>
     <string name="nav_bar_layout">Layout</string>
+    <string name="navbar_layout_normal">Normal</string>
+    <string name="navbar_layout_compact">Compact</string>
+    <string name="navbar_layout_leftleaning">Left-leaning</string>
+    <string name="navbar_layout_rightleaning">Right-leaning</string>
+    <string name="navbar_invert_layout_title">Swap keys</string>
+    <string name="navbar_invert_layout_summary">Invert back and recents navbar buttons</string>
 
     <!-- Torch Power button gestures -->
     <string name="torch_power_button_gesture_title">Screen off torch</string>
@@ -471,7 +475,11 @@
 
     <!-- Volume key answer -->
     <string name="volume_answer_call_title">Answer call</string>
-    <string name="volume_answer_call_summary">Press volume keys to answer calls</string>
+    <string name="volume_answer_call_summary">Answer incoming calls by pressing the volume keys</string>
+
+    <!-- Home key answer -->
+    <string name="home_answer_call_title">Answer call</string>
+    <string name="home_answer_call_summary">Answer incoming calls by pressing the home button</string>
 
     <!-- Notifications while screen on -->
     <string name="notification_sound_vib_screen_on_title">Noisy notifications</string>

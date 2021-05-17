@@ -192,10 +192,10 @@
     </string-array>
 
     <string-array name="nav_bar_layouts">
-        <item>Normal</item>
-        <item>Compact</item>
-        <item>Left-leaning</item>
-        <item>Right-leaning</item>
+        <item>@string/navbar_layout_normal</item>
+        <item>@string/navbar_layout_compact</item>
+        <item>@string/navbar_layout_leftleaning</item>
+        <item>@string/navbar_layout_rightleaning</item>
     </string-array>
     <string-array name="nav_bar_layouts_values" translatable="false">
         <item>default</item>
