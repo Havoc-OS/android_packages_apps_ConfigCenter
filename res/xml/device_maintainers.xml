@@ -780,7 +780,7 @@
             android:title="@string/device_mido">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/sagarrokade006" />
+                android:data="https://t.me/NBD_ERICK" />
         </Preference>
 
         <Preference
