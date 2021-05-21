@@ -28,7 +28,16 @@
             android:icon="@drawable/havoc_developer">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://www.paypal.me/ANUSHEK"/>
+                android:data="https://t.me/SKULSHADY"/>
+        </Preference>
+
+        <Preference
+            android:title="Sukeeerat SG (irongfly)"
+            android:summary="@string/havoc_developers_sukeerat"
+            android:icon="@drawable/havoc_developer">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/IronGFly"/>
         </Preference>
 
         <Preference
@@ -76,16 +85,6 @@
         </Preference>
 
         <Preference
-            android:key="havoc_discord"
-            android:title="@string/havoc_discord_title"
-            android:summary="@string/havoc_discord_summary"
-            android:icon="@drawable/havoc_discord">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://discord.gg/YfhBCj4"/>
-        </Preference>
-
-        <Preference
             android:key="havoc_donate"
             android:title="@string/havoc_donate"
             android:summary="@string/havoc_donate_summary"
@@ -121,6 +120,16 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://github.com/Havoc-OS"/>
+        </Preference>
+
+        <Preference
+            android:key="havoc_gerrit"
+            android:title="@string/havoc_gerrit_title"
+            android:summary="@string/havoc_gerrit_summary"
+            android:icon="@drawable/havoc_gerrit">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://review.havoc-os.com/"/>
         </Preference>
     </PreferenceCategory>
 </PreferenceScreen>

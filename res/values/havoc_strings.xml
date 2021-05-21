@@ -51,6 +51,7 @@
     <!-- About -->
 	<string name="team_category_title">Team</string>
     <string name="havoc_developers_skulshady" translatable="false">• Founder \n• Core Developer \n• UI/UX Designer\n• Maintainer</string>
+    <string name="havoc_developers_sukeerat" translatable="false">• DevOps &amp; Scaling Engineer \n• Developer \n• Maintainer</string>
     <string name="havoc_support_tushar" translatable="false">• Head of Support Team\n• Graphics Designer</string>
     <string name="havoc_support_summary" translatable="false">• Support Group Moderator</string>
     <string name="havoc_support_maintainer_summary" translatable="false">• Maintainer\n• Support Group Moderator</string>
@@ -65,8 +66,8 @@
     <string name="havoc_announcements_summary">Official announcements channel</string>
     <string name="havoc_telegram_title">Telegram</string>
     <string name="havoc_telegram_summary">Support group for Official builds</string>
-    <string name="havoc_discord_title">Discord</string>
-    <string name="havoc_discord_summary">Official server for ROM support</string>
+    <string name="havoc_gerrit_title">Gerrit</string>
+    <string name="havoc_gerrit_summary">Code review for Havoc-OS</string>
     <string name="havoc_source_title">Github</string>
     <string name="havoc_source_summary">Havoc-OS source code</string>
     <string name="havoc_donate">Donate</string>

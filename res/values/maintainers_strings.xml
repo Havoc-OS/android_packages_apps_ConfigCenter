@@ -35,13 +35,13 @@
     <string name="device_category_nextbit_title" translatable="false">Nextbit</string>
     <string name="device_category_nubia_title" translatable="false">Nubia</string>
     <string name="device_category_yu_title" translatable="false">YU</string>
-    <string name="device_category_zuk_title" translatable="false">ZUK</string>
+    <string name="device_category_meizu_title" translatable="false">Meizu</string>
     <string name="device_category_huawei_title" translatable="false">Huawei</string>
     <string name="device_category_nokia_title" translatable="false">Nokia</string>
 
     <!-- Devices & Maintainers -->
     <string name="device_generic" translatable="false">Generic System Image</string>
-    <string name="device_generic_summary" translatable="false">arm, arm64, a64\nEvgeny Brin (EugW)</string>
+    <string name="device_generic_summary" translatable="false">arm, arm64, a64\nAntony Brian (Antony-Brian)</string>
 
     <string name="device_bacon" translatable="false">OnePlus One</string>
     <string name="device_bacon_summary" translatable="false">bacon\nClint Thebus (ClintT)</string>
@@ -53,10 +53,10 @@
     <string name="device_oneplus3_summary" translatable="false">oneplus3\nAnushek Prasal (SKULSHADY)</string>
 
     <string name="device_cheeseburger" translatable="false">OnePlus 5</string>
-    <string name="device_cheeseburger_summary" translatable="false">cheeseburger\nTilak Sidduram (tilaksidduram)</string>
+    <string name="device_cheeseburger_summary" translatable="false">cheeseburger\nAnushek Prasal (SKULSHADY)</string>
 
     <string name="device_dumpling" translatable="false">OnePlus 5T</string>
-    <string name="device_dumpling_summary" translatable="false">dumpling\nTilak Sidduram (tilaksidduram)</string>
+    <string name="device_dumpling_summary" translatable="false">dumpling\nAnushek Prasal (SKULSHADY)</string>
 
     <string name="device_enchilada" translatable="false">OnePlus 6</string>
     <string name="device_enchilada_summary" translatable="false">enchilada\nClint Thebus (ClintT)</string>
@@ -76,8 +76,20 @@
     <string name="device_hotdog" translatable="false">OnePlus 7T Pro</string>
     <string name="device_hotdog_summary" translatable="false">hotdog\nAnushek Prasal (SKULSHADY)</string>
 
+    <string name="device_instantnoodle" translatable="false">OnePlus 8</string>
+    <string name="device_instantnoodle_summary" translatable="false">instantnoodle\nChris Chen (1249131356)</string>
+
+    <string name="device_instantnoodlep" translatable="false">OnePlus 8 Pro</string>
+    <string name="device_instantnoodlep_summary" translatable="false">instantnoodlep\nChris Chen (1249131356)</string>
+
+    <string name="device_kebab" translatable="false">OnePlus 8T</string>
+    <string name="device_kebab_summary" translatable="false">kebab\nChris Chen (1249131356)</string>
+
+    <string name="device_walleye" translatable="false">Google Pixel 2</string>
+    <string name="device_walleye_summary" translatable="false">walleye\nSaurabh Jarial (bravesoul349)</string>
+
     <string name="device_taimen" translatable="false">Google Pixel 2 XL</string>
-    <string name="device_taimen_summary" translatable="false">taimen\nSteve Provancal (slothdabski)</string>
+    <string name="device_taimen_summary" translatable="false">taimen\nSaurabh Jarial (bravesoul349)</string>
 
     <string name="device_blueline" translatable="false">Google Pixel 3</string>
     <string name="device_blueline_summary" translatable="false">blueline\nSteve Provancal (slothdabski)</string>
@@ -187,8 +199,14 @@
     <string name="device_cepheus" translatable="false">Xiaomi Mi 9</string>
     <string name="device_cepheus_summary" translatable="false">cepheus\nSavsır Cankat Özbay (savsir)</string>
 
-    <string name="device_pyxis" translatable="false">Mi 9 Lite</string>
+    <string name="device_davinci" translatable="false">Xiaomi Mi 9T</string>
+    <string name="device_davinci_summary" translatable="false">davinci\nNikita Bely (wannacry)</string>
+
+    <string name="device_pyxis" translatable="false">Xiaomi Mi 9 Lite</string>
     <string name="device_pyxis_summary" translatable="false">pyxis\nNaassom Dourado (NaassomDourado)</string>
+
+    <string name="device_alioth" translatable="false">Xiaomi Mi 11X/Redmi K40/Poco F3</string>
+    <string name="device_alioth_summary" translatable="false">alioth\nSukeeerat SG (irongfly)</string>
 
     <string name="device_tissot" translatable="false">Xiaomi Mi A1</string>
     <string name="device_tissot_summary" translatable="false">tissot\nMountaser Halak</string>
@@ -200,7 +218,7 @@
     <string name="device_daisy_summary" translatable="false">daisy\nLuPe (LuPeSolTec)</string>
 
     <string name="device_laurel_sprout" translatable="false">Xiaomi Mi A3</string>
-    <string name="device_laurel_sprout_summary" translatable="false">laurel_sprout\nPrakash Singh (Prakaship78)</string>
+    <string name="device_laurel_sprout_summary" translatable="false">laurel_sprout\nKyryll Bondarenko (Magicxavi)</string>
 
     <string name="device_oxygen" translatable="false">Xiaomi Mi Max 2</string>
     <string name="device_oxygen_summary" translatable="false">oxygen\nRakesh Roshan (Hard_Rocks83)</string>
@@ -214,11 +232,20 @@
     <string name="device_andromeda" translatable="false">Xiaomi Mi Mix 3 5G</string>
     <string name="device_andromeda_summary" translatable="false">andromeda\nNicholas Magill (Inkypen)</string>
 
+    <string name="device_toco" translatable="false">Xiaomi Mi Note 10 Lite</string>
+    <string name="device_toco_summary" translatable="false">toco\nDennis Wachira (AndroidHQ254)</string>
+
     <string name="device_clover" translatable="false">Xiaomi Mi Pad 4/4 Plus</string>
     <string name="device_clover_summary" translatable="false">clover\nMax Weffers (rcstar6696)</string>
 
     <string name="device_beryllium" translatable="false">Xiaomi Poco F1</string>
     <string name="device_beryllium_summary" translatable="false">beryllium\nNinad Patil (blitzfire3)</string>
+
+    <string name="device_lmi" translatable="false">Xiaomi Poco F2 Pro</string>
+    <string name="device_lmi_summary" translatable="false">lmi\nAbdullah Tabbal (AbdullahPS)</string>
+
+    <string name="device_surya" translatable="false">Xiaomi Poco X3/NFC</string>
+    <string name="device_surya_summary" translatable="false">surya\nTushar Mahajan (mahajant99)</string>
 
     <string name="device_phoenix" translatable="false">Xiaomi Poco X2/Redmi K30</string>
     <string name="device_phoenix_summary" translatable="false">phoenix\nAbubakar Yagoub (Blacksuan19)</string>
@@ -239,7 +266,7 @@
     <string name="device_rosy_summary" translatable="false">rosy\nSukrut Bhagwat (Sukrut4778)</string>
 
     <string name="device_vince" translatable="false">Xiaomi Redmi 5 Plus</string>
-    <string name="device_vince_summary" translatable="false">vince\nSinchan Dasgupta (sinchan_dasgupta)</string>
+    <string name="device_vince_summary" translatable="false">vince\nMohammed Adnan (Addy44)</string>
 
     <string name="device_riva" translatable="false">Xiaomi Redmi 5A</string>
     <string name="device_riva_summary" translatable="false">riva\nErwin Abu Bakar Sidik (erwinabs)</string>
@@ -250,6 +277,9 @@
     <string name="device_onclite" translatable="false">Xiaomi Redmi 7</string>
     <string name="device_onclite_summary" translatable="false">onclite\nMohamed Arshad (MArshadR)</string>
 
+    <string name="device_juice" translatable="false">Xiaomi Redmi 9T/Note 9 4G/9 Power/Poco M3 [Unified]</string>
+    <string name="device_juice_summary" translatable="false">juice\nJoaquin Guzman (Joaquin#Citrus)</string>
+
     <string name="device_raphael" translatable="false">Xiaomi Redmi K20 Pro</string>
     <string name="device_raphael_summary" translatable="false">raphael\nAlex Tro (nuub1k)</string>
 
@@ -257,7 +287,7 @@
     <string name="device_kenzo_summary" translatable="false">kenzo\nPratik Pithore (pratik@2799)</string>
 
     <string name="device_mido" translatable="false">Xiaomi Redmi Note 4</string>
-    <string name="device_mido_summary" translatable="false">mido\nSagar Rokade (sagar.rokade.982)</string>
+    <string name="device_mido_summary" translatable="false">mido\nErick Eagle (NBD_ERICK)</string>
 
     <string name="device_whyred" translatable="false">Xiaomi Redmi Note 5 Pro</string>
     <string name="device_whyred_summary" translatable="false">whyred\nRuturaj Kadam</string>
@@ -268,14 +298,17 @@
     <string name="device_tulip" translatable="false">Xiaomi Redmi Note 6 Pro</string>
     <string name="device_tulip_summary" translatable="false">tulip\nAkhil MS (Akhilmsachu)</string>
 
-    <string name="device_lavender" translatable="false">Xiaomi Redmi Note 7</string>
-    <string name="device_lavender_summary" translatable="false">lavender\nMuhammad Fikri (Genkzsz11)</string>
+    <string name="device_lavender" translatable="false">Xiaomi Redmi Note 7/7S</string>
+    <string name="device_lavender_summary" translatable="false">lavender\nCrahm Cotnol (Hazama25)</string>
 
     <string name="device_violet" translatable="false">Xiaomi Redmi Note 7 Pro</string>
     <string name="device_violet_summary" translatable="false">violet\nAthul Dinesan (athul_05)</string>
 
     <string name="device_ginkgo" translatable="false">Xiaomi Redmi Note 8/T [Unified]</string>
-    <string name="device_ginkgo_summary" translatable="false">ginkgo\nAlexander Saleev (Sarisan)</string>
+    <string name="device_ginkgo_summary" translatable="false">ginkgo\nEdward Wu (edwardwu0223)</string>
+
+    <string name="device_gauguin" translatable="false">Xiaomi Redmi Note 9 Pro 5G/Mi 10i/Mi 10T Lite [Unified]</string>
+    <string name="device_gauguin_summary" translatable="false">gauguin\nBaolong Wu (wubaolong)</string>
 
     <string name="device_miatoll" translatable="false">Xiaomi Redmi Note 9S/9 Pro/9 Pro Max/Poco M2 Pro [Unified]</string>
     <string name="device_miatoll_summary" translatable="false">miatoll\nRizak Kamal (ijak)</string>
@@ -289,6 +322,9 @@
     <string name="device_kuntao" translatable="false">Lenovo P2</string>
     <string name="device_kuntao_summary" translatable="false">kuntao\nAdvaith Bhat (advaithbhat)</string>
 
+    <string name="device_z2_plus">Lenovo Zuk Z2 Plus</string>
+    <string name="device_z2_plus_summary">z2_plus\nNikhil Gohil (nikhil.gohil3)</string>
+
     <string name="device_lucye" translatable="false">LG G6</string>
     <string name="device_lucye_summary" translatable="false">lucye\nMichael Bardoň (wolfsvk)</string>
 
@@ -299,7 +335,7 @@
     <string name="device_X00QD_summary" translatable="false">X00QD\nEdward Wu (edwardwu0223)</string>
 
     <string name="device_Z01R" translatable="false">Asus Zenfone 5Z</string>
-    <string name="device_Z01R_summary" translatable="false">Z01R\nEdwardWu (edwardwu0223)</string>
+    <string name="device_Z01R_summary" translatable="false">Z01R\nEdward Wu (edwardwu0223)</string>
 
     <string name="device_I01WD" translatable="false">Asus Zenfone 6 (2019)</string>
     <string name="device_I01WD_summary" translatable="false">I01WD\nRăileanu Cosmin (Comico)</string>
@@ -312,6 +348,12 @@
 
     <string name="device_x01bd" translatable="false">Asus Zenfone Max Pro M2</string>
     <string name="device_x01bd_summary" translatable="false">X01BD\nSonal Singh (SonalSingh18)</string>
+
+    <string name="device_r5x" translatable="false">Realme 5/5i/5s</string>
+    <string name="device_r5x_summary" translatable="false">r5x\nUtkarsh Kanojiya (iamlordutkarsh)</string>
+
+    <string name="device_RMX2020" translatable="false">Realme C3/Narzo 10A</string>
+    <string name="device_RMX2020_summary" translatable="false">RMX2020\nInder Pandey (ishu88)</string>
 
     <string name="device_X2" translatable="false">Realme X2</string>
     <string name="device_X2_summary" translatable="false">X2\nBibhuti Bhushan Mohapatra (TH3_GUNN3R)</string>
@@ -334,8 +376,8 @@
     <string name="device_yureka2" translatable="false">YU Yureka 2</string>
     <string name="device_yureka2_summary" translatable="false">YUREKA2\nJathin (jmjxperia)</string>
 
-    <string name="device_z2_plus">Zuk Z2 Plus</string>
-    <string name="device_z2_plus_summary">z2_plus\nNikhil Gohil (nikhil.gohil3)</string>
+    <string name="device_m1852" translatable="false">Meizu X8</string>
+    <string name="device_m1852_summary" translatable="false">m1852\nDogukan Gunacti (blackcat67)</string>
 
     <string name="device_angler" translatable="false">Nexus 6P</string>
     <string name="device_angler_summary" translatable="false">angler\nHardik Kumar (hk1271)</string>
