@@ -305,7 +305,7 @@
     <string name="device_violet_summary" translatable="false">violet\nAthul Dinesan (athul_05)</string>
 
     <string name="device_ginkgo" translatable="false">Xiaomi Redmi Note 8/T [Unified]</string>
-    <string name="device_ginkgo_summary" translatable="false">ginkgo\nEdward Wu (edwardwu0223)</string>
+    <string name="device_ginkgo_summary" translatable="false">ginkgo\nYash Kachave (Introdructor)</string>
 
     <string name="device_gauguin" translatable="false">Xiaomi Redmi Note 9 Pro 5G/Mi 10i/Mi 10T Lite [Unified]</string>
     <string name="device_gauguin_summary" translatable="false">gauguin\nBaolong Wu (wubaolong)</string>
