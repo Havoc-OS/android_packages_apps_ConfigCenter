@@ -939,7 +939,7 @@
             android:title="@string/device_ginkgo">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/edwardwu0223" />
+                android:data="https://t.me/Introdructor" />
         </Preference>
 
         <Preference
