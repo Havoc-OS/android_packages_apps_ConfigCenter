@@ -36,11 +36,9 @@ public class Battery extends SettingsPreferenceFragment implements
     public static final String TAG = "Battery";
 
     private static final String SMART_PIXELS_ENABLED = "smart_pixels_enable";
-    private static final String SCREEN_STATE_TOGGLES_ENABLE = "screen_state_toggles_enable_key";
     private static final String SENSOR_BLOCK = "sensor_block";
 
     private SystemSettingMasterSwitchPreference mSmartPixelsEnabled;
-    private SystemSettingMasterSwitchPreference mEnableScreenStateToggles;
     private SystemSettingMasterSwitchPreference mSensorBlockEnabled;
 
     @Override
@@ -62,12 +60,6 @@ public class Battery extends SettingsPreferenceFragment implements
             mSmartPixelsEnabled.setVisible(false);
         }
 
-        mEnableScreenStateToggles = (SystemSettingMasterSwitchPreference) findPreference(SCREEN_STATE_TOGGLES_ENABLE);
-        int enabled = Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.START_SCREEN_STATE_SERVICE, 0, UserHandle.USER_CURRENT);
-        mEnableScreenStateToggles.setChecked(enabled != 0);
-        mEnableScreenStateToggles.setOnPreferenceChangeListener(this);
-
         mSensorBlockEnabled = (SystemSettingMasterSwitchPreference) findPreference(SENSOR_BLOCK);
         int sensorBlockEnabled = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.SENSOR_BLOCK, 0, UserHandle.USER_CURRENT);
@@ -81,19 +73,6 @@ public class Battery extends SettingsPreferenceFragment implements
             boolean value = (Boolean) objValue;
             Settings.System.putInt(getContentResolver(),
 		            SMART_PIXELS_ENABLED, value ? 1 : 0);
-            return true;
-        } else if (preference == mEnableScreenStateToggles) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.START_SCREEN_STATE_SERVICE, value ? 1 : 0, UserHandle.USER_CURRENT);
-            Intent service = (new Intent())
-                .setClassName("com.android.systemui", "com.android.systemui.havoc.screenstate.ScreenStateService");
-            if (value) {
-                getActivity().stopService(service);
-                getActivity().startService(service);
-            } else {
-                getActivity().stopService(service);
-            }
             return true;
         } else if (preference == mSensorBlockEnabled) {
             boolean value = (Boolean) objValue;
