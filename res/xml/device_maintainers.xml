@@ -174,7 +174,7 @@
             android:title="@string/device_kebab">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/cjh1249131356" />
+                android:data="https://t.me/Chandu078" />
         </Preference>
     </PreferenceCategory>
 
