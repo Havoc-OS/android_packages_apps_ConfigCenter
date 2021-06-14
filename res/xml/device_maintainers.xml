@@ -1286,5 +1286,15 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/RaghuVarma" />
         </Preference>
+		
+		<Preference
+            android:id="@+id/device_NB1"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_NB1_summary"
+            android:title="@string/device_NB1">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/edwardwu0223" />
+        </Preference>
     </PreferenceCategory>-->
 </PreferenceScreen>

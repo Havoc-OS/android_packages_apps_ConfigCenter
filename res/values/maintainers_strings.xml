@@ -393,5 +393,8 @@
 
     <string name="device_crystal" translatable="false">Nokia 7.1</string>
     <string name="device_crystal_summary" translatable="false">Crystal\nRaghu Varma</string>
+	
+	<string name="device_NB1" translatable="false">Nokia 8</string>
+	<string name="device_NB1" translatable="false">NB1\nEdward Wu (edwardwu0223)</string>
 
 </resources>
