@@ -1243,11 +1243,11 @@
         </Preference>
     </PreferenceCategory>-->
 
-    <!--<PreferenceCategory
+    <PreferenceCategory
         android:id="@+id/device_category_nokia"
         android:title="@string/device_category_nokia_title">
 
-	    <Preference
+	    <!--<Preference
             android:id="@+id/device_plate2"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_plate2_summary"
@@ -1255,9 +1255,9 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/RaghuVarma" />
-        </Preference>
+        </Preference>-->
 
-	    <Preference
+	    <!--<Preference
             android:id="@+id/device_dragon"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_dragon_summary"
@@ -1265,9 +1265,9 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/RaghuVarma" />
-        </Preference>
+        </Preference>-->
 
-	    <Preference
+	    <!--<Preference
             android:id="@+id/device_onyx"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_onyx_summary"
@@ -1275,9 +1275,9 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/RaghuVarma" />
-        </Preference>
+        </Preference>-->
 
-	    <Preference
+	    <!--<Preference
             android:id="@+id/device_crystal"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_crystal_summary"
@@ -1285,6 +1285,16 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/RaghuVarma" />
+        </Preference>-->
+		
+		<Preference
+            android:id="@+id/device_NB1"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_NB1_summary"
+            android:title="@string/device_NB1">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/edwardwu0223" />
         </Preference>
-    </PreferenceCategory>-->
+    </PreferenceCategory>
 </PreferenceScreen>
