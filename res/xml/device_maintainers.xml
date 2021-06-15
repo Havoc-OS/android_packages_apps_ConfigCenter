@@ -953,10 +953,10 @@
         </Preference>
 
         <Preference
-            android:id="@+id/device_miatoll"
+            android:id="@+id/device_joyeuse"
             android:icon="@drawable/havoc_device"
-            android:summary="@string/device_miatoll_summary"
-            android:title="@string/device_miatoll" >
+            android:summary="@string/device_joyeuse_summary"
+            android:title="@string/device_joyeuse" >
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/KmacQ" />
