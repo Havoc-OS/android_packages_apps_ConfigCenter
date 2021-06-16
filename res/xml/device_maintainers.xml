@@ -1113,6 +1113,16 @@
         </Preference>
 
         <Preference
+            android:id="@+id/device_RMX1971"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_RMX1971_summary"
+            android:title="@string/device_RMX1971">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Krish_Walecha" />
+        </Preference>
+
+        <Preference
             android:id="@+id/device_RMX2020"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_RMX2020_summary"
