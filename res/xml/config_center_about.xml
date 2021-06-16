@@ -32,7 +32,7 @@
         </Preference>
 
         <Preference
-            android:title="Sukeeerat SG (irongfly)"
+            android:title="Sukeerat SG (irongfly)"
             android:summary="@string/havoc_developers_sukeerat"
             android:icon="@drawable/havoc_developer">
             <intent
