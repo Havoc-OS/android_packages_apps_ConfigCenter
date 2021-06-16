@@ -397,4 +397,7 @@
 	<string name="device_NB1" translatable="false">Nokia 8</string>
 	<string name="device_NB1_summary" translatable="false">NB1\nEdward Wu (edwardwu0223)</string>
 
+    <string name="device_RMX1971" translatable="false">Realme 5 Pro</string>
+    <string name="device_RMX1971_summary" translatable="false">RMX1971\nKrish Walecha</string>
+
 </resources>
