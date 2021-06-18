@@ -313,6 +313,9 @@
     <string name="device_joyeuse" translatable="false">Xiaomi Redmi Note 9 Pro</string>
     <string name="device_joyeuse_summary" translatable="false">joyeuse\nRizak Kamal (ijak)</string>
 
+    <string name="device_mojito" translatable="false">Xiaomi Redmi Note 10</string>
+    <string name="device_mojito_summary" translatable="false">mojito\nJoaquin Guzman (Joaquin)</string>
+
     <string name="device_ysl" translatable="false">Xiaomi Redmi S2</string>
     <string name="device_ysl_summary" translatable="false">ysl\nTushar Mahajan (mahajant99)</string>
 

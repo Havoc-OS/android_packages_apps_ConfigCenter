@@ -843,6 +843,16 @@
         </Preference>
 
         <Preference
+            android:id="@+id/device_mojito"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_mojito_summary"
+            android:title="@string/device_mojito">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/idonthaveusernema" />
+        </Preference>
+
+        <Preference
             android:id="@+id/device_raphael"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_raphael_summary"
