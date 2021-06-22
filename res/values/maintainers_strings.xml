@@ -310,6 +310,9 @@
     <string name="device_gauguin" translatable="false">Xiaomi Redmi Note 9 Pro 5G/Mi 10i/Mi 10T Lite [Unified]</string>
     <string name="device_gauguin_summary" translatable="false">gauguin\nBaolong Wu (wubaolong)</string>
 
+    <string name="device_miatoll" translatable="false">Xiaomi Redmi Note 9S/9 Pro/9 Pro Max/Poco M2 Pro [Unified]</string>
+    <string name="device_miatoll_summary" translatable="false">miatoll\Sairam Majgaonkar (sairam60)</string>
+
     <string name="device_joyeuse" translatable="false">Xiaomi Redmi Note 9 Pro</string>
     <string name="device_joyeuse_summary" translatable="false">joyeuse\nRizak Kamal (ijak)</string>
 
