@@ -313,6 +313,9 @@
     <string name="device_joyeuse" translatable="false">Xiaomi Redmi Note 9 Pro</string>
     <string name="device_joyeuse_summary" translatable="false">joyeuse\nRizak Kamal (ijak)</string>
 
+    <string name="device_miatoll" translatable="false">Xiaomi Redmi Note 9S/9 Pro/9 Pro Max/Poco M2 Pro [Unified]</string>
+    <string name="device_miatoll_summary" translatable="false">miatoll\nSairam Majgaonkar (sairam60)</string>
+
     <string name="device_mojito" translatable="false">Xiaomi Redmi Note 10</string>
     <string name="device_mojito_summary" translatable="false">mojito\nJoaquin Guzman (Joaquin)</string>
 
