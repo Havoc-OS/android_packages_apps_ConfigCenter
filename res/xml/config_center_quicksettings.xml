@@ -141,6 +141,12 @@
             android:defaultValue="true" />
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="qs_footer_show_brightness_icon"
+            android:title="@string/brightness_icon_title"
+            android:summary="@string/brightness_icon_summary"
+            android:defaultValue="true" />
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="qs_footer_show_services"
             android:title="@string/qs_footer_services_title"
             android:summary="@string/qs_footer_services_summary"
