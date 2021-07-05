@@ -166,6 +166,9 @@
     <string name="device_ocean" translatable="false">Moto G7 Power</string>
     <string name="device_ocean_summary" translatable="false">ocean\nAndrew Hexen (SyberHexen)</string>
 
+    <string name="device_ocean" translatable="false">Moto G7 Play</string>
+    <string name="device_ocean_summary" translatable="false">ocean\nAndrew Hexen (SyberHexen)</string>
+
     <string name="device_payton" translatable="false">Moto X4</string>
     <string name="device_payton_summary" translatable="false">payton\nAndrew Hexen (SyberHexen)</string>
 
