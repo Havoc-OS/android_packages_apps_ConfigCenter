@@ -176,6 +176,17 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/Chandu078" />
         </Preference>
+
+        <Preference
+            android:id="@+id/device_lemonades"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_lemonades_summary"
+            android:title="@string/device_lemonades">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Chandu078" />
+        </Preference>
+
     </PreferenceCategory>
 
     <PreferenceCategory
