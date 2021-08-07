@@ -346,6 +346,9 @@
     <string name="device_I01WD" translatable="false">Asus Zenfone 6 (2019)</string>
     <string name="device_I01WD_summary" translatable="false">I01WD\nRăileanu Cosmin (Comico)</string>
 
+    <string name="device_I002D" translatable="false">Asus Zenfone 7/7 Pro (2020)</string>
+    <string name="device_I002D_summary" translatable="false">I01WD\nRăileanu Cosmin (ComicoX)</string>
+
     <string name="device_X00R" translatable="false">Asus Zenfone Lite L1</string>
     <string name="device_X00R_summary" translatable="false">X00R\nInder Pandey (ishu88)</string>
 
