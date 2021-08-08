@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+fatal: repository 'res/values/maintainers_string<?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
  * Copyright (C) 2018 Havoc-OS
@@ -353,7 +353,7 @@
     <string name="device_x00t_summary" translatable="false">X00T\nRizky Benggolo (travarilo)</string>
 
     <string name="device_x01bd" translatable="false">Asus Zenfone Max Pro M2</string>
-    <string name="device_x01bd_summary" translatable="false">X01BD\nSonal Singh (SonalSingh18)</string>
+    <string name="device_x01bd_summary" translatable="false">X01BD\nSukeerat Singh Goindi (Irongfly)</string>
 
     <string name="device_r5x" translatable="false">Realme 5/5i/5s</string>
     <string name="device_r5x_summary" translatable="false">r5x\nUtkarsh Kanojiya (iamlordutkarsh)</string>

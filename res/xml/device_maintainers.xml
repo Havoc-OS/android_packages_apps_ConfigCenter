@@ -1114,7 +1114,7 @@
             android:title="@string/device_x01bd">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/SonalSingh18" />
+                android:data="https://t.me/irongfly" />
         </Preference>
     </PreferenceCategory>
 
