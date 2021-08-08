@@ -732,6 +732,16 @@
                 android:data="https://t.me/t6pal" />
         </Preference>
 
+	    <Preference
+            android:id="@+id/device_phoenix"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_phoenix_summary"
+            android:title="@string/device_phoenix">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/blacksuan19" />
+        </Preference>
+
         <Preference
             android:id="@+id/device_surya"
             android:icon="@drawable/havoc_device"
@@ -740,6 +750,16 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/mahajant99" />
+        </Preference>
+
+        <Preference
+            android:id="@+id/device_vayu"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_vayu_summary"
+            android:title="@string/device_vayu">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/rahul9999xda" />
         </Preference>
 
         <Preference
@@ -850,16 +870,6 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/nuub1k" />
-        </Preference>
-
-	    <Preference
-            android:id="@+id/device_phoenix"
-            android:icon="@drawable/havoc_device"
-            android:summary="@string/device_phoenix_summary"
-            android:title="@string/device_phoenix">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://t.me/blacksuan19" />
         </Preference>
 
         <!--<Preference
