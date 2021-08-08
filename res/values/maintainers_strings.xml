@@ -247,6 +247,9 @@
     <string name="device_surya" translatable="false">Xiaomi Poco X3/NFC</string>
     <string name="device_surya_summary" translatable="false">surya\nTushar Mahajan (mahajant99)</string>
 
+    <string name="device_vayu" translatable="false">Xiaomi Poco X3 PRO</string>
+    <string name="device_vayu_summary" translatable="false">vayu\nRahul Yadav (rahul9999xda)</string>
+
     <string name="device_phoenix" translatable="false">Xiaomi Poco X2/Redmi K30</string>
     <string name="device_phoenix_summary" translatable="false">phoenix\nAbubakar Yagoub (Blacksuan19)</string>
 

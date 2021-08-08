@@ -982,6 +982,16 @@
                 android:data="https://t.me/idonthaveusernema" />
         </Preference>
 
+        <Preference
+            android:id="@+id/device_vayu"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_vayu_summary"
+            android:title="@string/device_vayu">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/rahul9999xda" />
+        </Preference>
+
         <!--<Preference
             android:id="@+id/device_ysl"
             android:icon="@drawable/havoc_device"
