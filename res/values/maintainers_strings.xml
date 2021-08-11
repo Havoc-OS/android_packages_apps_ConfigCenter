@@ -361,6 +361,9 @@
     <string name="device_RMX1971" translatable="false">Realme 5 Pro</string>
     <string name="device_RMX1971_summary" translatable="false">RMX1971\nKrish Walecha (Krishwalecha098)</string>
 
+    <string name="device_RMX2001" translatable="false">Realme 6 (G90T Series)</string>
+    <string name="device_RMX2001_summary" translatable="false">RMX2001\nNero (bx2nero)</string>
+
     <string name="device_RMX2020" translatable="false">Realme C3/Narzo 10A</string>
     <string name="device_RMX2020_summary" translatable="false">RMX2020\nInder Pandey (ishu88)</string>
 
