@@ -44,6 +44,13 @@
         android:summary="@string/gaming_mode_quick_start_apps_summary"
         android:fragment="com.havoc.config.center.fragments.QuickStartAppSettings" />
 
+    <com.havoc.support.preferences.SystemSettingSeekBarPreference
+        android:key="gaming_mode_menu_opacity"
+        android:title="@string/gaming_mode_menu_opacity_title"
+        android:max="100"
+        settings:min="0"
+        android:defaultValue="75" />
+
     <PreferenceCategory
         android:title="@string/gaming_mode_performance">
 
