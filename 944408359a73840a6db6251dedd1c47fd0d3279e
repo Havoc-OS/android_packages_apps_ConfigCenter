@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "986aff7b_dfa487e0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000023
+      },
+      "writtenOn": "2021-08-12T11:27:35Z",
+      "side": 1,
+      "message": "have a look Update Maintainer op6|6t",
+      "revId": "944408359a73840a6db6251dedd1c47fd0d3279e",
+      "serverId": "9060a12c-e4ac-4c6f-a232-1777a55b3a69"
+    }
+  ]
+}
