@@ -623,6 +623,16 @@
         </Preference>-->
 
         <Preference
+            android:id="@+id/device_apollo"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_apollo_summary"
+            android:title="@string/device_apollo">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/sewa2k" />
+        </Preference>
+
+        <Preference
             android:id="@+id/device_alioth"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_alioth_summary"

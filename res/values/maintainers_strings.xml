@@ -211,6 +211,9 @@
     <string name="device_pyxis" translatable="false">Xiaomi Mi 9 Lite</string>
     <string name="device_pyxis_summary" translatable="false">pyxis\nNaassom Dourado (NaassomDourado)</string>
 
+    <string name="device_apollo" translatable="false">Xiaomi Mi 10T/10T Pro</string>
+    <string name="device_apollo_summary" translatable="false">apollo\nSebastian Sariego Benitez (sewa2k)</string>
+
     <string name="device_alioth" translatable="false">Xiaomi Mi 11X/Redmi K40/Poco F3</string>
     <string name="device_alioth_summary" translatable="false">alioth\nSukeerat SG (irongfly)</string>
 
