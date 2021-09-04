@@ -202,6 +202,9 @@
     <string name="device_davinci" translatable="false">Xiaomi Mi 9T</string>
     <string name="device_davinci_summary" translatable="false">davinci\nNikita Bely (wannacry)</string>
 
+    <string name="device_apollo" translatable="false">Xiaomi Mi 10T/10T Pro</string>
+    <string name="device_apollo_summary" translatable="false">sewa2k\nSebastian Sariego Benitez</string>
+
     <string name="device_pyxis" translatable="false">Xiaomi Mi 9 Lite</string>
     <string name="device_pyxis_summary" translatable="false">pyxis\nNaassom Dourado (NaassomDourado)</string>
 
