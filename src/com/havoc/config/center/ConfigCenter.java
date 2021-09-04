@@ -38,12 +38,6 @@ public class ConfigCenter extends SettingsPreferenceFragment {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.config_center);
-
-        final Preference cutoutCategory =
-                (Preference) getPreferenceScreen().findPreference("screen_category");
-        if (!Utils.hasNotch(getContext())) {
-            getPreferenceScreen().removePreference(cutoutCategory);
-        }
     }
 
     @Override
