@@ -34,7 +34,7 @@
     <string name="misc_summary">Gaming mode, charging animation</string>
     <string name="navigation_title">Navigation</string>
     <string name="notifications_title">Notifications</string>
-    <string name="notifications_summary">Edge lighting, heads-up</string>
+    <string name="notifications_summary">Edge lighting, heads up</string>
     <string name="quicksettings_title">Quick Settings</string>
     <string name="quicksettings_summary">Tile layout, footer icons</string>
     <string name="statusbar_title">Status Bar</string>
@@ -44,7 +44,7 @@
     <string name="ambient_display_custom_title">Ambient Display</string>
     <string name="ambient_display_custom_summary">Always on, music ticker, gestures</string>
     <string name="screen_title">Screen</string>
-    <string name="screen_summary">Rounded corners, legacy app scaling</string>
+    <string name="screen_summary">Rounded corners, display cutout</string>
     <string name="media_title">Media</string>
     <string name="media_summary">Adaptive playback, music visualizer</string>
 
@@ -168,14 +168,10 @@
     <string name="notification_stat">Status bar</string>
     <string name="heads_up_notifications">Heads Up</string>
     <string name="heads_up_notifications_summary">Pop up status bar notifications</string>
-    <string name="add_heads_up_package">Add app</string>
     <string name="heads_up_stoplist_title">Stoplist</string>
-    <string name="add_heads_up_stoplist_summary">Disable heads up in these applications</string>
+    <string name="heads_up_stoplist_summary">Disable heads up in these applications</string>
     <string name="heads_up_blacklist_title">Blacklist</string>
-    <string name="add_heads_up_blacklist_summary">Disable heads up for these applications</string>
-    <string name="profile_choose_app">Choose app</string>
-    <string name="dialog_delete_title">Delete</string>
-    <string name="dialog_delete_message">Remove selected item?</string>
+    <string name="heads_up_blacklist_summary">Disable heads up for these applications</string>
 
     <!-- QuickSettings haptic feedback -->
     <string name="quick_settings_vibrate_title">Haptic feedback</string>
@@ -783,7 +779,7 @@
     <!-- Status Bar Ticker -->
     <string name="ticker_screen_title">Ticker</string>
     <string name="ticker_screen_summary">Ticker-style status bar notifications</string>
-    <string name="ticker_screen_footer">Ticker is visible only when heads-up notifications are not shown</string>
+    <string name="ticker_screen_footer">Ticker is visible only when heads up notifications are not shown</string>
     <string name="ticker_mode_title">Show ticker for</string>
     <string name="ticker_notifications">Notifications</string>
     <string name="ticker_media">Notifications and music</string>
@@ -873,7 +869,7 @@
 
     <!-- Don't touch headsup -->
     <string name="dont_touch_headsup_title">Disable app launch</string>
-    <string name="dont_touch_headsup_summary">Avoid launching the app when tapping the heads-up notification</string>
+    <string name="dont_touch_headsup_summary">Avoid launching the app when tapping the heads up notification</string>
 
     <!-- Generic stuff used everywhere -->
     <string name="reset">Reset</string>

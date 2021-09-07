@@ -42,25 +42,15 @@
         android:summary="@string/dont_touch_headsup_summary"
         android:defaultValue="false" />
 
-    <PreferenceCategory
-            android:title="@string/heads_up_stoplist_title"
-            android:key="stoplist_applications" >
+    <Preference
+        android:key="heads_up_stoplist"
+        android:title="@string/heads_up_stoplist_title"
+        android:summary="@string/heads_up_stoplist_summary"
+        android:fragment="com.havoc.config.center.fragments.HeadsUpStoplist" />
 
-        <Preference
-            android:key="add_stoplist_packages"
-            android:icon="@drawable/ic_menu_add_activated_tint"
-            android:title="@string/add_heads_up_package"
-            android:summary="@string/add_heads_up_stoplist_summary" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
-            android:title="@string/heads_up_blacklist_title"
-            android:key="blacklist_applications" >
-
-        <Preference
-            android:key="add_blacklist_packages"
-            android:icon="@drawable/ic_menu_add_activated_tint"
-            android:title="@string/add_heads_up_package"
-            android:summary="@string/add_heads_up_blacklist_summary" />
-    </PreferenceCategory>
+    <Preference
+        android:key="heads_up_blacklist"
+        android:title="@string/heads_up_blacklist_title"
+        android:summary="@string/heads_up_blacklist_summary"
+        android:fragment="com.havoc.config.center.fragments.HeadsUpBlacklist" />
 </PreferenceScreen>

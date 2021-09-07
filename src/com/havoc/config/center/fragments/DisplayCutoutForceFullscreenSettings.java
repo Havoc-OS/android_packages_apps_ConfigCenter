@@ -81,7 +81,7 @@ public class DisplayCutoutForceFullscreenSettings extends SettingsPreferenceFrag
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         getActivity().getActionBar().setTitle(R.string.display_cutout_force_fullscreen_title);
-        return inflater.inflate(R.layout.cutout_force_fullscreen_layout, container, false);
+        return inflater.inflate(R.layout.app_selector_preference, container, false);
     }
 
     @Override
@@ -228,7 +228,7 @@ public class DisplayCutoutForceFullscreenSettings extends SettingsPreferenceFrag
 
             if (convertView == null) {
                 holder = new ViewHolder(mInflater.inflate(
-                        R.layout.cutout_force_fullscreen_list_item, parent, false));
+                        R.layout.app_selector_preference_list_item, parent, false));
             } else {
                 holder = (ViewHolder) convertView.getTag();
             }
