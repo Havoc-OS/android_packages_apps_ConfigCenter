@@ -19,18 +19,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/gaming_mode_notification_danmaku_title" >
-    
-    <com.havoc.support.preferences.SystemSettingSwitchPreference
-        android:key="gaming_mode_show_danmaku"
-        android:title="@string/gaming_mode_show_danmaku_title"
-        android:defaultValue="true" />
 
     <com.havoc.support.preferences.SystemSettingSwitchPreference
         android:key="gaming_mode_danmaku_dynamic_notification_filter"
         android:title="@string/gaming_mode_danmaku_dynamic_notification_filter_title"
         android:summary="@string/gaming_mode_danmaku_dynamic_notification_filter_summary"
-        android:defaultValue="true"
-        android:dependency="gaming_mode_show_danmaku" />
+        android:defaultValue="true" />
 
     <com.havoc.support.preferences.SystemSettingSeekBarPreference
         android:key="gaming_mode_danmaku_size_horizontal"
@@ -38,8 +32,7 @@
         android:defaultValue="36"
         android:max="64"
         settings:min="12"
-        settings:units="px"
-        android:dependency="gaming_mode_show_danmaku" />
+        settings:units="px" />
 
     <com.havoc.support.preferences.SystemSettingSeekBarPreference
         android:key="gaming_mode_danmaku_size_vertical"
@@ -47,8 +40,7 @@
         android:defaultValue="36"
         android:max="64"
         settings:min="12"
-        settings:units="px"
-        android:dependency="gaming_mode_show_danmaku" />
+        settings:units="px" />
 
     <com.havoc.support.preferences.SystemSettingSeekBarPreference
         android:key="gaming_mode_danmaku_speed_horizontal"
@@ -56,8 +48,7 @@
         android:defaultValue="300"
         android:max="1000"
         settings:min="100"
-        settings:units="px/s"
-        android:dependency="gaming_mode_show_danmaku" />
+        settings:units="px/s" />
 
     <com.havoc.support.preferences.SystemSettingSeekBarPreference
         android:key="gaming_mode_danmaku_speed_vertical"
@@ -65,12 +56,12 @@
         android:defaultValue="300"
         android:max="1000"
         settings:min="100"
-        settings:units="px/s"
-        android:dependency="gaming_mode_show_danmaku" />
+        settings:units="px/s" />
 
-    <com.havoc.config.center.preferences.PackageListPreference
-        android:title="@string/gaming_mode_danmaku_blacklist"
+    <Preference
         android:key="gaming_mode_danmaku_app_blacklist"
-        android:dependency="gaming_mode_show_danmaku" />
+        android:title="@string/gaming_mode_danmaku_blacklist_title"
+        android:summary="@string/gaming_mode_danmaku_blacklist_summary"
+        android:fragment="com.havoc.config.center.fragments.DanmakuBlacklist" />
 
 </PreferenceScreen>

@@ -18,12 +18,10 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:layout_height="56dp"
     android:paddingStart="?android:attr/listPreferredItemPaddingStart"
     android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp">
+    android:paddingVertical="4dp">
 
     <ImageView
         android:id="@+id/app_icon"
@@ -44,12 +42,11 @@
             android:id="@+id/app_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:textColor="?android:attr/textColorPrimary"
-            android:textAppearance="@style/TextAppearance.Medium"
+            android:textAppearance="@style/TextAppearance"
+            android:textSize="16sp"
             android:singleLine="true"
             android:ellipsize="marquee" />
-
     </LinearLayout>
 
     <Switch

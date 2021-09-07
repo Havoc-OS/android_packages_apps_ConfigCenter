@@ -18,10 +18,11 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingVertical="8dp">
 
     <FrameLayout
-        android:id="@+id/cutout_force_fullscreen_prefs"
+        android:id="@+id/app_selector_prefs"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

@@ -20,36 +20,35 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/gaming_mode_title" >
 
+    <Preference
+        android:key="gaming_mode_apps"
+        android:title="@string/gaming_mode_apps_title"
+        android:summary="@string/gaming_mode_apps_summary"
+        android:fragment="com.havoc.config.center.fragments.GamingModeApps" />
+
     <com.havoc.support.preferences.SystemSettingSwitchPreference
         android:key="gaming_mode_dynamic_add"
         android:title="@string/gaming_mode_dynamic_add_title"
         android:summary="@string/gaming_mode_dynamic_add_summary"
         android:defaultValue="true" />
 
-    <com.havoc.support.preferences.SystemSettingSwitchPreference
-        android:key="gaming_mode_disable_auto_brightness"
-        android:title="@string/gaming_mode_disable_auto_brightness_title"
-        android:summary="@string/gaming_mode_disable_auto_brightness_summary"
-        android:defaultValue="true" />
+    <PreferenceCategory
+        android:title="@string/gaming_mode_overlay">
 
-    <Preference
-        android:key="gaming_mode_notification_danmaku"
-        android:title="@string/gaming_mode_notification_danmaku_title" 
-        android:summary="@string/gaming_mode_notification_danmaku_summary"
-        android:fragment="com.havoc.config.center.fragments.DanmakuSettings" />
+        <Preference
+            android:key="gaming_mode_quick_start_apps"
+            android:title="@string/gaming_mode_quick_start_apps_title"
+            android:summary="@string/gaming_mode_quick_start_apps_summary"
+            android:fragment="com.havoc.config.center.fragments.QuickStartApps" />
 
-    <Preference
-        android:key="gaming_mode_quick_start_apps"
-        android:title="@string/gaming_mode_quick_start_apps_title" 
-        android:summary="@string/gaming_mode_quick_start_apps_summary"
-        android:fragment="com.havoc.config.center.fragments.QuickStartAppSettings" />
-
-    <com.havoc.support.preferences.SystemSettingSeekBarPreference
-        android:key="gaming_mode_menu_opacity"
-        android:title="@string/gaming_mode_menu_opacity_title"
-        android:max="100"
-        settings:min="0"
-        android:defaultValue="75" />
+        <com.havoc.support.preferences.SystemSettingSeekBarPreference
+            android:key="gaming_mode_menu_opacity"
+            android:title="@string/gaming_mode_menu_opacity_title"
+            android:max="100"
+            settings:min="10"
+            android:defaultValue="100"
+            settings:units="%" />
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/gaming_mode_performance">
@@ -77,7 +76,14 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/gaming_mode_dnd">
+        android:title="@string/gaming_mode_notifications">
+
+        <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
+            android:key="gaming_mode_show_danmaku"
+            android:fragment="com.havoc.config.center.fragments.DanmakuSettings"
+            android:title="@string/gaming_mode_notification_danmaku_title"
+            android:summary="@string/gaming_mode_notification_danmaku_summary"
+            android:defaultValue="true" />
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="gaming_mode_disable_notification_alert"
@@ -99,17 +105,28 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/gaming_mode_prevent_accidental_touch">
+        android:title="@string/gaming_mode_brightness">
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="gaming_mode_disable_auto_brightness"
+            android:title="@string/gaming_mode_disable_auto_brightness_title"
+            android:summary="@string/gaming_mode_disable_auto_brightness_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/gaming_mode_navigation">
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="gaming_mode_disable_hw_keys"
+            android:title="@string/gaming_mode_disable_hw_keys_title"
+            android:summary="@string/gaming_mode_disable_hw_keys_summary"
+            android:defaultValue="false" />
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="gaming_mode_disable_gesture"
             android:title="@string/gaming_mode_disable_gesture_title"
+            android:summary="@string/gaming_mode_disable_gesture_summary"
             android:defaultValue="false" />
-
     </PreferenceCategory>
-
-    <com.havoc.config.center.preferences.PackageListPreference
-        android:key="gaming_mode_app_list"
-        android:title="@string/gaming_mode_apps" />
-
 </PreferenceScreen>
