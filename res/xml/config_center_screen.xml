@@ -35,6 +35,12 @@
             android:summary="@string/stock_statusbar_in_hide_summary"
             android:defaultValue="true" />
 
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="display_hide_notch"
+            android:title="@string/display_hide_notch_title"
+            android:summary="@string/display_hide_notch_summary"
+            android:defaultValue="false" />
+
         <Preference
             android:key="display_cutout_force_fullscreen_settings"
             android:title="@string/display_cutout_force_fullscreen_title"

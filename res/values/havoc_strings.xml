@@ -1001,4 +1001,8 @@
     <string name="gaming_mode_danmaku_blacklist_title">Blacklist</string>
     <string name="gaming_mode_danmaku_blacklist_summary">Disable ticker for these applications</string>
 
+    <!-- Display cutout -->
+    <string name="display_hide_notch_title">Hide display cutout</string>
+    <string name="display_hide_notch_summary">Disable black fill-in for display cutout</string>
+
 </resources>
