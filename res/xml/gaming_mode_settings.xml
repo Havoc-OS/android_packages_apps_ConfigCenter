@@ -35,11 +35,18 @@
     <PreferenceCategory
         android:title="@string/gaming_mode_overlay">
 
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="gaming_mode_use_overlay_menu"
+            android:title="@string/gaming_mode_use_menu_overlay_title"
+            android:summary="@string/gaming_mode_use_menu_overlay_summary"
+            android:defaultValue="true" />
+
         <Preference
             android:key="gaming_mode_quick_start_apps"
             android:title="@string/gaming_mode_quick_start_apps_title"
             android:summary="@string/gaming_mode_quick_start_apps_summary"
-            android:fragment="com.havoc.config.center.fragments.QuickStartApps" />
+            android:fragment="com.havoc.config.center.fragments.QuickStartApps"
+            android:dependency="gaming_mode_use_overlay_menu" />
 
         <com.havoc.support.preferences.SystemSettingSeekBarPreference
             android:key="gaming_mode_menu_opacity"
@@ -47,7 +54,8 @@
             android:max="100"
             settings:min="10"
             android:defaultValue="100"
-            settings:units="%" />
+            settings:units="%"
+            android:dependency="gaming_mode_use_overlay_menu" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -83,7 +91,8 @@
             android:fragment="com.havoc.config.center.fragments.DanmakuSettings"
             android:title="@string/gaming_mode_notification_danmaku_title"
             android:summary="@string/gaming_mode_notification_danmaku_summary"
-            android:defaultValue="true" />
+            android:defaultValue="true"
+            android:dependency="gaming_mode_use_overlay_menu" />
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="gaming_mode_disable_notification_alert"

@@ -961,6 +961,8 @@
     <string name="gaming_mode_dynamic_add_summary">Try detecting and adding games automatically</string>
 
     <string name="gaming_mode_overlay">Overlay</string>
+    <string name="gaming_mode_use_menu_overlay_title">Show overlay</string>
+    <string name="gaming_mode_use_menu_overlay_summary">Show floating button and overlay when in game mode</string>
     <string name="gaming_mode_quick_start_apps_title">Quick launch apps</string>
     <string name="gaming_mode_quick_start_apps_summary">Choose the apps you want to quick launch when in game mode</string>
     <string name="gaming_mode_menu_opacity_title">Overlay opacity</string>
