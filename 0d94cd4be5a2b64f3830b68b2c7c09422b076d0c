@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99352f47_2224f69e",
+        "filename": "res/values/maintainers_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1000006
+      },
+      "writtenOn": "2021-09-20T20:19:19Z",
+      "side": 1,
+      "message": "Please fix the strings",
+      "revId": "0d94cd4be5a2b64f3830b68b2c7c09422b076d0c",
+      "serverId": "9060a12c-e4ac-4c6f-a232-1777a55b3a69"
+    }
+  ]
+}
