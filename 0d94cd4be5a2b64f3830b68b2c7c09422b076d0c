@@ -16,6 +16,24 @@
       "message": "Please fix the strings",
       "revId": "0d94cd4be5a2b64f3830b68b2c7c09422b076d0c",
       "serverId": "9060a12c-e4ac-4c6f-a232-1777a55b3a69"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "56c04307_ec8511ae",
+        "filename": "res/values/maintainers_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-09-21T07:04:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "99352f47_2224f69e",
+      "revId": "0d94cd4be5a2b64f3830b68b2c7c09422b076d0c",
+      "serverId": "9060a12c-e4ac-4c6f-a232-1777a55b3a69"
     }
   ]
 }
