@@ -1014,4 +1014,8 @@
     <string name="alert_slider_mute_media_title">Mute media volume</string>
     <string name="alert_slider_mute_media_summary">Turn off media volume when the alert slider is set to silent</string>
 
+    <!-- Background process killer -->
+    <string name="background_process_killer_title">Kill background processes</string>
+    <string name="background_process_killer_summary">Stop all non-essential background processes when the device is idle</string>
+
 </resources>

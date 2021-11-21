@@ -37,6 +37,12 @@
         android:summary="@string/sensor_block_summary"
         android:defaultValue="false" />
 
+    <com.havoc.support.preferences.SystemSettingSwitchPreference
+        android:key="background_process_killer"
+        android:title="@string/background_process_killer_title"
+        android:summary="@string/background_process_killer_summary"
+        android:defaultValue="false" />
+
     <Preference
         android:key="aggressive_battery"
         android:title="@string/aggressive_battery_title"
