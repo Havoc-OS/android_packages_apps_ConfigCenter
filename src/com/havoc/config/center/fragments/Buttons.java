@@ -84,6 +84,7 @@ public class Buttons extends SettingsPreferenceFragment implements
     private static final String CATEGORY_APPSWITCH = "app_switch_key";
     private static final String CATEGORY_CAMERA = "camera_key";
     private static final String CATEGORY_BACKLIGHT = "key_backlight";
+    private static final String CATEGORY_SLIDER = "alert_slider";
 
     private SwitchPreference mHomeAnswerCall;
     private ListPreference mHomeLongPressAction;
@@ -131,6 +132,7 @@ public class Buttons extends SettingsPreferenceFragment implements
         final boolean hasAssistKey = ButtonSettingsUtils.hasAssistKey(getActivity());
         final boolean hasAppSwitchKey = ButtonSettingsUtils.hasAppSwitchKey(getActivity());
         final boolean hasCameraKey = ButtonSettingsUtils.hasCameraKey(getActivity());
+        final boolean hasAlertSlider = res.getBoolean(com.android.internal.R.bool.config_hasAlertSlider);
 
         final boolean showHomeWake = ButtonSettingsUtils.canWakeUsingHomeKey(getActivity());
         final boolean showBackWake = ButtonSettingsUtils.canWakeUsingBackKey(getActivity());
@@ -147,6 +149,7 @@ public class Buttons extends SettingsPreferenceFragment implements
         final PreferenceCategory assistCategory = prefScreen.findPreference(CATEGORY_ASSIST);
         final PreferenceCategory appSwitchCategory = prefScreen.findPreference(CATEGORY_APPSWITCH);
         final PreferenceCategory cameraCategory = prefScreen.findPreference(CATEGORY_CAMERA);
+        final PreferenceCategory sliderCategory = prefScreen.findPreference(CATEGORY_SLIDER);
 
         mAnbi = (SwitchPreference) findPreference(KEY_ANBI);
         mGestureSystemNavigation = (Preference) findPreference(KEY_GESTURE_SYSTEM);
@@ -367,6 +370,10 @@ public class Buttons extends SettingsPreferenceFragment implements
 
         if (!hasHomeKey && !hasBackKey && !hasMenuKey && !hasAssistKey && !hasAppSwitchKey && !hasCameraKey) {
             hwCategory.setVisible(false);
+        }
+
+        if (!hasAlertSlider) {
+            sliderCategory.setVisible(false);
         }
     }
 
