@@ -26,6 +26,12 @@
         android:entryValues="@array/pulse_location_values"
         android:defaultValue="0" />
 
+    <com.havoc.support.preferences.SecureSettingSwitchPreference
+        android:key="ambient_pulse_enabled"
+        android:title="@string/ambient_visualizer_title"
+        android:summary="@string/ambient_visualizer_summary"
+        android:defaultValue="false" />
+
     <com.havoc.support.preferences.SecureSettingListPreference
         android:key="pulse_render_style"
         android:title="@string/pulse_render_mode_title"

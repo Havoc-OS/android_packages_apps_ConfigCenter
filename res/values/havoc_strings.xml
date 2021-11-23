@@ -845,6 +845,8 @@
     <string name="pulse_location_navbar">Navbar</string>
     <string name="pulse_location_both">Both</string>
     <string name="pulse_location_both_summary">Lockscreen and Navbar</string>
+    <string name="ambient_visualizer_title">Show on Ambient Display</string>
+    <string name="ambient_visualizer_summary">Show the visualizer on ambient display</string>
 
     <!-- Notch: Full screen apps -->
     <string name="display_cutout_force_fullscreen_title">Full screen apps</string>
