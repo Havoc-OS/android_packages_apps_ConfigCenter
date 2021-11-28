@@ -83,7 +83,7 @@ public class SleepMode extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.sleep_mode_settings);
+        addPreferencesFromResource(R.xml.sleep_mode);
         PreferenceScreen screen = getPreferenceScreen();
 
         mContext = getContext();

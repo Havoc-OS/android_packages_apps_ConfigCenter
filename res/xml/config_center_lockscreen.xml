@@ -70,7 +70,7 @@
             settings:min="0"
             settings:units="%"
             settings:interval="5"
-            android:defaultValue="0" />
+            android:defaultValue="100" />
 
         <com.havoc.support.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_status_bar"

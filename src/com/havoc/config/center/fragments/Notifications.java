@@ -36,12 +36,10 @@ public class Notifications extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "Notifications";
-    // private static final String LIGHTS_CATEGORY = "notification_lights";
     private static final String HEADS_UP_NOTIFICATIONS_ENABLED = "heads_up_notifications_enabled";
     private static final String AMBIENT_NOTIFICATION_LIGHT = "pulse_ambient_light";
     private static final String STATUS_BAR_SHOW_TICKER = "status_bar_show_ticker";
 
-    // private PreferenceCategory mLightsCategory;
     private GlobalSettingMasterSwitchPreference mHeadsUpEnabled;
     private SystemSettingMasterSwitchPreference mEdgeLightEnabled;
     private SystemSettingMasterSwitchPreference mTickerEnabled;
@@ -64,7 +62,7 @@ public class Notifications extends SettingsPreferenceFragment implements
         mEdgeLightEnabled = (SystemSettingMasterSwitchPreference) findPreference(AMBIENT_NOTIFICATION_LIGHT);
         mEdgeLightEnabled.setOnPreferenceChangeListener(this);
         int edgeLightEnabled = Settings.System.getInt(getContentResolver(),
-                AMBIENT_NOTIFICATION_LIGHT, 0);
+                AMBIENT_NOTIFICATION_LIGHT, 1);
         mEdgeLightEnabled.setChecked(edgeLightEnabled != 0);
 
         mTickerEnabled = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_SHOW_TICKER);

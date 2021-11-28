@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 Havoc-OS
+ * Copyright (C) 2021 Havoc-OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,42 +24,28 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.InputFilter;
-import android.text.Spannable;
 import android.text.TextUtils;
 import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Switch;
-import android.widget.TextView;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.custom.Utils;
-
 import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
-
+import com.havoc.config.center.preferences.SwitchBarPreferenceFragment;
 import com.havoc.support.preferences.SystemSettingListPreference;
 
-public class CustomCarrierLabel extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
+public class CustomCarrierLabel extends SwitchBarPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
-    public static final String TAG = "CarrierLabel";
     private static final String CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final String KEY_CARRIER_LABEL = "carrier_label_location";
 
     private PreferenceScreen mCustomCarrierLabel;
-    private String mCustomCarrierLabelText;
     private SystemSettingListPreference mShowCarrierLabel;
-
-    private TextView mTextView;
-    private View mSwitchBar;
+    private String mCustomCarrierLabelText;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,7 +53,6 @@ public class CustomCarrierLabel extends SettingsPreferenceFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
 
         addPreferencesFromResource(R.xml.custom_carrier_label);
-        PreferenceScreen prefSet = getPreferenceScreen();
 
         mCustomCarrierLabel = (PreferenceScreen) findPreference(CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
@@ -76,12 +61,12 @@ public class CustomCarrierLabel extends SettingsPreferenceFragment implements
         int showCarrierLabel = Settings.System.getInt(resolver,
                 Settings.System.CARRIER_LABEL_LOCATION, 0);
         CharSequence[] NonNotchEntries = {
-            getResources().getString(R.string.show_carrier_keyguard),
-            getResources().getString(R.string.show_carrier_statusbar),
-            getResources().getString(R.string.show_carrier_enabled)
+                getResources().getString(R.string.show_carrier_keyguard),
+                getResources().getString(R.string.show_carrier_statusbar),
+                getResources().getString(R.string.show_carrier_enabled)
         };
         CharSequence[] NotchEntries = {
-            getResources().getString(R.string.show_carrier_keyguard)
+                getResources().getString(R.string.show_carrier_keyguard)
         };
         CharSequence[] NonNotchValues = {"0", "1" , "2"};
         CharSequence[] NotchValues = {"0"};
@@ -93,52 +78,7 @@ public class CustomCarrierLabel extends SettingsPreferenceFragment implements
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        final View view = LayoutInflater.from(getContext()).inflate(R.layout.master_setting_switch, container, false);
-        ((ViewGroup) view).addView(super.onCreateView(inflater, container, savedInstanceState));
-        return view;
-    }
-
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        boolean enabled = Settings.System.getInt(getContentResolver(),
-                Settings.System.CARRIER_LABEL_ENABLED, 1) == 1;
-
-        mTextView = view.findViewById(R.id.switch_text);
-        mTextView.setText(getString(enabled ?
-                R.string.switch_on_text : R.string.switch_off_text));
-
-        mSwitchBar = view.findViewById(R.id.switch_bar);
-        Switch switchWidget = mSwitchBar.findViewById(android.R.id.switch_widget);
-        switchWidget.setChecked(enabled);
-        switchWidget.setOnCheckedChangeListener(this);
-        mSwitchBar.setActivated(enabled);
-        mSwitchBar.setOnClickListener(v -> {
-            switchWidget.setChecked(!switchWidget.isChecked());
-            mSwitchBar.setActivated(switchWidget.isChecked());
-        });
-
-        mCustomCarrierLabel.setEnabled(enabled);
-        mShowCarrierLabel.setEnabled(enabled);
-    }
-
-    @Override
-    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-        Settings.System.putInt(getContentResolver(),
-                Settings.System.CARRIER_LABEL_ENABLED, isChecked ? 1 : 0);
-        mTextView.setText(getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text));
-        mSwitchBar.setActivated(isChecked);
-
-        mCustomCarrierLabel.setEnabled(isChecked);
-        mShowCarrierLabel.setEnabled(isChecked);
-    }
-
-    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
- 		ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mShowCarrierLabel) {
             int value = Integer.parseInt((String) newValue);
             updateCarrierLabelSummary(value);
@@ -148,20 +88,22 @@ public class CustomCarrierLabel extends SettingsPreferenceFragment implements
     }
 
     private void updateCarrierLabelSummary(int value) {
-        Resources res = getResources();
-
-        if (value == 0) {
-            mShowCarrierLabel.setSummary(res.getString(R.string.show_carrier_keyguard));
-        } else if (value == 1) {
-            mShowCarrierLabel.setSummary(res.getString(R.string.show_carrier_statusbar));
-        } else if (value == 2) {
-            mShowCarrierLabel.setSummary(res.getString(R.string.show_carrier_both));
+        switch (value) {
+            default:
+            case 0:
+                mShowCarrierLabel.setSummary(getResources().getString(R.string.show_carrier_keyguard));
+                break;
+            case 1:
+                mShowCarrierLabel.setSummary(getResources().getString(R.string.show_carrier_statusbar));
+                break;
+            case 2:
+                mShowCarrierLabel.setSummary(getResources().getString(R.string.show_carrier_both));
+                break;
         }
     }
 
     public boolean onPreferenceTreeClick(Preference preference) {
         ContentResolver resolver = getActivity().getContentResolver();
-        boolean value;
         if (preference == mCustomCarrierLabel) {
             AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
             alert.setTitle(R.string.custom_carrier_label_title);
@@ -180,16 +122,14 @@ public class CustomCarrierLabel extends SettingsPreferenceFragment implements
             container.addView(input);
             alert.setView(container);
             alert.setPositiveButton(getString(android.R.string.ok),
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int whichButton) {
-                            String value = ((Spannable) input.getText()).toString().trim();
-                            Settings.System.putString(resolver, Settings.System.CUSTOM_CARRIER_LABEL, value);
-                            updateCustomLabelTextSummary();
-                            Intent i = new Intent();
-                            i.setAction(Intent.ACTION_CUSTOM_CARRIER_LABEL_CHANGED);
-                            getActivity().sendBroadcast(i);
-                }
-            });
+                    (DialogInterface.OnClickListener) (dialog, whichButton) -> {
+                        String value = input.getText().toString().trim();
+                        Settings.System.putString(resolver, Settings.System.CUSTOM_CARRIER_LABEL, value);
+                        updateCustomLabelTextSummary();
+                        Intent i = new Intent();
+                        i.setAction(Intent.ACTION_CUSTOM_CARRIER_LABEL_CHANGED);
+                        getActivity().sendBroadcast(i);
+                    });
             alert.setNegativeButton(getString(android.R.string.cancel), null);
             alert.show();
             return true;
@@ -199,7 +139,7 @@ public class CustomCarrierLabel extends SettingsPreferenceFragment implements
 
     private void updateCustomLabelTextSummary() {
         mCustomCarrierLabelText = Settings.System.getString(
-            getContentResolver(), Settings.System.CUSTOM_CARRIER_LABEL);
+                getContentResolver(), Settings.System.CUSTOM_CARRIER_LABEL);
         if (TextUtils.isEmpty(mCustomCarrierLabelText)) {
             mCustomCarrierLabel.setSummary(R.string.custom_carrier_label_notset);
         } else {
@@ -208,7 +148,14 @@ public class CustomCarrierLabel extends SettingsPreferenceFragment implements
     }
 
     @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.HAVOC_SETTINGS;
+    public boolean getSwitchState() {
+        return Settings.System.getInt(getContentResolver(),
+                Settings.System.CARRIER_LABEL_ENABLED, 1) == 1;
+    }
+
+    @Override
+    public void updateSwitchState(boolean isChecked) {
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.CARRIER_LABEL_ENABLED, isChecked ? 1 : 0);
     }
 }

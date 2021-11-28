@@ -77,7 +77,7 @@ public class VolumeSteps extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.volume_steps_fragment);
+        addPreferencesFromResource(R.xml.volume_steps);
         mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
         final PreferenceScreen prefScreen = getPreferenceScreen();

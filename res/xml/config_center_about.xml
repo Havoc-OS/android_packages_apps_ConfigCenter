@@ -39,25 +39,6 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/IronGFly"/>
         </Preference>
-
-        <Preference
-            android:title="Tushar Jain (theoj22)"
-            android:summary="@string/havoc_support_tushar"
-            android:icon="@drawable/havoc_support"/>
-
-        <Preference
-            android:key="mods"
-            android:fragment="com.havoc.config.center.fragments.GroupModerators"
-            android:summary="@string/group_mods_summary"
-            android:title="@string/group_mods_title"
-            android:icon="@drawable/havoc_moderator"/>
-
-        <Preference
-            android:key="maintainers"
-            android:fragment="com.havoc.config.center.fragments.DeviceMaintainers"
-            android:summary="@string/device_maintainers_title_summary"
-            android:title="@string/device_maintainers_title"
-            android:icon="@drawable/havoc_maintainer" />
     </PreferenceCategory>
 		
     <PreferenceCategory

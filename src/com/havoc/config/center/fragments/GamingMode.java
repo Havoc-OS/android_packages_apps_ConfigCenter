@@ -34,7 +34,7 @@ import com.havoc.support.preferences.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 
-public class GamingModeSettings extends SwitchBarPreferenceFragment implements
+public class GamingMode extends SwitchBarPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String GAMING_MODE_SHOW_DANMAKU = "gaming_mode_show_danmaku";
@@ -48,7 +48,7 @@ public class GamingModeSettings extends SwitchBarPreferenceFragment implements
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.gaming_mode_settings);
+        addPreferencesFromResource(R.xml.gaming_mode);
 
         final Resources res = getResources();
 

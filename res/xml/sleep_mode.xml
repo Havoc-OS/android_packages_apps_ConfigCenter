@@ -82,9 +82,9 @@
 
         <com.havoc.support.preferences.SecureSettingListPreference
             android:key="sleep_mode_ringer_mode"
-            android:title="@string/gaming_mode_ringer_title"
-            android:entries="@array/gaming_mode_ringer_entries"
-            android:entryValues="@array/gaming_mode_ringer_values"
+            android:title="@string/sleep_mode_ringer_title"
+            android:entries="@array/sleep_mode_ringer_entries"
+            android:entryValues="@array/sleep_mode_ringer_values"
             android:defaultValue="0"
             android:summary="%s" />
     </PreferenceCategory>

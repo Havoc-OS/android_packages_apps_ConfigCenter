@@ -28,7 +28,6 @@
     <!-- Wake on charge -->
     <!-- Double Tap gestures -->
     <!-- Power Menu -->
-    <string name="powermenu_lockscreen_summary">Mostrar y utilizar el diálogo del menú de apagado en la pantalla de bloqueo</string>
     <!-- Three-fingers-swipe to screenshot -->
     <!-- Heads up -->
     <!-- QuickSettings haptic feedback -->

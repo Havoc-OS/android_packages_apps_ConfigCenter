@@ -16,6 +16,18 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/heads_up_notifications">
 
+	<com.havoc.support.preferences.SystemSettingSwitchPreference
+        android:key="less_boring_heads_up"
+        android:title="@string/less_boring_heads_up_title"
+        android:summary="@string/less_boring_heads_up_summary"
+        android:defaultValue="false" />
+
+	<com.havoc.support.preferences.SystemSettingSwitchPreference
+        android:key="dont_touch_headsup"
+        android:title="@string/dont_touch_headsup_title"
+        android:summary="@string/dont_touch_headsup_summary"
+        android:defaultValue="false" />
+
     <ListPreference
         android:key="heads_up_time_out"
         android:title="@string/heads_up_time_out_title"
@@ -29,18 +41,6 @@
         android:entries="@array/heads_up_snooze_entries"
         android:entryValues="@array/heads_up_snooze_values"
         android:persistent="false" />
-
-	<com.havoc.support.preferences.SystemSettingSwitchPreference
-        android:key="less_boring_heads_up"
-        android:title="@string/less_boring_heads_up_title"
-        android:summary="@string/less_boring_heads_up_summary"
-        android:defaultValue="false" />
-
-	<com.havoc.support.preferences.SystemSettingSwitchPreference
-        android:key="dont_touch_headsup"
-        android:title="@string/dont_touch_headsup_title"
-        android:summary="@string/dont_touch_headsup_summary"
-        android:defaultValue="false" />
 
     <Preference
         android:key="heads_up_stoplist"

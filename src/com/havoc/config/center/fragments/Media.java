@@ -37,23 +37,13 @@ public class Media extends SettingsPreferenceFragment implements
     public static final String TAG = "Media";
 
     private static final String PULSE_ENABLED = "pulse_enabled";
-    private static final String KEY_RINGTONE_FOCUS_MODE = "ringtone_focus_mode";
 
     private SecureSettingMasterSwitchPreference mPulse;
-    private ListPreference mRingtoneFocusMode;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.config_center_media);
-
-        final Resources res = getResources();
-
-        mRingtoneFocusMode = (ListPreference) findPreference(KEY_RINGTONE_FOCUS_MODE);
-
-        if (!res.getBoolean(com.android.internal.R.bool.config_deviceRingtoneFocusMode)) {
-            mRingtoneFocusMode.setVisible(false);
-        }
 
         updateMasterPrefs();
     }

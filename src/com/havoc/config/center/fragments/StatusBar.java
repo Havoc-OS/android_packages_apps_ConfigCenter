@@ -89,7 +89,7 @@ public class StatusBar extends SettingsPreferenceFragment implements
     
         mStatusBarLogo = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_LOGO);
         mStatusBarLogo.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.STATUS_BAR_LOGO, 0) == 1));
+                Settings.System.STATUS_BAR_LOGO, 1) == 1));
         mStatusBarLogo.setOnPreferenceChangeListener(this);
     
         mNetworkTraffic = (SystemSettingMasterSwitchPreference) findPreference(NETWORK_TRAFFIC);

@@ -30,7 +30,7 @@
         android:fragment="com.havoc.config.center.fragments.StatusbarLogo"
         android:title="@string/status_bar_logo_title"
         android:summary="@string/status_bar_logo_summary"
-        android:defaultValue="false" />
+        android:defaultValue="true" />
 
     <PreferenceCategory
         android:key="statusbar_gestures"

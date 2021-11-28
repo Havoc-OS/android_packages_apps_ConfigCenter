@@ -18,12 +18,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title="@string/smart_pixels_title">
 
-    <com.havoc.support.preferences.SystemSettingSwitchPreference
-        android:key="smart_pixels_on_power_save"
-        android:title="@string/smart_pixels_on_power_save_title"
-        android:summary="@string/smart_pixels_on_power_save_summary"
-        android:defaultValue="false"/>
-
     <com.havoc.support.preferences.SystemSettingListPreference
         android:key="smart_pixels_pattern"
         android:entries="@array/smart_pixels_percent_strings"

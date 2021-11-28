@@ -16,36 +16,23 @@
 
 package com.havoc.config.center.fragments;
 
-import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.CompoundButton;
-import android.widget.Switch;
-import android.widget.TextView;
 
-import androidx.preference.PreferenceCategory;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-
-import com.android.internal.logging.nano.MetricsProto;
+import androidx.preference.PreferenceCategory;
 
 import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
 
-import com.havoc.config.center.ConfigCenter;
+import com.havoc.config.center.preferences.SwitchBarPreferenceFragment;
 import com.havoc.support.colorpicker.ColorPickerPreference;
-import com.havoc.support.preferences.SecureSettingSwitchPreference;
 
-public class PulseSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
+public class Pulse extends SwitchBarPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
-    private static final String TAG = PulseSettings.class.getSimpleName();
     private static final String PULSE_LOCATION_KEY = "pulse_location";
     private static final String PULSE_COLOR_MODE_KEY = "pulse_color_mode";
     private static final String PULSE_COLOR_MODE_CHOOSER_KEY = "pulse_color_user";
@@ -53,7 +40,6 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private static final String PULSE_RENDER_CATEGORY_SOLID = "pulse_2";
     private static final String PULSE_RENDER_CATEGORY_FADING = "pulse_fading_bars_category";
     private static final String PULSE_RENDER_MODE_KEY = "pulse_render_style";
-    private static final String PULSE_SMOOTHING_KEY = "pulse_smoothing_enabled";
     private static final int RENDER_STYLE_FADING_BARS = 0;
     private static final int RENDER_STYLE_SOLID_LINES = 1;
     private static final int COLOR_TYPE_ACCENT = 0;
@@ -67,21 +53,16 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private ListPreference mColorModePref;
     private ColorPickerPreference mColorPickerPref;
     private Preference mLavaSpeedPref;
-    private SecureSettingSwitchPreference mSmoothingPref;
     private ListPreference mLocation;
-
-    private TextView mTextView;
-    private View mSwitchBar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.pulse_settings);
+        addPreferencesFromResource(R.xml.pulse);
 
         mFadingBarsCat = (PreferenceCategory) findPreference(PULSE_RENDER_CATEGORY_FADING);
         mSolidBarsCat = (PreferenceCategory) findPreference(PULSE_RENDER_CATEGORY_SOLID);
         mLavaSpeedPref = findPreference(PULSE_COLOR_MODE_LAVA_SPEED_KEY);
-        mSmoothingPref = (SecureSettingSwitchPreference) findPreference(PULSE_SMOOTHING_KEY);
 
         mColorModePref = (ListPreference) findPreference(PULSE_COLOR_MODE_KEY);
         mColorModePref.setOnPreferenceChangeListener(this);
@@ -92,7 +73,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         int pulseColor = Settings.Secure.getInt(getContentResolver(),
                 Settings.Secure.PULSE_COLOR_USER, 0xFFFFFFFF);
         mColorPickerPref.setNewPreviewColor(pulseColor);
-        String pulseColorHex = String.format("#%08x", (0xFFFFFFFF & pulseColor));
+        String pulseColorHex = String.format("#%08x", pulseColor);
         if (pulseColorHex.equals("#ffffffff")) {
             mColorPickerPref.setSummary(R.string.default_string);
         } else {
@@ -116,68 +97,12 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        final View view = LayoutInflater.from(getContext()).inflate(R.layout.master_setting_switch, container, false);
-        ((ViewGroup) view).addView(super.onCreateView(inflater, container, savedInstanceState));
-        return view;
-    }
-
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        boolean enabled = Settings.Secure.getInt(getContentResolver(),
-                Settings.Secure.PULSE_ENABLED, 0) == 1;
-
-        mTextView = view.findViewById(R.id.switch_text);
-        mTextView.setText(getString(enabled ?
-                R.string.switch_on_text : R.string.switch_off_text));
-
-        mSwitchBar = view.findViewById(R.id.switch_bar);
-        Switch switchWidget = mSwitchBar.findViewById(android.R.id.switch_widget);
-        switchWidget.setChecked(enabled);
-        switchWidget.setOnCheckedChangeListener(this);
-        mSwitchBar.setActivated(enabled);
-        mSwitchBar.setOnClickListener(v -> {
-            switchWidget.setChecked(!switchWidget.isChecked());
-            mSwitchBar.setActivated(switchWidget.isChecked());
-        });
-
-        mLocation.setEnabled(enabled);
-        mLavaSpeedPref.setEnabled(enabled);
-        mColorModePref.setEnabled(enabled);
-        mColorPickerPref.setEnabled(enabled);
-        mRenderMode.setEnabled(enabled);
-        mSmoothingPref.setEnabled(enabled);
-        mFadingBarsCat.setEnabled(enabled);
-        mSolidBarsCat.setEnabled(enabled);
-    }
-
-    @Override
-    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.PULSE_ENABLED, isChecked ? 1 : 0);
-        mTextView.setText(getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text));
-        mSwitchBar.setActivated(isChecked);
-
-        mLocation.setEnabled(isChecked);
-        mLavaSpeedPref.setEnabled(isChecked);
-        mColorModePref.setEnabled(isChecked);
-        mColorPickerPref.setEnabled(isChecked);
-        mRenderMode.setEnabled(isChecked);
-        mSmoothingPref.setEnabled(isChecked);
-        mFadingBarsCat.setEnabled(isChecked);
-        mSolidBarsCat.setEnabled(isChecked);
-    }
-
-    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference.equals(mColorModePref)) {
-            updateColorPrefs(Integer.valueOf(String.valueOf(newValue)));
+            updateColorPrefs(Integer.parseInt(String.valueOf(newValue)));
             return true;
         } else if (preference.equals(mRenderMode)) {
-            updateRenderCategories(Integer.valueOf(String.valueOf(newValue)));
+            updateRenderCategories(Integer.parseInt(String.valueOf(newValue)));
             return true;
         } else if (preference == mColorPickerPref) {
             String hex = ColorPickerPreference.convertToARGB(
@@ -192,7 +117,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
                     Settings.Secure.PULSE_COLOR_USER, intHex);
             return true;
         } else if (preference.equals(mLocation)) {
-            updateLocationSummary(Integer.valueOf(String.valueOf(newValue)));
+            updateLocationSummary(Integer.parseInt(String.valueOf(newValue)));
             return true;
         }
         return false;
@@ -201,6 +126,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private void updateColorPrefs(int val) {
         switch (val) {
             case COLOR_TYPE_ACCENT:
+            case COLOR_TYPE_AUTO:
                 mColorPickerPref.setVisible(false);
                 mLavaSpeedPref.setVisible(false);
                 break;
@@ -211,10 +137,6 @@ public class PulseSettings extends SettingsPreferenceFragment implements
             case COLOR_TYPE_LAVALAMP:
                 mColorPickerPref.setVisible(false);
                 mLavaSpeedPref.setVisible(true);
-                break;
-            case COLOR_TYPE_AUTO:
-                mColorPickerPref.setVisible(false);
-                mLavaSpeedPref.setVisible(false);
                 break;
         }
     }
@@ -241,7 +163,14 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     }
 
     @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.HAVOC_SETTINGS;
+    public boolean getSwitchState() {
+        return Settings.Secure.getInt(getContentResolver(),
+                Settings.Secure.PULSE_ENABLED, 0) == 1;
+    }
+
+    @Override
+    public void updateSwitchState(boolean isChecked) {
+        Settings.Secure.putInt(getContentResolver(),
+                Settings.Secure.PULSE_ENABLED, isChecked ? 1 : 0);
     }
 }

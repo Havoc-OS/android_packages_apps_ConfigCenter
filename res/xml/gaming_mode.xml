@@ -88,7 +88,7 @@
 
         <com.havoc.support.preferences.SystemSettingMasterSwitchPreference
             android:key="gaming_mode_show_danmaku"
-            android:fragment="com.havoc.config.center.fragments.DanmakuSettings"
+            android:fragment="com.havoc.config.center.fragments.Danmaku"
             android:title="@string/gaming_mode_notification_danmaku_title"
             android:summary="@string/gaming_mode_notification_danmaku_summary"
             android:defaultValue="true"

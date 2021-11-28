@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 Havoc-OS
+ * Copyright (C) 2021 Havoc-OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,24 +17,32 @@
 package com.havoc.config.center.fragments;
 
 import android.os.Bundle;
+import android.provider.Settings;
 
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
 
-public class DeviceMaintainers extends SettingsPreferenceFragment {
+import com.havoc.config.center.preferences.SwitchBarPreferenceFragment;
 
-    public static final String TAG = "DeviceMaintainers";
+public class NotificationTicker extends SwitchBarPreferenceFragment {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.device_maintainers);
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+
+        addPreferencesFromResource(R.xml.notification_ticker);
     }
 
     @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.HAVOC_SETTINGS;
+    public boolean getSwitchState() {
+        return Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_SHOW_TICKER, 0) == 1;
+    }
+
+    @Override
+    public void updateSwitchState(boolean isChecked) {
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.STATUS_BAR_SHOW_TICKER, isChecked ? 1 : 0);
     }
 }

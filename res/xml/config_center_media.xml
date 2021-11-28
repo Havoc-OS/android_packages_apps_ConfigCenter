@@ -16,49 +16,52 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-	android:title="@string/media_title" >
-
-    <com.havoc.support.preferences.GlobalSettingListPreference
-        android:key="ringtone_focus_mode"
-        android:title="@string/ringtone_focus_mode_title"
-        android:entries="@array/ringtone_focus_mode_entries"
-        android:entryValues="@array/ringtone_focus_mode_values"
-        android:defaultValue="1" />
-
-    <com.havoc.support.preferences.SystemSettingSwitchPreference
-        android:key="adaptive_playback_enabled"
-        android:title="@string/adaptive_playback_title"
-        android:summary="@string/adaptive_playback_summary"
-        android:defaultValue="false" />
-
-    <com.havoc.support.preferences.SystemSettingListPreference
-        android:key="adaptive_playback_timeout"
-        android:title="@string/adaptive_playback_timeout_title"
-        android:entries="@array/adaptive_playback_timeout_entries"
-        android:entryValues="@array/adaptive_playback_timeout_values"
-        android:defaultValue="30000"
-        android:dependency="adaptive_playback_enabled" />
+	android:title="@string/media_title">
 
     <com.havoc.support.preferences.SecureSettingMasterSwitchPreference
         android:key="pulse_enabled"
-        android:fragment="com.havoc.config.center.fragments.PulseSettings"
+        android:fragment="com.havoc.config.center.fragments.Pulse"
         android:title="@string/pulse_settings"
         android:summary="@string/pulse_settings_summary"
         android:defaultValue="false" />
 
-    <com.havoc.support.preferences.SecureSettingSwitchPreference
-        android:key="lockscreen_media_metadata"
-        android:title="@string/media_art_title"
-        android:summary="@string/media_art_summary"
-        android:defaultValue="true" />
+    <PreferenceCategory
+        android:key="adaptive_playback"
+        android:title="@string/adaptive_playback_title">
 
-    <com.havoc.support.preferences.SystemSettingSeekBarPreference
-        android:key="lockscreen_media_blur"
-        android:title="@string/lockscreen_media_blur_title"
-        android:max="100"
-        settings:min="0"
-        settings:units="%"
-        settings:interval="5"
-        android:defaultValue="100"
-        android:dependency="lockscreen_media_metadata" />
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="adaptive_playback_enabled"
+            android:title="@string/adaptive_playback_enabled_title"
+            android:summary="@string/adaptive_playback_enabled_summary"
+            android:defaultValue="false" />
+
+        <com.havoc.support.preferences.SystemSettingListPreference
+            android:key="adaptive_playback_timeout"
+            android:title="@string/adaptive_playback_timeout_title"
+            android:entries="@array/adaptive_playback_timeout_entries"
+            android:entryValues="@array/adaptive_playback_timeout_values"
+            android:defaultValue="30000"
+            android:dependency="adaptive_playback_enabled" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="lockscreen"
+        android:title="@string/lockscreen_title">
+
+        <com.havoc.support.preferences.SecureSettingSwitchPreference
+            android:key="lockscreen_media_metadata"
+            android:title="@string/media_art_title"
+            android:summary="@string/media_art_summary"
+            android:defaultValue="true" />
+
+        <com.havoc.support.preferences.SystemSettingSeekBarPreference
+            android:key="lockscreen_media_blur"
+            android:title="@string/lockscreen_media_blur_title"
+            android:max="100"
+            settings:min="0"
+            settings:units="%"
+            settings:interval="5"
+            android:defaultValue="100"
+            android:dependency="lockscreen_media_metadata" />
+    </PreferenceCategory>
 </PreferenceScreen>

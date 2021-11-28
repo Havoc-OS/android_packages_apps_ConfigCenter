@@ -12,7 +12,7 @@ import com.android.settings.R;
 
 import com.havoc.config.center.preferences.SwitchBarPreferenceFragment;
 
-public class DanmakuSettings extends SwitchBarPreferenceFragment implements
+public class Danmaku extends SwitchBarPreferenceFragment implements
         OnPreferenceChangeListener {
 
     @Override
